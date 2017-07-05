@@ -1042,22 +1042,22 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     We can easily define a procedure @c(sum-of-squares) that, given any two
     numbers as arguments, produces the sum of their squares:
 
-    ..src > scheme
+    ..srci > scheme
       > (define (sum-of-squares x y) \
           (+ (square x) (square y)))
       > (sum-of-squares 3 4)
       25
-    < src..
+    < srci..
 
     Now we can use @c(sum-of-squares) as a building block in constructing further
     procedures:
 
-    ..src > scheme
+    ..srci > scheme
       > (define (f a) \
           (sum-of-squares (+ a 1) (* a 2)))
       > (f 5)
       136
-    < src..
+    < srci..
 
     Compound procedures are used in exactly the same way as primitive procedures.
     Indeed, one could not tell by looking at the definition of @c(sum-of-squares)
@@ -1483,7 +1483,7 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     method of successive approximations, which says that whenever we have a guess
     @m(y) for the value of the square root of a number @m(x), we can perform a
     simple manipulation to get a better guess (one closer to the actual square
-    root) by averaging @m(y) with @m(x / y}.@n(21) For example, we can compute the
+    root) by averaging @m(y) with @m(x / y).@n(21) For example, we can compute the
     square root of 2 as follows.  Suppose our initial guess is 1:
 
     ..example >
@@ -1587,12 +1587,12 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
 
        Eva demonstrates the program for Alyssa:
 
-       ..src > scheme
+       ..srci > scheme
          > (new-if (= 2 3) 0 5)
          5
          > (new-if (= 1 1) 0 5)
          0
-       < src..
+       < srci..
 
        Delighted, Alyssa uses @c(new-if) to rewrite the square-root program:
 
@@ -5144,7 +5144,7 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   and subsequent items in the list.@n(75) The constructor @c(cons) makes a list
   like the original one, but with an additional item at the beginning.
 
-  ..src > scheme
+  ..srci > scheme
     > (car one-through-four)
     1
     > (cdr one-through-four)
@@ -5155,7 +5155,7 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     (10 1 2 3 4)
     > (cons 5 one-through-four)
     (5 1 2 3 4)
-  < src..
+  < srci..
 
   The value of @c(nil), used to terminate the chain of pairs, can be thought of
   as a sequence of no elements, the @e(empty list). The word @e(nil) is a
@@ -5380,7 +5380,7 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
      in a list and generate the list of results. For instance, the following
      procedure scales each number in a list by a given factor:
 
-     ..src > scheme
+     ..srci > scheme
        > (define (scale-list items factor)   \
            (if (null? items)                 \
                nil                           \
@@ -5390,7 +5390,7 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
 
        > (scale-list (list 1 2 3 4 5) 10)
        (10 20 30 40 50)}
-     < src..
+     < srci..
 
      We can abstract this general idea and capture it as a common pattern expressed
      as a higher-order procedure, just as in @l(#1.3). The higher-order procedure
@@ -13986,7 +13986,7 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
      Next we connect the wires in a half-adder circuit (as in @l(#Figure 3.25)),
      set the signal on @c(input-1) to 1, and run the simulation:
 
-     ..src > scheme
+     ..srci > scheme
        > (half-adder input-1 input-2 sum carry)
        ok
        > (set-signal! input-1 1)
@@ -13994,20 +13994,20 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
        > (propagate)
        sum 8  New-value = 1
        done
-     < src..
+     < srci..
 
      The @c(sum) signal changes to 1 at time 8. We are now eight time units from
      the beginning of the simulation. At this point, we can set the signal on
      @c(input-2) to 1 and allow the values to propagate:
 
-     ..src > scheme
+     ..srci > scheme
        > (set-signal! input-2 1)
        done
        > (propagate)
        carry 11  New-value = 1
        sum 16  New-value = 0
        done
-     < src..
+     < srci..
 
      The @c(carry) changes to 1 at time 11 and the @c(sum) changes to 0 at time 16.
 
@@ -16654,7 +16654,7 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
      We can demonstrate Euler acceleration with our sequence of approximations to
      @m(π):
 
-     ..src > scheme
+     ..srci > scheme
        > (display-stream  \
           (euler-transform pi-stream))
        3.166666666666667
@@ -16666,7 +16666,7 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
        3.142071817071818
        3.1412548236077655
        …
-     < src..
+     < srci..
 
      Even better, we can accelerate the accelerated sequence, and recursively
      accelerate that, and so on. Namely, we create a stream of streams (a structure
@@ -18923,7 +18923,7 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     Now all we need to do to run the evaluator is to initialize the global
     environment and start the driver loop. Here is a sample interaction:
 
-    ..src > scheme
+    ..srci > scheme
       > (define the-global-environment \
           (setup-environment))
       > (driver-loop)
@@ -18938,7 +18938,7 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
       > (append '(a b c) '(d e f))
       ;;; M-Eval value:
       (a b c d e f)
-    < src..
+    < srci..
 
     :: @t(Exercise 4.14) :: Eva Lu Ator and Louis Reasoner are each experimenting
        with the metacircular evaluator. Eva types in the definition of @c(map),
