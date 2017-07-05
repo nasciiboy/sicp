@@ -694,7 +694,6 @@ New Haven, Connecticut<br>
 <p>followed by the reductions</p>
 <pre class="srci" ><code class="scheme"><span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="nb">* </span><span class="mi">6</span> <span class="mi">6</span><span class="p">)</span>
    <span class="p">(</span><span class="nb">* </span><span class="mi">10</span> <span class="mi">10</span><span class="p">))</span>
-<span class="srci-text">     (* 10 10))</span>
 <span class="p">(</span><span class="nb">+ </span><span class="mi">36</span> <span class="mi">100</span><span class="p">)</span>
 <span class="srci-text">136</span>
 </code></pre>
@@ -1732,7 +1731,6 @@ n=a</pre></div>
   <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">add-dx</span> <span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">x</span> <span class="nv">dx</span><span class="p">))</span>
   <span class="p">(</span><span class="nb">* </span><span class="p">(</span><span class="nf">sum</span> <span class="nv">f</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">a</span> <span class="p">(</span><span class="nb">/ </span><span class="nv">dx</span> <span class="mf">2.0</span><span class="p">))</span> <span class="nv">add-dx</span> <span class="nv">b</span><span class="p">)</span>
      <span class="nv">dx</span><span class="p">))</span>
-<span class="srci-text">       dx))</span>
 <span class="p">(</span><span class="nf">integral</span> <span class="nv">cube</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mf">0.01</span><span class="p">)</span>
 <span class="srci-text">.24998750000000042</span>
 <span class="p">(</span><span class="nf">integral</span> <span class="nv">cube</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mf">0.001</span><span class="p">)</span>
@@ -2005,8 +2003,7 @@ f(x,y) = xa² + yb + ab</pre></div>
  <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">- </span><span class="p">(</span><span class="nb">* </span><span class="nv">x</span> <span class="nv">x</span> <span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="mi">2</span> <span class="nv">x</span><span class="p">)</span> <span class="mi">3</span><span class="p">))</span>
  <span class="mf">1.0</span>
  <span class="mf">2.0</span><span class="p">)</span>
-<span class="srci-text">   2.0)
-1.89306640625</span>
+<span class="srci-text">1.89306640625</span>
 </code></pre>
 </div>
 <h5 id="Finding-fixed-points-of-functions" >Finding fixed points of functions</h5>
@@ -2035,8 +2032,7 @@ f(x,y) = xa² + yb + ab</pre></div>
 <p>Similarly, we can find a solution to the equation <span class="math" >y = sin y + cos y</span>:</p>
 <pre class="srci" ><code class="scheme"><span class="p">(</span><span class="nf">fixed-point</span> <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">y</span><span class="p">)</span> <span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="nb">sin </span><span class="nv">y</span><span class="p">)</span> <span class="p">(</span><span class="nb">cos </span><span class="nv">y</span><span class="p">)))</span>
              <span class="mf">1.0</span><span class="p">)</span>
-<span class="srci-text">               1.0)
-1.2587315962971173</span>
+<span class="srci-text">1.2587315962971173</span>
 </code></pre>
 <p>The fixed-point process is reminiscent of the process we used for finding square roots in <a href="#1.1.7" >1.1.7</a>. Both are based on the idea of repeatedly improving a guess until the result satisfies some criterion. In fact, we can readily formulate the square-root computation as a fixed-point search.  Computing the square root of some number <span class="math" >x</span> requires finding a <span class="math" >y</span> such that <span class="math" >y² = x</span>. Putting this equation into the equivalent form <span class="math" >y = x / y</span>, we recognize that we are looking for a fixed point of the function<span class="note" ><sup><a href="#58" >58</a></sup></span> <span class="math" >y ↦ x / y</span>, and we can therefore try to compute square roots as</p>
 <div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nb">sqrt </span><span class="nv">x</span><span class="p">)</span>
@@ -2427,16 +2423,13 @@ d₁   d₂</pre></div>
 <span class="p">(</span><span class="k">define </span><span class="nv">one-third</span> <span class="p">(</span><span class="nf">make-rat</span> <span class="mi">1</span> <span class="mi">3</span><span class="p">))</span>
 <span class="p">(</span><span class="nf">print-rat</span>
  <span class="p">(</span><span class="nf">add-rat</span> <span class="nv">one-half</span> <span class="nv">one-third</span><span class="p">))</span>
-<span class="srci-text">   (add-rat one-half one-third))
-5/6</span>
+<span class="srci-text">5/6</span>
 <span class="p">(</span><span class="nf">print-rat</span>
  <span class="p">(</span><span class="nf">mul-rat</span> <span class="nv">one-half</span> <span class="nv">one-third</span><span class="p">))</span>
-<span class="srci-text">   (mul-rat one-half one-third))
-1/6</span>
+<span class="srci-text">1/6</span>
 <span class="p">(</span><span class="nf">print-rat</span>
  <span class="p">(</span><span class="nf">add-rat</span> <span class="nv">one-third</span> <span class="nv">one-third</span><span class="p">))</span>
-<span class="srci-text">   (add-rat one-third one-third))
-6/9</span>
+<span class="srci-text">6/9</span>
 </code></pre>
 <p>As the final example shows, our rational-number implementation does not reduce rational numbers to lowest terms. We can remedy this by changing <code>make-rat</code>. If we have a <code>gcd</code> procedure like the one in <a href="#1.2.5" >1.2.5</a> that produces the greatest common divisor of two integers, we can use <code>gcd</code> to reduce the numerator and the denominator to lowest terms before constructing the pair:</p>
 <div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">make-rat</span> <span class="nv">n</span> <span class="nv">d</span><span class="p">)</span>
@@ -2447,8 +2440,7 @@ d₁   d₂</pre></div>
 <p>Now we have</p>
 <pre class="srci" ><code class="scheme"><span class="p">(</span><span class="nf">print-rat</span>
  <span class="p">(</span><span class="nf">add-rat</span> <span class="nv">one-third</span> <span class="nv">one-third</span><span class="p">))</span>
-<span class="srci-text">   (add-rat one-third one-third))
-2/3</span>
+<span class="srci-text">2/3</span>
 </code></pre>
 <p>as desired. This modification was accomplished by changing the constructor <code>make-rat</code> without changing any of the procedures (such as <code>add-rat</code> and <code>mul-rat</code>) that implement the actual operations.</p>
 <div class="about" >
@@ -2827,10 +2819,8 @@ R₁ + R₂</pre></div>
       <span class="p">(</span><span class="nb">car </span><span class="nv">items</span><span class="p">)</span>
       <span class="p">(</span><span class="nb">list-ref </span><span class="p">(</span><span class="nb">cdr </span><span class="nv">items</span><span class="p">)</span>
                 <span class="p">(</span><span class="nb">- </span><span class="nv">n</span> <span class="mi">1</span><span class="p">))))</span>
-<span class="srci-text">                  (- n 1))))</span>
 <span class="p">(</span><span class="k">define </span><span class="nv">squares</span>
   <span class="p">(</span><span class="nb">list </span><span class="mi">1</span> <span class="mi">4</span> <span class="mi">9</span> <span class="mi">16</span> <span class="mi">25</span><span class="p">))</span>
-<span class="srci-text">    (list 1 4 9 16 25))</span>
 <span class="p">(</span><span class="nb">list-ref </span><span class="nv">squares</span> <span class="mi">3</span><span class="p">)</span>
 <span class="srci-text">16</span>
 </code></pre>
@@ -2839,10 +2829,8 @@ R₁ + R₂</pre></div>
   <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">null? </span><span class="nv">items</span><span class="p">)</span>
       <span class="mi">0</span>
       <span class="p">(</span><span class="nb">+ </span><span class="mi">1</span> <span class="p">(</span><span class="nb">length </span><span class="p">(</span><span class="nb">cdr </span><span class="nv">items</span><span class="p">)))))</span>
-<span class="srci-text">        (+ 1 (length (cdr items)))))</span>
 <span class="p">(</span><span class="k">define </span><span class="nv">odds</span>
   <span class="p">(</span><span class="nb">list </span><span class="mi">1</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">7</span><span class="p">))</span>
-<span class="srci-text">    (list 1 3 5 7))</span>
 <span class="p">(</span><span class="nb">length </span><span class="nv">odds</span><span class="p">)</span>
 <span class="srci-text">4</span>
 </code></pre>
@@ -2987,8 +2975,7 @@ R₁ + R₂</pre></div>
       <span class="nv">nil</span>
       <span class="p">(</span><span class="nb">cons </span><span class="p">(</span><span class="nf">proc</span> <span class="p">(</span><span class="nb">car </span><span class="nv">items</span><span class="p">))</span>
             <span class="p">(</span><span class="nb">map </span><span class="nv">proc</span> <span class="p">(</span><span class="nb">cdr </span><span class="nv">items</span><span class="p">)))))</span>
-<span class="srci-text">              (map proc (cdr items)))))
-</span>
+<span class="srci-text"></span>
 <span class="p">(</span><span class="nb">map </span><span class="nv">abs</span> <span class="p">(</span><span class="nb">list </span><span class="mi">-10</span> <span class="mf">2.5</span> <span class="mf">-11.6</span> <span class="mi">17</span><span class="p">))</span>
 <span class="srci-text">(10 2.5 11.6 17)</span>
 <span class="p">(</span><span class="nb">map </span><span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="nv">x</span> <span class="nv">x</span><span class="p">))</span> <span class="p">(</span><span class="nb">list </span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">))</span>
@@ -3053,8 +3040,7 @@ R₁ + R₂</pre></div>
 <pre class="srci" ><code class="scheme"><span class="p">(</span><span class="nf">for-each</span>
  <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">x</span><span class="p">)</span> <span class="p">(</span><span class="nf">newline</span><span class="p">)</span> <span class="p">(</span><span class="nb">display </span><span class="nv">x</span><span class="p">))</span>
  <span class="p">(</span><span class="nb">list </span><span class="mi">57</span> <span class="mi">321</span> <span class="mi">88</span><span class="p">))</span>
-<span class="srci-text">   (list 57 321 88))
-57
+<span class="srci-text">57
 321
 88</span>
 </code></pre>
@@ -3184,7 +3170,6 @@ R₁ + R₂</pre></div>
 <p>Modify your <code>reverse</code> procedure of <a href="#Exercise-2.18" >Exercise 2.18</a> to produce a <code>deep-reverse</code> procedure that takes a list as argument and returns as its value the list with its elements reversed and with all sublists deep-reversed as well. For example,</p>
 <pre class="srci" ><code class="scheme"><span class="p">(</span><span class="k">define </span><span class="nv">x</span>
   <span class="p">(</span><span class="nb">list </span><span class="p">(</span><span class="nb">list </span><span class="mi">1</span> <span class="mi">2</span><span class="p">)</span> <span class="p">(</span><span class="nb">list </span><span class="mi">3</span> <span class="mi">4</span><span class="p">)))</span>
-<span class="srci-text">    (list (list 1 2) (list 3 4)))</span>
 <span class="nv">x</span>
 <span class="srci-text">((1 2) (3 4))</span>
 <span class="p">(</span><span class="nb">reverse </span><span class="nv">x</span><span class="p">)</span>
@@ -3200,8 +3185,7 @@ R₁ + R₂</pre></div>
 <p>Write a procedure <code>fringe</code> that takes as argument a tree (represented as a list) and returns a list whose elements are all the leaves of the tree arranged in left-to-right order. For example,</p>
 <pre class="srci" ><code class="scheme"><span class="p">(</span><span class="k">define </span><span class="nv">x</span>
   <span class="p">(</span><span class="nb">list </span><span class="p">(</span><span class="nb">list </span><span class="mi">1</span> <span class="mi">2</span><span class="p">)</span> <span class="p">(</span><span class="nb">list </span><span class="mi">3</span> <span class="mi">4</span><span class="p">)))</span>
-<span class="srci-text">    (list (list 1 2) (list 3 4)))
-</span>
+<span class="srci-text"></span>
 <span class="p">(</span><span class="nf">fringe</span> <span class="nv">x</span><span class="p">)</span>
 <span class="srci-text">(1 2 3 4)</span>
 <span class="p">(</span><span class="nf">fringe</span> <span class="p">(</span><span class="nb">list </span><span class="nv">x</span> <span class="nv">x</span><span class="p">))</span>
@@ -3256,14 +3240,12 @@ R₁ + R₂</pre></div>
                            <span class="nv">factor</span><span class="p">)</span>
                <span class="p">(</span><span class="nf">scale-tree</span> <span class="p">(</span><span class="nb">cdr </span><span class="nv">tree</span><span class="p">)</span>
                            <span class="nv">factor</span><span class="p">)))))</span>
-<span class="srci-text">                             factor)))))
-</span>
+<span class="srci-text"></span>
 <span class="p">(</span><span class="nf">scale-tree</span> <span class="p">(</span><span class="nb">list </span><span class="mi">1</span>
                   <span class="p">(</span><span class="nb">list </span><span class="mi">2</span> <span class="p">(</span><span class="nb">list </span><span class="mi">3</span> <span class="mi">4</span><span class="p">)</span> <span class="mi">5</span><span class="p">)</span>
                   <span class="p">(</span><span class="nb">list </span><span class="mi">6</span> <span class="mi">7</span><span class="p">))</span>
             <span class="mi">10</span><span class="p">)</span>
-<span class="srci-text">              10)
-(10 (20 (30 40) 50) (60 70))</span>
+<span class="srci-text">(10 (20 (30 40) 50) (60 70))</span>
 </code></pre>
 <p>Another way to implement <code>scale-tree</code> is to regard the tree as a sequence of sub-trees and use <code>map</code>. We map over the sequence, scaling each sub-tree in turn, and return the list of results. In the base case, where the tree is a leaf, we simply multiply by the factor:</p>
 <div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">scale-tree</span> <span class="nv">tree</span> <span class="nv">factor</span><span class="p">)</span>
@@ -3282,8 +3264,7 @@ R₁ + R₂</pre></div>
  <span class="p">(</span><span class="nb">list </span><span class="mi">1</span>
        <span class="p">(</span><span class="nb">list </span><span class="mi">2</span> <span class="p">(</span><span class="nb">list </span><span class="mi">3</span> <span class="mi">4</span><span class="p">)</span> <span class="mi">5</span><span class="p">)</span>
        <span class="p">(</span><span class="nb">list </span><span class="mi">6</span> <span class="mi">7</span><span class="p">)))</span>
-<span class="srci-text">         (list 6 7)))
-(1 (4 (9 16) 25) (36 49))</span>
+<span class="srci-text">(1 (4 (9 16) 25) (36 49))</span>
 </code></pre>
 <p>Define <code>square-tree</code> both directly (i.e., without using any higher-order procedures) and also by using <code>map</code> and recursion.</p>
 </div>
@@ -3409,8 +3390,7 @@ R₁ + R₂</pre></div>
           <span class="p">(</span><span class="nf">accumulate</span> <span class="nv">op</span>
                       <span class="nv">initial</span>
                       <span class="p">(</span><span class="nb">cdr </span><span class="nv">sequence</span><span class="p">)))))</span>
-<span class="srci-text">                        (cdr sequence)))))
-</span>
+<span class="srci-text"></span>
 <span class="p">(</span><span class="nf">accumulate</span> <span class="nv">+</span> <span class="mi">0</span> <span class="p">(</span><span class="nb">list </span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span><span class="p">))</span>
 <span class="srci-text">15</span>
 <span class="p">(</span><span class="nf">accumulate</span> <span class="nv">*</span> <span class="mi">1</span> <span class="p">(</span><span class="nb">list </span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span><span class="p">))</span>
@@ -3426,7 +3406,6 @@ R₁ + R₂</pre></div>
             <span class="p">(</span><span class="nf">enumerate-interval</span>
              <span class="p">(</span><span class="nb">+ </span><span class="nv">low</span> <span class="mi">1</span><span class="p">)</span>
              <span class="nv">high</span><span class="p">))))</span>
-<span class="srci-text">               high))))</span>
 <span class="p">(</span><span class="nf">enumerate-interval</span> <span class="mi">2</span> <span class="mi">7</span><span class="p">)</span>
 <span class="srci-text">(2 3 4 5 6 7)</span>
 </code></pre>
@@ -3437,7 +3416,6 @@ R₁ + R₂</pre></div>
         <span class="p">(</span><span class="k">else </span><span class="p">(</span><span class="nf">append</span>
                <span class="p">(</span><span class="nf">enumerate-tree</span> <span class="p">(</span><span class="nb">car </span><span class="nv">tree</span><span class="p">))</span>
                <span class="p">(</span><span class="nf">enumerate-tree</span> <span class="p">(</span><span class="nb">cdr </span><span class="nv">tree</span><span class="p">))))))</span>
-<span class="srci-text">                 (enumerate-tree (cdr tree))))))</span>
 <span class="p">(</span><span class="nf">enumerate-tree</span> <span class="p">(</span><span class="nb">list </span><span class="mi">1</span> <span class="p">(</span><span class="nb">list </span><span class="mi">2</span> <span class="p">(</span><span class="nb">list </span><span class="mi">3</span> <span class="mi">4</span><span class="p">))</span> <span class="mi">5</span><span class="p">))</span>
 <span class="srci-text">(1 2 3 4 5)</span>
 </code></pre>
@@ -3468,8 +3446,7 @@ R₁ + R₂</pre></div>
    <span class="p">(</span><span class="nb">map </span><span class="nv">square</span>
         <span class="p">(</span><span class="nb">map </span><span class="nv">fib</span>
              <span class="p">(</span><span class="nf">enumerate-interval</span> <span class="mi">0</span> <span class="nv">n</span><span class="p">)))))</span>
-<span class="srci-text">               (enumerate-interval 0 n)))))
-</span>
+<span class="srci-text"></span>
 <span class="p">(</span><span class="nf">list-fib-squares</span> <span class="mi">10</span><span class="p">)</span>
 <span class="srci-text">(0 1 1 4 9 25 64 169 441 1156 3025)</span>
 </code></pre>
@@ -3481,12 +3458,10 @@ R₁ + R₂</pre></div>
    <span class="nv">*</span>
    <span class="mi">1</span>
    <span class="p">(</span><span class="nb">map </span><span class="nv">square</span> <span class="p">(</span><span class="nf">filter</span> <span class="nv">odd?</span> <span class="nv">sequence</span><span class="p">))))</span>
-<span class="srci-text">     (map square (filter odd? sequence))))
-</span>
+<span class="srci-text"></span>
 <span class="p">(</span><span class="nf">product-of-squares-of-odd-elements</span>
  <span class="p">(</span><span class="nb">list </span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span><span class="p">))</span>
-<span class="srci-text">   (list 1 2 3 4 5))
-225</span>
+<span class="srci-text">225</span>
 </code></pre>
 <p>We can also formulate conventional data-processing applications in terms of sequence operations. Suppose we have a sequence of personnel records and we want to find the salary of the highest-paid programmer. Assume that we have a selector <code>salary</code> that returns the salary of a record, and a predicate <code>programmer?</code> that tests if a record is for a programmer. Then we can write</p>
 <div class="highlight"><pre><span></span><span class="p">(</span><span class="nf">define</span>
@@ -6429,7 +6404,6 @@ P₃: 13x + 5</pre></div>
   <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">amount</span><span class="p">)</span>
     <span class="p">(</span><span class="k">set! </span><span class="nv">balance</span> <span class="p">(</span><span class="nb">- </span><span class="nv">balance</span> <span class="nv">amount</span><span class="p">))</span>
     <span class="nv">balance</span><span class="p">))</span>
-<span class="srci-text">      balance))</span>
 <span class="p">(</span><span class="k">define </span><span class="nv">W</span> <span class="p">(</span><span class="nf">make-simplified-withdraw</span> <span class="mi">25</span><span class="p">))</span>
 <span class="p">(</span><span class="nf">W</span> <span class="mi">20</span><span class="p">)</span>
 <span class="srci-text">5</span>
@@ -9608,8 +9582,7 @@ c + a₀x + --- a₁x² + --- a₂x³ + --- a₃ x⁴ + ...
             <span class="p">(</span><span class="nf">sqrt-improve</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">))</span>
           <span class="nv">guesses</span><span class="p">)))</span>
   <span class="nv">guesses</span><span class="p">)</span>
-<span class="srci-text">    guesses)
-</span>
+<span class="srci-text"></span>
 <span class="p">(</span><span class="nf">display-stream</span> <span class="p">(</span><span class="nf">sqrt-stream</span> <span class="mi">2</span><span class="p">))</span>
 <span class="srci-text">1.
 1.5
@@ -9629,13 +9602,11 @@ c + a₀x + --- a₁x² + --- a₂x³ + --- a₃ x⁴ + ...
   <span class="p">(</span><span class="nf">cons-stream</span>
    <span class="p">(</span><span class="nb">/ </span><span class="mf">1.0</span> <span class="nv">n</span><span class="p">)</span>
    <span class="p">(</span><span class="nf">stream-map</span> <span class="nv">-</span> <span class="p">(</span><span class="nf">pi-summands</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">n</span> <span class="mi">2</span><span class="p">)))))</span>
-<span class="srci-text">     (stream-map - (pi-summands (+ n 2)))))
-</span>
+<span class="srci-text"></span>
 <span class="p">(</span><span class="k">define </span><span class="nv">pi-stream</span>
   <span class="p">(</span><span class="nf">scale-stream</span>
    <span class="p">(</span><span class="nf">partial-sums</span> <span class="p">(</span><span class="nf">pi-summands</span> <span class="mi">1</span><span class="p">))</span> <span class="mi">4</span><span class="p">))</span>
-<span class="srci-text">     (partial-sums (pi-summands 1)) 4))
-</span>
+<span class="srci-text"></span>
 <span class="p">(</span><span class="nf">display-stream</span> <span class="nv">pi-stream</span><span class="p">)</span>
 <span class="srci-text">4.
 2.666666666666667
@@ -9700,8 +9671,7 @@ S₍ₙ₊₁₎ − ---------------------
 <pre class="srci" ><code class="scheme"><span class="p">(</span><span class="nf">display-stream</span>
  <span class="p">(</span><span class="nf">accelerated-sequence</span> <span class="nv">euler-transform</span>
                        <span class="nv">pi-stream</span><span class="p">))</span>
-<span class="srci-text">                         pi-stream))
-4.
+<span class="srci-text">4.
 3.166666666666667
 3.142105263157895
 3.141599357319005
@@ -10060,8 +10030,7 @@ input  |           |      |\__    +--&gt;|   \_  integral
 <p>In general, every caller of <code>integral</code> must now <code>delay</code> the integrand argument. We can demonstrate that the <code>solve</code> procedure works by approximating <span class="math" >e ≈ 2.718</span> by computing the value at <span class="math" >y = 1</span> of the solution to the differential equation <span class="math" >dy / dt = y</span> with initial condition <span class="math" >y(0) = 1</span>:</p>
 <pre class="srci" ><code class="scheme"><span class="p">(</span><span class="nf">stream-ref</span>
  <span class="p">(</span><span class="nf">solve</span> <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">y</span><span class="p">)</span> <span class="nv">y</span><span class="p">)</span> <span class="mi">1</span> <span class="mf">0.001</span><span class="p">)</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="srci-text">   (solve (lambda (y) y) 1 0.001) 1000)
-2.716924</span>
+<span class="srci-text">2.716924</span>
 </code></pre>
 <div class="about" >
 <div class="about-dt" ><span id="Exercise 3.77" >Exercise 3.77</span></div>
@@ -11649,7 +11618,6 @@ Arguments   |  8     Eval          `888888888888888888) | Environment
 <p>With these changes made, we can start the evaluator and test it. The successful evaluation of the <code>try</code> expression discussed in <a href="#4.2.1" >4.2.1</a> indicates that the interpreter is performing lazy evaluation:</p>
 <pre class="srci" ><code class="scheme"><span class="p">(</span><span class="k">define </span><span class="nv">the-global-environment</span>
   <span class="p">(</span><span class="nf">setup-environment</span><span class="p">))</span>
-<span class="srci-text">    (setup-environment))</span>
 <span class="p">(</span><span class="nf">driver-loop</span><span class="p">)</span>
 <span class="srci-text">;;; L-Eval input:</span>
 <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">try</span> <span class="nv">a</span> <span class="nv">b</span><span class="p">)</span> <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">= </span><span class="nv">a</span> <span class="mi">0</span><span class="p">)</span> <span class="mi">1</span> <span class="nv">b</span><span class="p">))</span>
@@ -11776,8 +11744,7 @@ ok
 <span class="p">(</span><span class="nf">for-each</span>
  <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">x</span><span class="p">)</span> <span class="p">(</span><span class="nf">newline</span><span class="p">)</span> <span class="p">(</span><span class="nb">display </span><span class="nv">x</span><span class="p">))</span>
  <span class="p">(</span><span class="nb">list </span><span class="mi">57</span> <span class="mi">321</span> <span class="mi">88</span><span class="p">))</span>
-<span class="srci-text">   (list 57 321 88))
-57
+<span class="srci-text">57
 321
 88
 
@@ -11830,17 +11797,14 @@ ok
   <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">= </span><span class="nv">n</span> <span class="mi">0</span><span class="p">)</span>
       <span class="p">(</span><span class="nb">car </span><span class="nv">items</span><span class="p">)</span>
       <span class="p">(</span><span class="nb">list-ref </span><span class="p">(</span><span class="nb">cdr </span><span class="nv">items</span><span class="p">)</span> <span class="p">(</span><span class="nb">- </span><span class="nv">n</span> <span class="mi">1</span><span class="p">))))</span>
-<span class="srci-text">        (list-ref (cdr items) (- n 1))))</span>
 <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nb">map </span><span class="nv">proc</span> <span class="nv">items</span><span class="p">)</span>
   <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">null? </span><span class="nv">items</span><span class="p">)</span>
       <span class="o">&#39;</span><span class="p">()</span>
       <span class="p">(</span><span class="nb">cons </span><span class="p">(</span><span class="nf">proc</span> <span class="p">(</span><span class="nb">car </span><span class="nv">items</span><span class="p">))</span>
             <span class="p">(</span><span class="nb">map </span><span class="nv">proc</span> <span class="p">(</span><span class="nb">cdr </span><span class="nv">items</span><span class="p">)))))</span>
-<span class="srci-text">              (map proc (cdr items)))))</span>
 <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">scale-list</span> <span class="nv">items</span> <span class="nv">factor</span><span class="p">)</span>
   <span class="p">(</span><span class="nb">map </span><span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="nv">x</span> <span class="nv">factor</span><span class="p">))</span>
        <span class="nv">items</span><span class="p">))</span>
-<span class="srci-text">         items))</span>
 <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">add-lists</span> <span class="nv">list1</span> <span class="nv">list2</span><span class="p">)</span>
   <span class="p">(</span><span class="k">cond </span><span class="p">((</span><span class="nb">null? </span><span class="nv">list1</span><span class="p">)</span> <span class="nv">list2</span><span class="p">)</span>
         <span class="p">((</span><span class="nb">null? </span><span class="nv">list2</span><span class="p">)</span> <span class="nv">list1</span><span class="p">)</span>
@@ -11849,12 +11813,10 @@ ok
                     <span class="p">(</span><span class="nf">add-lists</span>
                      <span class="p">(</span><span class="nb">cdr </span><span class="nv">list1</span><span class="p">)</span>
                      <span class="p">(</span><span class="nb">cdr </span><span class="nv">list2</span><span class="p">))))))</span>
-<span class="srci-text">                       (cdr list2))))))</span>
 <span class="p">(</span><span class="k">define </span><span class="nv">ones</span> <span class="p">(</span><span class="nb">cons </span><span class="mi">1</span> <span class="nv">ones</span><span class="p">))</span>
 <span class="p">(</span><span class="k">define </span><span class="nv">integers</span>
   <span class="p">(</span><span class="nb">cons </span><span class="mi">1</span> <span class="p">(</span><span class="nf">add-lists</span> <span class="nv">ones</span> <span class="nv">integers</span><span class="p">)))</span>
-<span class="srci-text">    (cons 1 (add-lists ones integers)))
-;;; L-Eval input:</span>
+<span class="srci-text">;;; L-Eval input:</span>
  <span class="p">(</span><span class="nb">list-ref </span><span class="nv">integers</span> <span class="mi">17</span><span class="p">)</span>
 <span class="srci-text">;;; L-Eval value:
 18</span>
@@ -11867,13 +11829,11 @@ ok
           <span class="p">(</span><span class="nf">add-lists</span> <span class="p">(</span><span class="nf">scale-list</span> <span class="nv">integrand</span> <span class="nv">dt</span><span class="p">)</span>
                      <span class="nv">int</span><span class="p">)))</span>
   <span class="nv">int</span><span class="p">)</span>
-<span class="srci-text">    int)</span>
 <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">solve</span> <span class="nv">f</span> <span class="nv">y0</span> <span class="nv">dt</span><span class="p">)</span>
   <span class="p">(</span><span class="k">define </span><span class="nv">y</span> <span class="p">(</span><span class="nf">integral</span> <span class="nv">dy</span> <span class="nv">y0</span> <span class="nv">dt</span><span class="p">))</span>
   <span class="p">(</span><span class="k">define </span><span class="nv">dy</span> <span class="p">(</span><span class="nb">map </span><span class="nv">f</span> <span class="nv">y</span><span class="p">))</span>
   <span class="nv">y</span><span class="p">)</span>
-<span class="srci-text">    y)
-;;; L-Eval input:</span>
+<span class="srci-text">;;; L-Eval input:</span>
 <span class="p">(</span><span class="nb">list-ref </span><span class="p">(</span><span class="nf">solve</span> <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">x</span><span class="p">)</span> <span class="nv">x</span><span class="p">)</span> <span class="mi">1</span> <span class="mf">0.001</span><span class="p">)</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="srci-text">;;; L-Eval value:
 2.716924</span>
@@ -12645,8 +12605,7 @@ ok
   <span class="p">(</span><span class="nf">permanent-set!</span> <span class="nv">count</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">count</span> <span class="mi">1</span><span class="p">))</span>
   <span class="p">(</span><span class="nf">require</span> <span class="p">(</span><span class="nb">not </span><span class="p">(</span><span class="nb">eq? </span><span class="nv">x</span> <span class="nv">y</span><span class="p">)))</span>
   <span class="p">(</span><span class="nb">list </span><span class="nv">x</span> <span class="nv">y</span> <span class="nv">count</span><span class="p">))</span>
-<span class="srci-text">    (list x y count))
-
+<span class="srci-text">
 ;;; Starting a new problem
 ;;; Amb-Eval value:
 (a b 2)
@@ -12670,8 +12629,7 @@ ok
    <span class="p">(</span><span class="nf">require</span> <span class="p">(</span><span class="nb">even? </span><span class="nv">x</span><span class="p">))</span>
    <span class="nv">x</span><span class="p">)</span>
  <span class="ss">&#39;all-odd</span><span class="p">)</span>
-<span class="srci-text">   'all-odd)
-;;; Starting a new problem
+<span class="srci-text">;;; Starting a new problem
 ;;; Amb-Eval value:
 all-odd
 
@@ -12681,8 +12639,7 @@ all-odd
    <span class="p">(</span><span class="nf">require</span> <span class="p">(</span><span class="nb">even? </span><span class="nv">x</span><span class="p">))</span>
    <span class="nv">x</span><span class="p">)</span>
  <span class="ss">&#39;all-odd</span><span class="p">)</span>
-<span class="srci-text">   'all-odd)
-
+<span class="srci-text">
 ;;; Starting a new problem
 ;;; Amb-Eval value:
 8</span>
@@ -16393,7 +16350,6 @@ the-cdrs |                  |                 | memory
 <p>Finally, we can initialize the global environment and run the evaluator:</p>
 <pre class="srci" ><code class="scheme"><span class="p">(</span><span class="k">define </span><span class="nv">the-global-environment</span>
   <span class="p">(</span><span class="nf">setup-environment</span><span class="p">))</span>
-<span class="srci-text">    (setup-environment))</span>
 <span class="p">(</span><span class="nf">start</span> <span class="nv">eceval</span><span class="p">)</span>
 <span class="srci-text">
 ;;; EC-Eval input:</span>
@@ -16401,8 +16357,7 @@ the-cdrs |                  |                 | memory
   <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">null? </span><span class="nv">x</span><span class="p">)</span>
       <span class="nv">y</span>
       <span class="p">(</span><span class="nb">cons </span><span class="p">(</span><span class="nb">car </span><span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">append </span><span class="p">(</span><span class="nb">cdr </span><span class="nv">x</span><span class="p">)</span> <span class="nv">y</span><span class="p">))))</span>
-<span class="srci-text">        (cons (car x) (append (cdr x) y))))
-;;; EC-Eval value:
+<span class="srci-text">;;; EC-Eval value:
 ok
 
 ;;; EC-Eval input:</span>
@@ -16426,8 +16381,7 @@ ok
 <pre class="srci" ><code class="scheme"><span class="srci-text">;;; EC-Eval input:</span>
 <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">factorial</span> <span class="nv">n</span><span class="p">)</span>
   <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">= </span><span class="nv">n</span> <span class="mi">1</span><span class="p">)</span> <span class="mi">1</span> <span class="p">(</span><span class="nb">* </span><span class="p">(</span><span class="nf">factorial</span> <span class="p">(</span><span class="nb">- </span><span class="nv">n</span> <span class="mi">1</span><span class="p">))</span> <span class="nv">n</span><span class="p">)))</span>
-<span class="srci-text">    (if (= n 1) 1 (* (factorial (- n 1)) n)))
-(total-pushes = 3, maximum-depth = 3)
+<span class="srci-text">(total-pushes = 3, maximum-depth = 3)
 
 ;;; EC-Eval value:
 ok
@@ -17743,16 +17697,13 @@ factorial</pre></div>
 <p>Write a procedure <code>find-variable</code> that takes as arguments a variable and a compile-time environment and returns the lexical address of the variable with respect to that environment. For example, in the program fragment that is shown above, the compile-time environment during the compilation of expression <code>(e1)</code> is <code>((y z) (a b c d e) (x y))</code>. <code>Find-variable</code> should produce</p>
 <pre class="srci" ><code class="scheme"><span class="p">(</span><span class="nf">find-variable</span>
  <span class="ss">&#39;c</span> <span class="o">&#39;</span><span class="p">((</span><span class="nf">y</span> <span class="nv">z</span><span class="p">)</span> <span class="p">(</span><span class="nf">a</span> <span class="nv">b</span> <span class="nv">c</span> <span class="nv">d</span> <span class="nv">e</span><span class="p">)</span> <span class="p">(</span><span class="nf">x</span> <span class="nv">y</span><span class="p">)))</span>
-<span class="srci-text">   'c '((y z) (a b c d e) (x y)))
-(1 2)</span>
+<span class="srci-text">(1 2)</span>
 <span class="p">(</span><span class="nf">find-variable</span>
  <span class="ss">&#39;x</span> <span class="o">&#39;</span><span class="p">((</span><span class="nf">y</span> <span class="nv">z</span><span class="p">)</span> <span class="p">(</span><span class="nf">a</span> <span class="nv">b</span> <span class="nv">c</span> <span class="nv">d</span> <span class="nv">e</span><span class="p">)</span> <span class="p">(</span><span class="nf">x</span> <span class="nv">y</span><span class="p">)))</span>
-<span class="srci-text">   'x '((y z) (a b c d e) (x y)))
-(2 0)</span>
+<span class="srci-text">(2 0)</span>
 <span class="p">(</span><span class="nf">find-variable</span>
  <span class="ss">&#39;w</span> <span class="o">&#39;</span><span class="p">((</span><span class="nf">y</span> <span class="nv">z</span><span class="p">)</span> <span class="p">(</span><span class="nf">a</span> <span class="nv">b</span> <span class="nv">c</span> <span class="nv">d</span> <span class="nv">e</span><span class="p">)</span> <span class="p">(</span><span class="nf">x</span> <span class="nv">y</span><span class="p">)))</span>
-<span class="srci-text">   'w '((y z) (a b c d e) (x y)))
-not-found</span>
+<span class="srci-text">not-found</span>
 </code></pre>
 </div>
 </div>
@@ -17787,8 +17738,7 @@ not-found</span>
     <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">= </span><span class="nv">n</span> <span class="mi">1</span><span class="p">)</span>
         <span class="mi">1</span>
         <span class="p">(</span><span class="nb">* </span><span class="p">(</span><span class="nf">factorial</span> <span class="p">(</span><span class="nb">- </span><span class="nv">n</span> <span class="mi">1</span><span class="p">))</span> <span class="nv">n</span><span class="p">))))</span>
-<span class="srci-text">          (* (factorial (- n 1)) n))))
-;;; EC-Eval value:
+<span class="srci-text">;;; EC-Eval value:
 ok
 ;;; EC-Eval input:</span>
 <span class="p">(</span><span class="nf">factorial</span> <span class="mi">5</span><span class="p">)</span>
@@ -17849,8 +17799,7 @@ ok
     <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">= </span><span class="nv">n</span> <span class="mi">1</span><span class="p">)</span>
         <span class="mi">1</span>
         <span class="p">(</span><span class="nb">* </span><span class="p">(</span><span class="nf">factorial</span> <span class="p">(</span><span class="nb">- </span><span class="nv">n</span> <span class="mi">1</span><span class="p">))</span> <span class="nv">n</span><span class="p">))))</span>
-<span class="srci-text">          (* (factorial (- n 1)) n))))
-(total-pushes = 0, maximum-depth = 0)
+<span class="srci-text">(total-pushes = 0, maximum-depth = 0)
 ;;; EC-Eval value:
 ok
 ;;; EC-Eval input:</span>
@@ -17915,8 +17864,7 @@ ok
     <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">= </span><span class="nv">n</span> <span class="mi">1</span><span class="p">)</span>
         <span class="mi">1</span>
         <span class="p">(</span><span class="nb">* </span><span class="p">(</span><span class="nf">factorial</span> <span class="p">(</span><span class="nb">- </span><span class="nv">n</span> <span class="mi">1</span><span class="p">))</span> <span class="nv">n</span><span class="p">))))</span>
-<span class="srci-text">          (* (factorial (- n 1)) n))))
-;;; EC-Eval value:
+<span class="srci-text">;;; EC-Eval value:
 ok
 ;;; EC-Eval input:</span>
 <span class="p">(</span><span class="nf">factorial</span> <span class="mi">5</span><span class="p">)</span>
@@ -18566,13 +18514,11 @@ ok
      <span class="p">(</span><span class="nb">list </span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">)</span>
      <span class="p">(</span><span class="nb">list </span><span class="mi">40</span> <span class="mi">50</span> <span class="mi">60</span><span class="p">)</span>
      <span class="p">(</span><span class="nb">list </span><span class="mi">700</span> <span class="mi">800</span> <span class="mi">900</span><span class="p">))</span>
-<span class="srci-text">       (list 700 800 900))
-(741 852 963)</span>
+<span class="srci-text">(741 852 963)</span>
 <span class="p">(</span><span class="nb">map </span><span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">x</span> <span class="nv">y</span><span class="p">)</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">x</span> <span class="p">(</span><span class="nb">* </span><span class="mi">2</span> <span class="nv">y</span><span class="p">)))</span>
      <span class="p">(</span><span class="nb">list </span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">)</span>
      <span class="p">(</span><span class="nb">list </span><span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span><span class="p">))</span>
-<span class="srci-text">       (list 4 5 6))
-(9 12 15)</span>
+<span class="srci-text">(9 12 15)</span>
 </code></pre>
 </div>
 </div>
