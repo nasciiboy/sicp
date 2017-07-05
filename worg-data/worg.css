@@ -1,0 +1,330 @@
+:root {
+                           /* COLOR VARS    */
+    --FGCtitle  : #ff4500;  /* #+TITLE:      */
+    --FGCstart1 : #4B99D2;  /* *             */
+    --FGCstart2 : #00ffff;  /* **            */
+    --FGCstart3 : #ff4500;  /* ***           */
+    --FGCstart4 : #98fb98;  /* ****          */
+    --FGCstart5 : #b0c4de;  /* *****         */
+    --FGCstart6 : #7fffd4;  /* ******        */
+    --FGCstart7 : #db2e24;  /* *******       */
+    --FGCstart8 : #ff4500;  /* ********      */
+    --FGCtext   : #ffffff;
+    --FGCemph   : #ffffff;  /* 4B99D2        */
+    --FGCtcode  : #bfbfff;  /* code          */
+    --FGCbcode  : #b3b3b3;  /* block code    */
+    --FGCtcomm  : #ff4500;  /* command       */
+    --FGCfile   : #eedd82;  /* file          */
+    --FGCmath   : #98fb98;  /* math          */
+    --FGClink   : #00ffff;  /* link          */
+    --BGClinkh  : #556b2f;  /* link bg hover */
+    --FGClinkh  : #ffffff;  /* link fg hover */
+    --FGCbquot  : #a5b1fe;  /* blockquote    */
+    --FGCaquot  : #a5b1fe;  /* author quote  */
+    --FGCdtabout: #6fb336;  /* about title   */
+    --FGCfigure : #ffffff;  /* about title   */
+    --BGCdt     : #b3b3b3;  /* dl bg dt      */
+    --FGCdt     : #ffffff;  /* dl fg dt      */
+    --FGCthead  : #ff7f24;  /* table head    */
+    --BGCthead  : #000000;  /* table head    */
+    --FGCtbody  : #87cefa;  /* table body    */
+}
+
+@font-face { font-family: text;           src: local('sans-serif'          );                     }
+@font-face { font-family: text_bold;      src: local('sans-serif'          ); font-style: bold;   }
+@font-face { font-family: text_italic;    src: local('sans-serif'          ); font-style: italic; }
+@font-face { font-family: text_verse;     src: local('sans-serif'          ); font-style: italic; }
+@font-face { font-family: title;          src: local('cursive'             );                     }
+@font-face { font-family: heatline;       src: local('cursive'             );                     }
+@font-face { font-family: codetext;       src: url(fonts/DejaVuSansMono.ttf);                     }
+@font-face { font-family: codeblock;      src: url(fonts/DejaVuSansMono.ttf);                     }
+@font-face { font-family: description_dt; src: local('cursive'             );                     }
+@font-face { font-family: description_dd; src: local('sans'                );                     }
+
+html { background: #000; color: var( --FGCtext );
+       margin: 0;
+       background-image: url(img/icon.jpg);
+       background-size: 12%;
+       background-attachment: fixed;
+       background-position: right bottom;
+       background-repeat: no-repeat;
+     }
+
+html body { font-size: 1.1em; font-family: text; line-height: 1.8em;
+            padding: 2em 2em 2em 1em; max-width: 80%; min-width: 640px;
+          }
+
+/* ################# HEATLINES */
+h1 { color: var( --FGCtitle  ); font-size:   3em; font-family: title;    } /* TITLE    */
+h2 { color: var( --FGCstart1 ); font-size: 1.6em; font-family: heatline; } /* *        */
+h3 { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; } /* **       */
+h4 { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; } /* ***      */
+h5 { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; } /* ****     */
+h6 { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; } /* *****    */
+h7 { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; } /* ******   */
+h8 { color: var( --FGCstart7 ); font-size: 1.1em; font-family: heatline; } /* *******  */
+h9 { color: var( --FGCstart8 ); font-size: 1.1em; font-family: heatline; } /* ******** */
+
+h1 { line-height: 1.5em; text-align: center;      } /* TITLE    */
+h2 { border-bottom: 1px solid #ddd;               } /* *        */
+h3 {                                              } /* **       */
+h4 {                                              } /* ***      */
+h5 {                                              } /* ****     */
+h6 {                                              } /* *****    */
+h7 {                                              } /* ******   */
+h8 {                                              } /* *******  */
+h9 {                                              } /* ******** */
+
+h1.subtitle { color: var( --FGCstart1 ); font-size:   2em; font-family: title;    }
+h2.subtitle { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; }
+h3.subtitle { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; }
+h4.subtitle { color: var( --FGCstart4 ); font-size: 1.3em; font-family: heatline; }
+h5.subtitle { color: var( --FGCstart5 ); font-size: 1.2em; font-family: heatline; }
+h6.subtitle { color: var( --FGCstart6 ); font-size: 1.1em; font-family: heatline; }
+h7.subtitle { color: var( --FGCstart7 ); font-size: 1.0em; font-family: heatline; }
+h8.subtitle { color: var( --FGCstart8 ); font-size: 1.0em; font-family: heatline; }
+h9.subtitle { color: var( --FGCtitle  ); font-size: 1.0em; font-family: heatline; }
+
+/* ###################### TEXT */
+.hBody-2 { color: #ffffff; text-align: justify; margin-left: 1em; } /* *        */
+.hBody-3 { color: #ffffff; text-align: justify; margin-left: 1em; } /* **       */
+.hBody-4 { color: #ffffff; text-align: justify; margin-left: 1em; } /* ***      */
+.hBody-5 { color: #ffffff; text-align: justify; margin-left: 1em; } /* ****     */
+.hBody-6 { color: #ffffff; text-align: justify; margin-left: 1em; } /* *****    */
+.hBody-7 { color: #ffffff; text-align: justify; margin-left: 1em; } /* ******   */
+.hBody-8 { color: #ffffff; text-align: justify; margin-left: 1em; } /* *******  */
+.hBody-9 { color: #ffffff; text-align: justify; margin-left: 1em; } /* ******** */
+
+/* ####################### TOC */
+#toc { background-color: #000; border: 1px solid #CCC;
+                     position: fixed; right: 0em; top: 0em; float: right;
+                     max-height: 90%; max-width: 30%;
+                     z-index: 1; overflow: auto;
+                     box-shadow: 0 0 1em #777777; border-bottom-left-radius: 5px; }
+#toc p { color: #eedd82; background-color: #000;
+         font-size: .8em; text-align: center;
+         border: 0; padding: 0em 0.5em 0em 0.5em; }
+#toc #toc-contents { display: none; text-align: left; }
+#toc:hover #toc-contents { display: block;
+                           font-size: 1.5em; line-height: 1em;
+                           padding-bottom: 1em;
+                         }
+#toc #toc-contents .toc { padding: 0 1em 0 0.7em; display: block }
+#toc #toc-contents .toc a { text-decoration: none; }
+#toc #toc-contents .toc a:hover { color: #ffffff; }
+
+/* *        */
+#toc #toc-contents a.h1
+{ color: var( --FGCtitle  ); font-size: .6em; list-style: none; padding-left: 0.0em }
+/* **       */
+#toc #toc-contents a.h2
+{ color: var( --FGCstart1 ); font-size: .6em; list-style: none; padding-left: 0.3em }
+/* ***      */
+#toc #toc-contents a.h3
+{ color: var( --FGCstart2 ); font-size: .6em; list-style: none; padding-left: 0.6em }
+/* ****     */
+#toc #toc-contents a.h4
+{ color: var( --FGCstart3 ); font-size: .6em; list-style: none; padding-left: 0.9em }
+/* *****    */
+#toc #toc-contents a.h5
+{ color: var( --FGCstart4 ); font-size: .6em; list-style: none; padding-left: 1.2em }
+/* ******   */
+#toc #toc-contents a.h6
+{ color: var( --FGCstart5 ); font-size: .6em; list-style: none; padding-left: 1.5em }
+/* *******  */
+#toc #toc-contents a.h7
+{ color: var( --FGCstart6 ); font-size: .6em; list-style: none; padding-left: 1.8em }
+
+#toc #toc-contents a.h8
+{ color: var( --FGCstart7 ); font-size: .6em; list-style: none; padding-left: 2.1em }
+
+#toc #toc-contents a.h9
+{ color: var( --FGCstart9 ); font-size: .6em; list-style: none; padding-left: 2.4em }
+
+
+/* ############### FONT STYLE */
+b       { font-family: text_bold; }
+i       { font-family: text_italic; }
+u       { text-decoration: underline; }
+em      { color: var( --FGCemph ); font-weight: 600; }
+cite    { font-family: text_verse; color: #a5b1fe; }
+code    { color: var( --FGCtcode ); font-family: codetext; padding: 0px 0.2em; }
+code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+.file   { color: var( --FGCfile ); font-family: codetext; }
+.math   { color: var( --FGCmath ); font-family: codetext; }
+.acronym { color: var( --FGCstart8 ); font-weight: 600; }
+abbr     { color: var( --FGCstart8 ); font-weight: 600; }
+
+a       { color: var( --FGClink ); text-decoration: underline; }
+a:hover { background-color: var( --BGClinkh ); color: var( --FGClinkh ); text-decoration: none; }
+a code { color: var( --FGCtcode ); text-decoration: underline; }
+a:hover code { background-color: var( --BGClinkh ); color: var( --FGClinkh ); text-decoration: none; }
+
+ol li { margin-top: 1em; }
+ul li { margin-top: 1em; }
+ol li b,
+ul li b { font-weight: bold; }
+ol li p,
+ul li p { color: #fff; font-size: 1em; }
+
+ul.dialog { list-style-type: none; }
+ul.dialog p { color: #f67478; }
+
+dl { margin-left:  1em; }
+dt { color: var( --FGCdt );
+     font-size: 1.2em; font-family: description_dt;
+     font-weight: 900; font-stretch: expanded;
+     margin-top:  1em; }
+
+dd { color: #ffffff; font-size: 1.0em; font-family: description_dd; font-style: bold; }
+
+
+figure { margin-top: 1em; text-align: center; }
+img    { max-width: 100%; min-width: 75%; filter: invert( 100% ); }
+img:hover { filter: invert( 0% ); }
+figcaption {}
+
+table { text-align: left; width: 100%; margin-top: 1em; }
+table thead { border: none; color: var( --FGCthead ); background: var( --BGCthead ); }
+table thead tr th { }
+table tbody { border-bottom: 2px solid #fff; color: var( --FGCtbody );; }
+table tbody tr td { }
+
+
+/* BLOCK STYLE #### */
+/* EMPHS */
+.bold   { font-family: text_bold; }
+.emph   { color: var( --FGCemph ); font-weight: 600; }
+.italic { font-family: text_italic; }
+.center { text-align: center; justify-content: center; }
+.verse  { margin: 2em 0em; font-family: text_italic; text-align: center; line-height: .8em; }
+
+.figure .title { color: var( --FGCfigure ); font-size: 1.2em; font-weight: 600; font-family: heatline; }
+
+.pret { padding-left: 1em; text-align: left; }
+
+.tab { padding-left: 3em; text-align: left; }
+
+
+/* ABOUT */
+.about { width: 100%; display: inline-flex; flex-flow: row nowrap; flex-direction: row;  }
+.about div.about-dt { order: 1; padding-left: 1em;
+                      color: var( --FGCdtabout ); font-size: 1.2em; font-weight: 800; text-align: center; }
+
+.about div.about-dd { order: 2; padding-left: 1em; font-family: description_dd;  overflow: auto; }
+
+/* Blockquote */
+blockquote { font-family: text_verse; color: var( --FGCbquot ); }
+div.quote-author { }
+div.quote-author p { text-align: right; padding-right: 2%; color: var( --FGCaquot ); }
+
+/* CODE */
+pre.code,
+div.highlight  { overflow: auto;
+                 margin: 1em 1em; padding: 0.5em 1em;
+                 margin-top:
+                 text-align: left; font-family: codeblock; font-size: 1.2em;
+               }
+
+/* CODE */
+pre.srci { overflow: auto;
+           margin: 1em 1em; padding: 0.5em 1em;
+           margin-top:
+           text-align: left; font-family: codeblock; font-size: 1.2em;
+         }
+.srci-text { color: #FFB; }
+.srci-code { }
+
+/* Art */
+.art-block { display: flex;
+             justify-content: center;
+           }
+
+pre.art { overflow: auto; /* background-color: #151515; */
+          margin: 1em;
+          align-self: center;
+          /* display:inline-table; */
+          text-align: left;font-family: codeblock; font-size: 1.2em;
+        }
+
+/* Pre, Example */
+.pre-block,
+.example-block { display: flex;
+                 justify-content: center;
+               }
+
+pre.pre,
+pre.example { overflow: auto; /* background-color: #151515; */
+              margin: 1em;
+              align-self: center;
+              text-align: left;font-family: codeblock; font-size: 1.2em;
+        }
+
+/* CODE */
+div.cols { align-items: strech; } /* strech, center, flex-start, flex-end, baseline, initial, inherit */
+div.cols-element   { padding: 1em; }
+
+/* pygments */
+.hll {                                    }
+.c   { color: #808080                     } /* Comment */
+.p   { color: #ffffff;                    } /* * */
+.err { color: #F00000;                    } /* Error */
+.k   { color: #00ffff; font-weight: bold  } /* * Keyword */
+.o   { color: #ffffff;                    } /* * Operator */
+.cm  { color: #808080                     } /* Comment.Multiline */
+.cp  { color: #eedd82;                    } /* * Comment.Preproc */
+.c1  { color: #ff4500                     } /* * Comment.Single */
+.cs  { color: #cc0000; font-weight: bold  } /* Comment.Special */
+.gd  { color: #A00000                     } /* Generic.Deleted */
+.ge  {                 /* font-style: italic */ } /* Generic.Emph */
+.gr  { color: #FF0000                     } /* Generic.Error */
+.gh  { color: #000080; font-weight: bold  } /* Generic.Heading */
+.gi  { color: #00A000                     } /* Generic.Inserted */
+.go  { color: #808080                     } /* Generic.Output */
+.gp  { color: #c65d09; font-weight: bold  } /* Generic.Prompt */
+.gs  {                 font-weight: bold  } /* Generic.Strong */
+.gu  { color: #800080; font-weight: bold  } /* Generic.Subheading */
+.gt  { color: #0040D0                     } /* Generic.Traceback */
+.kc  { color: #008000; font-weight: bold  } /* Keyword.Constant */
+.kd  { color: #008000; font-weight: bold  } /* Keyword.Declaration */
+.kn  { color: #008000; font-weight: bold  } /* Keyword.Namespace */
+.kp  { color: #003080; font-weight: bold  } /* Keyword.Pseudo */
+.kr  { color: #008000; font-weight: bold  } /* Keyword.Reserved */
+.kt  { color: #6666ff; font-weight: bold  } /* Keyword.Type */
+.m   { color: #6000E0; font-weight: bold  } /* Literal.Number */
+.s   { color: #ffa07a;                    } /* Literal.String */
+.n   { color: #98fb98;                    } /* * Name */
+.na  { color: #0000C0;                    } /* Name.Attribute */
+.nb  { color: #007020;                    } /* Name.Builtin */
+.nc  { color: #B00060; font-weight: bold  } /* Name.Class */
+.no  { color: #003060; font-weight: bold  } /* Name.Constant */
+.nd  { color: #505050; font-weight: bold  } /* Name.Decorator */
+.ni  { color: #800000; font-weight: bold  } /* Name.Entity */
+.ne  { color: #F00000; font-weight: bold  } /* Name.Exception */
+.nf  { color: #b0c4de; font-weight: bold  } /* * Name.Function */
+.nl  { color: #ffa07a; font-weight: bold  } /* * Name.Label */
+.nn  { color: #0e84b5; font-weight: bold  } /* Name.Namespace */
+.nt  { color: #007000                     } /* Name.Tag */
+.nv  { color: #906030                     } /* Name.Variable */
+.ow  { color: #000000; font-weight: bold  } /* Operator.Word */
+.w   { color: #bbbbbb                     } /* Text.Whitespace */
+.mf  { color: #6000E0; font-weight: bold  } /* Literal.Number.Float */
+.mh  { color: #005080; font-weight: bold  } /* Literal.Number.Hex */
+.mi  { color: #ffa07a; font-weight: bold  } /* Literal.Number.Integer */
+.mo  { color: #4000E0; font-weight: bold  } /* Literal.Number.Oct */
+.sb  {                                    } /* Literal.String.Backtick */
+.sc  { color: #ffffff;                    } /* * Literal.String.Char */
+.sd  { color: #D04020                     } /* Literal.String.Doc */
+.s2  {                                    } /* Literal.String.Double */
+.se  { color: #606060; font-weight: bold  } /* Literal.String.Escape */
+.sh  {                                    } /* Literal.String.Heredoc */
+.si  {                                    } /* Literal.String.Interpol */
+.sx  { color: #D02000;                    } /* Literal.String.Other */
+.sr  { color: #000000;                    } /* Literal.String.Regex */
+.s1  {                                    } /* Literal.String.Single */
+.ss  { color: #A06000                     } /* Literal.String.Symbol */
+.bp  { color: #007020                     } /* Name.Builtin.Pseudo */
+.vc  { color: #306090                     } /* Name.Variable.Class */
+.vg  { color: #d07000; font-weight: bold  } /* Name.Variable.Global */
+.vi  { color: #3030B0                     } /* Name.Variable.Instance */
+.il  { color: #0000D0; font-weight: bold  } /* Literal.Number.Integer.Long */
