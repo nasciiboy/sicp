@@ -35,50 +35,28 @@ Engineering and Computer Science Department at the Massachusetts Institute of
 Technology. It was edited and produced by The @A(MIT) Press under a joint
 production-distribution arrangement with the McGraw-Hill Book Company.
 
-Based on Unofficial Texinfo Format @l(http://sicpebook.wordpress.com),
-based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 2007).
+* Unofficial @e(morg) Format
 
-* Unofficial Texinfo Format
+  This is the second edition @A(SICP) book, from Unofficial
+  @l(morg<>https://github.com/nasciiboy/morg/) Format.
 
-  This is the second edition @A(SICP) book, from Unofficial Texinfo Format.
-
-  You are probably reading it in an Info hypertext browser, such as the Info
-  mode of Emacs. You might alternatively be reading it @e(Texinfo)-formatted on
-  your screen or printer, though that would be silly. And, if printed,
-  expensive.
+  This @l(https://github.com/nasciiboy/morg/<>morg) version is based on
+  Unofficial Texinfo Format @l(http://sicpebook.wordpress.com), based on
+  @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 2007).
 
   The freely-distributed official @A(HTML)-and-@A(GIF) format was first
   converted personally to Unofficial Texinfo Format (@A(UTF)) version 1 by Lytha
   Ayth during a long Emacs lovefest weekend in April, 2001.
 
-  The @A(UTF) is easier to search than the @A(HTML) format. It is also much
-  more accessible to people running on modest computers, such as donated
-  '386-based PCs. A 386 can, in theory, run Linux, Emacs, and a Scheme
-  interpreter simultaneously, but most 386s probably can't also run both
-  Netscape and the necessary X Window System without prematurely introducing
-  budding young underfunded hackers to the concept of @e(thrashing). @A(UTF)
-  can also fit uncompressed on a 1.44@A(MB) floppy diskette, which may come in
-  handy for installing @A(UTF) on PCs that do not have Internet or @A(LAN)
-  access.
-
   The Texinfo conversion has been a straight transliteration, to the extent
-  possible. Like the @e(TeX)-to-@A(HTML) conversion, this was not without some
-  introduction of breakage. In the case of Unofficial Texinfo Format, figures
-  have suffered an amateurish resurrection of the lost art of @A(ASCII). Also,
-  it's quite possible that some errors of ambiguity were introduced during the
-  conversion of some of the copious superscripts (@'(^)) and subscripts (@'(_)).
-  Divining @e(which) has been left as an exercise to the reader. But at least we
-  don't put our brave astronauts at risk by encoding the
-  @e(greater-than-or-equal) symbol as @c(<u>&gt;</u>).
-
-  If you modify @f(sicp.texi) to correct errors or improve the @A(ASCII) art,
-  then update the @c(@@set utfversion @value{utfversion}) line to reflect your
-  delta. For example, if you started with Lytha's version @c(1), and your name
-  is Bob, then you could name your successive versions @c(1.bob1), @c(1.bob2), …
-  @c(1.bob@i{n}). Also update @c(utfversiondate). If you want to distribute
-  your version on the Web, then embedding the string @"(sicp.texi) somewhere in
-  the file or Web page will make it easier for people to find with Web search
-  engines.
+  possible. Like the @e(morg)-to-@A(HTML) conversion, this was not without some
+  introduction of breakage. In the case of Unofficial morg Format, figures
+  have suffered an amateurish resurrection of the lost art of @A(ASCII) (and
+  Unicode). Also, it's quite possible that some errors of ambiguity were
+  introduced during the conversion of some of the copious superscripts (@'(^))
+  and subscripts (@'(_)).  Divining @e(which) has been left as an exercise to
+  the reader. But at least we don't put our brave astronauts at risk by encoding
+  the @e(greater-than-or-equal) symbol as @c(<u>&gt;</u>).
 
   It is believed that the Unofficial Texinfo Format is in keeping with the
   spirit of the graciously freely-distributed @A(HTML) version. But you never
@@ -87,29 +65,6 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   before you use your full name or distribute Info, @A(DVI), PostScript, or
   @A(PDF) formats that might embed your account or machine name. @i{Peath,
   Lytha Ayth}
-
-  @b{Addendum:} See also the @A(SICP) video lectures by Abelson and Sussman:
-  at @l(http://groups.csail.mit.edu/mac/classes/6.001/abelson-sussman-lectures/<>@A(MIT CSAIL)) or
-  @l(http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/<>@A(MIT OCW)).
-
-  @b{Second Addendum:} Above is the original introduction to the @A(UTF)
-  from 2001. Ten years later, @A(UTF) has been transformed: mathematical symbols
-  and formulas are properly typeset, and figures drawn in vector graphics. The
-  original text formulas and @A(ASCII) art figures are still there in the
-  Texinfo source, but will display only when compiled to Info output. At the
-  dawn of e-book readers and tablets, reading a @A(PDF) on screen is officially
-  not silly anymore. Enjoy!  @i{A.R, May, 2011}
-
-  @b{Third Addendum:} Things go in spirals. We explored the powers of Texinfo
-  and LaTeX at typesetting the @A(PDF) book. Now it's time to come back to
-  @A(HTML). This turn it shall be @A(HTML5). @"(It can be a dangerous place, but
-  it's our last, best hope for peace.) (Sinclair, @q(Babylon 5).) Does the peace
-  endure after the browser wars? Anyway, the aim of the project is to approach
-  the quality of LaTeX output by using the @A(HTML5) toolbox. JavaScript,
-  @A(CSS3), @A(SVG), MathJax, MathML, and web fonts are employed here. Due to
-  the experimental nature of this undertaking, there will be glitches and errors
-  in some browsers. Technical and artistic help is appreciated. In the
-  meantime, enjoy the book, and fire up a @A(REPL)!  @i{A.R, January, 2014}
 
 * Dedication
 
@@ -1225,11 +1180,11 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     actions in the different cases according to the rule
 
     ..example >
-            /
-            |   x  if x > 0
-      |x| = <   0  if x = 0
-            |  −x  if x < 0
-            \
+             ╭
+             │   x  if x > 0
+      │x│ = <    0  if x = 0
+             │  −x  if x < 0
+             ╰
     < example..
 
     This construct is called a @e(case analysis), and there is a special form in
@@ -1970,15 +1925,15 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 1.4) A linear iterative process for computing 6!.
 
     ..art >
-      (factorial 6)   -----.
-      (fact-iter   1 1 6)  |
-      (fact-iter   1 2 6)  |
-      (fact-iter   2 3 6)  |
-      (fact-iter   6 4 6)  |
-      (fact-iter  24 5 6)  |
-      (fact-iter 120 6 6)  |
-      (fact-iter 720 7 6)  V
-      720
+      (factorial 6)   ------.
+      (fact-iter   1 1 6)   |
+      (fact-iter   1 2 6)   |
+      (fact-iter   2 3 6)   |
+      (fact-iter   6 4 6)   |
+      (fact-iter  24 5 6)   |
+      (fact-iter 120 6 6)   |
+      (fact-iter 720 7 6)  /
+      720      <-----------
     < art..
 
 @ ..img > img/chap1/Fig1.4d.std.svg
@@ -4545,21 +4500,21 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 2.1) Data-abstraction barriers in the rational-number package.
 
     ..art >
-              +------------------------------------+
-      --------| Programs that use rational numbers |--------
-              +------------------------------------+
+              ╭────────────────────────────────────╮
+      ────────┤ Programs that use rational numbers ├────────
+              ╰────────────────────────────────────╯
                 Rational numbers in problem domain
-                  +---------------------------+
-      ------------|   add-rat  sub-rat  ...   |-------------
-                  +---------------------------+
+                  ╭───────────────────────────╮
+      ────────────┤   add-rat  sub-rat  ...   ├─────────────
+                  ╰───────────────────────────╯
          Rational numbers as numerators and denominators
-                    +------------------------+
-      --------------| make-rat  numer  denom |--------------
-                    +------------------------+
+                    ╭────────────────────────╮
+      ──────────────┤ make-rat  numer  denom ├──────────────
+                    ╰────────────────────────╯
                     Rational numbers as pairs
-                        +----------------+
-      ------------------| cons  car  cdr |------------------
-                        +----------------+
+                        ╭────────────────╮
+      ──────────────────┤ cons  car  cdr ├──────────────────
+                        ╰────────────────╯
                   However pairs are implemented
     < art..
 
@@ -5007,14 +4962,14 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 2.2) Box-and-pointer representation of @c[(cons 1 2)].
 
     ..art >
-           +---+---+     +---+
-      ---->| * | *-+---->| 2 |
-           +-|-+---+     +---+
-             |
-             V
-           +---+
-           | 1 |
-           +---+
+           ╭───┬───╮     ╭───╮
+      ────▶│ ◆ │ ◆ ┼────▶│ 2 │
+           ╰─┼─┴───╯     ╰───╯
+             │
+             ▼
+           ╭───╮
+           │ 1 │
+           ╰───╯
     < art..
 
 @ ..img > img/chap2/Fig2.2e.std.svg
@@ -5029,19 +4984,19 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 2.3) Two ways to combine 1, 2, 3, and 4 using pairs.
 
     ..art >
-           +---+---+     +---+---+         +---+---+     +---+
-      ---->| * | *-+---->| * | * |    ---->| * | *-+---->| 4 |
-           +-|-+---+     +-|-+-|-+         +-|-+---+     +---+
-             |             |   |             |
-             V             V   V             V
-         +---+---+      +---+ +---+      +---+---+     +---+---+
-         | * | * |      | 3 | | 4 |      | * | *-+---->| * | * |
-         +-|-+-|-+      +---+ +---+      +-|-+---+     +-|-+-|-+
-           |   |                           |             |   |
-           V   V                           V             V   V
-        +---+ +---+                      +---+        +---+ +---+
-        | 1 | | 2 |                      | 1 |        | 2 | | 3 |
-        +---+ +---+                      +---+        +---+ +---+
+           ╭───┬───╮     ╭───┬───╮         ╭───┬───╮     ╭───╮
+      ────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ◆ │    ────▶│ ◆ │ ◆ ┼────▶│ 4 │
+           ╰─┼─┴───╯     ╰─┼─┴─┼─╯         ╰─┼─┴───╯     ╰───╯
+             │             │   │             │
+             ▼             ▼   ▼             ▼
+         ╭───┬───╮      ╭───╮ ╭───╮      ╭───┬───╮     ╭───┬───╮
+         │ ◆ │ ◆ │      │ 3 │ │ 4 │      │ ◆ │ ◆ ┼────▶│ ◆ │ ◆ │
+         ╰─┼─┴─┼─╯      ╰───╯ ╰───╯      ╰─┼─┴───╯     ╰─┼─┴─┼─╯
+           │   │                           │             │   │
+           ▼   ▼                           ▼             ▼   ▼
+        ╭───╮ ╭───╮                      ╭───╮        ╭───╮ ╭───╮
+        │ 1 │ │ 2 │                      │ 1 │        │ 2 │ │ 3 │
+        ╰───╯ ╰───╯                      ╰───╯        ╰───╯ ╰───╯
 
         (cons (cons 1 2)                 (cons (cons 1
               (cons 3 4))                            (cons 2 3))
@@ -5091,14 +5046,14 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 2.4) The sequence 1, 2, 3, 4 represented as a chain of pairs.
 
     ..art >
-           +---+---+     +---+---+     +---+---+     +---+---+
-      ---->| * | *-+---->| * | *-+---->| * | *-+---->| * | / |
-           +-|-+---+     +-|-+---+     +-|-+---+     +-|-+---+
-             |             |             |             |
-             V             V             V             V
-           +---+         +---+         +---+         +---+
-           | 1 |         | 2 |         | 3 |         | 4 |
-           +---+         +---+         +---+         +---+
+           ╭───┬───╮     ╭───┬───╮     ╭───┬───╮     ╭───┬───╮
+      ────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+           ╰─┼─┴───╯     ╰─┼─┴───╯     ╰─┼─┴───╯     ╰─┼─┴───╯
+             │             │             │             │
+             ▼             ▼             ▼             ▼
+           ╭───╮         ╭───╮         ╭───╮         ╭───╮
+           │ 1 │         │ 2 │         │ 3 │         │ 4 │
+           ╰───╯         ╰───╯         ╰───╯         ╰───╯
     < art..
 
 @ ..img > img/chap2/Fig2.4e.std.svg
@@ -5529,22 +5484,22 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 2.5) Structure formed by @c[(cons (list 1 2) (list 3 4))].
 
     ..art >
-                                                (3 4)
-                                                  |
-                                                  V
-      ((1 2) 3 4)  +---+---+                  +---+---+     +---+---+
-              ---->| * | *-+----------------->| * | *-+---->| * | / |
-                   +-|-+---+                  +-|-+---+     +-|-+---+
-                     |                          |             |
-                     V                          V             V
-            (1 2)  +---+---+     +---+---+    +---+         +---+
-              ---->| * | *-+---->| * | / |    | 3 |         | 4 |
-                   +-|-+---+     +-|-+---+    +---+         +---+
-                     |             |
-                     V             V
-                   +---+         +---+
-                   | 1 |         | 2 |
-                   +---+         +---+
+            ((1 2) 3 4)                   (3 4)
+                 │                          │
+                 ▼                          ▼
+             ╭───┬───╮                  ╭───┬───╮     ╭───┬───╮
+             │ ◆ │ ◆ ┼─────────────────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+             ╰─┼─┴───╯                  ╰─┼─┴───╯     ╰─┼─┴───╯
+               │                          │             │
+               ▼                          ▼             ▼
+      (1 2)  ╭───┬───╮     ╭───┬───╮    ╭───╮         ╭───╮
+      ──────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │    │ 3 │         │ 4 │
+             ╰─┼─┴───╯     ╰─┼─┴───╯    ╰───╯         ╰───╯
+               │             │
+               ▼             ▼
+             ╭───╮         ╭───╮
+             │ 1 │         │ 2 │
+             ╰───╯         ╰───╯
     < art..
 
 @ ..img > img/chap2/Fig2.5e.std.svg
@@ -5557,12 +5512,15 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 2.6) The list structure in @l(#Figure 2.5) viewed as a tree.
 
     ..art >
-       ((1 2) 3 4)
-           /\\
-          /  | \
-      (1 2)  3 4
-       / \
-       1 2
+         ((1 2) 3 4)
+             /|\
+            / | \
+           /  |  \
+          /   |   \
+       (1 2)  3    4
+        / \
+       /   \
+      1     2
     < art..
 
 @ ..img > img/chap2/Fig2.6b.std.svg
@@ -5899,15 +5857,15 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     between the two programs.
 
     ..art >
-      +-------------+   +-------------+   +-------------+   +-------------+
-      | enumerate:  |-->| filter:     |-->| map:        |-->| accumulate: |
-      | tree leaves |   | odd?        |   | square      |   | +, 0        |
-      +-------------+   +-------------+   +-------------+   +-------------+
+      ╭─────────────╮   ╭──────────╮   ╭─────────╮   ╭─────────────╮
+      │ enumerate:  ├──▶│ filter:  ├──▶│ map:    ├──▶│ accumulate: │
+      │ tree leaves │   │ odd?     │   │ square  │   │ +, 0        │
+      ╰─────────────╯   ╰──────────╯   ╰─────────╯   ╰─────────────╯
 
-      +-------------+   +-------------+   +-------------+   +-------------+
-      | enumerate:  |-->| map:        |-->| filter:     |-->| accumulate: |
-      | integers    |   | fib         |   | even?       |   | cons, ()    |
-      +-------------+   +-------------+   +-------------+   +-------------+
+      ╭─────────────╮   ╭──────────╮   ╭─────────╮   ╭─────────────╮
+      │ enumerate:  ├──▶│ map:     ├──▶│ filter: ├──▶│ accumulate: │
+      │ integers    │   │ fib      │   │ even?   │   │ cons, ()    │
+      ╰─────────────╯   ╰──────────╯   ╰─────────╯   ╰─────────────╯
     < art..
 
 @ ..img > img/chap2/Fig2.7e.std.svg
@@ -6640,19 +6598,19 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 2.13) Recursive plans for @c(right-split) and @c(corner-split).
 
     ..art >
-      +-------------+-------------+    +------+------+-------------+
-      |             |             |    | up-  | up-  |             |
-      |             | right-split |    | split| split| corner-split|
-      |             |             |    |      |      |             |
-      |             |     n-1     |    |  n-1 |  n-1 |     n-1     |
-      |             |             |    |      |      |             |
-      |  identity   +-------------+    +------+------+-------------+
-      |             |             |    |             | right-split |
-      |             | right-split |    |             |     n-1     |
-      |             |             |    |  identity   +-------------+
-      |             |     n-1     |    |             | right-split |
-      |             |             |    |             |     n-1     |
-      +-------------+-------------+    +-------------+-------------+
+      ╭─────────────┬─────────────╮    ╭──────┬──────┬─────────────╮
+      │             │             │    │ up-  │ up-  │             │
+      │             │ right-split │    │ split│ split│ corner-split│
+      │             │             │    │      │      │             │
+      │             │     n-1     │    │  n-1 │  n-1 │     n-1     │
+      │             │             │    │      │      │             │
+      │  identity   ├─────────────┤    ├──────┴──────┼─────────────┤
+      │             │             │    │             │ right-split │
+      │             │ right-split │    │             │     n-1     │
+      │             │             │    │  identity   ├─────────────┤
+      │             │     n-1     │    │             │ right-split │
+      │             │             │    │             │     n-1     │
+      ╰─────────────┴─────────────╯    ╰─────────────┴─────────────╯
 
              right-split n                    corner-split n
     < art..
@@ -6788,17 +6746,19 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
                                __
                            __--  \
                        __--       \
-            __     __--            \   __
-           |\  __--                 \__-|
-             \-                  __--
+                   __--            \
+               __--                 \
+             _-                      \
+             ◤                   __-◥
       frame   \              __--
       edge2    \         __--    frame
       vector    \    __--        edge1
                  \_--            vector
-                  -   <--+
-                frame    |
-                origin   +-- (0, 0) point
-                vector       on display screen
+                  - ◀╮
+                     ╰───╮
+               frame     │
+               origin    ╰ (0, 0) point
+               vector      on display screen
     < art..
 
 @   ..img > img/chap2/Fig2.15a.std.svg
@@ -8551,14 +8511,14 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
 
     ..art >
                  Programs that use complex numbers
-        +-------------------------------------------------+
-      --| add-complex sub-complex mul-complex div-complex |--
-        +-------------------------------------------------+
+        ╭─────────────────────────────────────────────────╮
+      ──┤ add-complex sub-complex mul-complex div-complex ├──
+        ╰─────────────────────────────────────────────────╯
                     Complex arithmetic package
-      ---------------------------+---------------------------
-                Rectangular      |         Polar
-              representation     |     representation
-      ---------------------------+---------------------------
+      ───────────────────────────┬───────────────────────────
+                Rectangular      │         Polar
+              representation     │     representation
+      ───────────────────────────┴───────────────────────────
           List structure and primitive machine arithmetic
     < art..
 
@@ -8599,17 +8559,17 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
 
     ..art >
        Imaginary
-          ^
-          |
-        y |.........................* z = x + iy = reⁱᴬ
-          |                    __-- .
-          |                __--     .
-          |          r __--         .
-          |        __--             .
-          |    __-- \               .
-          |__--    A |              .
-      ----+----------+-------------------> Real
-          |                         x
+          ▲
+          │
+        y │.........................◆ z = x + iy = reⁱᴬ
+          │                    __-- .
+          │                __--     .
+          │          r __--         .
+          │        __--             .
+          │    __-- \               .
+          │__--    A |              .
+      ────┼──────────┴───────────────────▶ Real
+          │                         x
     < art..
 
 @ ..img > img/chap2/Fig2.20.std.svg
@@ -8953,18 +8913,18 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 2.21) Structure of the generic complex-arithmetic system.
 
     ..art >
-          +-------------------------------------------------+
-      ----| add-complex sub-complex mul-complex div-complex |----
-          +-------------------------------------------------+
+           ╭─────────────────────────────────────────────────╮
+      ─────┤ add-complex sub-complex mul-complex div-complex ├────
+           ╰─────────────────────────────────────────────────╯
                       Complex arithmetic package
-                       +-----------------------+
-                       | real-part   imag-part |
-      -----------------|                       |------------------
-                       | magnitude   angle     |
-                       +-----------+-----------+
-                 Rectangular       |          Polar
-                representation     |     representation
-      -----------------------------+------------------------------
+                       ╭───────────────────────╮
+                       │ real-part   imag-part │
+      ─────────────────┤                       ├──────────────────
+                       │ magnitude   angle     │
+                       ╰───────────┬───────────╯
+                 Rectangular       │          Polar
+                representation     │     representation
+      ─────────────────────────────┴──────────────────────────────
              List structure and primitive machine arithmetic
     < art..
 
@@ -9417,21 +9377,21 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 2.23) Generic arithmetic system.
 
     ..art >
-                              Programs that use numbers
-                                 +-----------------+
-      ---------------------------| add sub mul div |-------------------
-                                 +-----------------+
-                              Generic arithmetic package
-       +-----------------+   +-------------------------+
-       | add-rat sub-rat |   | add-complex sub-complex |   +---------+
-      -|                 |-+-|                         |-+-| + - * / |-
-       | mul-rat div-rat | | | mul-complex div-complex | | +---------+
-       +-----------------+ | +-------------------------+ |
-            Rational       |     Complex artithmetic     |   Ordinary
-           arithmetic      +--------------+--------------+  arithmetic
-                           | Rectangular  |     Polar    |
-      ---------------------+--------------+--------------+-------------
-                   List structure and primitive machine arithmetic
+                               Programs that use numbers
+                                  ╭─────────────────╮
+      ────────────────────────────┤ add sub mul div ├────────────────────
+                                  ╰─────────────────╯
+                               Generic arithmetic package
+        ╭─────────────────╮   ╭─────────────────────────╮
+        │ add-rat sub-rat │   │ add-complex sub-complex │   ╭─────────╮
+      ──┤                 ├─┬─┤                         ├─┬─┤ + - * / ├──
+        │ mul-rat div-rat │ │ │ mul-complex div-complex │ │ ╰─────────╯
+        ╰─────────────────╯ │ ╰─────────────────────────╯ │
+             Rational       │     Complex artithmetic     │   Ordinary
+            arithmetic      ├──────────────┬──────────────┤  arithmetic
+                            │ Rectangular  │     Polar    │
+      ──────────────────────┴──────────────┴──────────────┴──────────────
+                    List structure and primitive machine arithmetic
     < art..
 
 @ ..img > img/chap2/Fig2.23b.std.svg
@@ -9622,14 +9582,14 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 2.24) Representation of @m(3 + 4i) in rectangular form.
 
     ..art >
-           +---+---+     +---+---+     +---+---+
-      ---->| * | *-+---->| * | *-+---->| * | * |
-           +-|-+---+     +-|-+---+     +-|-+-|-+
-             |             |             |   |
-             V             V             V   V
-       +---------+   +-------------+  +---+ +---+
-       | complex |   | rectangular |  | 3 | | 4 |
-       +---------+   +-------------+  +---+ +---+
+           ╭───┬───╮     ╭───┬───╮     ╭───┬───╮
+      ────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ◆ │
+           ╰─┼─┴───╯     ╰─┼─┴───╯     ╰─┼─┴─┼─╯
+             │             │             │   │
+             ▼             ▼             ▼   ▼
+          ╭─────────╮ ╭─────────────╮ ╭───╮ ╭───╮
+          │ complex │ │ rectangular │ │ 3 │ │ 4 │
+          ╰─────────╯ ╰─────────────╯ ╰───╯ ╰───╯
     < art..
 
 @ ..img > img/chap2/Fig2.24d.std.svg
@@ -9865,14 +9825,14 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
 
     ..art >
        complex
-         ^
-         |
+         ▲
+         │
         real
-         ^
-         |
+         ▲
+         │
       rational
-         ^
-         |
+         ▲
+         │
       integer
     < art..
 
@@ -10743,11 +10703,12 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
 
   ..quote >
     Mεταβάλλον ὰναπαύεται
-
     (Even while it changes, it stands still.)
+
     --Heraclitus
 
     Plus ça change, plus c'est la même chose.
+
     --Alphonse Karr
   < quote..
 
@@ -11664,19 +11625,19 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 3.1) A simple environment structure.
 
     ..art >
-                 +--------+
-                 |      I |
-                 | x: 3   |
-                 | y: 5   |
-                 +--------+
-                    ^  ^
-                    |  |
-                  C |  | D
-      +---------+   |  |   +----------+
-      |      II |   |  |   |      III |
-      | z: 6    +---+  +---+ m: 1     |
-      | x: 7    |          | y: 2     |
-      +---------+          +----------+
+                 ╭────────╮
+                 │      I │
+                 │ x: 3   │
+                 │ y: 5   │
+                 ╰────────╯
+                    ▲  ▲
+                    │  │
+                  C │  │ D
+      ╭─────────╮   │  │   ╭─────────╮
+      │      II │   │  │   │     III │
+      │ z: 6    ├───╯  ╰───┤ m: 1    │
+      │ x: 7    │          │ y: 2    │
+      ╰─────────╯          ╰─────────╯
     < art..
 
 @ ..img > img/chap3/Fig3.1b.std.svg
@@ -11748,19 +11709,19 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     @c[(define (square x) (* x x))] in the global environment.
 
     ..art >
-                 +----------------------+
-                 | other variables      |
-      global --->|                      |
-      env        | square: --+          |
-                 +-----------|----------+
-                             |       ^
-      (define (square x)     |       |
-        (* x x))             V       |
-                         .---.---.   |
-                         | O | O-+---+
-                         `-|-^---'
-                           |
-                           V
+                 ╭──────────────────────╮
+                 │ other variables      │
+      global ───▶│                      │
+      env        │ square: ──╮          │
+                 ╰───────────┼──────────╯
+                             │       ▲
+      (define (square x)     │       │
+        (* x x))             ▼       │
+                         .───.───.   │
+                         │ ◆ │ ◆ ┼───╯
+                         `─┼─^───'
+                           │
+                           ▼
                          parameters: x
                          body: (* x x)
     < art..
@@ -11789,19 +11750,19 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 3.3) Environment created by evaluating @c[(square 5)] in the global environment.
 
     ..art >
-                +------------------------------------+
-                | other variables                    |
-      global -->|                                    |
-      env       | square: --+                        |
-                +-----------|---------------------+--+
-                            |       ^             ^
-      (square 5)            |       |             |
-                            V       |             |
-                        .---.---.   |         +---+--+
-                        | O | O-+---+   E1 -->| x: 5 |
-                        `-|-^---'             +------+
-                          |
-                          V
+                 ╭─────────────────────────────────────────╮
+                 │ other variables                         │
+      global ───▶│                                         │
+      env        │ square: ──╮                             │
+                 ╰───────────┼─────────────────────────────╯
+                             │       ▲              ▲
+      (square 5)             │       │              │
+                             ▼       │              │
+                         .───.───.   │           ╭──┴────╮
+                         │ ◆ │ ◆ ┼───╯   E1 ────▶│ x: 5  │
+                         `─┼─^───'               ╰───────╯
+                           │
+                           ▼
                         parameters: x
                         body: (* x x)
     < art..
@@ -11863,23 +11824,23 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 3.4) Procedure objects in the global frame.
 
     ..art >
-                +--------------------------------------------+
-                | sum-of-squares:                            |
-      global -->| square:                                    |
-      env       | f: --+                                     |
-                +------|--------------+--------------+-------+
-                       |     ^        |     ^        |     ^
-                       |     |        |     |        |     |
-                       V     |        V     |        V     |
-                   .---.---. |    .---.---. |    .---.---. |
-                   | O | O-+-+    | O | O-+-+    | O | O-+-+
-                   `-|-^---'      `-|-^---'      `-|-^---'
-                     |              |              |
-                     V              V              V
-         parameters: a          parameters: x  parameters: x, y
-         body: (sum-of-squares  body: (* x x)  body: (+ (square x)
-                 (+ a 1)                                (square y))
-                 (* a 2))
+             ╭───────────────────────────────────────────────╮
+      global │ sum-of-squares: ──────────────────────╮       │
+      env    │ square: ───────────────╮              │       │
+         ───▶│ f: ─────╮              │              │       │
+             ╰─────────┼──────────────┼──────────────┼───────╯
+                       │     ▲        │     ▲        │     ▲
+                       │     │        │     │        │     │
+                       ▼     │        ▼     │        ▼     │
+                   .───.───. │    .───.───. │    .───.───. │
+                   │ ◆ │ ◆ ┼─╯    │ ◆ │ ◆ ┼─╯    │ ◆ │ ◆ ┼─╯
+                   `─┼─^───'      `─┼─^───'      `─┼─^───'
+                     │              │              │
+                     ▼              ▼              ▼
+       parameters: a            parameters: x    parameters: x, y
+       body: (sum-of-squares    body: (* x x)    body: (+ (square x)
+               (+ a 1)                                    (square y))
+               (* a 2))
     < art..
 
 @ ..img > img/chap3/Fig3.4b.std.svg
@@ -11897,15 +11858,15 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     the procedures in @l(#Figure 3.4).
 
     ..art >
-                +-----------------------------------------------------+
-      global -->|                                                     |
-      env       +-----------------------------------------------------+
-                  ^              ^                ^               ^
+                ╭─────────────────────────────────────────────────────╮
+      global ──▶│                                                     │
+      env       ╰─────────────────────────────────────────────────────╯
+                  ▲              ▲                ▲               ▲
       (f 5)       |              |                |               |
-              +------+       +-------+        +------+        +-------+
-        E1 -->| a: 5 |  E2 ->| x: 6  |  E3 -->| x: 6 |  E4 -->| x: 10 |
-              |      |       | y: 10 |        |      |        |       |
-              +------+       +-------+        +------+        +-------+
+              ╭──────╮       ╭───────╮        ╭──────╮        ╭───────╮
+        E1 ──▶│ a: 5 │  E2 ─▶│ x: 6  │  E3 ──▶│ x: 6 │  E4 ──▶│ x: 10 │
+              │      │       │ y: 10 │        │      │        │       │
+              ╰──────╯       ╰───────╯        ╰──────╯        ╰───────╯
          (sum-of-squares   (+ (square x)       (* x x)         (* x x)
            (+ a 1)            (square u))
            (+ a 2))
@@ -12017,23 +11978,23 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     environment.
 
     ..art >
-                +---------------------------+
-      global -->| make-withdraw: --+        |
-      env       +------------------|--------+
-                                   |      ^
-                                   V      |
-                               .---.---. |
-                               | O | O-+--+
-                               `-|-^---'
-                                 |
-                                 V
-               parameters: balance
-               body: (lambda (amount)
-                       (if (>= balance amount)
-                           (begin (set! balance
-                                        (- balance amount))
-                                  balance)
-                           "Insufficient funds"))
+                 ╭─────────────────────────────╮
+      global ───▶│ make-withdraw:   ──╮        │
+      env        ╰────────────────────┼────────╯
+                                      │     ▲
+                                      │     │
+                                      ▼     │
+                                  .───.───. │
+                                  │ ◆ │ ◆ ┼─╯
+                                  `─┼─^───'
+                                    │
+          parameters: balance       ▼
+          body: (lambda (amount)
+                  (if (>= balance amount)
+                      (begin (set! balance
+                                   (- balance amount))
+                             balance)
+                      "Insufficient funds"))
     < art..
 
 @ ..img > img/chap3/Fig3.6c.std.svg
@@ -12059,21 +12020,22 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 3.7) Result of evaluating @c[(define W1 (make-withdraw 100))].
 
     ..art >
-                +-----------------------------------------------+
-                | make-withdraw: -----------------------+       |
-      global -->|                                       |       |
-                | W1: --+                               |       |
-                +-------|-------------------------------|-------+
-                        |                ^              |     ^
-                        |                |              V     |
-                        |        +-------+------+   .---.---. |
-                        |  E1 -->| balance: 100 |   | O | O-+-+
-                        |        +--------------+   `-|-^---'
-                        V                ^            |
-                    .---.---.            |            V
-                  +-+-O | O-+------------+    parameters: balance
-                  | `---^---'                 body: ...
-                  V
+             ╭────────────────────────────────────────────────╮
+      global │ make-withdraw: ─────────────────────────────╮  │
+      env    │                                             │  │
+         ───▶│ W1: ─╮                                      │  │
+             ╰──────┼──────────────────────────────────────┼──╯
+                    │                 ▲                    │
+                    │                 |                    │
+                    │          ╭──────────────╮  .───.───. │
+                    │    E1 ──▶│ balance: 100 │  │ ◆ │ ◆ ┼─╯
+                    │          ╰──────────────╯  `─┼─^───'
+                    ▼                 │            │
+                .───.───.             │            ▼
+                │ ◆ │ ◆ ┼─────────────╯     parameters: balance
+                `─┼─^───'                   body: ...
+                  │
+                  ▼
           parameters: amount
           body: (if (>= balance amount)
                     (begin (set! balance (- balance amount))
@@ -12113,22 +12075,22 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 3.8) Environments created by applying the procedure object @c(W1).
 
     ..art >
-                +---------------------------------------------------+
-                | make-withdraw: ...                                |
-      global -->|                                                   |
-      env       | W1: --+                                           |
-                +-------|-------------------------------------------+
-                        |               ^
-                        |               |
-                        |       +-------+------+ Here is the balance
-                        | E1 -->| balance: 100 | that will be changed
-                        |       +--------------+ by the set!.
-                        V               ^   ^
-                    .---.---.           |   +----+
-                    | O | O-+-----------+        |
-                    `-|-^---'             +------+-----+
-                      |                   | amount: 50 |
-                      V                   +------------+
+             ╭──────────────────────────────────────╮
+      global │ make-withdraw: ...                   │
+      env    │                                      │
+         ───▶│ W1: ─╮                               │
+             ╰──────┼───────────────────────────────╯
+                    │                 ▲
+                    │                 |
+                    │          ╭──────────────╮ Here is the balance
+                    │    E1 ──▶│ balance: 100 │ that will be changed
+                    │          ╰──────────────╯ by the set!.
+                    ▼             │       ▲
+                .───.───.         │       |
+                │ ◆ │ ◆ ┼─────────╯    ╭────────────╮
+                `─┼─^───'              │ amount: 50 │
+                  │                    ╰────────────╯
+                  ▼
             parameters: amount   (if (>= balance amount)
             body: ...                (begin (set! balance
                                                   (- balance amount))
@@ -12152,22 +12114,22 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 3.9) Environments after the call to @c(W1).
 
     ..art >
-                 +------------------------------------+
-                 | make-withdraw: ...                 |
-      global --->|                                    |
-      env        | W1: --+                            |
-                 +-------|----------------------------+
-                         |                   ^
-                         |                   |
-                         |            +------+------+
-                         |     E1 --->| balance: 50 |
-                         |            +-------------+
-                         V                   ^
-                     .---.---.               |
-                     | O | O-+---------------+
-                     `-|-^---'
-                       |
-                       V
+             ╭──────────────────────────────────────╮
+      global │ make-withdraw: ...                   │
+      env    │                                      │
+         ───▶│ W1: ─────╮                           │
+             ╰──────────┼───────────────────────────╯
+                        │                 ▲
+                        │                 |
+                        │          ╭─────────────╮
+                        │    E1 ──▶│ balance: 50 │
+                        │          ╰─────────────╯
+                        ▼                 │
+                    .───.───.             │
+                    │ ◆ │ ◆ ┼─────────────╯
+                    `─┼─^───'
+                      │
+                      ▼
                 parameters: amount
                 body: ...
     < art..
@@ -12196,22 +12158,22 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     a second object.
 
     ..art >
-               +-------------------------------------------------+
-               | make-withdraw: ...                              |
-      global ->| W2: ---------------------------+                |
-      env      | W1: --+                        |                |
-               +-------|------------------------|----------------+
-                       |              ^         |              ^
-                       |              |         |              |
-                       |       +------+------+  |       +------+-------+
-                       |  E1 ->| balance: 50 |  |  E2 ->| balance: 100 |
-                       |       +-------------+  |       +--------------+
-                       V              ^         V              ^
-                   .---.---.          |     .---.---.          |
-                   | O | O-+----------+     | O | O-+----------+
-                   `-|-^---'                `-|-^---'
-                     | +----------------------+
-                     V V
+               ╭─────────────────────────────────────────────────╮
+               │ make-withdraw: ...                              │
+      global ─▶│ W2: ───────────────────────────╮                │
+      env      │ W1:  ─╮                        │                │
+               ╰───────┼────────────────────────┼────────────────╯
+                       │              ▲         │              ▲
+                       │              |         │              |
+                       │       ╭─────────────╮  │       ╭──────────────╮
+                       │  E1 ─▶│ balance: 50 │  │  E2 ─▶│ balance: 100 │
+                       │       ╰─────────────╯  │       ╰──────────────╯
+                       ▼              ▲         ▼              ▲
+                   .───.───.          │     .───.───.          │
+                   │ ◆ │ ◆ ┼──────────╯     │ ◆ │ ◆ ┼──────────╯
+                   `─┼─^───'                `─┼─^───'
+                     │ ╭──────────────────────╯
+                     ▼ ▼
               parameters: amount
               body: ...
     < art..
@@ -12287,28 +12249,28 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 3.11) @c(Sqrt) procedure with internal definitions.
 
     ..art >
-                +--------------------------------------------------+
-      global -->| sqrt: --+                                        |
-      env       |         |                                        |
-                +---------|----------------------------------------+
-                          V       ^                   ^
-                      .---.---.   |                   |
-           +----------+-O | O-+---+        +----------+------------+
-           |          `---^---'            | x: 2                  |
-           V                         E1 -->| good-enough?: -+      |
-      parameters: x                        | improve: ...   |      |
-      body: (define good-enough? ...)      | sqrt-iter: ... |      |
-            (define improve ...)           +----------------|------+
-            (define sqrt-iter ...)          ^  ^            |     ^
-            (sqrt-iter 1.0)                 |  |            V     |
-                                  +---------++ |        .---.---. |
-                            E2 -->| guess: 1 | |        | O | O-+-+
-                                  +----------+ |        `-|-^---'
-                            call to sqrt-iter  |          |
-                                               |          V
-                                     +---------++    parameters: guess
-                               E3 -->| guess: 1 |    body: (< (abs ...)
-                                     +----------+             ...)
+                ╭──────────────────────────────────────────────────╮
+      global ──▶│ sqrt: ──╮                                        │
+      env       │         │                                        │
+                ╰─────────┼────────────────────────────────────────╯
+                          ▼       ▲                   ▲
+                      .───.───.   │                   │
+           ╭──────────│ ◆ │ ◆ ┼───╯        ╭──────────┴────────────╮
+           │          `───^───'            │ x: 2                  │
+           ▼                         E1 ──▶│ good-enough?: ─╮      │
+      parameters: x                        │ improve: ...   │      │
+      body: (define good-enough? ...)      │ sqrt-iter: ... │      │
+            (define improve ...)           ╰────────────────┼──────╯
+            (define sqrt-iter ...)          ▲  ▲            │     ▲
+            (sqrt-iter 1.0)                 │  │            ▼     │
+                                  ╭─────────┴╮ │        .───.───. │
+                            E2 ──▶│ guess: 1 │ │        │ ◆ │ ◆ ┼─╯
+                                  ╰──────────╯ │        `─┼─^───'
+                            call to sqrt─iter  │          │
+                                               │          ▼
+                                     ╭─────────┴╮    parameters: guess
+                               E3 ──▶│ guess: 1 │    body: (< (abs ...)
+                                     ╰──────────╯             ...)
                                call to good-enough?
     < art..
 
@@ -12468,27 +12430,27 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 3.12) Lists @c(x): @c[((a b) c d)] and @c(y): @c[(e f)].
 
     ..art >
-           +---+---+     +---+---+     +---+---+
-      x -->| * | *-+---->| * | *-+---->| * | / |
-           +-|-+---+     +-|-+---+     +-|-+---+
-             |             V             V
-             |           +---+         +---+
-             |           | c |         | d |
-             |           +---+         +---+
-             |           +---+---+     +---+---+
-             +---------->| * | *-+---->| * | / |
-                         +-|-+---+     +-|-+---+
-                           V             V
-                         +---+         +---+
-                         | a |         | b |
-                         +---+         +---+
-                         +---+---+     +---+---+
-                    y -->| * | *-+---->| * | / |
-                         +-|-+---+     +-|-+---+
-                           V             V
-                         +---+         +---+
-                         | e |         | f |
-                         +---+         +---+
+           ╭───┬───╮     ╭───┬───╮     ╭───┬───╮
+      x ──▶│ ◆ │ ◆ ┼────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+           ╰─┼─┴───╯     ╰─┼─┴───╯     ╰─┼─┴───╯
+             │             ▼             ▼
+             │           ╭───╮         ╭───╮
+             │           │ c │         │ d │
+             │           ╰───╯         ╰───╯
+             │           ╭───┬───╮     ╭───┬───╮
+             ╰──────────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+                         ╰─┼─┴───╯     ╰─┼─┴───╯
+                           ▼             ▼
+                         ╭───╮         ╭───╮
+                         │ a │         │ b │
+                         ╰───╯         ╰───╯
+                         ╭───┬───╮     ╭───┬───╮
+                    y ──▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+                         ╰─┼─┴───╯     ╰─┼─┴───╯
+                           ▼             ▼
+                         ╭───╮         ╭───╮
+                         │ e │         │ f │
+                         ╰───╯         ╰───╯
     < art..
 
 @ ..img > img/chap3/Fig3.12b.std.svg
@@ -12497,27 +12459,27 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     @l(#Figure 3.12).
 
     ..art >
-           +---+---+     +---+---+     +---+---+
-      x -->| * | *-+---->| * | *-+---->| * | / |
-           +-|-+---+     +-|-+---+     +-|-+---+
-             |             V             V
-             |           +---+         +---+
-             |           | c |         | d |
-             |           +---+         +---+
-             |           +---+---+     +---+---+
-             |           | * | *-+---->| * | / |
-             |           +-|-+---+     +-|-+---+
-             |             V             V
-             |           +---+         +---+
-             |           | a |         | b |
-             |           +---+         +---+
-             +---------->+---+---+     +---+---+
-                         | * | *-+---->| * | / |
-                    y -->+-|-+---+     +-|-+---+
-                           V             V
-                         +---+         +---+
-                         | e |         | f |
-                         +---+         +---+
+           ╭───┬───╮     ╭───┬───╮     ╭───┬───╮
+      x ──▶│ ◆ │ ◆ ┼────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+           ╰─┼─┴───╯     ╰─┼─┴───╯     ╰─┼─┴───╯
+             │             ▼             ▼
+             │           ╭───╮         ╭───╮
+             │           │ c │         │ d │
+             │           ╰───╯         ╰───╯
+             │           ╭───┬───╮     ╭───┬───╮
+             │           │ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+             │           ╰─┼─┴───╯     ╰─┼─┴───╯
+             │             ▼             ▼
+             │           ╭───╮         ╭───╮
+             │           │ a │         │ b │
+             │           ╰───╯         ╰───╯
+             ╰──────────▶╭───┬───╮     ╭───┬───╮
+                    y ──▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+                         ╰─┼─┴───╯     ╰─┼─┴───╯
+                           ▼             ▼
+                         ╭───╮         ╭───╮
+                         │ e │         │ f │
+                         ╰───╯         ╰───╯
     < art..
 
 @ ..img > img/chap3/Fig3.13b.std.svg
@@ -12532,27 +12494,27 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     lists in @l(#Figure 3.12).
 
     ..art >
-           +---+---+     +---+---+     +---+---+
-      x -->| * | *-+---->| * | *-+---->| * | / |
-           +-|-+---+ +-->+-|-+---+     +-|-+---+
-             |       |     V             V
-             |       |   +---+         +---+
-             |       |   | c |         | d |
-             |       |   +---+         +---+
-             |       |   +---+---+     +---+---+
-             +-------+-->| * | *-+---->| * | / |
-                     |   +-|-+---+     +-|-+---+
-           +---+---+ |     V             V
-      z -->| * | *-+-+   +---+         +---+
-           +-|-+---+     | a |         | b |
-             |           +---+         +---+
-             +---------->+---+---+     +---+---+
-                         | * | *-+---->| * | / |
-                    y -->+-|-+---+     +-|-+---+
-                           V             V
-                         +---+         +---+
-                         | e |         | f |
-                         +---+         +---+
+           ╭───┬───╮     ╭───┬───╮     ╭───┬───╮
+      x ──▶│ ◆ │ ◆ ┼────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+           ╰─┼─┴───╯ ╭──▶╰─┼─┴───╯     ╰─┼─┴───╯
+             │       │     ▼             ▼
+             │       │   ╭───╮         ╭───╮
+             │       │   │ c │         │ d │
+             │       │   ╰───╯         ╰───╯
+             │       │   ╭───┬───╮     ╭───┬───╮
+             ╰───────┼──▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+                     │   ╰─┼─┴───╯     ╰─┼─┴───╯
+                     │     ▼             ▼
+           ╭───┬───╮ │   ╭───╮         ╭───╮
+      z ──▶│ ◆ │ ◆ ┼─╯   │ a │         │ b │
+           ╰─┼─┴───╯     ╰───╯         ╰───╯
+             ╰──────────▶╭───┬───╮     ╭───┬───╮
+                    y ──▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+                         ╰─┼─┴───╯     ╰─┼─┴───╯
+                           ▼             ▼
+                         ╭───╮         ╭───╮
+                         │ e │         │ f │
+                         ╰───╯         ╰───╯
     < art..
 
 @ ..img > img/chap3/Fig3.14b.std.svg
@@ -12568,27 +12530,27 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     @l(#Figure 3.12).
 
     ..art >
-           +---+---+     +---+---+     +---+---+
-      x -->| * | * |     | * | *-+---->| * | / |
-           +-|-+-|-+     +-|-+---+     +-|-+---+
-             |   |         V             V
-             |   |       +---+         +---+
-             |   |       | c |         | d |
-             |   |       +---+         +---+
-             |   |       +---+---+     +---+---+
-             +---+------>| * | *-+---->| * | / |
-                 |       +-|-+---+     +-|-+---+
-                 |         V             V
-                 |       +---+         +---+
-                 |       | a |         | b |
-                 |       +---+         +---+
-                 +------>+---+---+     +---+---+
-                         | * | *-+---->| * | / |
-                    y -->+-|-+---+     +-|-+---+
-                           V             V
-                         +---+         +---+
-                         | e |         | f |
-                         +---+         +---+
+           ╭───┬───╮     ╭───┬───╮     ╭───┬───╮
+      x ──▶│ ◆ │ ◆ │     │ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+           ╰─┼─┴─┼─╯     ╰─┼─┴───╯     ╰─┼─┴───╯
+             │   │         ▼             ▼
+             │   │       ╭───╮         ╭───╮
+             │   │       │ c │         │ d │
+             │   │       ╰───╯         ╰───╯
+             │   │       ╭───┬───╮     ╭───┬───╮
+             ╰───┼──────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+                 │       ╰─┼─┴───╯     ╰─┼─┴───╯
+                 │         ▼             ▼
+                 │       ╭───╮         ╭───╮
+                 │       │ a │         │ b │
+                 │       ╰───╯         ╰───╯
+                 ╰──────▶╭───┬───╮     ╭───┬───╮
+                    y ──▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+                         ╰─┼─┴───╯     ╰─┼─┴───╯
+                           ▼             ▼
+                         ╭───╮         ╭───╮
+                         │ e │         │ f │
+                         ╰───╯         ╰───╯
     < art..
 
 @ ..img > img/chap3/Fig3.15b.std.svg
@@ -12722,17 +12684,18 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 3.16) The list @c(z1) formed by @c[(cons x x)].
 
     ..art >
-            +---+---+
-      z1 -->| * | * |
-            +-|-+-|-+
-              V   V
-            +---+---+     +---+---+
-       x -->| * | *-+---->| * | / |
-            +-|-+---+     +-|-+---+
-              V             V
-            +---+         +---+
-            | a |         | b |
-            +---+         +---+
+            ╭───┬───╮
+      z1 ──▶│ ◆ │ ◆ │
+            ╰─┼─┴─┼─╯
+              │   │
+              ▼   ▼
+            ╭───┬───╮     ╭───┬───╮
+       x ──▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+            ╰─┼─┴───╯     ╰─┼─┴───╯
+              ▼             ▼
+            ╭───╮         ╭───╮
+            │ a │         │ b │
+            ╰───╯         ╰───╯
     < art..
 
 @ ..img > img/chap3/Fig3.16b.std.svg
@@ -12749,18 +12712,17 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     @c[(cons (list 'a 'b) (list 'a 'b))].
 
     ..art >
-            +---+---+     +---+---+     +---+---+
-      z2 -->| * | *-+---->| * | *-+---->| * | / |
-            +-|-+---+     +-|-+---+     +-|-+---+
-              |             V             V
-              |           +---+         +---+
-              |           | a |         | b |
-              |           +---+         +---+
-              |             ^             ^
-              |             |             |
-              |           +-|-+---+     +-|-+---+
-              +---------->| * | *-+---->| * | / |
-                          +---+---+     +---+---+
+            ╭───┬───╮     ╭───┬───╮     ╭───┬───╮
+      z2 ──▶│ ◆ │ ◆ ┼────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+            ╰─┼─┴───╯     ╰─┼─┴───╯     ╰─┼─┴───╯
+              │             ▼             ▼
+              │           ╭───╮         ╭───╮
+              │           │ a │         │ b │
+              │           ╰───╯         ╰───╯
+              │             ▲             ▲
+              │           ╭─┼─┬───╮     ╭─┼─┬───╮
+              ╰──────────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+                          ╰───┴───╯     ╰───┴───╯
     < art..
 
 @ ..img > img/chap3/Fig3.17b.std.svg
@@ -13019,19 +12981,21 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     rear pointers.
 
     ..art >
-             +---+---+
-        q -->| * | *-+-------------------+
-             +-|-+---+                   |
-               |                         |
-               | front-ptr               | rear-ptr
-               V                         V
-           +---+---+    +---+---+    +---+---+
-           | * | *-+--->| * | *-+--->| * | / |
-           +-|-+---+    +-|-+---+    +-|-+---+
-             V            V            V
-           +---+        +---+        +---+
-           | a |        | b |        | c |
-           +---+        +---+        +---+
+           ╭───┬───╮
+      q ──▶│ ◆ │ ◆ ┼─────────────────────╮
+           ╰─┼─┴───╯                     │
+             │                           │
+             │ front-ptr                 │ rear-ptr
+             │                           │
+             ▼                           ▼
+           ╭───┬───╮     ╭───┬───╮     ╭───┬───╮
+           │ ◆ │ ◆ ┼────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+           ╰─┼─┴───╯     ╰─┼─┴───╯     ╰─┼─┴───╯
+             │             │             │
+             ▼             ▼             ▼
+           ╭───╮         ╭───╮         ╭───╮
+           │ a │         │ b │         │ c │
+           ╰───╯         ╰───╯         ╰───╯
     < art..
 
 @ ..img > img/chap3/Fig3.19b.std.svg
@@ -13085,19 +13049,21 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     queue of @l(#Figure 3.19).
 
     ..art >
-             +---+---+
-        q -->| * | *-+--------------------------------+
-             +-|-+---+                                |
-               |                                      |
-               | front-ptr                            | rear-ptr
-               V                                      V
-           +---+---+    +---+---+    +---+---+    +---+---+
-           | * | *-+--->| * | *-+--->| * | *-+--->| * | / |
-           +-|-+---+    +-|-+---+    +-|-+---+    +-|-+---+
-             V            V            V            V
-           +---+        +---+        +---+        +---+
-           | a |        | b |        | c |        | d |
-           +---+        +---+        +---+        +---+
+           ╭───┬───╮
+      q ──▶│ ◆ │ ◆ ┼─────────────────────────────────╮
+           ╰─┼─┴───╯                                 │
+             │                                       │
+             │ front-ptr                             │ rear-ptr
+             │                                       │
+             ▼                                       ▼
+         ╭───┬───╮     ╭───┬───╮     ╭───┬───╮     ╭───┬───╮
+         │ ◆ │ ◆ ┼────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+         ╰─┼─┴───╯     ╰─┼─┴───╯     ╰─┼─┴───╯     ╰─┼─┴───╯
+           │             │             │             │
+           ▼             ▼             ▼             ▼
+         ╭───╮         ╭───╮         ╭───╮         ╭───╮
+         │ a │         │ b │         │ c │         │ d │
+         ╰───╯         ╰───╯         ╰───╯         ╰───╯
     < art..
 
 @ ..img > img/chap3/Fig3.20c.std.svg
@@ -13135,19 +13101,21 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     of @l(#Figure 3.20).
 
     ..art >
-             +---+---+
-        q -->| * | *-+--------------------------------+
-             +-|-+---+                                |
-               +------------+                         |
-                  front-ptr |                         | rear-ptr
-                            V                         V
-           +---+---+    +---+---+    +---+---+    +---+---+
-           | * | *-+--->| * | *-+--->| * | *-+--->| * | / |
-           +-|-+---+    +-|-+---+    +-|-+---+    +-|-+---+
-             V            V            V            V
-           +---+        +---+        +---+        +---+
-           | a |        | b |        | c |        | d |
-           +---+        +---+        +---+        +---+
+           ╭───┬───╮
+      q ──▶│ ◆ │ ◆ ┼───────────────────────────────────╮
+           ╰─┼─┴───╯                                   │
+             │                                         │
+             │ front-ptr                               │ rear-ptr
+             ╰─────────────╮                           │
+                           ▼                           ▼
+           ╭───┬───╮     ╭───┬───╮     ╭───┬───╮     ╭───┬───╮
+           │ ◆ │ ◆ ┼────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+           ╰─┼─┴───╯     ╰─┼─┴───╯     ╰─┼─┴───╯     ╰─┼─┴───╯
+             │             │             │             │
+             ▼             ▼             ▼             ▼
+           ╭───╮         ╭───╮         ╭───╮         ╭───╮
+           │ a │         │ b │         │ c │         │ d │
+           ╰───╯         ╰───╯         ╰───╯         ╰───╯
     < art..
 
 @ ..img > img/chap3/Fig3.21c.std.svg
@@ -13236,19 +13204,23 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 3.22) A table represented as a headed list.
 
     ..art >
-      +---+---+    +---+---+    +---+---+    +---+---+
-      | * | *-+--->| * | *-+--->| * | *-+--->| * | / |
-      +-|-+---+    +-|-+---+    +-|-+---+    +-|-+---+
-      |            |            |            |
-      V            V            V            V
-      +---------+   +---+---+   +---+---+   +---+---+
-      | *table* |   | * | * |   | * | * |   | * | * |
-      +---------+   +-|-+-|-+   +-|-+-|-+   +-|-+-|-+
-      |   |       |   |       |   |
-      V   V       V   V       V   V
-      +---+ +---+ +---+ +---+ +---+ +---+
-      | a | | 1 | | b | | 2 | | c | | 3 |
-      +---+ +---+ +---+ +---+ +---+ +---+
+        table
+          ╷
+          │
+          ▼
+      ╭───┬───╮     ╭───┬───╮     ╭───┬───╮     ╭───┬───╮
+      │ ◆ │ ◆ ┼────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+      ╰─┼─┴───╯     ╰─┼─┴───╯     ╰─┼─┴───╯     ╰─┼─┴───╯
+        │             │             │             │
+        ▼             ▼             ▼             ▼
+      ┌─────────┐   ╭───┬───╮     ╭───┬───╮     ╭───┬───╮
+      │ *table* │   │ ◆ │ ◆ ┼────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ◆ │
+      └─────────┘   ╰─┼─┴─┼─╯     ╰─┼─┴─┼─╯     ╰─┼─┴─┼─╯
+                      │   │         │   │         │   │
+                      ▼   ▼         ▼   ▼         ▼   ▼
+                   ╭───╮ ╭───╮   ╭───╮ ╭───╮   ╭───╮ ╭───╮
+                   │ a │ │ 1 │   │ b │ │ 2 │   │ c │ │ 3 │
+                   ╰───╯ ╰───╯   ╰───╯ ╰───╯   ╰───╯ ╰───╯
     < art..
 
 @ ..img > img/chap3/Fig3.22c.std.svg
@@ -13322,35 +13294,35 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
 
     ..art >
       table
-        |
-        V
-      +---+---+   +---+---+   +---+---+
-      | * | *-+-->| * | *-+-->| * | / |
-      +-|-+---+   +-|-+---+   +-|-+---+
-        V           |           V
-      +-------+     |         +---+---+   +---+---+   +---+---+
-      |*table*|     |         | * | *-+-->| * | *-+-->| * | / |
-      +-------+     |         +-|-+---+   +-|-+---+   +-|-+---+
-                    |           V           V           V
-                    |       +-------+     +---+---+   +---+---+
-                    |       |letters|     | * | * |   | * | * |
-                    |       +-------+     +-|-+-|-+   +-|-+-|-+
-                    |                       V   V       V   V
-                    |                    +---+ +---+ +---+ +---+
-                    |                    | a | | 97| | b | | 98|
-                    |                    +---+ +---+ +---+ +---+
-                    V
-                  +---+---+   +---+---+   +---+---+   +---+---+
-                  | * | *-+-->| * | *-+-->| * | *-+-->| * | / |
-                  +-|-+---+   +-|-+---+   +-|-+---+   +-|-+---+
-                    V           V           V           V
-                +------+      +---+---+   +---+---+   +---+---+
-                | math |      | * | * |   | * | * |   | * | * |
-                +------+      +-|-+-|-+   +-|-+-|-+   +-|-+-|-+
-                                V   V       V   V       V   V
-                             +---+ +---+ +---+ +---+ +---+ +---+
-                             | + | | 43| | - | | 45| | * | | 42|
-                             +---+ +---+ +---+ +---+ +---+ +---+
+        ╷
+        │
+        ▼
+      ╭───┬───╮     ╭───┬───╮     ╭───┬───╮
+      │ ◆ │ ◆ ┼────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+      ╰─┼─┴───╯     ╰─┼─┴───╯     ╰─┼─┴───╯
+        ▼             │             ▼
+      ┌─────────┐     │           ╭───┬───╮     ╭───┬───╮     ╭───┬───╮
+      │ *table* │     │           │ ◆ │ ◆ ┼────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+      └─────────┘     │           ╰─┼─┴───╯     ╰─┼─┴───╯     ╰─┼─┴───╯
+                      │             ▼             ▼             ▼
+                      │           ┌───────────┐ ╭───┬───╮     ╭───┬───╮
+                      │           │ *letters* │ │ ◆ │ ◆ │     │ ◆ │ ◆ │
+                      │           └───────────┘ ╰─┼─┴─┼─╯     ╰─┼─┴─┼─╯
+                      │                           ▼   ▼         ▼   ▼
+                      │                        ╭───╮╭────╮   ╭───╮╭────╮
+                      │                        │ a ││ 97 │   │ b ││ 99 │
+                      ▼                        ╰───╯╰────╯   ╰───╯╰────╯
+                    ╭───┬───╮     ╭───┬───╮     ╭───┬───╮     ╭───┬───╮
+                    │ ◆ │ ◆ ┼────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ◆ ┼────▶│ ◆ │ ╱ │
+                    ╰─┼─┴───╯     ╰─┼─┴───╯     ╰─┼─┴───╯     ╰─┼─┴───╯
+                      ▼             ▼             ▼             ▼
+                    ┌────────┐    ╭───┬───╮     ╭───┬───╮     ╭───┬───╮
+                    │ *math* │    │ ◆ │ ◆ │     │ ◆ │ ◆ │     │ ◆ │ ◆ │
+                    └────────┘    ╰─┼─┴─┼─╯     ╰─┼─┴─┼─╯     ╰─┼─┴─┼─╯
+                                    ▼   ▼         ▼   ▼         ▼   ▼
+                                 ╭───╮╭────╮   ╭───╮╭────╮   ╭───╮╭────╮
+                                 │ + ││ 43 │   │ - ││ 45 │   │ * ││ 42 │
+                                 ╰───╯╰────╯   ╰───╯╰────╯   ╰───╯╰────╯
     < art..
 
 @ ..img > img/chap3/Fig3.23b.std.svg
@@ -13571,12 +13543,14 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 3.24) Primitive functions in the digital logic simulator.
 
     ..art >
-                     __          ___
-        |\        --|  \       --\  \
-      --| >o--      |   )--       )  >--
-        |/        --|__/       --/__/
 
-      Inverter    And-gate     Or-gate
+        ╭-._           ╭───-.          ─────.
+        │   `\       ──┤     \       ──\     \
+      ──┤     >○──     │      )──       )     >--
+        │ __./       ──┤     /       ──/     /
+        ╰-'            ╰────`          ─────'
+
+      Inverter       And-gate        Or-gate
     < art..
 
 @ ..img > img/chap3/Fig3.24a.std.svg
@@ -13594,19 +13568,19 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 3.25) A half-adder circuit.
 
     ..art >
-          +--------------------------------------+
-          |         ____                         |
-      A --------*---\   \ D               ___    |
-          |     |    >   >---------------|   \   |
-          |  +--|---/___/                |    )----- S
-          |  |  |              |\  E  +--|___/   |
-          |  |  |           +--| >o---+          |
-          |  |  |    ___    |  |/                |
-          |  |  +---|   \   |                    |
-          |  |      |    )--*----------------------- C
-      B -----*------|___/                        |
-          |                                      |
-          +--------------------------------------+
+          ╭───────────────────────────────────────╮
+          │         ____                          │
+      A ──┼─────●───\   \ D                ___    │
+          │     │    >   >────────────────│   \   │
+          │  ╭──│───/___/                 │    )──┼── S
+          │  │  │              │\.  E  ╭──│___/   │
+          │  │  │           ╭──│  >○───╯          │
+          │  │  │    ___    │  │/`                │
+          │  │  ╰───│   \   │                     │
+          │  │      │    )──●─────────────────────┼── C
+      B ──┼──●──────│___/                         │
+          │                                       │
+          ╰───────────────────────────────────────╯
     < art..
 
 @ ..img > img/chap3/Fig3.25c.std.svg
@@ -13678,15 +13652,15 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 3.26) A full-adder circuit.
 
     ..art >
-          +----------------------------------+
-          |              +-------+           |
-      A -----------------+ half- +-------------- SUM
-          |  +-------+   | adder |   ____    |
-      B -----+ half- +---+       +---\   \   |
-          |  | adder |   +-------+    >or >----- Cout
-      C -----+       +---------------/___/   |
-          |  +-------+                       |
-          +----------------------------------+
+            ╭──────────────────────────────────╮
+            │              ╭───────╮           │
+       A  ──┼──────────────┤ half- ├───────────┼── SUM
+            │  ╭───────╮   │ adder │   ____    │
+       B  ──┼──┤ half- ├───┤       ├───\   \   │
+            │  │ adder │   ╰───────╯    >or >──┼── Cₒᵤₜ
+      Cᵢₙ ──┼──┤       ├───────────────/___/   │
+            │  ╰───────╯                       │
+            ╰──────────────────────────────────╯
     < art..
 
 @ ..img > img/chap3/Fig3.26.std.svg
@@ -13799,17 +13773,17 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 3.27) A ripple-carry adder for @m(n)-bit numbers.
 
     ..art >
-         :                                              :   :
-         :  A₁  B₁    C₁    A₂  B₂    C₂    A₃  B₃   C₃ :   :  Aₙ  Bₙ Cₙ=0
-         :  |   |   +---+   |   |   +---+   |   |   +-----  :  |   |   +-
-         |  |   |   |   |   |   |   |   |   |   |   |   :   :  |   |   |
-         : ++---+---++  |  ++---+---++  |  ++---+---++  :   : ++---+---++
-         : |   FA    |  |  |   FA    |  |  |   FA    |  :   : |   FA    |
-         : +--+---+--+  |  +--+---+--+  |  +--+---+--+  :   : +--+---+--+
-         :    |   |     |     |   |     |     |   |     :   :    |   |
-      C ------+   |     +-----+   |     +-----+   |     :  ------+   |
-         :        |        C₁     |        C₂     |     :   :C₍ₙ₋₁₎  |
-         :        |               |               |     :   :        |
+         |                                              |   |
+         |  A₁  B₁    C₁    A₂  B₂    C₂    A₃  B₃   C₃ |   |  Aₙ  Bₙ Cₙ=0
+         |  │   │   ╭───╮   │   │   ╭───╮   │   │   ╭───|─  |  │   │   ╭─
+         |  │   │   │   │   │   │   │   │   │   │   │   |   |  │   │   │
+         | ╭┴───┴───┴╮  │  ╭┴───┴───┴╮  │  ╭┴───┴───┴╮  |   | ╭┴───┴───┴╮
+         | │   FA    │  │  │   FA    │  │  │   FA    │  |   | │   FA    │
+         | ╰──┬───┬──╯  │  ╰──┬───┬──╯  │  ╰──┬───┬──╯  |   | ╰──┬───┬──╯
+         |    │   │     │     │   │     │     │   │     |   |    │   │
+      C ─|────╯   │     ╰─────╯   │     ╰─────╯   │     |  ─|────╯   │
+         |        │        C₁     │        C₂     │     |   |C₍ₙ₋₁₎  │
+         |        │               │               │     |   |        │
                   S₁              S₂              S₃                 Sₙ
     < art..
 
@@ -14211,15 +14185,15 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     constraint network.
 
     ..art >
-             +---------+     +---------+   v   +---------+
-      C -----+ m1      |  u  |      m1 +-------+ a1      |
-             |    *  p +-----+ p  *    |       |    *  s +---- F
-          +--+ m2      |     |      m2 +--+ +--+ a2      |
-          |  +---------+     +---------+  | |  +---------+
-        w |                              x| |y
-          |    +-----+        +-----+     | |     +-----+
-          +----+  9  |        |  5  +-----+ +-----+  32 |
-               +-----+        +-----+             +-----+
+             ╭─────────╮     ╭─────────╮   v   ╭─────────╮
+      C ─────┤ m1      │  u  │      m1 ├───────┤ a1      │
+             │    *  p ├─────┤ p  *    │       │    *  s ├──── F
+          ╭──┤ m2      │     │      m2 ├──╮ ╭──┤ a2      │
+          │  ╰─────────╯     ╰─────────╯  │ │  ╰─────────╯
+        w │                              x│ │y
+          │    ╭─────╮        ╭─────╮     │ │     ╭─────╮
+          ╰────┤  9  │        │  5  ├─────╯ ╰─────┤  32 │
+               ╰─────╯        ╰─────╯             ╰─────╯
     < art..
 
 @ ..img > img/chap3/Fig3.28.std.svg
@@ -14850,31 +14824,31 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     of events in two banking withdrawals can lead to an incorrect final balance.
 
     ..art >
-       |           Peter              Bank              Paul
-       |                              ____
-       |                             /    \
-       |             .--------------| $100 |-------------.
-       |             |               \____/              |
-       |             V                                   V
-       |  .----------------------.            .----------------------.
-       |  | Access balance: $100 |            | Access balance: $100 |
-       |  `----------+-----------'            `----------+-----------'
-       |             V                                   V
-       |  .----------------------.            .----------------------.
-       |  | new value: 100-10=90 |            | new value: 100-25=75 |
-       |  `----------+-----------'            `----------+-----------'
-       |             V                                   |
-       |  .----------------------.                       |
-       |  | set! balance to $90  |                       |
-       |  `----------+-----------'    ____               |
-       |             |               /    \              |
-       |             `------------->| $ 90 |             V
-       |                             \____/   .----------------------.
-       |                                      | new value: 100-25=75 |
-       |                              ____    `----------+-----------'
-       |                             /    \              |
-       |                            | $ 90 |<------------'
-       V                             \____/
+       │           Peter              Bank              Paul
+       │                              ____
+       │                             ╱    ╲
+       │             ╭──────────────( $100 )─────────────╮
+       │             │               ╲____╱              │
+       │             ▼                                   ▼
+       │  ╭──────────────────────╮            ╭──────────────────────╮
+       │  │ Access balance: $100 │            │ Access balance: $100 │
+       │  ╰──────────┬───────────╯            ╰──────────┬───────────╯
+       │             ▼                                   ▼
+       │  ╭──────────────────────╮            ╭──────────────────────╮
+       │  │ new value: 100─10=90 │            │ new value: 100─25=75 │
+       │  ╰──────────┬───────────╯            ╰──────────┬───────────╯
+       │             ▼                                   │
+       │  ╭──────────────────────╮                       │
+       │  │ set! balance to $90  │                       │
+       │  ╰──────────┬───────────╯    ____               │
+       │             │               ╱    ╲              │
+       │             ╰─────────────>( $ 90 )             ▼
+       │                             ╲____╱   ╭──────────────────────╮
+       │                                      │ new value: 100─25=75 │
+       │                              ____    ╰──────────┬───────────╯
+       │                             ╱    ╲              │
+       │                            ( $ 90 )<────────────╯
+       ▼                             ╲____╱
       time
     < art..
 
@@ -14922,24 +14896,24 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     account in Bank1 and a private account in Bank2.
 
     ..art >
-       |    Peter          Bank1          Paul           Bank2
-       |    ____           ____           ____           ____
-       |   /    \         /    \         /    \         /    \
-       |  |  $7  |--. .--| $100 |       |  $5  |--. .--| $300 |
-       |   \____/   V V   \____/         \____/   V V   \____/
-       |           +---+                         +---+
-       |           | W |                         | D |
-       |    ____   ++-++   ____           ____   ++-++   ____
-       |   /    \   | |   /    \         /    \   | |   /    \
-       |  | $17  |<-' `->| $90  |--. .--|  $0  |<-' `->| $305 |
-       |   \____/         \____/   V V   \____/         \____/
-       |                          +---+
-       |                          | W |
-       |    ____           ____   ++-++   ____           ____
-       |   /    \         /    \   | |   /    \         /    \
-       |  | $17  |       | $65  |<-' `->| $25  |       | $305 |
-       |   \____/         \____/         \____/         \____/
-       V
+       │    Peter          Bank1          Paul           Bank2
+       │    ____           ____           ____           ____
+       │   ╱    ╲         ╱    ╲         ╱    ╲         ╱    ╲
+       │  (  $7  )──╮ ╭──( $100 )       (  $5  )──╮ ╭──( $300 )
+       │   ╲____╱   ▼ ▼   ╲____╱         ╲____╱   ▼ ▼   ╲____╱
+       │           ╭───╮                         ╭───╮
+       │           │ W │                         │ D │
+       │    ____   ╰┬─┬╯   ____           ____   ╰┬─┬╯   ____
+       │   ╱    ╲   │ │   ╱    ╲         ╱    ╲   │ │   ╱    ╲
+       │  ( $17  )◀─╯ ╰─▶( $90  )──╮ ╭──(  $0  )◀─╯ ╰─▶( $305 )
+       │   ╲____╱         ╲____╱   ▼ ▼   ╲____╱         ╲____╱
+       │                          ╭───╮
+       │                          │ W │
+       │    ____           ____   ╰┬─┬╯   ____           ____
+       │   ╱    ╲         ╱    ╲   │ │   ╱    ╲         ╱    ╲
+       │  ( $17  )       ( $65  )◀─╯ ╰─▶( $25  )       ( $305 )
+       │   ╲____╱         ╲____╱         ╲____╱         ╲____╱
+       ▼
       time
     < art..
 
@@ -15070,19 +15044,21 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
      will be left with one of five possible values, depending on the interleaving
      of the events of @m(P₁) and @m(P₂):
 
-     ..example >
-       101: @m(P₁) sets @c(x) to 100 and then @m(P₂) increments
+     - 101: @m(P₁) sets @c(x) to 100 and then @m(P₂) increments
             @c(x) to 101.
-       121: @m(P₂) increments @c(x) to 11 and then @m(P₁) sets
+
+     - 121: @m(P₂) increments @c(x) to 11 and then @m(P₁) sets
             @c(x) to @c(x) times @c(x).
-       110: @m(P₂) changes @c(x) from 10 to 11 between the
+
+     - 110: @m(P₂) changes @c(x) from 10 to 11 between the
             two times that @m(P₁) accesses the value of
             @c(x) during the evaluation of @c[(* x x)].
-        11: @m(P₂) accesses @c(x), then @m(P₁) sets @c(x) to 100,
+
+     - 11: @m(P₂) accesses @c(x), then @m(P₁) sets @c(x) to 100,
             then @m(P₂) sets @c(x).
-       100: @m(P₁) accesses @c(x) (twice), then @m(P₂) sets
+
+     - 100: @m(P₁) accesses @c(x) (twice), then @m(P₂) sets
             @c(x) to 11, then @m(P₁) sets @c(x).
-     < example..
 
      We can constrain the concurrency by using serialized procedures, which are
      created by @e(serializers). Serializers are constructed by
@@ -16189,20 +16165,20 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 3.31) The prime sieve viewed as a signal-processing system.
 
     ..art >
-        +---------------------------------------------------------------+
-        | sieve                                                         |
-        |                                                               |
-        |        __/|                                        |\__       |
-        |     __/car|........................................|   \__    |
-        |   _/      |           :                            |      \_  |
-      ----><_       |           V                            |  cons _>---->
-        |    \__    |    +------------+    +------------+    |    __/   |
-        |       \cdr|--->| filter:    |    | sieve      |--->| __/      |
-        |          \|    |            |--->|            |    |/         |
-        |                | not        |    |            |               |
-        |                | divisible? |    |            |               |
-        |                +------------+    +------------+               |
-        +---------------------------------------------------------------+
+        ╭───────────────────────────────────────────────────────────────╮
+        │ sieve                                                         │
+        │                                                               │
+        │        __/│                                        │\__       │
+        │     __/car│........................................│   \__    │
+        │   _/      │           :                            │      \_  │
+      ──┼─▶<_       │           ▼                            │  cons _>─┼──▶
+        │    \__    │    ╭────────────╮    ╭────────────╮    │    __/   │
+        │       \cdr│───▶│ filter:    │    │ sieve      │───▶│ __/      │
+        │          \│    │            │───▶│            │    │/         │
+        │                │ not        │    │            │               │
+        │                │ divisible? │    │            │               │
+        │                ╰────────────╯    ╰────────────╯               │
+        ╰───────────────────────────────────────────────────────────────╯
     < art..
 
 @ ..img > img/chap3/Fig3.31a.std.svg
@@ -17024,15 +17000,15 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
 
     ..art >
                                    initial-value
-                                        |
-             +-----------+              |   |\__
-      input  |           |      |\__    +-->|   \_  integral
-      ------>| scale: dt +----->|   \_      |cons_>--*------->
-             |           |      | add_>---->| __/    |
-             +-----------+  +-->| __/       |/       |
-                            |   |/                   |
-                            |                        |
-                            +------------------------+
+                                        │
+             ╭───────────╮              │   │\__
+      input  │           │      │\__    ╰──▶│   \_  integral
+      ──────▶│ scale: dt ├─────▶│   \_      │cons_>──●───────▶
+             │           │      │ add_>────▶│ __/    │
+             ╰───────────╯  ╭──▶│ __/       │/       │
+                            │   │/                   │
+                            │                        │
+                            ╰────────────────────────╯
     < art..
 
 @ ..img > img/chap3/Fig3.32a.std.svg
@@ -17048,28 +17024,26 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
      ..figure > @t(Figure 3.33) An RC circuit and the associated signal-flow diagram.
 
        ..art >
-           +        v        -
+               +        v        -
 
-          ->----'\/\/\,---| |---
-           i       R         C
+             ──▶────'\/\/\,─────┤ ├────                  ╭t
+               i                           v = v₀ + (1/C)│ i dt +  R i
+                       R         C                       ╯0
 
-
-                           / t
-                        1  |
-          v  =  v   +  --- |  i dt  +  R i
-                 0      C  |
-                           / 0
-
-                  +--------------+
-              +-->|   scale: R   |---------------------+   |\_
-              |   +--------------+                     |   |  \_
-              |                                        +-->|    \   v
-           i  |   +--------------+     +------------+      | add >--->
-          ----+-->|  scale: 1/C  |---->|  integral  |----->|   _/
-                  +--------------+     +------------+      | _/
-                                             |             |/
-                                        v
-                                         0
+                 ╭────────────╮
+                 │            │
+             ╭──▶│ scale:  R  ├───────────────────────╮
+             │   │            │                       │   |\_
+             │   ╰────────────╯                       ╰──▶|  \_
+             │                                            |    \  v
+             │   ╭────────────╮        ╭──────────╮       | add >───▶
+           i │   │            │        │          │       |   _/
+         ────●──▶│ scale: i/C ├───────▶│ integral ├──────▶| _/
+                 │            │        │          │       |/
+                 ╰────────────╯        ╰──────────╯
+                                            ▲
+                                            │
+                                            v₀
        < art..
 
 @  ..img > img/chap3/Fig3.33a.std.svg
@@ -17211,13 +17185,13 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
 
     ..art >
                                   y₀
-                                   |
-                                   V
-          +----------+  dy   +----------+     y
-      +-->|  map: f  +------>| integral +--*----->
-      |   +----------+       +----------+  |
-      |                                    |
-      +------------------------------------+
+                                   │
+                                   ▼
+          ╭──────────╮  dy   ╭──────────╮     y
+      ╭──▶│  map: f  ├──────▶│ integral ├──●─────▶
+      │   ╰──────────╯       ╰──────────╯  │
+      │                                    │
+      ╰────────────────────────────────────╯
     < art..
 
 @ ..img > img/chap3/Fig3.34.std.svg
@@ -17335,20 +17309,20 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     second-order linear differential equation.
 
     ..art >
-                     dy₀                  y₀
-                      |                   |
-                      V                   V
-         ddy     +----------+    dy  +----------+    y
-      +--------->| integral +-----*--+ integral +--*--->
-      |          +----------+     |  +----------+  |
-      |                           |                |
-      |            +----------+   |                |
-      |     __/|<--+ scale: a |<--+                |
-      |   _/   |   +----------+                    |
-      +--<_add |                                   |
-           \__ |   +----------+                    |
-              \|<--+ scale: b |<-------------------+
-                   +----------+
+                     dy₀                   y₀
+                      │                    │
+                      ▼                    ▼
+         ddy     ╭──────────╮    dy   ╭──────────╮    y
+      ╭─────────▶│ integral ├─────●──▶│ integral ├──●───▶
+      │          ╰──────────╯     │   ╰──────────╯  │
+      │                           │                 │
+      │            ╭──────────╮   │                 │
+      │     __/│◀──┤ scale: a │◀──╯                 │
+      │   _/   │   ╰──────────╯                     │
+      ╰──<_add │                                    │
+           \__ │   ╭──────────╮                     │
+              \│◀──┤ scale: b │◀────────────────────+
+                   ╰──────────╯
     < art..
 
 @ ..img > img/chap3/Fig3.35b.std.svg
@@ -17360,17 +17334,18 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 3.36) A series RLC circuit.
 
     ..art >
-                    + v_R -
+                   +  v_R  ─
               i_R
-           +--->----'\/\/\,--------+
-           |                       |  i_L
-          \|/          R          \|/
-        +  |  i_C                  |_   +
-          -+-                       _)
-      v_C -+- C                     _)  v_L
-           |                        _)
-        -  |                       |    -
-           +-----------------------+
+           ╭───▶────'\/\/\,────────╮
+           │                       │  i_L
+       +   │           R           ▼
+           ▼                       │
+           │  i_C                  │_   +
+      v_C  ┴                        _)
+           ┬  C                     _)  v_L
+           │                        _)
+       −   │                       │    −
+           ╰───────────────────────╯
     < art..
 
 @ ..img > img/chap3/Fig3.36.std.svg
@@ -17422,29 +17397,29 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     RLC circuit.
 
     ..art >
-                       +-------------+
-      +----------------+  scale: l/L |<--+
-      |                +-------------+   |
-      |                                  |
-      |                +-------------+   |  v_C
-      |       dv_C +-->|   integral  +---*------>
-      |            |   +-------------+
-      |            |        ^
-      |            |        | v_(C_0)
-      |            |
-      |            |   +-------------+
-      |            +---+ scale: -l/C |<--+
-      |                +-------------+   |
-      |  |\__                            |
-      +->|   \_  di_L  +-------------+   |  i_L
-         | add_>------>|   integral  +---*------>
-      +->| __/         +-------------+   |
-      |  |/                 ^            |
-      |                     | i_(L_0)    |
-      |                                  |
-      |                +-------------+   |
-      +----------------+ scale: -R/L |<--+
-                       +-------------+
+                       ╭─────────────╮
+      ╭────────────────┤  scale: l/L │◀──╮
+      │                ╰─────────────╯   │
+      │                                  │
+      │                ╭─────────────╮   │  v_C
+      │       dv_C ╭──▶│   integral  ├───●──────▶
+      │            │   ╰─────────────╯
+      │            │        ▲
+      │            │        ╰── v_(C_0)
+      │            │
+      │            │   ╭─────────────╮
+      │            ╰───┤ scale: −l/C │◀──╮
+      │                ╰─────────────╯   │
+      │  │\__                            │
+      ╰─▶│   \_  di_L  ╭─────────────╮   │  i_L
+         │ add_>──────▶│   integral  ├───●──────▶
+      ╭─▶│ __/         ╰─────────────╯   │
+      │  │/                 ▲            │
+      │                     ╰── i_(L_0)  │
+      │                                  │
+      │                ╭─────────────╮   │
+      ╰────────────────┤ scale: −R/L │◀──╯
+                       ╰─────────────╯
     < art..
 
 @ ..img > img/chap3/Fig3.37.std.svg
@@ -17698,11 +17673,11 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     streams of transaction requests.
 
     ..art >
-      Peter's requests   +---------+     +---------+
-      ------------------>|         |     |         |
-      Paul's requests    |  merge  |---->| bank    |---->
-      ------------------>|         |     | account |
-                         +---------+     +---------+
+      Peter's requests   ╭─────────╮     ╭─────────╮
+      ──────────────────▶│         │     │         │
+      Paul's requests    │  merge  ├────▶│ bank    ├────▶
+      ──────────────────▶│         │     │ account │
+                         ╰─────────╯     ╰─────────╯
     < art..
 
 @ ..img > img/chap3/Fig3.38a.std.svg
@@ -18969,31 +18944,31 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   together.
 
   ..figure > @t(Figure 4.2) The factorial program, viewed as an abstract
-  machine.
+    machine.
 
     ..art >
-          +-----------------------------------+
-          | factorial                   |1    |
-          |              |1             V     |
-          |              |           +-----+  |
-          |              V           | #   |  |
-          |           +-----+        |     |  |
-      6 --------*-----|  =  |------->|   #-+-----> 720
-          |     |     +-----+        |  /  |  |
-          |     |                    | #   |  |
-          |     |                    +-----+  |
-          |     |                       ^     |
-          |     |                       |     |
-          |     |                    +--+--+  |
-          |     *------------------->|  *  |  |
-          |     |                    +-----+  |
-          |     V                       ^     |
-          |  +-----+    +-----------+   |     |
-          |  |  -  +--->| factorial +---+     |
-          |  +-----+    +-----------+         |
-          |     ^                             |
-          |     |1                            |
-          +-----------------------------------+
+          ╭────────────────────────────────────╮
+          │ factorial                    │1    │
+          │               │1             V     │
+          │               │           ╭─────╮  │
+          │               ▼           │ •   │  │
+          │            ╭─────╮        │     │  │
+      6 ──┼─────●─────▶│  =  ├───────▶│  •  ├──┼──▶ 720
+          │     │      ╰─────╯        │  ╱  │  │
+          │     │                     │  •  │  │
+          │     │                     ╰─────╯  │
+          │     │                        ▲     │
+          │     │                        │     │
+          │     │                     ╭──┴──╮  │
+          │     ●────────────────────▶│  *  │  │
+          │     │                     ╰─────╯  │
+          │     ▼                        ▲     │
+          │  ╭─────╮     ╭───────────╮   │     │
+          │  │  ─  ├────▶│ factorial ├───╯     │
+          │  ╰─────╯     ╰───────────╯         │
+          │     ▲                              │
+          │     │1                             │
+          ╰────────────────────────────────────╯
     < art..
 
 @ ..img > img/chap4/Fig4.2a.std.svg
@@ -19007,10 +18982,10 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
   ..figure > @t(Figure 4.3) The evaluator emulating a factorial machine.
 
     ..art >
-                         +--------+
-                  6 ---->|  eval  |----> 720
-                         +--------+
-                             /
+                         ╭────────╮
+                  6 ────▶│  eval  ├────▶ 720
+                         ╰────────╯
+                             ◥
                    . . .    /  . . .
              . . .       ../. .      .
            .                           ..
@@ -22394,13 +22369,13 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
 
     ..art >
                                         output stream
-        input stream   +-------------+  of frames,
-        of frames      |    query    |  filtered and extended
-      ---------------->|             +------------------------->
-                       | (job ?x ?y) |
-                       +-------------+
-                              ^
-                              |
+        input stream   ╭─────────────╮  of frames,
+        of frames      │    query    │  filtered and extended
+      ────────────────▶│             ├─────────────────────────▶
+                       │ (job ?x ?y) │
+                       ╰─────────────╯
+                              ▲
+                              │
                      stream of assertions
                         from data base
     < art..
@@ -22452,17 +22427,17 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     by operating on the stream of frames in series.
 
     ..art >
-                      +----------------------+
-                      |       (and A B)      |
-        input stream  |                      |  output stream
-        of frames     |   +---+       +---+  |  of frames
-      ------------------->| A +------>| B +-------------------->
-                      |   +---+       +---+  |
-                      |     ^           ^    |
-                      |     |           |    |
-                      |     +-----*-----+    |
-                      +-----------|----------+
-                                  |
+                      ╭──────────────────────╮
+                      │       (and A B)      │
+        input stream  │                      │  output stream
+        of frames     │   ╭───╮       ╭───╮  │  of frames
+      ────────────────┼──▶│ A ├──────▶│ B ├──┼─────────────────▶
+                      │   ╰───╯       ╰───╯  │
+                      │     ▲           ▲    │
+                      │     │           │    │
+                      │     ╰─────●─────╯    │
+                      ╰───────────┼──────────╯
+                                  │
                               data base
     < art..
 
@@ -22477,23 +22452,23 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     operating on the stream of frames in parallel and merging the results.
 
     ..art >
-                 +---------------------------+
-                 |          (or A B)         |
-                 |    +---+                  |
-      input      | +->| A |------------+     |  output
-      stream of  | |  +---+            V     |  stream of
-      frames     | |    ^          +-------+ |  frames
-      -------------*    |          | merge +--------------->
-                 | |    |          +-------+ |
-                 | |    |              ^     |
-                 | |    |   +---+      |     |
-                 | +------->| B +------+     |
-                 |      |   +---+            |
-                 |      |     ^              |
-                 |      |     |              |
-                 |      +--*--+              |
-                 +---------|-----------------+
-                           |
+                 ╭───────────────────────────╮
+                 │          (or A B)         │
+                 │    ╭───╮                  │
+      input      │ ╭─▶│ A │────────────╮     │  output
+      stream of  │ │  ╰───╯            ▼     │  stream of
+      frames     │ │    ▲          ╭───────╮ │  frames
+      ───────────┼─●    │          │ merge ├─┼─────────────▶
+                 │ │    │          ╰───────╯ │
+                 │ │    │              ▲     │
+                 │ │    │   ╭───╮      │     │
+                 │ ╰────┼──▶│ B ├──────╯     │
+                 │      │   ╰───╯            │
+                 │      │     ▲              │
+                 │      │     │              │
+                 │      ╰──●──╯              │
+                 ╰─────────┼─────────────────╯
+                           │
                        data base
     < art..
 
@@ -24253,22 +24228,22 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
 
     ..art >
                                     ___
-      +-----+          +-----+     /   \
-      |  a  |<--(X)----|  b  +--->|  =  |
-      +--+--+   a<-b   +-+---+     \___/
-         |               |  ^        ^
-         +------+   +----+  |        |
-                |   |      (X) b<-t  |
-             .--+---+--.    |       / \
-              \  rem  /     |      / O \
-               \_____/      |     +-----+
-                  |         |
-                 (X) t<-r   |
-                  |         |
-                  V         |
-               +-----+      |
-               |  t  +------+
-               +-----+
+      ╭─────╮          ╭─────╮     ╱   ╲
+      │  a  │◀──(X)────│  b  ├───▶(  =  )
+      ╰──┬──╯   a←b    ╰─┬───╯     ╲___╱
+         │               │  ▲        ▲
+         ╰──────╮   ╭────╯  │        │
+                ▼   ▼      (X) b←t   │
+             .─────────.    │       ╱ ╲
+              ╲  rem  ╱     │      ╱ O ╲
+               ╲_____╱      │     '─────'
+                  │         │
+                 (X) t←r    │
+                  │         │
+                  ▼         │
+               ╭─────╮      │
+               │  t  +──────╯
+               ╰─────╯
     < art..
 
 @ ..img > img/chap5/Fig5.1a.std.svg
@@ -24313,26 +24288,21 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
 
     ..art >
            start
-             |
-             V
-            / \ yes
-      +--->< = >-----> done
-      |     \ /
-      |      | no
-      |      V
-      |  +------+
-      |  | t<-r |
-      |  +---+--+
-      |      |
-      |      V
-      |  +------+
-      |  | a<-b |
-      |  +---+--+
-      |      |
-      |      V
-      |  +------+
-      +--+ b<-t |
-         +------+
+             │
+             ▼
+            ╱ ╲  no   ╭─────╮
+      ╭───▶( = )─────▶│ t←r │
+      │     ╲ ╱       ╰──┬──╯
+      │      │           │
+      │      │ yes       ▼
+      │      ▼        ╭─────╮
+      │     done      │ a←b │
+      │               ╰──┬──╯
+      │                  │
+      │                  ▼
+      │               ╭─────╮
+      ╰───────────────┤ b←t │
+                      ╰─────╯
     < art..
 
 @ ..img > img/chap5/Fig5.2.std.svg
@@ -24533,32 +24503,32 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
      ..figure > @t(Figure 5.4) A @A(GCD) machine that reads inputs and prints results.
 
        ..art >
-                            .--------.
-                             \ read /
-                              \____/
-                                |
-                        +-------*------+
-                        |              |
-                 a<-rd (X)            (X) b<-rd
-                        |              |
-                        V              V           ___
-                     +-----+        +-----+       /   \
-                     |  a  |<--(X)--+  b  +----->|  =  |
-                     +-+-+-+  a<-b  +-+---+       \___/
-                       | |            |  ^          ^
-                    +--+ +----+    +--+  |          |
-                    |         |    |    (X) b<-t   / \
-                    V         V    V     |        / O \
-               .---------. .---------. |       /_____\
-         --(X)->\ print /    \  rem  /   |
-            P    \_____/      \_____/    |
-                                 |       |
-                                (X) t<-r |
-                                 |       |
-                                 V       |
-                              +-----+    |
-                              |  t  +----+
-                              +-----+
+                           .─────────.
+                            ╲ read  ╱
+                             ╲_____╱
+                                │
+                        ╭───────*──────╮
+                        │              │
+                  a←rd (X)            (X) b←rd
+                        │              │
+                        ▼              ▼           ___
+                     ╭─────╮        ╭─────╮       ╱   ╲
+                     │  a  │◀──(X)──┤  b  ├─────▶(  =  )
+                     ╰─┬─┬─╯   a←b  ╰─┬───╯       ╲___╱
+                       │ │            │  ▲          ▲
+                    ╭──╯ ╰────╮    ╭──╯  │          │
+                    │         │    │    (X) b←t    ╱ ╲
+                    ▼         ▼    ▼     │        ╱ O ╲
+               .─────────.  .─────────.  │       ╱_____╲
+         ──(X)─▶╲ print ╱    ╲  rem  ╱   │
+            P    ╲_____╱      ╲_____╱    │
+                                 │       │
+                                (X) t←r  │
+                                 │       │
+                                 ▼       │
+                              ╭─────╮    │
+                              │  t  ├────╯
+                              ╰─────╯
        < art..
 
        ..src > scheme
@@ -24617,46 +24587,46 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
 
     ..art >
                                           ___
-      +-----+         +-----+            /   \
-      |  a  |<--(X)---+  b  +-------*-->|  =  |
-      +--+--+   a<-b  +-+---+       |    \___/
-         |              |  ^        |
-        (X) t<-a        |  |        |
-         |              | (X) b<-t  |
-         V              |  |       _V_
-      +-----+           |  |      /   \
-      |  t  +-------*---|--*-----|  <  |
-      +-----+       |   |         \___/
-         ^          V   V
-         |        ---------
-        (X) t<-d   \  -  /
-         |          --+--
-         |            |
-         +------------+
+      ╭─────╮         ╭─────╮            ╱   ╲
+      │  a  │◀──(X)───┤  b  ├───────●──▶(  =  )
+      ╰──┬──╯   a←b   ╰─┬───╯       │    ╲___╱
+         │              │  ▲        │
+        (X) t←a         │  │        │
+         │              │ (X) b←t   │
+         ▼              │  │       _▼_
+      ╭─────╮           │  │      ╱   ╲
+      │  t  ├───────●───┼──●─────(  <  )
+      ╰─────╯       │   │         ╲___╱
+         ▲          ▼   ▼
+         │       .─────────.
+        (X) t←d   ╲   −   ╱
+         │         '──┬──'
+         │            │
+         ╰────────────╯
 
 
          start
-           |
-           V
-          / \ yes            +-------+
-      +->< = >----> done     | t<-d  |<--+
-      |   \ /                +---+---+   |
-      |    | no                  |       |
-      |    |                     V       |
-      |    |   +------+         / \ no   |
-      |    +-->| t<-a +------->< < >-----+
-      |        +------+         \ /
-      |                          | yes
-      |      +-------------------+
-      |      V
-      |  +-------+
-      |  | a<-b  |
-      |  +---+---+
-      |      |
-      |      V
-      |  +-------+
-      +--+ b<-t  |
-         +-------+
+           │
+           ▼
+          ╱ ╲ yes            ╭───────╮
+      ╭─▶( = )────▶ done     │  t←d  │◀──╮
+      │   ╲ ╱                ╰───┬───╯   │
+      │    │ no                  │       │
+      │    │                     ▼       │
+      │    │   ╭───────╮        ╱ ╲ no   │
+      │    ╰──▶│  t←a  ├──────▶( < )─────╯
+      │        ╰───────╯        ╲ ╱
+      │                          │ yes
+      │      ╭───────────────────╯
+      │      ▼
+      │  ╭───────╮
+      │  │  a←b  │
+      │  ╰───┬───╯
+      │      │
+      │      ▼
+      │  ╭───────╮
+      ╰──┤  b←t  │
+         ╰───────╯
     < art..
 
 @ ..img > img/chap5/Fig5.5b.std.svg
@@ -24725,23 +24695,23 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     ..cols >
 
       ..art >
-                                    ___
-        +-----+        +-----+     /   \
-        |  a  |<-(X)---+  b  |--->|  =  |
-        +--+--+  a<-b  ++----+     \___/
-           |            |  ^         ^
-           `----.   .---'  |         |
-                V   V     (X) b<-t   |
-               -------     |        / \
-               \ rem /     |       /_0_\
-                --+--      |
-                  |        |
-                 (X) t<-r  |
-                  |        |
-                  V        |
-               +-----+     |
-               |  t  +-----'
-               +-----+
+                                     ___
+        ╭─────╮        ╭─────╮      ╱   ╲
+        │  a  │◀─(X)───┤  b  │────▶(  =  )
+        ╰──┬──╯  a←b   ╰┬────╯      ╲___╱
+           │            │   ▲         ▲
+           ╰────╮   ╭───╯   │         │
+                ▼   ▼      (X) b←t    │
+              .───────.     │        ╱ ╲
+               ╲ rem ╱      │       ╱ 0 ╲
+                ──┬──       │      '─────'
+                  │         │
+                 (X) t←r    │
+                  │         │
+                  V         │
+               ╭─────╮      │
+               │  t  ├──────╯
+               ╰─────╯
       < art..
 
       ::
@@ -24760,23 +24730,23 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     ..cols >
 
       ..art >
-                                    ___
-        +-----+        +-----+     /   \
-        |  c  |<-(X)---+  d  |--->|  =  |
-        +--+--+  c<-d  ++----+     \___/
-           |            |  ^         ^
-           `----.   .---'  |         |
-                V   V     (X) d<-t   |
-               -------     |        / \
-               \ rem /     |       /_0_\
-                --+--      |
-                  |        |
-                 (X) s<-r  |
-                  |        |
-                  V        |
-               +-----+     |
-               |  s  +-----'
-               +-----+
+                                     ___
+        ╭─────╮        ╭─────╮      ╱   ╲
+        │  c  │◀─(X)───┤  d  │────▶(  =  )
+        ╰──┬──╯  c←d   ╰┬────╯      ╲___╱
+           │            │   ▲         ▲
+           ╰────╮   ╭───╯   │         │
+                ▼   ▼      (X) d←t    │
+              .───────.     │        ╱ ╲
+               ╲ rem ╱      │       ╱ 0 ╲
+                ──┬──       │      '─────'
+                  │         │
+                 (X) s←r    │
+                  │         │
+                  V         │
+               ╭─────╮      │
+               │  s  ├──────╯
+               ╰─────╯
       < art..
 
       ::
@@ -25063,31 +25033,32 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
 
     ..art >
                                    ___
-                                  /   \
-          +----------*-----------|  =  |
-          |          |            \___/
-         (X)         |              ^
-          |          |              |
-          V          |          +---+---+   sn    +-------+
-      +-------+      |          |       +---(X)-->|       |
-      |  val  |<-(X)-|----------+   n   |         | stack |
-      +-----+-+      |          |       |<--(X)---+       |
-        ^   |        |          +-------+   rn    +-+-----+
-        |   |        |            ^                 |   ^
-       (X)  |        |            |                 |   |
-        |   |   +----|--------*  (X)                |  (X) sc
-        |   |   |    |        |   |             rc (X)  |
-        |   |   |    *----.   |   |                 |   |
-        |   V   V    |    V   V   |                 V   |
-        |  -------   |   -------  |              +------+-+
-        |  \  *  /   |   \  -  /  |              |continue+--> controller
-        |   --+--    |    --+--   |              +--------+
-        |     |      |      |     |               ^      ^
-        +-----+      |      +-----+               |      |
-                     |                           (X)    (X)
-                     |                            |      |
-                    / \                   after- / \    / \  fact-
-                   /₁_\                  fact  /___\  /___\ done
+                                  ╱   ╲
+          ╭──────────●───────────(  =  )
+          │          │            ╲___╱
+         (X)         │              ▲
+          │          │              │
+          ▼          │          ╭───┴───╮    sn   ╭───────╮
+      ╭───────╮      │          │       ├───(X)──▶│       │
+      │  val  │◀─(X)─│──────────┤   n   │         │ stack │
+      ╰─────┬─╯      │          │       │◀──(X)───┤       │
+        ▲   │        │          ╰───────╯   rn    ╰─┬─────╯
+        │   │        │            │   ▲             │   ▲
+       (X)  │        │            │   │             │   │
+        │   │   ╭────┼────────────●  (X)            │  (X) sc
+        │   │   │    │            │   │         rc (X)  │
+        │   │   │    ●────────╮   │   │             │   │
+        │   ▼   ▼    │        ▼   ▼   │             ▼   │
+        │  ───────   │       ───────  │         ╭───────┴──╮
+        │  ╲  *  ╱   │       ╲  ─  ╱  │         │ continue ├──▶ controller
+        │   ──┬──    │        ──┬──   │         ╰──────────╯
+        │     │      │          │     │           ▲       ▲
+        ╰─────╯      │          ╰─────╯           │       │
+                     │                           (X)     (X)
+                     │                            │       │
+                    ╱ ╲                   after- ╱ ╲     ╱ ╲  fact-
+                   ╱ 1 ╲                  fact  ╱   ╲   ╱   ╲ done
+                  ╱_____╲                      ╱_____╲ ╱_____╲
     < art..
 
     ..src > scheme
@@ -26460,26 +26431,26 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     of the list @c[((1 2) 3 4)].
 
     ..art >
-                     +---+---+               +---+---+    +---+---+
-      ((1 2) 3 4) -->| * | *-+-------------->| * | *-+--->| * | / |
-                     +-|-+---+               +-|-+---+    +-|-+---+
-                    1  |                    2  |         4  |
-                       V                       V            V
-                     +---+---+    +---+---+  +---+        +---+
-                     | * | *-+--->| * | / |  | 3 |        | 4 |
-                     +-|-+---+    +-|-+---+  +---+        +---+
-                    5  |         7  |
-                       V            V
-                     +---+        +---+
-                     | 1 |        | 2 |
-                     +---+        +---+
+                     ╭───┬───╮               ╭───┬───╮    ╭───┬───╮
+      ((1 2) 3 4) ──▶│ ◆ │ ◆ ┼──────────────▶│ ◆ │ ◆ ┼───▶│ ◆ │ ╱ │
+                     ╰─┼─┴───╯               ╰─┼─┴───╯    ╰─┼─┴───╯
+                    1  │                    2  │         4  │
+                       ▼                       ▼            ▼
+                     ╭───┬───╮    ╭───┬───╮  ╭───╮        ╭───╮
+                     │ ◆ │ ◆ ┼───▶│ ◆ │ ╱ │  │ 3 │        │ 4 │
+                     ╰─┼─┴───╯    ╰─┼─┴───╯  ╰───╯        ╰───╯
+                    5  │         7  │
+                       ▼            ▼
+                     ╭───╮        ╭───╮
+                     │ 1 │        │ 2 │
+                     ╰───╯        ╰───╯
 
-         Index   0    1    2    3    4    5    6    7    8    ...
-               +----+----+----+----+----+----+----+----+----+----
-      the-cars |    | p5 | n3 |    | n4 | n1 |    | n2 |    | ...
-               +----+----+----+----+----+----+----+----+----+----
-      the-cdrs |    | p2 | p4 |    | e0 | p7 |    | e0 |    | ...
-               +----+----+----+----+----+----+----+----+----+----
+         Index   0    1    2    3    4    5    6    7    8    ⋯
+               ╭────┬────┬────┬────┬────┬────┬────┬────┬────┬────
+      the-cars │    │ p5 │ n3 │    │ n4 │ n1 │    │ n2 │    │ ⋯
+               ├────┼────┼────┼────┼────┼────┼────┼────┼────┼────
+      the-cdrs │    │ p2 │ p4 │    │ e0 │ p7 │    │ e0 │    │ ⋯
+               ╰────┴────┴────┴────┴────┴────┴────┴────┴────┴────
     < art..
 
 @ ..img > img/chap5/Fig5.14b.std.svg
@@ -26761,34 +26732,34 @@ based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 
     ..art >
                    Just before garbage collection
 
-               +------------------------------------+
-      the-cars |                                    | working
-               | mixture of useful data and garbage | memory
-      the-cdrs |                                    |
-               +------------------------------------+
-                                                  ^
-                                                  | free
+               ╭────────────────────────────────────╮
+      the-cars │                                    │ working
+               │ mixture of useful data and garbage │ memory
+      the-cdrs │                                    │
+               ╰────────────────────────────────────╯
+                                                  ▲
+                                                  │ free
 
-               +------------------------------------+
-      new-cars |                                    | free
-               |            free memory             | memory
-      new-cdrs |                                    |
-               +------------------------------------+
+               ╭────────────────────────────────────╮
+      new-cars │                                    │ free
+               │            free memory             │ memory
+      new-cdrs │                                    │
+               ╰────────────────────────────────────╯
 
                    Just after garbage collection
 
-               +------------------------------------+
-      new-cars |                                    | new
-               |          discarded memory          | free
-      new-cdrs |                                    | memory
-               +------------------------------------+
+               ╭────────────────────────────────────╮
+      new-cars │                                    │ new
+               │          discarded memory          │ free
+      new-cdrs │                                    │ memory
+               ╰────────────────────────────────────╯
 
-               +------------------+-----------------+
-      the-cars |                  |                 | new
-               |   useful data    |    free area    | working
-      the-cdrs |                  |                 | memory
-               +------------------+-----------------+
-                                    ^
+               ╭──────────────────┬─────────────────╮
+      the-cars │                  │                 │ new
+               │   useful data    │    free area    │ working
+      the-cdrs │                  │                 │ memory
+               ╰──────────────────┴─────────────────╯
+                                    ▲
                                     | free
     < art..
 
