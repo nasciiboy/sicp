@@ -11,7 +11,7 @@ Oficial [sicpebook](http://sicpebook.wordpress.com) basada en la Version Texinfo
 no Oficial [neilvandyke](http://www.neilvandyke.org/sicp-texi/) convertida desde
 la [version HTML](http://mitpress.mit.edu/sicp/) original de MIT Press.
 
-Source
+Codigo
 ------
 
 El directorio principal contiene el fuente [morg](https://github.com/nasciiboy/morg/)
@@ -27,7 +27,7 @@ morg toHtml sicp.morg
 Necesita tener instalado `git`, [golang](https://golang.org/)
 y [pygmentize](http://pygments.org/) (resaltado de codigo fuente)
 
-Si prifiere verlo en terminal, intente:
+Si prefiere verlo en terminal, intente:
 
 ```bash
 morg tui sicp.morg
