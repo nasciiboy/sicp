@@ -40,8 +40,8 @@ production-distribution arrangement with the McGraw-Hill Book Company.
   This is the second edition @A(SICP) book, from Unofficial morg Format.
 
   This @l(https://github.com/nasciiboy/morg/<>morg) version is based on
-  Unofficial Texinfo Format @l(http://sicpebook.wordpress.com), based on
-  @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4) (January 10, 2007).
+  Unofficial Texinfo Format @l(http://sicpebook.wordpress.com) (Juli 07, 2017),
+  based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4).
 
   The freely-distributed official @A(HTML)-and-@A(GIF) format was first
   converted personally to Unofficial Texinfo Format (@A(UTF)) version 1 by Lytha
@@ -2634,9 +2634,9 @@ production-distribution arrangement with the McGraw-Hill Book Company.
       than or equal to the @m(kᵗʰ) Fibonacci number.@n(43)
 
     We can use this theorem to get an order-of-growth estimate for Euclid's
-    Algorithm. Let @m(n) be the smaller of the two inputs to the procedure. If the
-    process takes @m(k) steps, then we must have @m(n ≥ Fib(k) ≈ φᵏ /
-    √5). Therefore the number of steps @m(k) grows as the logarithm (to the base
+    Algorithm. Let @m(n) be the smaller of the two inputs to the procedure. If
+    the process takes @m(k) steps, then we must have @m[n ≥ Fib(k) ≈ φᵏ / √5].
+    Therefore the number of steps @m(k) grows as the logarithm (to the base
     @m(φ) of @m(n). Hence, the order of growth is @m[Θ(log n)].
 
     :: @t(Exercise 1.20) :: The process that a procedure generates is of course
