@@ -19,7 +19,7 @@ en `sicp.morg.` Para crear el fichero HTML:
 
 ```bash
 go get -v github.com/nasciiboy/morg
-git clone github.com/nasciiboy/sicp.git
+git clone https://github.com/nasciiboy/sicp.git
 cd sicp
 morg toHtml sicp.morg
 ```

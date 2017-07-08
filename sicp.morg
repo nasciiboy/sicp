@@ -3,7 +3,7 @@
 ..subtitle > @e(Second Edition) Unofficial morg Format
 ..copy     > 1996 Massachusetts Institute of Technology
 ..licence  > CC BY-SA 4.0
-..author   > Harold Abelson and Gerald Jay Sussman with Julie Sussman, foreword by Alan J. Perlis
+..author   > Harold Abelson and Gerald Jay Sussman with Julie Sussman
 ..style    > worg-data/worg.css
 ..options  > mathjax pygments toc
 
@@ -31254,7 +31254,6 @@ production-distribution arrangement with the McGraw-Hill Book Company.
        (define f (lambda (x y . z) ⟨body⟩))
        (define g (lambda w ⟨body⟩))
      < src..
-     }
 
   :: @N(78) :: @t(Footnote 78) Scheme standardly provides a @c(map) procedure
      that is more general than the one described here. This more general @c(map)
