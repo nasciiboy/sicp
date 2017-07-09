@@ -40,7 +40,7 @@ production-distribution arrangement with the McGraw-Hill Book Company.
   This is the second edition @A(SICP) book, from Unofficial morg Format.
 
   This @l(https://github.com/nasciiboy/morg/<>morg) version is based on
-  Unofficial Texinfo Format @l(http://sicpebook.wordpress.com) (Juli 07, 2017),
+  Unofficial Texinfo Format @l(http://sicpebook.wordpress.com) (July 07, 2017),
   based on @l(http://www.neilvandyke.org/sicp-texi/<>2.neilvandyke4).
 
   The freely-distributed official @A(HTML)-and-@A(GIF) format was first
@@ -54,8 +54,7 @@ production-distribution arrangement with the McGraw-Hill Book Company.
   Unicode). Also, it's quite possible that some errors of ambiguity were
   introduced during the conversion of some of the copious superscripts (@'(^))
   and subscripts (@'(_)).  Divining @e(which) has been left as an exercise to
-  the reader. But at least we don't put our brave astronauts at risk by encoding
-  the @e(greater-than-or-equal) symbol as @c(<u>&gt;</u>).
+  the reader.
 
   It is believed that the Unofficial Texinfo Format is in keeping with the
   spirit of the graciously freely-distributed @A(HTML) version. But you never
@@ -17502,7 +17501,7 @@ production-distribution arrangement with the McGraw-Hill Book Company.
                                  random-numbers)))
     < src..
 
-    We use this to construct the stream of outcomes of the Ces@`aro experiment
+    We use this to construct the stream of outcomes of the Cesàro experiment
     performed on consecutive pairs in the @c(random-numbers) stream:
 
     ..src > scheme
@@ -30221,7 +30220,7 @@ production-distribution arrangement with the McGraw-Hill Book Company.
   @l(http://mumble.net/~jar/pubs/macros_that_work.ps<>–›)
 
   @t(Colmerauer et al. 1973) Colmerauer A., H. Kanoui, R. Pasero, and
-  P. Roussel. 1973. Un syst@`eme de communication homme-machine en
+  P. Roussel. 1973. Un système de communication homme-machine en
   français. Technical report, Groupe Intelligence Artificielle, Université d'Aix
   Marseille, Luminy.
   @l(http://alain.colmerauer.free.fr/alcol/ArchivesPublications/HommeMachineFr/HoMa.pdf<>–›)
@@ -30258,7 +30257,7 @@ production-distribution arrangement with the McGraw-Hill Book Company.
   survey, and evaluation. In @q(Future Generation Computer Systems), vol. 9,
   pp. 105-117.  @l(https://saltworks.stanford.edu/assets/kv359wz9060.pdf<>–›)
 
-  @t[Feeley (1986)] Feeley, Marc. 1986. Deux approches @`a l'implantation du
+  @t[Feeley (1986)] Feeley, Marc. 1986. Deux approches à l'implantation du
   language Scheme. Masters thesis, Université de Montréal.
   @l(http://www.iro.umontreal.ca/~feeley/papers/FeeleyMSc.pdf<>–›)
 
@@ -31713,7 +31712,7 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      Kolmogorov, Solomonoff, and Chaitin have made great progress in clarifying
      these issues; a discussion can be found in @l(#Chaitin 1975).
 
-  :: @N(135) :: This theorem is due to E. Ces@`aro. See section 4.5.2 of
+  :: @N(135) :: This theorem is due to E. Cesàro. See section 4.5.2 of
      @l(#Knuth 1981) for a discussion and a proof.
 
   :: @N(136) :: @A(MIT) Scheme provides such a procedure. If @c(random) is given

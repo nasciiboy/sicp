@@ -6,7 +6,7 @@
     <title>Structure and Interpretation of Computer Programs</title>
     <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="subtitle"    content="Second Edition Unofficial morg Format" />
-    <meta name="author"      content="Harold Abelson and Gerald Jay Sussman with Julie Sussman, foreword by Alan J. Perlis" />
+    <meta name="author"      content="Harold Abelson and Gerald Jay Sussman with Julie Sussman" />
     
     <meta name="licence"     content="CC BY-SA 4.0" />
     
@@ -342,9 +342,9 @@ Montreal, Toronto<br>
 <h2 id="Unofficial-morg-Format" >Unofficial <em>morg</em> Format</h2>
 <div class="hBody-2" >
 <p>This is the second edition <span class="acronym" >SICP</span> book, from Unofficial morg Format.</p>
-<p>This <a href="https://github.com/nasciiboy/morg/" >morg</a> version is based on Unofficial Texinfo Format <a href="http://sicpebook.wordpress.com" >http://sicpebook.wordpress.com</a> (Juli 07, 2017), based on <a href="http://www.neilvandyke.org/sicp-texi/" >2.neilvandyke4</a>.</p>
+<p>This <a href="https://github.com/nasciiboy/morg/" >morg</a> version is based on Unofficial Texinfo Format <a href="http://sicpebook.wordpress.com" >http://sicpebook.wordpress.com</a> (July 07, 2017), based on <a href="http://www.neilvandyke.org/sicp-texi/" >2.neilvandyke4</a>.</p>
 <p>The freely-distributed official <span class="acronym" >HTML</span>-and-<span class="acronym" >GIF</span> format was first converted personally to Unofficial Texinfo Format (<span class="acronym" >UTF</span>) version 1 by Lytha Ayth during a long Emacs lovefest weekend in April, 2001.</p>
-<p>The Texinfo conversion has been a straight transliteration, to the extent possible. Like the <em>morg</em>-to-<span class="acronym" >HTML</span> conversion, this was not without some introduction of breakage. In the case of Unofficial morg Format, figures have suffered an amateurish resurrection of the lost art of <span class="acronym" >ASCII</span> (and Unicode). Also, it's quite possible that some errors of ambiguity were introduced during the conversion of some of the copious superscripts (<samp>^</samp>) and subscripts (<samp>_</samp>).  Divining <em>which</em> has been left as an exercise to the reader. But at least we don't put our brave astronauts at risk by encoding the <em>greater-than-or-equal</em> symbol as <code>&lt;u&gt;&amp;gt;&lt;/u&gt;</code>.</p>
+<p>The Texinfo conversion has been a straight transliteration, to the extent possible. Like the <em>morg</em>-to-<span class="acronym" >HTML</span> conversion, this was not without some introduction of breakage. In the case of Unofficial morg Format, figures have suffered an amateurish resurrection of the lost art of <span class="acronym" >ASCII</span> (and Unicode). Also, it's quite possible that some errors of ambiguity were introduced during the conversion of some of the copious superscripts (<samp>^</samp>) and subscripts (<samp>_</samp>).  Divining <em>which</em> has been left as an exercise to the reader.</p>
 <p>It is believed that the Unofficial Texinfo Format is in keeping with the spirit of the graciously freely-distributed <span class="acronym" >HTML</span> version. But you never know when someone's armada of lawyers might need something to do, and get their shorts all in a knot over some benign little thing, so think twice before you use your full name or distribute Info, <span class="acronym" >DVI</span>, PostScript, or <span class="acronym" >PDF</span> formats that might embed your account or machine name. <i>Peath, Lytha Ayth</i></p>
 </div>
 <h2 id="Dedication" >Dedication</h2>
@@ -10208,7 +10208,7 @@ d i_L      1           R
                <span class="p">(</span><span class="nf">stream-map</span> <span class="nv">rand-update</span>
                            <span class="nv">random-numbers</span><span class="p">)))</span>
 </pre></div>
-<p>We use this to construct the stream of outcomes of the Ces</p>
+<p>We use this to construct the stream of outcomes of the Cesàro experiment performed on consecutive pairs in the <code>random-numbers</code> stream:</p>
 <div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="nv">cesaro-stream</span>
   <span class="p">(</span><span class="nf">map-successive-pairs</span>
    <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">r1</span> <span class="nv">r2</span><span class="p">)</span> <span class="p">(</span><span class="nb">= </span><span class="p">(</span><span class="nb">gcd </span><span class="nv">r1</span> <span class="nv">r2</span><span class="p">)</span> <span class="mi">1</span><span class="p">))</span>
@@ -17930,7 +17930,7 @@ ok
 <p><span id="Clark-(1978)" >Clark (1978)</span> Clark, Keith L. 1978. Negation as failure. In <q>Logic and Data Bases</q>.  New York: Plenum Press, pp. 293-322. <a href="http://www.doc.ic.ac.uk/~klc/neg.html" >–›</a></p>
 <p><span id="Clinger-(1982)" >Clinger (1982)</span> Clinger, William. 1982. Nondeterministic call by need is neither lazy nor by name. In <q>Proceedings of the <span class="acronym" >ACM</span> Symposium on Lisp and Functional Programming</q>, pp. 226-234.</p>
 <p><span id="Clinger-and-Rees-1991" >Clinger and Rees 1991</span> Clinger, William, and Jonathan Rees. 1991. Macros that work. In <q>Proceedings of the 1991 <span class="acronym" >ACM</span> Conference on Principles of Programming Languages</q>, pp. 155-162. <a href="http://mumble.net/~jar/pubs/macros_that_work.ps" >–›</a></p>
-<p><span id="Colmerauer-et-al.-1973" >Colmerauer et al. 1973</span> Colmerauer A., H. Kanoui, R. Pasero, and P. Roussel. 1973. Un syst</p>
+<p><span id="Colmerauer-et-al.-1973" >Colmerauer et al. 1973</span> Colmerauer A., H. Kanoui, R. Pasero, and P. Roussel. 1973. Un système de communication homme-machine en français. Technical report, Groupe Intelligence Artificielle, Université d'Aix Marseille, Luminy. <a href="http://alain.colmerauer.free.fr/alcol/ArchivesPublications/HommeMachineFr/HoMa.pdf" >–›</a></p>
 <p><span id="Cormen-et-al.-1990" >Cormen et al. 1990</span> Cormen, Thomas, Charles Leiserson, and Ronald Rivest. 1990. <q>Introduction to Algorithms</q>. Cambridge, <span class="acronym" >MA</span>: <span class="acronym" >MIT</span> Press.</p>
 <p><span id="Darlington-et-al.-1982" >Darlington et al. 1982</span> Darlington, John, Peter Henderson, and David Turner. 1982. <q>Functional Programming and Its Applications</q>. New York: Cambridge University Press.</p>
 <p><span id="Dijkstra-1968a" >Dijkstra 1968a</span> Dijkstra, Edsger W. 1968a. The structure of the <q><span class="acronym" >THE</span></q> multiprogramming system. <q>Communications of the <span class="acronym" >ACM</span></q> 11(5): 341-346. <a href="http://www.cs.utexas.edu/users/EWD/ewd01xx/EWD196.PDF" >–›</a></p>
@@ -17939,7 +17939,7 @@ ok
 <p><span id="deKleer-et-al.-1977" >deKleer et al. 1977</span> deKleer, Johan, Jon Doyle, Guy Steele, and Gerald J. Sussman. 1977.  <span class="acronym" >AMORD</span>: Explicit control of reasoning. In <q>Proceedings of the <span class="acronym" >ACM</span> Symposium on Artificial Intelligence and Programming Languages</q>, pp. 116-125.  <a href="http://dspace.mit.edu/handle/1721.1/5750" >–›</a></p>
 <p><span id="Doyle-(1979)" >Doyle (1979)</span> Doyle, Jon. 1979. A truth maintenance system. <q>Artificial Intelligence</q> 12: 231-272.  <a href="http://dspace.mit.edu/handle/1721.1/5733" >–›</a></p>
 <p><span id="Feigenbaum-and-Shrobe-1993" >Feigenbaum and Shrobe 1993</span> Feigenbaum, Edward, and Howard Shrobe. 1993. The Japanese National Fifth Generation Project: Introduction, survey, and evaluation. In <q>Future Generation Computer Systems</q>, vol. 9, pp. 105-117.  <a href="https://saltworks.stanford.edu/assets/kv359wz9060.pdf" >–›</a></p>
-<p><span id="Feeley-(1986)" >Feeley (1986)</span> Feeley, Marc. 1986. Deux approches </p>
+<p><span id="Feeley-(1986)" >Feeley (1986)</span> Feeley, Marc. 1986. Deux approches à l'implantation du language Scheme. Masters thesis, Université de Montréal. <a href="http://www.iro.umontreal.ca/~feeley/papers/FeeleyMSc.pdf" >–›</a></p>
 <p><span id="Feeley-and-Lapalme-1987" >Feeley and Lapalme 1987</span> Feeley, Marc and Guy Lapalme. 1987. Using closures for code generation.  <q>Journal of Computer Languages</q> 12(1): 47-66. <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.90.6978" >–›</a></p>
 <p>Feller, William. 1957. <q>An Introduction to Probability Theory and Its Applications</q>, volume 1. New York: John Wiley &amp; Sons.</p>
 <p><span id="Fenichel-and-Yochelson-(1969)" >Fenichel and Yochelson (1969)</span> Fenichel, R., and J. Yochelson. 1969. A Lisp garbage collector for virtual memory computer systems. <q>Communications of the <span class="acronym" >ACM</span></q> 12(11): 611-612. <a href="https://www.cs.purdue.edu/homes/hosking/690M/p611-fenichel.pdf" >–›</a></p>
@@ -18519,7 +18519,6 @@ ok
 <div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="nv">f</span> <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">x</span> <span class="nv">y</span> <span class="o">.</span> <span class="nv">z</span><span class="p">)</span> <span class="err">⟨</span><span class="nv">body</span><span class="err">⟩</span><span class="p">))</span>
 <span class="p">(</span><span class="k">define </span><span class="nv">g</span> <span class="p">(</span><span class="k">lambda </span><span class="nv">w</span> <span class="err">⟨</span><span class="nv">body</span><span class="err">⟩</span><span class="p">))</span>
 </pre></div>
-<p>}</p>
 </div>
 </div>
 <div class="about" >
@@ -18913,7 +18912,7 @@ ok
 <div class="about" >
 <div class="about-dt" ><span class="defnote" id="135" >135</span></div>
 <div class="about-dd" >
-<p>This theorem is due to E. Ces</p>
+<p>This theorem is due to E. Cesàro. See section 4.5.2 of <a href="#Knuth-1981" >Knuth 1981</a> for a discussion and a proof.</p>
 </div>
 </div>
 <div class="about" >
