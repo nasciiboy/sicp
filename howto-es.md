@@ -226,7 +226,7 @@ Para colocar una `@` dentro del texto tal cual, utilize `@@`
 el fichero <code class="file">TODO.org</code> se encuentra la lista de
 pendientes y encargados de cada labor
 
-## Cosideraciones finales
+## Consideraciones finales
 
 La herramienta principal con la que se realiza la traduccion ha sido *El editor*
 Emacs, el cual proporciona diversas facilidades de edicion, tomando prestadas
