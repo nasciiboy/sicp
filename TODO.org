@@ -1,0 +1,33 @@
+* Tareas generales
+
+  Corregir la apertura y cierre de todos los comandos @, en particular los
+  camandos matematicos m y M, enlaces y algunos objetivos @t()
+
+  dentro de los comandos @m y @M substituir @c(f) por ƒ
+
+* Tareas por colaborador
+
+  agregar tarea siguiendo el formato
+
+  - [ ] - Colaborador encargado :: Tarea que desea realizar :: Seccion
+  - [X] - Colaborador encargado :: Tarea concluida          :: Seccion
+
+  Agrege su tarea intercalandola en el orden y posicion que sigue el libro.
+
+  Si la tarea que va a realizar no esta asignada, por ejemplo traducir la
+  seccion 3.1, cuando la traduccion va en la seccion 2.5, coloquela al final de
+  la lista.
+
+  Si la tarea que va a realizar, tiene que ver con por ejemplo
+  revisar/re-traducir una seccion, coloquela justo debajo de donde aparece la
+  asignacion original
+
+  Intente no interferir con una tarea sin terminar, a menos que el encargado
+  deje de prestar interes por un tiempo razonable o sea una de las pocas tareas
+  pendientes
+
+  === TAREAS
+
+  - [X] - nasciiboy :: traduccion :: Unofficial morg Format
+  - [X] - nasciiboy :: traduccion :: Dedication
+  - [ ] - nasciiboy :: traduccion :: Prefacio a la segunda Edicion
