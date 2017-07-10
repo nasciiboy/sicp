@@ -251,3 +251,6 @@ sus cambios revise la codificacion
 en la traduccion, las opciones de resaltado e inclucion de mathjax, estan
 desabilitadas (comando `..options >`) para evitar el cuello de botella que
 suponen en el desarrollo, habilite si quiere la exportacion completa
+
+Para terminar, hay un subreddit donde realizar cualquer pregunta, propuesta o
+insulto, en https://www.reddit.com/r/SICP_ES/
