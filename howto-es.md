@@ -1,4 +1,4 @@
-# Guia para Colaborardores
+# Guia para Colaboradores
 
 Bienvenidos los contribuidores a la traduccion No oficial de libro SICP al
 español!
