@@ -165,7 +165,7 @@ pasemos a un ejemplo real
 * Formato @e(morg) No Oficial
 
 #   This is the second edition @A(SICP) book, from Unofficial morg Format.
-  Esta es la seguanda edicion del libro @A(SICP), no oficial en formato morg.
+  Esta es la segunda edicion del libro @A(SICP), no oficial en formato morg.
 
 #   This @l(https://github.com/nasciiboy/morg/<>morg) version is based on
 #   Unofficial Texinfo Format @l(http://sicpebook.wordpress.com) (July 07, 2017),
