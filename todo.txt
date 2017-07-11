@@ -30,4 +30,5 @@
 
   - [X] - nasciiboy :: traduccion :: Unofficial morg Format
   - [X] - nasciiboy :: traduccion :: Dedication
+  - [X] - nasciiboy :: traduccion :: Foreword
   - [ ] - nasciiboy :: traduccion :: Preface to the Second Edition

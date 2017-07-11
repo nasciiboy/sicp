@@ -155,7 +155,7 @@ Company.
 
 #     --Alan J. Perlis (April 1, 1922−February 7, 1990)
     --Alan J. Perlis (Abril 1 de 1922−Febrero 7 de 1990)
-#   ..quote >
+#   < quote..
   < quote..
 
 # * Foreword
@@ -496,7 +496,7 @@ Company.
 
 #     --Alan J. Perlis
     --Alan J. Perlis
-#   ..quote >
+#   < quote..
   < quote..
 
 
@@ -602,7 +602,7 @@ Company.
 #       Poorly-Understood and Sloppily-Formulated Ideas)
    --Marvin Minsky, @"(¿Por qué la programación es un buen medio para expresar
      ideas mal entendidas y formuladas)
-#   ..quote >
+#   < quote..
  < quote..
 
 
@@ -998,7 +998,7 @@ Company.
 * Construyendo Abstracciones con Procedimientos
 
 #   ..quote >
- ..quote >
+  ..quote >
 #     The acts of the mind, wherein it exerts its power over simple ideas, are
 #     chiefly these three: 1. Combining several simple ideas into one compound
 #     one, and thus all complex ideas are made. 2. The second is bringing two
@@ -1007,19 +1007,19 @@ Company.
 #     which it gets all its ideas of relations. 3. The third is separating them
 #     from all other ideas that accompany them in their real existence: this is
 #     called abstraction, and thus all its general ideas are made.
-   Los actos de la mente, en los que ejerce su poder sobre las ideas simples,
-   son principalmente estos tres: 1. La combinación de varias ideas simples en
-   uno compuesto uno, y por lo tanto todas las ideas complejas se hacen. 2. La
-   segunda consiste en reunir dos ideas, ya sean simples o complejas, y fijarlas
-   unas a otras para poder verlas a la vez, sin unirlas en una sola, por las
-   cuales se obtienen todas sus ideas de relaciones. 3. La tercera es separarlos
-   de todas las otras ideas que los acompañan en su existencia real: esto se
-   llama abstracción, y así se hacen todas sus ideas generales.
+    Los actos de la mente, en los que ejerce su poder sobre las ideas simples,
+    son principalmente estos tres: 1. La combinación de varias ideas simples en
+    uno compuesto uno, y por lo tanto todas las ideas complejas se hacen. 2. La
+    segunda consiste en reunir dos ideas, ya sean simples o complejas, y fijarlas
+    unas a otras para poder verlas a la vez, sin unirlas en una sola, por las
+    cuales se obtienen todas sus ideas de relaciones. 3. La tercera es separarlos
+    de todas las otras ideas que los acompañan en su existencia real: esto se
+    llama abstracción, y así se hacen todas sus ideas generales.
 
 #     --John Locke, @q(An Essay Concerning Human Understanding) (1690)
-   --John Locke, @"(un ensayo sobre la comprensión humana) (1690)
-#   ..quote >
- < quote..
+    --John Locke, @"(un ensayo sobre la comprensión humana) (1690)
+#   < quote..
+  < quote..
 
 
 #   We are about to study the idea of a @e(computational process).  Computational
@@ -7742,7 +7742,7 @@ Company.
 * Creación de abstracciones con datos
 
 #   ..quote >
- ..quote >
+  ..quote >
 #     We now come to the decisive step of mathematical abstraction: we forget
 #     about what the symbols stand for. … [The mathematician] need not be idle;
 #     there are many operations which he may carry out with these symbols, without
@@ -7754,8 +7754,8 @@ Company.
 
 #     --Hermann Weyl, @q(The Mathematical Way of Thinking)
     --Hermann Weyl, @"(La manera matemática de pensar)
-#   ..quote >
- < quote..
+#   < quote..
+  < quote..
 
 #   We concentrated in @l(#Chapter 1) on computational processes and on the role
 #   of procedures in program design. We saw how to use primitive data (numbers)
@@ -20368,7 +20368,7 @@ Company.
 * Modularidad, Objetos y Estado
 
 #   ..quote >
- ..quote >
+  ..quote >
 #     Mεταβάλλον ὰναπαύεται
 #     (Even while it changes, it stands still.)
     Mεταβάλλον ὰναπαύεται (Incluso mientras cambia, se queda quieto.)
@@ -20381,8 +20381,8 @@ Company.
 
 #     --Alphonse Karr
     --Alphonse Karr
-#   ..quote >
- < quote..
+#   < quote..
+  < quote..
 
 #   The preceding chapters introduced the basic elements from which programs are
 #   made. We saw how primitive procedures and primitive data are combined to
@@ -33705,8 +33705,8 @@ Company.
 # * Chapter 4 <> Metalinguistic Abstraction
 * Abstracción metalingüística
 
-  #   ..quote >
- ..quote >
+#   ..quote >
+  ..quote >
 #     … It's in words that the magic is––Abracadabra, Open Sesame, and the
 #     rest––but the magic words in one story aren't magical in the next. The real
 #     magic is to understand which words work, and when, and for what; the trick
@@ -33727,8 +33727,8 @@ Company.
 
 #     --John Barth, @q(Chimera)
     --John Barth, @"(Quimera)
-#   ..quote >
- < quote..
+#   < quote..
+  < quote..
 
 #   In our study of program design, we have seen that expert programmers control
 #   the complexity of their designs with the same general techniques used by
@@ -33814,14 +33814,14 @@ Company.
   programación:
 
 #   ..quote >
- ..quote >
+  ..quote >
 #     The evaluator, which determines the meaning of expressions in a programming
 #     language, is just another program.
     El evaluador, que determina el significado de las expresiones en un lenguaje
     de programación, es simplemente otro programa.
 
-#   ..quote >
- < quote..
+#   < quote..
+  < quote..
 
 #   To appreciate this point is to change our images of ourselves as programmers.
 #   We come to see ourselves as designers of languages, rather than only users of
@@ -45851,7 +45851,7 @@ Company.
 * Informática con máquinas registradoras
 
 #   ..quote >
- ..quote >
+  ..quote >
 #     My aim is to show that the heavenly machine is not a kind of divine, live
 #     being, but a kind of clockwork (and he who believes that a clock has soul
 #     attributes the maker's glory to the work), insofar as nearly all the
@@ -45866,8 +45866,8 @@ Company.
 
 #     --Johannes Kepler (letter to Herwart von Hohenburg, 1605)
     --Johannes Kepler (carta a Herwart von Hohenburg, 1605)
-#   ..quote >
- < quote..
+#   < quote..
+  < quote..
 
 
 #   We began this book by studying processes and by describing processes in terms

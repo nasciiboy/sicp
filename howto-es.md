@@ -13,7 +13,7 @@ en el mundo real
 Esta traduccion se realiza por respeto y admiracion al espiritu que habita en la
 maquina. Manteniendo ese espiritu la obra esta bajo liciencia CC-SA 4.0 por lo
 que se da por hecho que cualquier contribucion a esta se apega a dicha
-licencia. Por respeto a las personas este proyecto no obliga a firmar ningun
+licencia. Por respeto a las personas, este proyecto no obliga a firmar ningun
 CLA, u otro contrato similar
 
 Happy Hacking!
@@ -28,7 +28,7 @@ nasciiboy@gmail.com, siendo el unico requisito clonar el repositorio
 
     git clone https://github.com/nasciiboy/sicp.git
 
-manternerlo actualizado con los cambios mediante el comando
+manternerlo actualizado mediante el comando
 
     git pull
 
@@ -47,11 +47,11 @@ Antes de realizar modificaciones agregar la URL del repositorio original del pro
 
     $ git remote add upstream https://github.com/nasciiboy/sicp.git
 
-Antes de empezar a trabajar, obtener los últimos cambios del Repo Original:
+y obtener los últimos cambios del repo Original:
 
     $ git pull -r upstream master
 
-Crear una Rama, Para crear una rama usar la opción `checkout` de git:
+Crear una Rama. Para crear una rama usar la opción `checkout` de git:
 
     $ git checkout -b mi-rama-con-cambios
 
@@ -85,24 +85,24 @@ compilador con el que se hace un programa, no se considera que un proyecto
 terminado tenga que contener las datos de su programa de control de versiones
 
 los datos sobre la autoria de sus contribuidores (si es lo que se desea) seran
-colocados dentro del fichero <code class="file">CONTRIBUTORS.txt</code>, que sera
-el registro que se transmita en la version final de la traduccion
+colocados dentro del fichero <code class="file">contrib.txt</code>, que sera
+el registro transmido en la version final de la traduccion
 
 ## Organizacion
 
 ```
 .
-├── CONTRIBUTORS.txt      // lista de colaboradores
+├── contrib.txt           // lista de colaboradores
 ├── img                   // carpeta con imagenes del libro
 │   ...
-├── howto-es.md           // Este fichero
+├── howto-es.md           // Como colaborar
 ├── LICENSE               // Licencia del proyecto
 ├── README-EN.md          // presentacion del proyecto en ingles
 ├── README.md             // presentacion del proyecto en español
 ├── sicp.morg             // fichero "maestro" del libro (ingles)
 ├── sicp.html             // exportacion del libro (ingles)
 ├── sicp-es.porg          // fichero "maestro" con la traduccion al español
-├── TODO.org
+├── todo.txt              // tareas a realizar
 └── worg-data             // carpeta con recursos para la exportacion html
     ├── worg.css          // hoja de estilo
     ├── fonts             // fuentes
@@ -112,7 +112,7 @@ el registro que se transmita en la version final de la traduccion
 ## La herramienta morg
 
 [morg](https://github.com/nasciiboy/morg) es un programa desarrollado en
-el lenguaje de programacion Go, para instalarlo priemero debe seguir los pasos
+el lenguaje de programacion Go, para instalarlo primero debe seguir los pasos
 de [esta](https://github.com/nasciiboy/morg/blob/master/howto.md) guia, o si ya
 tiene instalado el lenguaje Go en su sistema, puede optener la herramienta con
 el comando
@@ -177,30 +177,30 @@ pasemos a un ejemplo real
   @l(http://mitpress.mit.edu/sicp/<>version HTML) original de MIT Press.
 ```
 
-morg cuenta con sencillas pero potentes opcienes de estructuracion y resaltado,
+morg cuenta con sencillas pero potentes opciones de estructuracion y resaltado,
 no es necesario conocerlas a profundidad, pero aqui estan las principales
 
-- Todos los elementos finalizan cuando aparece una linea en blanco, exeptuando
+- todos los elementos finalizan cuando aparece una linea en blanco, exeptuando
   los "comandos" que se guian por la indentacion
 
 - el documento se estructura por niveles de encabezado, esto es cada linea que
-  inicia con uno o varios `*` seguida por almenos un espacio en blanco. El
+  inicia con uno o varios `*` seguida por al menos un espacio en blanco. El
   alcance de este encabezado, termina cuando aparece otro encabezado
 
 - las listas inician con `-`, `+`, `1.`, `1)`, `a.` o `a)`, seguido por un
   espacio en blanco y luego su contenido debe indentarse
 
 - las definiciones inician con `-` o `+` luego aparece el texto a definir,
-  seguido por ` :: ` y luego cuaquer contenido que conforme la definicion debe
-  seguir la identacion
+  seguido por ` :: ` y despues cualquer contenido que conforme la definicion debe
+  llebar identacion
 
 - los "abouts" inician con `::` luego aparece el "titulo",
   seguido por ` :: ` y despues cualquer contenido que conforme la definicion debe
   seguir la identacion
 
 - los "comandos de bloque" tienen la estructura `..el-comando opciones > argumento`. El
-  cuerpo, del comando si es que tiene debe estar endentado con dos espacios.
-  Los comandos pueden "cerrarse" explicitamente con `< el-comando..`, de otra
+  cuerpo, del comando si es que tiene, debe estar indentado con dos espacios.
+  Los comandos de bloque pueden "cerrarse" explicitamente con `< el-comando..`, de otra
   forma terminan cuanto el contenido deja de mantener la indentacion
 
 - existen los comandos `@`, que sirven tanto para resaltar el texto, como para
@@ -211,7 +211,7 @@ no es necesario conocerlas a profundidad, pero aqui estan las principales
   `>`. La variedad de este ultimo se utiliza para *evitar abiguedades* sobre el
   alcance del contenido
 
-  Si dentro del comando `@` aparece `<>` significa el texto a la derecha de
+  Si dentro del comando `@` aparece `<>` significa que el texto a la derecha de
   este, reemplazara lo que aparesca en la exportacion y el texto a la izquierda
   es el "argumento" del comando
 
@@ -223,15 +223,20 @@ Para colocar una `@` dentro del texto tal cual, utilize `@@`
 
 ## TODO
 
-el fichero <code class="file">TODO.org</code> se encuentra la lista de
+el fichero <code class="file">todo.txt</code> se encuentra la lista de
 pendientes y encargados de cada labor
+
+Antes de iniciar una tarea realize una modificacion en dicho fichero
+adjudicandose la tarea, envie un pull request y espere a que se actualice
+el repositorio fuente
 
 ## Consideraciones finales
 
 La herramienta principal con la que se realiza la traduccion ha sido *El editor*
 Emacs, el cual proporciona diversas facilidades de edicion, tomando prestadas
 cualidades del modo *org-mode*, considere su uso, de otra manera tendra que
-editar "rusticamente", debido a la juventud del lenguaje de marcas morg
+editar "rusticamente", debido a la juventud del lenguaje de marcas morg, de ser
+asi no se moleste en "cuadrar" los parrafos, solo mantenga la indentacion
 
 Hasta el momento he utilizado google translate (<code class="file">sicp-es.porg</code>)
 tanto para la traduccion maquina, e igual para ir realizando una revicion
@@ -241,12 +246,12 @@ mano utilice
 
     $ morg toTxt sicp.morg
 
-esto genera el fichero <code class="file">sicp.txt</code>, con todos los
-parrafos en una sola linea. Es una caracteristica sin terminar, pero bastante
+esto genera el fichero <code class="file">sicp.txt</code>, con cada parrafo en
+una sola linea independiente. Es una caracteristica sin terminar, pero bastante
 util
 
-Para finalizar todos los ficheros estan codificados en utf-8, antes de enviar
-sus cambios revise la codificacion
+todos los ficheros estan codificados en utf-8, antes de enviar sus cambios
+revise la codificacion
 
 en la traduccion, las opciones de resaltado e inclucion de mathjax, estan
 desabilitadas (comando `..options >`) para evitar el cuello de botella que
