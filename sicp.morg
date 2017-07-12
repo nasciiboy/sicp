@@ -25464,8 +25464,8 @@ production-distribution arrangement with the McGraw-Hill Book Company.
 
 **** The basic machine
 
-     The @c(make-new-machine) procedure, shown in @l(#Figure 5.13,,Figure 5.13),
-     constructs an object whose local state consists of a stack, an initially empty
+     The @c(make-new-machine) procedure, shown in @l(#Figure 5.13), constructs
+     an object whose local state consists of a stack, an initially empty
      instruction sequence, a list of operations that initially contains an
      operation to initialize the stack, and a @e(register table) that initially
      contains two registers, named @c(flag) and @c(pc) (for @"(program
