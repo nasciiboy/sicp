@@ -591,12 +591,13 @@ Company.
 #     scientists. Computer programs are good, they say, for particular purposes,
 #     but they aren't flexible. Neither is a violin, or a typewriter, until you
 #     learn how to use it.
-   Una computadora es como un violín. Usted puede imaginar a un principiante que
-   intenta primero un fonógrafo y luego un violín. Este último, dice, suena
-   terrible. Ese es el argumento que hemos escuchado de nuestros humanistas y la
-   mayoría de nuestros informáticos. Los programas informáticos son buenos,
-   dicen, para propósitos particulares, pero no son flexibles. Tampoco es un
-   violín, ni una máquina de escribir, hasta que aprendas a usarlo.
+   Una computadora es como un violín. Puedes imaginar a un principiante que
+   probar primero con un fonógrafo y luego con un violín. Este último, dice,
+   suena terrible. Ese es el argumento que hemos escuchado de nuestros
+   humanistas y la mayoría de nuestros informáticos. Los programas informáticos
+   son buenos, dicen, para propósitos particulares, pero no son
+   flexibles. Tampoco lo es un violín, ni una máquina de escribir, hasta que
+   aprendas a usarlo.
 
 #     --Marvin Minsky, @q(Why Programming Is a Good Medium for Expressing
 #       Poorly-Understood and Sloppily-Formulated Ideas)
@@ -617,17 +618,17 @@ Company.
 #   students have had little or no prior formal training in computation, although
 #   many have played with computers a bit and a few have had extensive programming
 #   or hardware-design experience.
-  @"(La Estructura e Interpretación de los Programas de Computadora) es la
+  @"(La Estructura e Interpretación de los Programas Informaticos) es la
   asignatura de nivel básico en informática en el Massachusetts Institute of
-  Technology. Se requiere de todos los estudiantes en el @A(MIT) que se
+  Technology. Se requiere a todos los estudiantes en el @A(MIT) que se
   especializan en ingeniería eléctrica o en informática, como una cuarta parte
-  del @"(plan de estudios básico común,) que también incluye dos asignaturas
+  del @"(plan de estudios básico común), que también incluye dos asignaturas
   sobre circuitos y sistemas lineales y un tema sobre el diseño de sistemas
   digitales. Hemos estado involucrados en el desarrollo de este tema desde 1978,
-  y hemos enseñado este material en su forma actual desde el otoño de 1980 a
-  entre 600 y 700 estudiantes cada año. La mayoría de estos estudiantes han
-  tenido poco o ningún entrenamiento formal previo en computación, aunque muchos
-  han jugado con las computadoras un poco y unos cuantos han tenido programación
+  y hemos enseñado este material en su forma actual desde otoño de 1980 a entre
+  600 y 700 estudiantes cada año. La mayoría de estos estudiantes han tenido
+  poco o ningún entrenamiento formal previo en computación, aunque muchos han
+  jugado con las computadoras un poco y unos cuantos han tenido programación
   extensa o experiencia de diseño de hardware.
 
 #   Our design of this introductory computer-science subject reflects two major
@@ -643,8 +644,8 @@ Company.
 #   control the intellectual complexity of large software systems.
   Nuestro diseño de este tema introductorio de ciencias de la computación
   refleja dos preocupaciones principales. En primer lugar, queremos establecer
-  la idea de que un lenguaje informático no es sólo una forma de obtener una
-  computadora para realizar operaciones sino que es un nuevo medio formal para
+  la idea de que un lenguaje informático no es sólo una forma lograr que una
+  computadora realice operaciones, sino que es un nuevo medio formal para
   expresar ideas sobre metodología. Así, los programas deben ser escritos para
   que la gente lea, y sólo de manera incidental para que las máquinas
   ejecuten. En segundo lugar, creemos que el material esencial a ser abordado
@@ -663,11 +664,11 @@ Company.
 #   they need not understand at any moment. They should feel secure about
 #   modifying a program, retaining the spirit and style of the original author.
   Nuestro objetivo es que los estudiantes que completen este tema deben tener
-  una buena idea de los elementos de estilo y la estética de la
-  programación. Deben tener el dominio de las principales técnicas para
-  controlar la complejidad en un sistema grande. Ellos deben ser capaces de leer
-  un programa de 50 páginas, si está escrito en un estilo ejemplar. Deben saber
-  qué no leer y lo que no necesitan comprender en ningún momento. Ellos deben
+  una buena idea de los elementos de estilo y la estética de la programación.
+  Deben tener el dominio de las principales técnicas para controlar la
+  complejidad en un sistema grande. Ellos deben ser capaces de leer un programa
+  de 50 páginas, si está escrito en un estilo ejemplar. Deben saber qué no
+  necesitan leer y que no necesitan comprender en ningún momento. Ellos deben
   sentirse seguros sobre la modificación de un programa, manteniendo el espíritu
   y el estilo del autor original.
 
@@ -684,10 +685,10 @@ Company.
   ingeniería. Controlamos la complejidad creando abstracciones que ocultan
   detalles cuando es apropiado. Controlamos la complejidad estableciendo
   interfaces convencionales que nos permiten construir sistemas combinando
-  piezas estándar y bien entendidas en una @"(mezcla y una) forma de
-  @"(coincidencia). Controlamos la complejidad estableciendo nuevos lenguajes
-  para describir un diseño, cada uno de los cuales enfatiza aspectos
-  particulares del diseño y desactiva otros.
+  piezas estándar y bien entendidas en forma de @"(mezcla y coincidencia).
+  Controlamos la complejidad estableciendo nuevos lenguajes para describir un
+  diseño, cada uno de los cuales enfatiza aspectos particulares del diseño y
+  atenua otros.
 
 #   Underlying our approach to this subject is our conviction that @"(computer
 #   science) is not a science and that its significance has little to do with
@@ -704,12 +705,12 @@ Company.
   las computadoras. La revolución de la computadora es una revolución en la
   forma en que pensamos y en la forma en que expresamos lo que pensamos. La
   esencia de este cambio es la aparición de lo que mejor podría llamarse
-  @e(epistemología procedimental: el) estudio de la estructura del conocimiento
+  @e(epistemología procedimental)––el estudio de la estructura del conocimiento
   desde un punto de vista imperativo, en oposición al punto de vista más
   declarativo tomado por los sujetos matemáticos clásicos. Las matemáticas
-  proporcionan un marco para tratar con precisión las nociones de @"(lo que
-  es. )  La computación proporciona un marco para tratar con precisión las
-  nociones de @"(cómo.)
+  proporcionan un marco para tratar con precisión las nociones de @"(lo que es).
+  La computación proporciona un marco para tratar con precisión las nociones de
+  @"(cómo).
 
 #   In teaching our material we use a dialect of the programming language Lisp. We
 #   never formally teach the language, because we don't have to. We just use it,
@@ -731,36 +732,26 @@ Company.
 #   debugging. We thank all the generations of Lisp wizards, starting with John
 #   McCarthy, who have fashioned a fine tool of unprecedented power and elegance.
   En la enseñanza de nuestro material utilizamos un dialecto del lenguaje de
-  programación Lisp. Nunca enseñamos formalmente el idioma, porque no tenemos
+  programación Lisp. Nunca enseñamos formalmente el lenguaje, porque no tenemos
   que hacerlo. Sólo lo usamos, y los estudiantes lo recogen en unos días. Esta
   es una gran ventaja de los lenguajes de tipo Lisp: tienen muy pocas formas de
   formar expresiones compuestas y casi ninguna estructura sintáctica. Todas las
   propiedades formales se pueden cubrir en una hora, como las reglas del
   ajedrez. Después de un corto tiempo nos olvidamos de los detalles sintácticos
-  de la lengua (porque no hay ninguno) y seguir con los problemas reales -
-  averiguar lo que queremos calcular, cómo vamos a descomponer los problemas en
-  partes manejables, y cómo vamos a trabajar en las partes. Otra ventaja de Lisp
-  es que apoya (pero no hace cumplir) más de las estrategias a gran escala para
-  la descomposición modular de los programas que cualquier otro idioma que
-  conocemos. Podemos hacer abstracciones de procedimientos y datos, podemos usar
-  funciones de orden superior para capturar patrones comunes de uso, podemos
-  modelar el estado local usando asignación y mutación de datos, podemos enlazar
-  partes de un programa con flujos y evaluación retrasada, y podemos fácilmente
-  Implementar lenguajes incrustados. Todo esto está incrustado en un entorno
-  interactivo con un excelente soporte para el diseño incremental de programas,
-  construcción, pruebas y depuración. Agradecemos a todas las generaciones de
-  magos Lisp, empezando por John McCarthy, que han creado una excelente
-  herramienta de poder y elegancia sin precedentes. Y podemos implementar
-  fácilmente lenguajes incrustados. Todo esto está incrustado en un entorno
-  interactivo con un excelente soporte para el diseño incremental de programas,
-  construcción, pruebas y depuración. Agradecemos a todas las generaciones de
-  magos Lisp, empezando por John McCarthy, que han creado una excelente
-  herramienta de poder y elegancia sin precedentes. Y podemos implementar
-  fácilmente lenguajes incrustados. Todo esto está incrustado en un entorno
-  interactivo con un excelente soporte para el diseño incremental de programas,
-  construcción, pruebas y depuración. Agradecemos a todas las generaciones de
-  magos Lisp, empezando por John McCarthy, que han creado una excelente
-  herramienta de poder y elegancia sin precedentes.
+  del lenguaje (porque no hay ninguno) y seguimos adelante con los problemas
+  reales––averiguar lo que queremos calcular, cómo vamos a descomponer los
+  problemas en partes manejables, y cómo vamos a trabajar en las partes. Otra
+  ventaja de Lisp es que soporta (pero no impone) la mayoria de estrategias de
+  cualquier otro lenguaje que conozcamos para la descomposición modular de los
+  programas a gran escala. Podemos hacer abstracciones de procedimientos y
+  datos, podemos usar funciones de orden superior para capturar patrones comunes
+  de uso, podemos modelar el estado local usando asignación y mutación de datos,
+  podemos enlazar partes de un programa con flujos y evaluación retrasada, y
+  podemos implementar lenguajes enbebidos fácilmente. Todo esto está incrustado
+  en un entorno interactivo con un excelente soporte para el diseño incremental
+  de programas, construcción, pruebas y depuración. Agradecemos a todas las
+  generaciones de magos Lisp, empezando por John McCarthy, que han creado una
+  excelente herramienta de poder y elegancia sin precedentes.
 
 #   Scheme, the dialect of Lisp that we use, is an attempt to bring together the
 #   power and elegance of Lisp and Algol. From Lisp we take the metalinguistic
@@ -773,21 +764,21 @@ Company.
 #   languages. We also recognize our debt to the mathematicians who scouted out
 #   this territory decades before computers appeared on the scene. These pioneers
 #   include Alonzo Church, Barkley Rosser, Stephen Kleene, and Haskell Curry.
-  Esquema, el dialecto de Lisp que usamos, es un intento de reunir el poder y la
+  Scheme, el dialecto de Lisp que usamos, es un intento de reunir el poder y la
   elegancia de Lisp y Algol. De Lisp tomamos el poder metalingüístico que deriva
   de la sintaxis simple, la representación uniforme de los programas como
-  objetos de datos, y los datos recolectados basados en recolección de
-  basura. Desde Algol tomamos el ámbito léxico y la estructura de bloques, que
+  objetos de datos, y la recolección de basura de datos almacenados en el
+  monticulo. De Algol tomamos el ámbito léxico y la estructura de bloques, que
   son regalos de los pioneros del diseño de lenguaje de programación que estaban
   en el comité de Algol. Queremos citar a John Reynolds y Peter Landin por sus
-  ideas sobre la relación del λ-cálculo de la Iglesia con la estructura de los
+  ideas sobre la relacion de la Iglesia del cálculo-λ con la estructura de los
   lenguajes de programación. También reconocemos nuestra deuda con los
   matemáticos que exploraron este territorio décadas antes de que las
-  computadoras aparecieran en la escena. Estos pioneros incluyen Alonzo Church,
+  computadoras aparecieran en escena. Estos pioneros incluyen a Alonzo Church,
   Barkley Rosser, Stephen Kleene y Haskell Curry.
 
 # * Acknowledgments
-* Expresiones de gratitud
+* Agradecimientos
 
 #   We would like to thank the many people who have helped us develop this book
 #   and this curriculum.

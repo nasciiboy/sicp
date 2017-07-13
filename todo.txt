@@ -32,4 +32,5 @@
   - [X] - nasciiboy :: traduccion :: Dedication
   - [X] - nasciiboy :: traduccion :: Foreword
   - [X] - nasciiboy :: traduccion :: Preface to the Second Edition
-  - [ ] - nasciiboy :: traduccion :: Preface to the First Edition
+  - [X] - nasciiboy :: traduccion :: Preface to the First Edition
+  - [ ] - nasciiboy :: traduccion :: Acknowledgments
