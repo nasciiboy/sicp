@@ -788,19 +788,19 @@ Company.
 #   Our subject is a clear intellectual descendant of @"(6.231,) a wonderful
 #   subject on programming linguistics and the λ-calculus taught at @A(MIT) in the
 #   late 1960s by Jack Wozencraft and Arthur Evans, Jr.
-  Nuestro tema es un claro descendiente intelectual de @"(6.231,) un maravilloso
-  tema de programación lingüística y el λ-cálculo enseñado en el @A(MIT) a
+  Nuestro tema es un claro descendiente intelectual de @"(6.231), un maravilloso
+  tema de programación lingüística y del cálculo-λ enseñado en el @A(MIT) a
   finales de 1960 por Jack Wozencraft y Arthur Evans, Jr.
 
 #   We owe a great debt to Robert Fano, who reorganized @A(MIT)'s introductory
 #   curriculum in electrical engineering and computer science to emphasize the
 #   principles of engineering design. He led us in starting out on this enterprise
 #   and wrote the first set of subject notes from which this book evolved.
-  Tenemos una gran deuda con Robert Fano, quien reorganizó @A(el) programa de
+  Tenemos una gran deuda con Robert Fano, quien reorganizó el programa de
   introducción al @A(MIT) en ingeniería eléctrica e informática para enfatizar
-  los principios del diseño de ingeniería. Él nos guió en comenzar hacia fuera
-  en esta empresa y escribió el primer sistema de las notas de la materia de las
-  cuales este libro evolucionó.
+  los principios del diseño de ingeniería. Él nos guió para empezar esta empresa
+  y escribió el primer conjunto de notas de temas de las cuales este libro
+  evolucionó.
 
 #   Much of the style and aesthetics of programming that we try to teach were
 #   developed in conjunction with Guy Lewis Steele Jr., who collaborated with
@@ -832,9 +832,9 @@ Company.
 #   emphasize that a student's ability to write and modify programs provides a
 #   powerful medium in which exploring becomes a natural activity.
   Marvin Minsky y Seymour Papert formaron muchas de nuestras actitudes acerca de
-  la programación y su lugar en nuestra vida intelectual. A ellos debemos
+  la programación y su lugar en nuestra vida intelectual. A ellos le debemos
   entender que la computación proporciona un medio de expresión para explorar
-  ideas que de otra manera serían demasiado complejas para tratar con
+  ideas que de otra manera serían demasiado complejas para tratarlas con
   precisión. Enfatizan que la capacidad del estudiante para escribir y modificar
   programas provee un poderoso medio en el cual la exploración se convierte en
   una actividad natural.
@@ -843,10 +843,10 @@ Company.
 #   had better be careful to support the joy of programming. Part of this joy
 #   derives from observing great masters at work. We are fortunate to have been
 #   apprentice programmers at the feet of Bill Gosper and Richard Greenblatt.
-  También estamos muy de acuerdo con Alan Perlis de que la programación es muy
-  divertida y que es mejor tener cuidado de apoyar la alegría de la
+  También estamos bastante de acuerdo con Alan Perlis de que la programación es
+  muy divertida y que es mejor tener cuidado de apoyar la alegría de la
   programación. Parte de esta alegría deriva de la observación de grandes
-  maestros en el trabajo. Tenemos la suerte de haber sido programadores de
+  maestros en el trabajo. Tenemos la fortuna de haber sido programadores de
   aprendiz a los pies de Bill Gosper y Richard Greenblatt.
 
 #   It is difficult to identify all the people who have contributed to the
@@ -868,11 +868,11 @@ Company.
   Siebert, Albert Meyer, Joe Stoy, Randy Davis, Louis Braida, Eric Grimson, Rod
   Brooks, Lynn Stein y Peter Szolovits. Queremos reconocer especialmente las
   destacadas contribuciones de Franklyn Turbak, ahora en Wellesley; Su trabajo
-  en la enseñanza de pregrado establecer un estándar que todos podemos aspirar
-  a. Estamos agradecidos a Jerry Saltzer y Jim Miller por ayudarnos a lidiar con
-  los misterios de la concurrencia ya Peter Szolovits y David McAllester por sus
-  contribuciones a la exposición de la evaluación no determinista en el
-  @l(#Capitulo 4).
+  en la enseñanza de pregrado establece un estándar al que todos podemos
+  aspirar. Estamos agradecidos con Jerry Saltzer y Jim Miller por ayudarnos a
+  lidiar con los misterios de la concurrencia, a Peter Szolovits y David
+  McAllester por sus contribuciones a la exposición de la evaluación no
+  determinista en el @l(#Capitulo 4).
 
 #   Many people have put in significant effort presenting this material at other
 #   universities. Some of the people we have worked closely with are Jacob
@@ -887,11 +887,11 @@ Company.
   material en otras universidades. Algunas de las personas con las que hemos
   trabajado estrechamente son Jacob Katzenelson en el Technion, Hardy Mayer en
   la Universidad de California en Irvine, Joe Stoy en Oxford, Elisha Sacks en
-  Purdue y Jan Komorowski en la Universidad Noruega de Ciencia y
-  Tecnología. Estamos excepcionalmente orgullosos de nuestros colegas que han
-  recibido importantes premios de enseñanza por sus adaptaciones de este tema en
-  otras universidades, incluyendo Kenneth Yip en Yale, Brian Harvey en la
-  Universidad de California en Berkeley y Dan Huttenlocher en Cornell.
+  Purdue y Jan Komorowski en la Universidad Noruega de Ciencia y Tecnología.
+  Estamos excepcionalmente orgullosos de nuestros colegas que han recibido
+  importantes premios de enseñanza por sus adaptaciones de este tema en otras
+  universidades, incluyendo a Kenneth Yip en Yale, Brian Harvey en la Universidad
+  de California en Berkeley y Dan Huttenlocher en Cornell.
 
 #   Al Moyé arranged for us to teach this material to engineers at
 #   Hewlett-Packard and for the production of videotapes of these lectures. We
@@ -900,10 +900,10 @@ Company.
 #   incorporating these tapes and taught them at universities and industry all
 #   over the world.
   Al Moyé nos dispuso para enseñar este material a los ingenieros de
-  Hewlett-Packard y para la producción de videos de estas
-  conferencias. Quisiéramos agradecer a los talentosos instructores, en
-  particular a Jim Miller, Bill Siebert y Mike Eisenberg, quienes han diseñado
-  cursos de educación continua que incorporan estas cintas y las enseñaron en
+  Hewlett-Packard y para la producción de videos de estas conferencias.
+  Quisiéramos agradecer a los talentosos instructores, en particular a Jim
+  Miller, Bill Siebert y Mike Eisenberg, quienes han diseñado cursos de
+  educación continua que incorporan estas cintas y las enseñaron en
   universidades e industrias de todo el mundo.
 
 #   Many educators in other countries have put in significant work translating the
@@ -916,7 +916,7 @@ Company.
   traduciendo la primera edición. Michel Briand, Pierre Chamard y André Pic
   produjeron una edición francesa; Susanne Daniels-Herold produjo una edición
   alemana; Y Fumio Motoyoshi produjo una edición japonesa. No sabemos quién
-  produjo la edición china, pero consideramos un honor haber sido seleccionado
+  produjo la edición china, pero consideramos un honor haber sido seleccionados
   como sujeto de una traducción @"(no autorizada).
 
 #   It is hard to enumerate all the people who have made technical contributions
@@ -929,14 +929,14 @@ Company.
 #   Cass, Patrick O'Donnell, Kevin Theobald, Daniel Weise, Kenneth Sinclair,
 #   Anthony Courtemanche, Henry M. Wu, Andrew Berlin, and Ruth Shyu.
   Es difícil enumerar a todas las personas que han hecho contribuciones técnicas
-  al desarrollo de los sistemas del Esquema que usamos con fines
-  educativos. Además de Guy Steele, los magos principales han incluido a Chris
-  Hanson, Joe Bowbeer, Jim Miller, Guillermo Rozas y Stephen Adams. Otros que
-  han puesto en un tiempo significativo son Richard Stallman, Alan Bawden,
-  Pitman Kent, Jon Taft, Neil Mayle, John Lamping, Gwyn Osnos, Tracy Larrabee,
-  George Carrette, Soma Chaudhuri, Bill Chiarchiaro, Steven Kirsch, Todd Cass,
-  Patrick O'Donnell, Kevin Theobald, Daniel Weise, Kenneth Sinclair, Anthony
-  Courtemanche, Henry M. Wu, Andrew Berlín, y Ruth Shyu.
+  al desarrollo de los sistemas Scheme que usamos con fines educativos. Además
+  de Guy Steele, los magos principales han incluido a Chris Hanson, Joe Bowbeer,
+  Jim Miller, Guillermo Rozas y Stephen Adams. Otros que han puesto un tiempo
+  significativo son Richard Stallman, Alan Bawden, Pitman Kent, Jon Taft, Neil
+  Mayle, John Lamping, Gwyn Osnos, Tracy Larrabee, George Carrette, Soma
+  Chaudhuri, Bill Chiarchiaro, Steven Kirsch, Todd Cass, Patrick O'Donnell,
+  Kevin Theobald, Daniel Weise, Kenneth Sinclair, Anthony Courtemanche, Henry
+  M. Wu, Andrew Berlín, y Ruth Shyu.
 
 #   Beyond the @A(MIT) implementation, we would like to thank the many people who
 #   worked on the @A(IEEE) Scheme standard, including William Clinger and Jonathan
@@ -945,15 +945,15 @@ Company.
   Más allá de la implementación del @A(MIT), queremos agradecer a muchas
   personas que trabajaron en el estándar @A(IEEE) Scheme, incluyendo a William
   Clinger y Jonathan Rees, quien editó el R⁴RS, y Chris Haynes, David Bartley,
-  Chris Hanson y Jim Miller, quienes prepararon el @A(IEEE) estándar.
+  Chris Hanson y Jim Miller, quienes prepararon el estándar @A(IEEE).
 
 #   Dan Friedman has been a long-time leader of the Scheme community. The
 #   community's broader work goes beyond issues of language design to encompass
 #   significant educational innovations, such as the high-school curriculum based
 #   on EdScheme by Schemer's Inc., and the wonderful books by Mike Eisenberg and
 #   by Brian Harvey and Matthew Wright.
-  Dan Friedman ha sido un líder de mucho tiempo de la comunidad Scheme. El
-  trabajo más amplio de la comunidad va más allá de las cuestiones de diseño de
+  Dan Friedman ha sido mucho tiempo un líder de la comunidad Scheme. El trabajo
+  más amplio de la comunidad va más allá de las cuestiones de diseño del
   lenguaje para abarcar innovaciones educativas significativas, como el plan de
   estudios de la escuela secundaria basado en EdScheme de Schemer Inc. y los
   maravillosos libros de Mike Eisenberg y Brian Harvey y Matthew Wright.
@@ -970,11 +970,11 @@ Company.
   real, especialmente Terry Ehling, Larry Cohen, y Paul Bethge en la prensa del
   @A(MIT). Ella Mazel encontró la maravillosa imagen de la portada. Para la
   segunda edición estamos particularmente agradecidos a Bernard y Ella Mazel por
-  su ayuda con el diseño del libro, ya David Jones, @e(TeX) asistente
-  extraordinario. También estamos en deuda con los lectores que hicieron
-  comentarios penetrantes sobre el nuevo proyecto: Jacob Katzenelson, Hardy
-  Mayer, Jim Miller, y especialmente Brian Harvey, que hizo este libro como
-  Julie hizo a su libro @"(Simply Scheme).
+  su ayuda con el diseño del libro, y David Jones, extraordinario mago
+  @e(TeX). También estamos en deuda con los lectores que hicieron comentarios
+  penetrantes sobre el nuevo proyecto: Jacob Katzenelson, Hardy Mayer, Jim
+  Miller, y especialmente Brian Harvey, que hizo en este libro como Julie hizo
+  en su propio libro @q(Simply Scheme).
 
 #   Finally, we would like to acknowledge the support of the organizations that
 #   have encouraged this work over the years, including support from
@@ -8926,7 +8926,7 @@ Company.
 #        This representation is known as @e(Church numerals), after its inventor,
 #        Alonzo Church, the logician who invented the λ-calculus.
        Esta representación se conoce como @e(números de la iglesia), después de
-       su inventor, Iglesia de Alonzo, el lógico que inventó el λ-cálculo.
+       su inventor, Iglesia de Alonzo, el lógico que inventó el cálculo-λ.
 
 #        Define @c(one) and @c(two) directly (not in terms of @c(zero) and
 #        @c(add-1)). (Hint: Use substitution to evaluate @c[(add-1 zero)]). Give a
@@ -59196,10 +59196,10 @@ Company.
   :: @N(53) :: Sería más claro y menos intimidante para las personas aprendiendo
      Lisp si un nombre más obvio que @c(lambda), por ejemplo @c(make-procedure),
      se utilizaron. Pero la convención está firmemente arraigada. La notación se
-     adopta desde el λ-cálculo, un formalismo matemático introducido por el
+     adopta desde el cálculo-λ, un formalismo matemático introducido por el
      matemático lógico Alonzo @l(#Church-(1941<>Church (1941) ). Church
-     desarrolló el λ-cálculo para proporcionar una base rigurosa para estudiar
-     las nociones de función y aplicación de la función. El λ-cálculo se ha
+     desarrolló el cálculo-λ para proporcionar una base rigurosa para estudiar
+     las nociones de función y aplicación de la función. El cálculo-λ se ha
      convertido en una herramienta básica para las investigaciones matemáticas
      de la semántica de los lenguajes de programación.
 
@@ -61961,8 +61961,8 @@ Company.
   :: @N(231) :: Este ejemplo ilustra un truco de programación para formular
      procedimientos recursivos sin utilizar @c(define). El truco más general de
      este tipo es el @e(operador )@m(Y), !que puede usarse para dar una
-     implementación de recursión de @"(λ-cálculo pura). (Ver
-     @l(#Stoy-1977<>Stoy 1977) para detalles sobre el λ-cálculo, y
+     implementación de recursión de @"(cálculo-λ pura). (Ver
+     @l(#Stoy-1977<>Stoy 1977) para detalles sobre el cálculo-λ, y
      @l(#Gabriel-1988<>Gabriel 1988) para una exposición del operador @m(Y) en
      Scheme.)@e()@"()@l(#Stoy 1977) @l(#Gabriel-1988)
 

@@ -33,4 +33,6 @@
   - [X] - nasciiboy :: traduccion :: Foreword
   - [X] - nasciiboy :: traduccion :: Preface to the Second Edition
   - [X] - nasciiboy :: traduccion :: Preface to the First Edition
-  - [ ] - nasciiboy :: traduccion :: Acknowledgments
+  - [X] - nasciiboy :: traduccion :: Acknowledgments
+  - [ ] - nasciiboy :: traduccion :: Building Abstractions with Procedures
+  - [ ] - nasciiboy :: traduccion :: Programación en Lisp
