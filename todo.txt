@@ -34,5 +34,9 @@
   - [X] - nasciiboy :: traduccion :: Preface to the Second Edition
   - [X] - nasciiboy :: traduccion :: Preface to the First Edition
   - [X] - nasciiboy :: traduccion :: Acknowledgments
-  - [ ] - nasciiboy :: traduccion :: Building Abstractions with Procedures
-  - [ ] - nasciiboy :: traduccion :: Programación en Lisp
+  - [X] - nasciiboy :: traduccion :: Building Abstractions with Procedures
+  - [X] - nasciiboy :: traduccion :: Programación en Lisp
+  - [ ] - nasciiboy :: traduccion :: The Elements of Programming
+  - [ ] - nasciiboy :: traduccion :: Expressions
+  - [ ] - nasciiboy :: traduccion :: Naming and the Environment
+  - [ ] - nasciiboy :: traduccion :: Evaluating Combinations

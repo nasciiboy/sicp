@@ -1000,15 +1000,15 @@ Company.
 #     called abstraction, and thus all its general ideas are made.
     Los actos de la mente, en los que ejerce su poder sobre las ideas simples,
     son principalmente estos tres: 1. La combinación de varias ideas simples en
-    uno compuesto uno, y por lo tanto todas las ideas complejas se hacen. 2. La
+    una compuesta una, y por lo tanto todas las ideas complejas se hacen. 2. La
     segunda consiste en reunir dos ideas, ya sean simples o complejas, y fijarlas
     unas a otras para poder verlas a la vez, sin unirlas en una sola, por las
-    cuales se obtienen todas sus ideas de relaciones. 3. La tercera es separarlos
-    de todas las otras ideas que los acompañan en su existencia real: esto se
+    cuales se obtienen todas sus ideas de relaciones. 3. La tercera es separarlas
+    de todas las otras ideas que las acompañan en su existencia real: esto se
     llama abstracción, y así se hacen todas sus ideas generales.
 
 #     --John Locke, @q(An Essay Concerning Human Understanding) (1690)
-    --John Locke, @"(un ensayo sobre la comprensión humana) (1690)
+    --John Locke, @q(un ensayo sobre la comprensión humana) (1690)
 #   < quote..
   < quote..
 
@@ -1036,13 +1036,13 @@ Company.
 #   processes to perform.
   Un proceso computacional es, de hecho, muy parecido a la idea de un espíritu
   de un hechicero. No se puede ver ni tocar. No está compuesto de materia en
-  absoluto. Sin embargo, es muy real. Puede realizar el trabajo
-  intelectual. Puede responder preguntas. Puede afectar al mundo desembolsando
-  dinero en un banco o controlando un brazo de robot en una fábrica. Los
-  programas que usamos para conjurar procesos son como los hechizos de un
-  hechicero. Se componen cuidadosamente de expresiones simbólicas en
-  @e(lenguajes de programación) arcanos y esotéricos que prescriben las tareas
-  que queremos que nuestros procesos realicen.
+  absoluto. Sin embargo, es muy real. Puede realizar trabajo intelectual. Puede
+  responder preguntas. Puede afectar al mundo desembolsando dinero en un banco o
+  controlando un brazo robot en una fábrica. Los programas que usamos para
+  conjurar procesos son como los hechizos de un hechicero. Se componen
+  cuidadosamente de expresiones simbólicas en @e(lenguajes de programación)
+  arcanos y esotéricos que prescriben las tareas que queremos que nuestros
+  procesos realicen.
 
 #   A computational process, in a correctly working computer, executes programs
 #   precisely and accurately. Thus, like the sorcerer's apprentice, novice
@@ -1050,11 +1050,11 @@ Company.
 #   their conjuring. Even small errors (usually called @e(bugs) or @e(glitches))
 #   in programs can have complex and unanticipated consequences.
   Un proceso computacional, en un equipo que funciona correctamente, ejecuta los
-  programas con precisión y precisión. Así, al igual que el aprendiz de brujo,
+  programas con precisión y exactitud. Así, al igual que el aprendiz de brujo,
   los programadores principiantes deben aprender a entender y anticipar las
-  consecuencias de su conjuración. Incluso los pequeños errores (generalmente
-  llamados @e(errores) o @e(fallas) ) en los programas pueden tener
-  consecuencias complejas e imprevistas.
+  consecuencias de su conjuración. Incluso los pequeños errores en los programas
+  (generalmente llamados @e(bugs) o @e(glitches)) pueden tener consecuencias
+  complejas e imprevistas.
 
 #   Fortunately, learning to program is considerably less dangerous than learning
 #   sorcery, because the spirits we deal with are conveniently contained in a
@@ -1063,7 +1063,7 @@ Company.
 #   to the catastrophic collapse of an airplane or a dam or the self-destruction
 #   of an industrial robot.
   Afortunadamente, aprender a programar es considerablemente menos peligroso que
-  aprender la brujería, porque los espíritus que tratamos están convenientemente
+  aprender brujería, porque los espíritus que tratamos están convenientemente
   contenidos de una manera segura. La programación del mundo real, sin embargo,
   requiere cuidado, experiencia y sabiduría. Un pequeño error en un programa de
   diseño asistido por computadora, por ejemplo, puede conducir al colapso
@@ -1078,15 +1078,15 @@ Company.
 #   their programs. Well-designed computational systems, like well-designed
 #   automobiles or nuclear reactors, are designed in a modular manner, so that the
 #   parts can be constructed, replaced, and debugged separately.
-  Los ingenieros de software maestros tienen la capacidad de organizar los
+  Los ingenieros maestros de software tienen la capacidad de organizar los
   programas para que puedan estar razonablemente seguros de que los procesos
   resultantes realizarán las tareas previstas. Pueden visualizar el
   comportamiento de sus sistemas de antemano. Saben cómo estructurar los
   programas para que los problemas imprevistos no conduzcan a consecuencias
-  catastróficas, y cuando surgen problemas, pueden @e(depurar) sus
-  programas. Los sistemas computacionales bien diseñados, como los automóviles o
-  los reactores nucleares bien diseñados, están diseñados de manera modular, de
-  modo que las piezas se pueden construir, reemplazar y depurar por separado.
+  catastróficas, y cuando surgen problemas, pueden @e(depurar) sus programas.
+  Los sistemas computacionales bien diseñados, como los automóviles o los
+  reactores nucleares bien diseñados, están diseñados de manera modular, de modo
+  que las piezas se pueden construir, reemplazar y depurar por separado.
 
 # ** Programming in Lisp
 ** Programación en Lisp
@@ -1110,8 +1110,8 @@ Company.
    de la década de 1950 como un formalismo para razonar sobre el uso de ciertos
    tipos de expresiones lógicas, llamadas @e(ecuaciones de recursión), como un
    modelo para la computación. El lenguaje fue concebido por John McCarthy y se
-   basa en su papel @"(Funciones Recursivas de las Expresiones Simbólicas y su
-   Computación por Máquina) (@l(#McCarthy-1960<>McCarthy 1960) ).
+   basa en su documento @"(Funciones Recursivas de Expresiones Simbólicas y su
+   Computación por Máquina) (@l(#McCarthy 1960)).
 
 #    Despite its inception as a mathematical formalism, Lisp is a practical
 #    programming language. A Lisp @e(interpreter) is a machine that carries out
@@ -1129,11 +1129,11 @@ Company.
    procesos descritos en el lenguaje Lisp. El primer intérprete Lisp fue
    implementado por McCarthy con la ayuda de colegas y estudiantes en el Grupo
    de Inteligencia Artificial del @A(MIT) Research Laboratory of Electronics y
-   en el @A(MIT) Computation Center. @n(1) Lisp, cuyo nombre es un acrónimo
-   de LISt Processing, fue diseñado para proporcionar capacidades de
-   manipulación de símbolos para atacar problemas de programación tales como la
-   diferenciación simbólica y la integración de expresiones algebraicas. Incluía
-   para este propósito nuevos objetos de datos conocidos como átomos y listas,
+   en el @A(MIT) Computation Center. @n(1) Lisp, cuyo nombre es un acrónimo de
+   LISt Processing, fue diseñado para proporcionar capacidades de manipulación
+   de símbolos para atacar problemas de programación como la diferenciación
+   simbólica y la integración de expresiones algebraicas. Incluía para este
+   propósito nuevos objetos de datos conocidos como átomos y listas,
 
 #    Lisp was not the product of a concerted design effort. Instead, it evolved
 #    informally in an experimental manner in response to users' needs and to
@@ -1147,20 +1147,19 @@ Company.
 #    family of dialects, which, while sharing most of the original features, may
 #    differ from one another in significant ways. The dialect of Lisp used in this
 #    book is called Scheme.@n(2)
-   Lisp no fue el producto de un esfuerzo de diseño concertado. En cambio,
+   Lisp no fue el producto de un esfuerzo de diseño planeado. En cambio,
    evolucionó informalmente de manera experimental en respuesta a las
-   necesidades de los usuarios ya consideraciones pragmáticas de
+   necesidades de los usuarios y a consideraciones pragmáticas de
    implementación. La evolución informal de Lisp ha continuado a través de los
    años, y la comunidad de usuarios de Lisp tradicionalmente ha resistido los
-   intentos de promulgar cualquier definición @"(oficial) de la lengua. Esta
+   intentos de promulgar cualquier definición @"(oficial) del lenguaje. Esta
    evolución, junto con la flexibilidad y la elegancia de la concepción inicial,
-   ha permitido a Lisp, que es el segundo idioma más antiguo en uso hoy en día
-   (sólo Fortran es más viejo), para adaptarse continuamente para abarcar las
-   ideas más modernas sobre el diseño del programa. Por lo tanto, Lisp es ahora
-   una familia de dialectos, que, aunque comparten la mayoría de las
-   características originales, pueden diferir entre sí de maneras
-   significativas. El dialecto de Lisp usado en este libro se llama
-   Esquema. @n(2)
+   ha permitido a Lisp, que es el segundo lenguaje más antiguo en uso hoy en día
+   (sólo Fortran es más viejo), adaptarse continuamente para abarcar las ideas
+   más modernas sobre el diseño de programas. Por lo tanto, Lisp es ahora una
+   familia de dialectos, que, aunque comparten la mayoría de las características
+   originales, pueden diferir entre sí de maneras significativas. El dialecto de
+   Lisp usado en este libro se llama Scheme.@n(2)
 
 #    Because of its experimental character and its emphasis on symbol manipulation,
 #    Lisp was at first very inefficient for numerical computations, at least in
@@ -1175,15 +1174,14 @@ Company.
    Debido a su carácter experimental y su énfasis en la manipulación de
    símbolos, Lisp fue al principio muy ineficiente para cálculos numéricos, al
    menos en comparación con Fortran. Con el paso de los años, sin embargo, se
-   han desarrollado compiladores de Lisp que traducen programas en código de
-   máquina que puede realizar cálculos numéricos razonablemente eficiente. Y
-   para aplicaciones especiales, Lisp se ha utilizado con gran
-   eficacia. @n(3) Aunque Lisp todavía no ha superado su vieja reputación
-   como desesperadamente ineficiente, Lisp ahora se usa en muchas aplicaciones
-   donde la eficiencia no es la preocupación central. Por ejemplo, Lisp se ha
-   convertido en un lenguaje de elección para los lenguajes de shell del sistema
-   operativo y para lenguajes de extensión para editores y sistemas de diseño
-   asistido por ordenador.
+   han desarrollado compiladores de Lisp que traducen programas a código máquina
+   que puede realizar cálculos numéricos razonablemente eficientes. Y para
+   aplicaciones especiales, Lisp se ha utilizado con gran eficacia.@n(3) Aunque
+   Lisp todavía no ha superado su vieja reputación como desesperadamente
+   ineficiente, ahora se usa en muchas aplicaciones donde la eficiencia no es la
+   preocupación central. Por ejemplo, Lisp se ha convertido en un lenguaje para
+   shell del sistema operativo y como lenguajes de extensión para editores y
+   sistemas de diseño asistido por computador.
 
 #    If Lisp is not a mainstream language, why are we using it as the framework for
 #    our discussion of programming?  Because the language possesses unique features
@@ -1201,7 +1199,7 @@ Company.
 #    data, such as the interpreters and compilers that support computer languages.
 #    Above and beyond these considerations, programming in Lisp is great fun.
    Si Lisp no es un lenguaje convencional, ¿por qué lo utilizamos como marco
-   para nuestra discusión sobre la programación? Debido a que el lenguaje posee
+   para nuestra discusión sobre programación? Porque el lenguaje posee
    características únicas que lo convierten en un medio excelente para estudiar
    importantes construcciones de programación y estructuras de datos y para
    relacionarlas con las características lingüísticas que las soportan. La más
@@ -1210,16 +1208,17 @@ Company.
    manipuladas como datos Lisp. La importancia de esto es que hay poderosas
    técnicas de diseño de programas que se basan en la capacidad de difuminar la
    distinción tradicional entre datos @"(pasivos) y procesos @"(activos). Como
-   veremos, Lisp ' S flexibilidad en el manejo de procedimientos como datos hace
-   que sea uno de los idiomas más convenientes en existencia para explorar estas
-   técnicas. La capacidad de representar los procedimientos como datos también
-   convierte a Lisp en un excelente lenguaje para escribir programas que deben
-   manipular otros programas como datos, como los intérpretes y compiladores que
-   soportan los lenguajes de la computadora. Por encima y más allá de estas
-   consideraciones, la programación en Lisp es muy divertida.
+   veremos, la flexibilidad de Lisp en el manejo de procedimientos como datos
+   hace que sea uno de los lenguajes más convenientes en existencia para
+   explorar estas técnicas. La capacidad de representar los procedimientos como
+   datos también convierte a Lisp en un excelente lenguaje para escribir
+   programas que deben manipular otros programas como datos, como los
+   intérpretes y compiladores que soportan los lenguajes de la computadora. Por
+   encima y más allá de estas consideraciones, la programación en Lisp es muy
+   divertida.
 
 # ** 1.1 <> The Elements of Programming
-** 1.1 <> Los elementos de la programación
+** 1.1 <> Los Elementos de la Programación
 
 #    A powerful programming language is more than just a means for instructing a
 #    computer to perform tasks. The language also serves as a framework within
@@ -1269,7 +1268,7 @@ Company.
 #    that these same rules allow us to build procedures to manipulate compound data
 #    as well.
    En este capítulo trataremos sólo con datos numéricos simples para que podamos
-   centrarnos en las reglas para los procedimientos de construcción. @n(4)
+   centrarnos en las reglas para los procedimientos de construcción.@n(4)
    En capítulos posteriores veremos que estas mismas reglas nos permiten
    construir procedimientos para manipular datos compuestos también.
 
@@ -1302,7 +1301,7 @@ Company.
     < src..
 
 #     the interpreter will respond by printing@n(5)
-    El intérprete responderá imprimiendo @n(5)
+    El intérprete responderá imprimiendo@n(5)
 
 #     ..srci > scheme
 #       486
@@ -1447,7 +1446,7 @@ Company.
     Siguiendo una convención de formato conocida como @e(pretty-printing), en la
     que cada combinación larga se escribe para que los operandos estén alineados
     verticalmente. Las indentaciones resultantes muestran claramente la
-    estructura de la expresión. @n(6)
+    estructura de la expresión.@n(6)
 
 #     Even with complex expressions, the interpreter always operates in the same
 #     basic cycle: It reads an expression from the terminal, evaluates the
@@ -1460,7 +1459,7 @@ Company.
     imprime el resultado. Este modo de operación se expresa a menudo expresando
     que el intérprete se ejecuta en un @e(bucle de lectura-eval-print). Observe
     en particular que no es necesario instruir explícitamente al intérprete para
-    que imprima el valor de la expresión. @n(7)
+    que imprima el valor de la expresión.@n(7)
 
 # *** 1.1.2 <> Naming and the Environment
 *** 1.1.2 <> Nomenclatura y Medio Ambiente
@@ -1487,7 +1486,7 @@ Company.
 #     causes the interpreter to associate the value 2 with the name @c(size).@n(8)
 #     Once the name @c(size) has been associated with the number 2, we can refer to
 #     the value 2 by name:
-    Hace que el intérprete asocie el valor 2 con el nombre @c(size). @n(8)
+    Hace que el intérprete asocie el valor 2 con el nombre @c(size).@n(8)
     Una vez que el nombre @c(size)se ha asociado con el número 2, podemos
     referirnos al valor 2 por nombre:
 
@@ -1560,7 +1559,7 @@ Company.
     tipo de memoria que rastree los pares nombre-objeto. Esta memoria se llama
     el @e(ambiente) (más precisamente el @e(ambiente global), ya que veremos más
     adelante que un cálculo puede implicar un número de ambientes
-    diferentes). @n(9)
+    diferentes).@n(9)
 
 # *** 1.1.3 <> Evaluating Combinations
 *** 1.1.3 <> Evaluando Combinaciones
@@ -1599,7 +1598,7 @@ Company.
     realizar el proceso de evaluación sobre cada elemento de la combinación. Por
     lo tanto, la regla de evaluación es de naturaleza @e(recursiva) ; Es decir,
     incluye, como uno de sus pasos, la necesidad de invocar la regla
-    misma. @n(10)
+    misma.@n(10)
 
 #     Notice how succinctly the idea of recursion can be used to express what, in
 #     the case of a deeply nested combination, would otherwise be viewed as a rather
@@ -1748,7 +1747,7 @@ Company.
     otros lenguajes de programación, Lisp tiene una sintaxis muy simple; Es
     decir, la regla de evaluación para las expresiones puede ser descrita por
     una regla general simple junto con reglas especializadas para un pequeño
-    número de formas especiales. @n(11)
+    número de formas especiales.@n(11)
 
 # *** 1.1.4 <> Compound Procedures
 *** 1.1.4 <> Procedimientos compuestos
@@ -1817,7 +1816,7 @@ Company.
     sí mismo. La cosa a ser multiplicada se da un nombre local @c(x), que juega
     el mismo papel que un pronombre juega en lenguaje natural. La evaluación de
     la definición crea este procedimiento compuesto y lo asocia con el nombre
-    @c(square). @n(12)
+    @c(square).@n(12)
 
 #     The general form of a procedure definition is
     La forma general de una definición de procedimiento es
@@ -1838,12 +1837,12 @@ Company.
 #     @c[(formal parameters)] are grouped within parentheses, just as they would be
 #     in an actual call to the procedure being defined.
     El @c((name))símbolo es un símbolo asociado con la definición del
-    procedimiento en el entorno. @n(13) El @c((formal parameters))son los
+    procedimiento en el entorno.@n(13) El @c((formal parameters))son los
     nombres utilizados dentro del cuerpo del procedimiento para referirse a los
     argumentos correspondientes del procedimiento. El @c((body))es una expresión
     que dará el valor de la aplicación de procedimiento cuando los parámetros
     formales son reemplazados por los argumentos reales a los que se aplica el
-    procedimiento. @n(14) El @c((name))y el @c((formal parameters))se
+    procedimiento.@n(14) El @c((name))y el @c((formal parameters))se
     agrupan entre paréntesis, tal como serían en una llamada real al
     procedimiento que se está definiendo.
 
@@ -2099,7 +2098,7 @@ Company.
       en el @l(#Capitulo 3) el uso de procedimientos con @"(datos
       mutables, ) Veremos que el modelo de sustitución se descompone y debe ser
       reemplazado por un modelo de aplicación de procedimiento más
-      complicado. @n(15)
+      complicado.@n(15)
 
 # **** Applicative order versus normal order
 **** Orden aplicable versus orden normal
@@ -2207,7 +2206,7 @@ Company.
      ser modelados por sustitución. Por otro lado, la evaluación de orden normal
      puede ser una herramienta extremadamente valiosa, e investigaremos algunas
      de sus implicaciones en el @l(#Capitulo 3) y el
-     @l(#Capitulo 4). @n(16)
+     @l(#Capitulo 4).@n(16)
 
 # *** 1.1.6 <> Conditional Expressions and Predicates
 *** 1.1.6 <> Expresiones Condicionales y Predicados
@@ -2299,7 +2298,7 @@ Company.
 #     the @m[⟨p⟩]'s is found to be true, the value of the @c(cond) is undefined.
     Llamadas @e(cláusulas). La primera expresión de cada par es un
     @e(predicado), es decir, una expresión cuyo valor se interpreta como
-    verdadero o falso. @n(17) Las expresiones condicionales se evalúan de
+    verdadero o falso.@n(17) Las expresiones condicionales se evalúan de
     la siguiente manera. El predicado @m(⟨p₁⟩) se evalúa primero. Si su valor es
     falso, se evalúa @m(⟨p₂⟩). Si el valor de @m(⟨p₂⟩) es también falso, se
     evalúa @m(⟨p₃⟩). Este proceso continúa hasta que se encuentra un predicado
@@ -2317,7 +2316,7 @@ Company.
     La palabra @e(predicado) se utiliza para los procedimientos que devuelven
     verdadero o falso, así como para las expresiones que evalúan a verdadero o
     falso. El procedimiento de valor absoluto @c(abs) hace uso de los predicados
-    primitivos @c(>), @c(<) y @c(=). @n(18) Estos toman dos números
+    primitivos @c(>), @c(<) y @c(=).@n(18) Estos toman dos números
     como argumentos y prueban si el primer número es, respectivamente, mayor
     que, menor o igual al segundo número, devolviendo verdadero o falso en
     consecuencia.
@@ -2389,7 +2388,7 @@ Company.
     @c((predicate)) parte de la expresión. Si se @c((predicate)) evalúa a un
     valor verdadero, el intérprete evalúa @c((consequent)) y devuelve su
     valor. De lo contrario, evalúa @c((alternative)) y devuelve su
-    valor. @n(19)
+    valor.@n(19)
 
 #     In addition to primitive predicates such as @c(<), @c(=), and @c(>), there are
 #     logical composition operations, which enable us to construct compound
@@ -2684,7 +2683,7 @@ Company.
     distinción entre conocimiento declarativo y conocimiento imperativo. En
     matemáticas nos referimos generalmente a descripciones declarativas (lo que
     es), mientras que en informática normalmente nos referimos a las
-    descripciones imperativas (cómo). @n(20)
+    descripciones imperativas (cómo).@n(20)
 
 #     How does one compute square roots?  The most common way is to use Newton's
 #     method of successive approximations, which says that whenever we have a guess
@@ -2697,7 +2696,7 @@ Company.
     tengamos una suposición @m(y) para el valor de la raíz cuadrada de un número
     @m(x), podemos realizar una manipulación simple para obtener una mejor
     conjetura (una más cercana a la Raíz cuadrada real) haciendo un promedio de
-    @m(y) con @m(x / y). @n(21) Por ejemplo, podemos calcular la raíz
+    @m(y) con @m(x / y).@n(21) Por ejemplo, podemos calcular la raíz
     cuadrada de 2 como sigue. Supongamos que nuestra conjetura inicial es 1:
 
 #     ..example >
@@ -2793,7 +2792,7 @@ Company.
     buena. (Ver @l(#Ejercicio 1.7) .) La idea es mejorar la
     respuesta hasta que esté lo suficientemente cerca como para que su plaza se
     diferencia del radicando en menos de una tolerancia predeterminada (en este
-    caso 0.001): @n(22)
+    caso 0.001):@n(22)
 
 #     ..src > scheme
 #       (define (good-enough? guess x)
@@ -2807,7 +2806,7 @@ Company.
 #     Finally, we need a way to get started. For instance, we can always guess that
 #     the square root of any number is 1:@n(23)
     Por último, necesitamos una manera de empezar. Por ejemplo, siempre podemos
-    adivinar que la raíz cuadrada de cualquier número es 1: @n(23)
+    adivinar que la raíz cuadrada de cualquier número es 1:@n(23)
 
 #     ..src > scheme
 #       (define (sqrt x)
@@ -2859,7 +2858,7 @@ Company.
     computadora a hacer algo una y otra vez. @c(Sqrt-iter), Por otro lado,
     demuestra cómo la iteración se puede lograr sin utilizar un constructo
     especial distinto de la capacidad ordinaria de llamar a un
-    procedimiento. @n(24)
+    procedimiento.@n(24)
 
 #     :: @t(Exercise 1.6) :: Alyssa P. Hacker doesn't see why @c(if) needs to be
 #        provided as a special form. @"(Why can't I just define it as an ordinary
@@ -3072,7 +3071,7 @@ Company.
     Así, considerando sólo los valores que devuelven, los dos procedimientos
     siguientes para cuadrar un número deben ser indistinguibles. Cada uno toma
     un argumento numérico y produce el cuadrado de ese número como el
-    valor. @n(25)
+    valor.@n(25)
 
 #     ..src > scheme
 #       (define (square x) (* x x))
@@ -3194,7 +3193,7 @@ Company.
      que la definición del procedimiento @e(enlaza) sus parámetros formales. El
      significado de una definición de procedimiento no cambia si una variable
      enlazada se renombre constantemente a lo largo de la
-     definición. @n(26) Si una variable no está unida, decimos que es
+     definición.@n(26) Si una variable no está unida, decimos que es
      @e(libre). El conjunto de expresiones para las que un enlace define un
      nombre se denomina @e(ámbito) de ese nombre. En una definición de
      procedimiento, las variables enlazadas declaradas como los parámetros
@@ -3381,7 +3380,7 @@ Company.
 #      languages and is an important tool for helping to organize the construction of
 #      large programs.
      Usaremos extensivamente la estructura de bloques para ayudarnos a dividir
-     grandes programas en piezas tratables. @n(28) La idea de estructura de
+     grandes programas en piezas tratables.@n(28) La idea de estructura de
      bloques se originó con el lenguaje de programación Algol 60. Aparece en la
      mayoría de los lenguajes de programación avanzados y es una herramienta
      importante para ayudar a organizar la construcción de grandes programas.
@@ -3585,7 +3584,7 @@ Company.
 #     Once again, we can recast our description as a procedure for computing
 #     factorials:@n(29)
     Una vez más, podemos refundir nuestra descripción como un procedimiento para
-    calcular factorials: @n(29)
+    calcular factorials:@n(29)
 
 #     ..src > scheme
 #       (define (factorial n)
@@ -3726,7 +3725,7 @@ Company.
     @"(oculta) adicional, mantenida por el intérprete y no contenida en las
     variables del programa, que indica @"(dónde está el proceso) en la
     negociación de la cadena de operaciones diferidas. Cuanto más larga sea la
-    cadena, más información deberá mantenerse. @n(30)
+    cadena, más información deberá mantenerse.@n(30)
 
 #     In contrasting iteration and recursion, we must be careful not to confuse the
 #     notion of a recursive @e(process) with the notion of a recursive
@@ -3783,7 +3782,7 @@ Company.
     implementación recursiva de la cola, la iteración se puede expresar usando
     el mecanismo ordinario de la llamada del procedimiento, de modo que las
     construcciones especiales de la iteración sean útiles solamente como azúcar
-    sintáctico. @n(31)
+    sintáctico.@n(31)
 
 #     :: @t(Exercise 1.9) :: Each of the following two procedures defines a method
 #        for adding two positive integers in terms of the procedures @c(inc), which
@@ -4124,7 +4123,7 @@ Company.
     No se debe concluir de esto que los procesos recursivos arbóreos son
     inútiles. Cuando consideramos procesos que operan sobre datos estructurados
     jerárquicamente en lugar de números, encontraremos que la recursión del
-    árbol es una herramienta natural y poderosa. @n(32) Pero incluso en
+    árbol es una herramienta natural y poderosa.@n(32) Pero incluso en
     operaciones numéricas, los procesos recursivos arbóreos pueden ser útiles
     para ayudarnos a entender y diseñar programas. Por ejemplo, aunque el primer
     @c(fib) procedimiento es mucho menos eficiente que el segundo, es más
@@ -4198,7 +4197,7 @@ Company.
      dada al problema de cambiar cantidades más pequeñas usando menos tipos de
      monedas. Considere cuidadosamente esta regla de reducción y convencerse de
      que podemos usarla para describir un algoritmo si especificamos los
-     siguientes casos degenerados: @n(33)
+     siguientes casos degenerados:@n(33)
 
 #      - If @m[a] is exactly 0, we should count that as 1 way to make change.
      - Si @m(a) es exactamente 0, debemos contarlo como una forma de hacer el
@@ -4298,7 +4297,7 @@ Company.
      podría obtener lo mejor de ambos mundos mediante el diseño de un
      @"(compilador inteligente) que podría transformar los procedimientos
      recursivos arbóreos en procedimientos más eficientes que Calcular el mismo
-     resultado. @n(34)
+     resultado.@n(34)
 
 #      :: @t(Exercise 1.11) :: A function @m[f] is defined by the rule that @m[f(n) =
 #         n] if @m[n < 3] and @m[f(n) = f(n-1) + 2f(n-2) + 3f(n-3)] if @m[n ≥
@@ -4338,7 +4337,7 @@ Company.
 #         procedure that computes elements of Pascal's triangle by means of a
 #         recursive process.
         Los números en el borde del triángulo son todos 1, y cada número dentro
-        del triángulo es la suma de los dos números sobre él. @n(35)
+        del triángulo es la suma de los dos números sobre él.@n(35)
         Escriba un procedimiento que computa elementos del triángulo de Pascal
         por medio de un proceso recursivo.
 
@@ -4420,7 +4419,7 @@ Company.
     la entrada @m(n). Así, los pasos requeridos para este proceso crecen como
     @m(Θ (n)). También vimos que el espacio requerido crece como @m(Θ (n)). Para
     el factorial iterativo, el número de pasos sigue siendo @m(Θ (n)) pero el
-    espacio es @m(Θ (1)) - es decir, constante. @n(36) La computación
+    espacio es @m(Θ (1)) - es decir, constante.@n(36) La computación
     recursiva de Fibonacci requiere @m(Θ (φⁿ)) pasos y espacio @m(Θ (n)), donde
     @m(φ) es la razón de oro descrita en @l(#1.2.2).
 
@@ -4677,7 +4676,7 @@ Company.
     podemos calcular se duplica (aproximadamente) con cada nueva multiplicación
     que se nos permite. Así, el número de multiplicaciones requeridas para un
     exponente de @m(n) crece tan rápido como el logaritmo de @m(n) a la
-    base 2. El proceso tiene crecimiento @m(Θ (log n)). @n(37)
+    base 2. El proceso tiene crecimiento @m(Θ (log n)).@n(37)
 
 #     The difference between @m[Θ(log n)] growth and @m[Θ(n)] growth becomes
 #     striking as @m(n) becomes large. For example, @c(fast-expt) for @m(n) = 1000
@@ -4688,12 +4687,12 @@ Company.
 #     down so straightforwardly as the recursive algorithm.@n(39)
     La diferencia entre el crecimiento de @m(Θ (log n)) y el crecimiento de @m(Θ
     (n)) se hace notoria cuando @m(n se) hace grande. Por ejemplo, @c(fast-expt)
-    para @m(n) = 1000 requiere sólo 14 multiplicaciones. @n(38) También es
+    para @m(n) = 1000 requiere sólo 14 multiplicaciones.@n(38) También es
     posible utilizar la idea de elevar al cuadrado sucesiva para idear un
     algoritmo iterativo que calcula exponenciales con una serie logarítmica de
     pasos (véase el @l(#Ejercicio 1.16) ), aunque, como suele ser
     el caso con algoritmos iterativos, esto no está escrito de manera rodeos
-    Como el algoritmo recursivo. @n(39)
+    Como el algoritmo recursivo.@n(39)
 
 #     :: @t(Exercise 1.16) :: Design a procedure that evolves an iterative
 #        exponentiation process that uses successive squaring and uses a logarithmic
@@ -4761,7 +4760,7 @@ Company.
        @l(#Ejercicio 1.16) y el @l(#Ejercicio
        1.17), diseñar un procedimiento que genera un proceso iterativo para
        multiplicar dos enteros en términos de sumar, duplicar y reducir a la
-       mitad y usa un número logarítmico de pasos. @n(40)
+       mitad y usa un número logarítmico de pasos.@n(40)
 
 #     :: @t(Exercise 1.19) :: There is a clever algorithm for computing the
 #        Fibonacci numbers in a logarithmic number of steps. Recall the
@@ -4915,7 +4914,7 @@ Company.
     comenzar con dos enteros positivos y realizar reducciones repetidas siempre
     producirá un par donde el segundo número es 0. Entonces el @A(GCD) es el
     otro número en el par. Este método para calcular el @A(GCD) se conoce como
-    @e(Algoritmo de Euclides). @n(42)
+    @e(Algoritmo de Euclides).@n(42)
 
 #     It is easy to express Euclid's Algorithm as a procedure:
     Es fácil expresar el Algoritmo de Euclides como un procedimiento:
@@ -4949,7 +4948,7 @@ Company.
 #       than or equal to the @m(kᵗʰ) Fibonacci number.@n(43)
     - Teorema de Lamé :: Si el Algoritmo de Euclides requiere @m(k) pasos para
          calcular el @A(GCD) de algún par, entonces el número más pequeño en el
-         par debe ser mayor o igual al número de @m(kᵗʰ) Fibonacci. @n(43)
+         par debe ser mayor o igual al número de @m(kᵗʰ) Fibonacci.@n(43)
 
 #     We can use this theorem to get an order-of-growth estimate for Euclid's
 #     Algorithm. Let @m(n) be the smaller of the two inputs to the procedure. If
@@ -5071,7 +5070,7 @@ Company.
 #      the number of steps required to identify @m(n) as prime will have order of
 #      growth @m(Θ(√n)).
      La prueba final @c(find-divisor) se basa en el hecho de que si @m(n) no es
-     primo debe tener un divisor inferior o igual a @m(√n). @n(44) Esto
+     primo debe tener un divisor inferior o igual a @m(√n).@n(44) Esto
      significa que el algoritmo sólo necesita probar divisores entre 1 y
      @m(√n). En consecuencia, el número de pasos necesarios para identificar
      @m(n) como primo tendrá orden de crecimiento @m(Θ (√n) ).
@@ -5082,7 +5081,7 @@ Company.
 #      The @m[Θ(log n)] primality test is based on a result from number theory known
 #      as Fermat's Little Theorem.@n(45)
      La prueba de primalidad @m(Θ (log n)) se basa en un resultado de la teoría
-     de números conocida como el Pequeño Teorema de Fermat. @n(45)
+     de números conocida como el Pequeño Teorema de Fermat.@n(45)
 
 #      - Fermat's Little Theorem :: If @m(n) is a prime number and @m(a) is any
 #        positive integer less than @m(n), then @m(a) raised to the @m(nᵗʰ) power is
@@ -5157,7 +5156,7 @@ Company.
 #      the exponent.@n(46)
      Esto es muy similar al @c(fast-expt) procedimiento de
      @l(#1.2.4). Utiliza la cuadratura sucesiva, de manera que el número
-     de pasos crece logarítmicamente con el exponente. @n(46)
+     de pasos crece logarítmicamente con el exponente.@n(46)
 
 #      The Fermat test is performed by choosing at random a number @m(a) between 1
 #      and @m(n-1) inclusive and checking whether the remainder modulo @m(n) of the
@@ -5242,7 +5241,7 @@ Company.
      que engañan la prueba de Fermat: números @m(n) que no son primos y que
      tienen la propiedad de que @m(aⁿ) es congruente a @m(un) módulo @m(n) para
      todos los enteros @m(a <n). Estos números son extremadamente raros, por
-     lo que la prueba de Fermat es bastante fiable en la práctica. @n(47)
+     lo que la prueba de Fermat es bastante fiable en la práctica.@n(47)
 
 #      There are variations of the Fermat test that cannot be fooled. In these tests,
 #      as with the Fermat method, one tests the primality of an integer @m(n) by
@@ -5280,7 +5279,7 @@ Company.
      interés en algoritmos de este tipo, que han llegado a ser conocidos como
      @e(algoritmos probabilísticos). Hay una gran cantidad de actividades de
      investigación en esta área, y los algoritmos probabilísticos se han
-     aplicado con éxito en muchos campos. @n(48)
+     aplicado con éxito en muchos campos.@n(48)
 
 #      :: @t(Exercise 1.21) :: Use the @c(smallest-divisor) procedure to find the
 #         smallest divisor of each of the following numbers: 199, 1999, 19999.
@@ -5487,12 +5486,12 @@ Company.
         proceso @m(Θ (log n)) en un proceso @m(Θ (n)). )  Explique.
 
 #      :: @t(Exercise 1.27) :: Demonstrate that the Carmichael numbers listed in
-#         @n(47<>Footnote 47) really do fool the Fermat test. That is, write a
+#        @n(47<>Footnote 47) really do fool the Fermat test. That is, write a
 #         procedure that takes an integer @m(n) and tests whether @m(aⁿ) is congruent
 #         to @m(a) modulo @m(n) for every @m(a < n), and try your procedure on the
 #         given Carmichael numbers.
      :: @t(Ejercicio 1.27) :: Demostrar que los números de Carmichael enumerados
-        en la @n(47<>Nota 47) hacen realmente engañar a la prueba de Fermat. Es
+        en la@n(47<>Nota 47) hacen realmente engañar a la prueba de Fermat. Es
         decir, escribe un procedimiento que toma un entero @m(n) y prueba si
         @m(aⁿ) es congruente a @m(un) módulo @m(n) para cada @m(a <n), e
         intenta tu procedimiento en los números de Carmichael dados.
@@ -5677,7 +5676,7 @@ Company.
     < example..
 
 #     which converges to @m[π / 8] (very slowly):@n(49)
-    Que converge a @m(π / 8) (muy lentamente): @n(49)
+    Que converge a @m(π / 8) (muy lentamente):@n(49)
 
 #     ..src > scheme
 #       (define (pi-sum a b)
@@ -5845,7 +5844,7 @@ Company.
     < srci..
 
 #     We can also define @c(pi-sum) in the same way:@n(50)
-    También podemos definir @c(pi-sum) de la misma manera: @n(50)
+    También podemos definir @c(pi-sum) de la misma manera:@n(50)
 
 #     ..src > scheme
 #       (define (pi-sum a b)
@@ -5998,11 +5997,11 @@ Company.
 #          approximations to @m(π) using the formula@n(52)
        - El @c(sum) procedimiento es sólo el más simple de un gran número de
          abstracciones similares que pueden capturarse como procedimientos de
-         orden superior. @n(51) Escriba un procedimiento análogo llamado
+         orden superior.@n(51) Escriba un procedimiento análogo llamado
          @c(product) que devuelve el producto de los valores de una función en
          puntos sobre un rango dado. Mostrar cómo definir @c(factorial) en
          términos de @c(product). También se usa @c(product) para calcular
-         aproximaciones a @m(π) usando la fórmula @n(52)
+         aproximaciones a @m(π) usando la fórmula@n(52)
 
 #          ..example >
 #            π   2 ⋅ 4 ⋅ 4 ⋅ 6 ⋅ 6 ⋅ 8 ⋅ ⋯
@@ -6242,7 +6241,7 @@ Company.
 #     or, more generally, in any context where we would normally use a procedure
 #     name.@n(53)
     O, de manera más general, en cualquier contexto en el que normalmente
-    utilizaríamos un nombre de procedimiento. @n(53)
+    utilizaríamos un nombre de procedimiento.@n(53)
 
 # **** Using @c(let) to create local variables
 **** Usar @c(let) para crear variables locales
@@ -6510,7 +6509,7 @@ Company.
 #      We prefer, however, to use @c(let) in situations like this and to use internal
 #      @c(define) only for internal procedures.@n(54)
      Preferimos, sin embargo, utilizar @c(let) en situaciones como esta y usar
-     @c(define) sólo interno para procedimientos internos. @n(54)
+     @c(define) sólo interno para procedimientos internos.@n(54)
 
 #      :: @t(Exercise 1.34) :: Suppose we define the procedure
      :: @t(Ejercicio 1.34) :: Supongamos que definimos el procedimiento
@@ -6673,7 +6672,7 @@ Company.
 #      similar to the one used in @l(#1.1.7) for computing square roots:@n(55)
      Para probar si los puntos finales están @"(lo suficientemente cerca)
      podemos usar un procedimiento similar al usado en @l(#1.1.7) para
-     calcular raíces cuadradas: @n(55)
+     calcular raíces cuadradas:@n(55)
 
 #      ..src > scheme
 #        (define (close-enough? x y)
@@ -6700,7 +6699,7 @@ Company.
      positivo, y llama al @c(search) procedimiento en consecuencia. Si la
      función tiene el mismo signo en los dos puntos dados, no se puede utilizar
      el método de medio intervalo, en cuyo caso el procedimiento indica un
-     error. @n(56)
+     error.@n(56)
 
 #      ..src > scheme
 #        (define (half-interval-method f a b)
@@ -6826,7 +6825,7 @@ Company.
 #      For example, we can use this method to approximate the fixed point of the
 #      cosine function, starting with 1 as an initial approximation:@n(57)
      Por ejemplo, podemos usar este método para aproximar el punto fijo de la
-     función coseno, comenzando con 1 como una aproximación inicial: @n(57)
+     función coseno, comenzando con 1 como una aproximación inicial:@n(57)
 
 #      ..srci > scheme
 #        > (fixed-point cos 1.0)
@@ -6867,7 +6866,7 @@ Company.
      cuadrada como una búsqueda de punto fijo. Calculando la raíz cuadrada de un
      cierto número @m(x se) requiere encontrar a @m(y) tal que @m(y2 =
      x). Poniendo esta ecuación en la forma equivalente @m(y = x / y),
-     reconocemos que estamos buscando un punto fijo de la función @n(58)
+     reconocemos que estamos buscando un punto fijo de la función@n(58)
      @m( y ↦ x / y), por lo que podemos tratar de calcular las raíces cuadradas
      como
 
@@ -7169,7 +7168,7 @@ Company.
     de @c(x) y @c((f x)). Por ejemplo, aplicar @c(average-damp) al @c(square)
     procedimiento produce un procedimiento cuyo valor en cierto número @m(x) es
     la media de @m(x) y @m(x²). La aplicación de este procedimiento resultante a
-    10 devuelve el promedio de 10 y 100, o 55: @n(59)
+    10 devuelve el promedio de 10 y 100, o 55:@n(59)
 
 #     ..srci > scheme
 #       > ((average-damp square) 10)
@@ -7273,13 +7272,13 @@ Company.
      Y @m(Dg (x)) es la derivada de @m(g) evaluada en @m(x). El método de Newton
      es el uso del método de punto fijo que vimos anteriormente para aproximar
      una solución de la ecuación encontrando un punto fijo de la función
-     @m(f). @n(61)
+     @m(f).@n(61)
 
 #      For many functions @m(g) and for sufficiently good initial guesses for @m(x),
 #      Newton's method converges very rapidly to a solution of @m[g(x) = 0].@n(62)
      Para muchas funciones @m(g) y para las suposiciones iniciales
      suficientemente buenas para @m(x), el método de Newton converge muy
-     rápidamente a una solución de @m(g (x) = 0). @n(62)
+     rápidamente a una solución de @m(g (x) = 0).@n(62)
 
 #      In order to implement Newton's method as a procedure, we must first express
 #      the idea of derivative. Note that @"(derivative,) like average damping, is
@@ -7392,7 +7391,7 @@ Company.
      la que queremos encontrar un cero, junto con una conjetura inicial. Por
      ejemplo, para encontrar la raíz cuadrada de @m(x), podemos usar el método
      de Newton para encontrar un cero de la función @m(y ↦ y² - x) comenzando
-     con una conjetura inicial de 1. @n(63)
+     con una conjetura inicial de 1.@n(63)
 
 #      This provides yet another form of the square-root procedure:
      Esto proporciona otra forma del procedimiento de raíz cuadrada:
@@ -7534,7 +7533,7 @@ Company.
      formas en que los elementos computacionales pueden ser manipulados. Se dice
      que los elementos con la menor cantidad de restricciones tienen estatus de
      @e(primera clase). Algunos de los @"(derechos y privilegios) de los
-     elementos de primera clase son: @n(64)
+     elementos de primera clase son:@n(64)
 
 #      - They may be named by variables.
      - Pueden ser nombrados por variables.
@@ -7543,7 +7542,7 @@ Company.
 #      - They may be returned as the results of procedures.
      - Pueden ser devueltos como los resultados de los procedimientos.
 #      - They may be included in data structures.@n(65)
-     - Pueden ser incluidos en las estructuras de datos. @n(65)
+     - Pueden ser incluidos en las estructuras de datos.@n(65)
 
 #      Lisp, unlike other common programming languages, awards procedures full
 #      first-class status. This poses challenges for efficient implementation, but
@@ -7551,7 +7550,7 @@ Company.
      Lisp, a diferencia de otros lenguajes de programación comunes, otorga
      procedimientos de primera clase completa. Esto plantea retos para una
      implementación eficiente, pero la ganancia resultante en el poder expresivo
-     es enorme. @n(66)
+     es enorme.@n(66)
 
 #      :: @t(Exercise 1.40) :: Define a procedure @c(cubic) that can be used together
 #         with the @c(newtons-method) procedure in expressions of the form
@@ -7934,7 +7933,7 @@ Company.
   qué es importante que nuestro lenguaje de programación proporcione la
   capacidad de manipular objetos compuestos directamente: Sin esto, no hay forma
   de un procedimiento tal como pasar sus argumentos a lo largo de @c(add) y
-  @c(mul) sin tener que conocer su estructura detallada. @n(67)
+  @c(mul) sin tener que conocer su estructura detallada.@n(67)
 
 #   We begin this chapter by implementing the rational-number arithmetic system
 #   mentioned above. This will form the background for our discussion of compound
@@ -8241,7 +8240,7 @@ Company.
      procedimiento toma dos argumentos y devuelve un objeto de datos compuesto
      que contiene los dos argumentos como partes. Dado un par, podemos extraer
      las partes usando los procedimientos primitivos @c(car) y
-     @c(cdr). @n(68) Por lo tanto, podemos utilizar @c(cons), @c(car) y
+     @c(cdr).@n(68) Por lo tanto, podemos utilizar @c(cons), @c(car) y
      @c(cdr) de la siguiente manera:
 
 #      ..srci > scheme
@@ -8309,7 +8308,7 @@ Company.
      Los pares ofrecen una forma natural de completar el sistema de números
      racionales. Simplemente represente un número racional como un par de dos
      enteros: un numerador y un denominador. Luego @c(make-rat), @c(numer) y
-     @c(denom) se implementan fácilmente de la siguiente manera: @n(69)
+     @c(denom) se implementan fácilmente de la siguiente manera:@n(69)
 
 #      ..src > scheme
 #        (define (make-rat n d) (cons n d))
@@ -8327,7 +8326,7 @@ Company.
 #      denominator:@n(70)
      Además, para mostrar los resultados de nuestros cálculos, podemos imprimir
      números racionales imprimiendo el numerador, una barra y el denominador:
-     @n(70)
+    @n(70)
 
 #      ..src > scheme
 #        (define (print-rat x)
@@ -8740,7 +8739,7 @@ Company.
     número racional. En general, podemos pensar en datos definidos por alguna
     colección de selectores y constructores, junto con las condiciones
     especificadas que estos procedimientos deben cumplir para ser una
-    representación válida. @n(71)
+    representación válida.@n(71)
 
 #     This point of view can serve to define not only @"(high-level) data objects,
 #     such as rational numbers, but lower-level objects as well. Consider the notion
@@ -9474,7 +9473,7 @@ Company.
    referimos a esta capacidad como la @e(propiedad) de @e(cierre) de
    @c(cons). En general, una operación para combinar objetos de datos satisface
    la propiedad de cierre si los resultados de combinar cosas con esa operación
-   pueden combinarse por sí mismos usando la misma operación. @n(72)
+   pueden combinarse por sí mismos usando la misma operación.@n(72)
    cierre es la clave del poder en cualquier medio de combinación, ya que nos
    permite crear estructuras @e(jerárquicas) - estructuras compuestas de partes,
    que a su vez están formadas por partes, y así sucesivamente.
@@ -9493,7 +9492,7 @@ Company.
    consecuencias del cierre para los datos compuestos. Describimos algunas
    técnicas convencionales para el uso de pares para representar secuencias y
    árboles, y exhibimos un lenguaje gráfico que ilustra el cierre de una manera
-   vívida. @n(73)
+   vívida.@n(73)
 
 # *** 2.2.1 <> Representing Sequences
 *** 2.2.1 <> Representación de secuencias
@@ -9568,8 +9567,8 @@ Company.
 #     lists.@n(74) The above sequence could be produced by @c[(list 1 2 3 4)].  In
 #     general,
     Tal secuencia de pares, formada por @c(cons) es anidados, se llama una
-    @e(lista), y Esquema proporciona una primitiva llamada @c(list) para ayudar
-    en la construcción de listas. @n(74) La secuencia anterior podría ser
+    @e(lista), y Scheme proporciona una primitiva llamada @c(list) para ayudar
+    en la construcción de listas.@n(74) La secuencia anterior podría ser
     producida por @c((list 1 2 3 4)). En general,
 
 #     ..src > scheme
@@ -9636,7 +9635,7 @@ Company.
     de @c(cdr) como seleccionar la sublista que consiste en todo menos el primer
     elemento. Aplicaciones anidadas de @c(car) y @c(cdr) se pueden utilizar para
     extraer los artículos segundo, tercero y subsiguientes de la
-    lista. @n(75) El constructor @c(cons) hace una lista como la original,
+    lista.@n(75) El constructor @c(cons) hace una lista como la original,
     pero con un elemento adicional al principio.
 
 #     ..srci > scheme
@@ -10042,7 +10041,7 @@ Company.
 
 #         then in the body of @c(g), @c(w) will be the list @c[(1 2 3 4 5 6)].@n(77)
         Entonces en el cuerpo de @c(g), @c(w) será la lista @c((1 2 3 4 5
-        6)). @n(77)
+        6)).@n(77)
 
 #         Use this notation to write a procedure @c(same-parity) that takes one or
 #         more integers and returns a list of all the arguments that have the same
@@ -10108,7 +10107,7 @@ Company.
      @l(#1.3). Aquí se llama el procedimiento de orden superior
      @c(map). @c(Map) Toma como argumentos un procedimiento de un argumento y
      una lista y devuelve una lista de los resultados producidos aplicando el
-     procedimiento a cada elemento de la lista: @n(78)
+     procedimiento a cada elemento de la lista:@n(78)
 
 #      ..srci > scheme
 #        > (define (map proc items)               \
@@ -10520,7 +10519,7 @@ Company.
 #     complete procedure:@n(79)
     Para ayudar en la escritura de procedimientos recursivos en los árboles,
     Scheme proporciona el predicado primitivo @c(pair?), que comprueba si su
-    argumento es un par. Aquí está el procedimiento completo: @n(79)
+    argumento es un par. Aquí está el procedimiento completo:@n(79)
 
 #     ..src > scheme
 #       (define (count-leaves x)
@@ -11226,7 +11225,7 @@ Company.
      < srci..
 
 #      To enumerate the leaves of a tree, we can use@n(80)
-     Para enumerar las hojas de un árbol, podemos usar @n(80)
+     Para enumerar las hojas de un árbol, podemos usar@n(80)
 
 #      ..srci > scheme
 #        > (define (enumerate-tree tree)                  \
@@ -11429,7 +11428,7 @@ Company.
 #      These examples give just a hint of the vast range of operations that can be
 #      expressed as sequence operations.@n(81)
      Estos ejemplos dan sólo una pizca de la amplia gama de operaciones que se
-     pueden expresar como operaciones de secuencia. @n(81)
+     pueden expresar como operaciones de secuencia.@n(81)
 
 #      Sequences, implemented here as lists, serve as a conventional interface that
 #      permits us to combine processing modules. Additionally, when we uniformly
@@ -11509,7 +11508,7 @@ Company.
 #         multiply by @m(x), and so on, until we reach @m(a₀).@n(82)
         En otras palabras, comenzamos con @m(aₙ), multiplicamos por @m(x),
         añadimos @m(aₙ₋₁), multiplicamos por @m(x), y así sucesivamente, hasta
-        alcanzar @m(a₀). @n(82)
+        alcanzar @m(a₀).@n(82)
 
 #         Fill in the following template to produce a procedure that evaluates a
 #         polynomial using Horner's rule. Assume that the coefficients of the
@@ -11663,7 +11662,7 @@ Company.
         < example..
 
 #         We can define the dot product as@n(83)
-        Podemos definir el producto punto como @n(83)
+        Podemos definir el producto punto como@n(83)
 
 #         ..src > scheme
 #           (define (dot-product v w)
@@ -11792,7 +11791,7 @@ Company.
 #      @m(i) and @m(j), where @m(1 ≤ j < i ≤ n), such that @m(i + j) is prime. For
 #      example, if @m(n) is 6, then the pairs are the following:
      Podemos extender el paradigma de secuencia para incluir muchos cálculos que
-     se expresan comúnmente utilizando bucles anidados. @n(84) Considere
+     se expresan comúnmente utilizando bucles anidados.@n(84) Considere
      este problema: Dado un número entero positivo @m(n), encontrar todos los
      pares ordenados de números enteros distintos positivas @m(i) y @m(j), donde
      @m(1 ≤ j <i ≤ n), tal que @m(i + j) es primo. Por ejemplo, si @m(n) es
@@ -11838,7 +11837,7 @@ Company.
      secuencia, generamos el par @c((list i j)). Esto nos da una secuencia de
      pares para cada @m(i). La combinación de todas las secuencias para todos
      los @m(i) (acumulando con @c(append)) produce la secuencia de pares
-     requerida: @n(85)
+     requerida:@n(85)
 
 #      ..src > scheme
 #        (accumulate
@@ -11963,11 +11962,11 @@ Company.
      3}) son @m({1, 2, 3}), @m({1, 3, 2}), @m({2, 1, 3}), @m({2, 3, 1}), @m({3,
      1, 2}), y @m({3, 2, 1}). Aquí hay un plan para generar las permutaciones de
      @m(S) : Para cada ítem @m(x) en @m(S), recursivamente generar la secuencia
-     de permutaciones de @m(S - x), @n(86) y adjuntar @m(x) al frente de
+     de permutaciones de @m(S - x),@n(86) y adjuntar @m(x) al frente de
      cada uno. Esto produce, @m(Para cada x) en @m(S), la secuencia de
      permutaciones de @m(S) que comienzan con @m(x). La combinación de estas
      secuencias para todo @m(x) proporciona todas las permutaciones de @m(S) :
-     @n(87)
+    @n(87)
 
 #      ..src > scheme
 #        (define (permutations s)
@@ -12220,7 +12219,7 @@ Company.
     los procedimientos de orden superior de una manera esencial. El lenguaje
     está diseñado para que sea fácil experimentar con patrones como los de la
     @l(#Figura 2.9), que están compuestos por elementos repetidos
-    que se desplazan y se escalan. @n(88) En este lenguaje, los objetos de
+    que se desplazan y se escalan.@n(88) En este lenguaje, los objetos de
     datos que se combinan se representan como procedimientos y no como
     estructura de lista. Así como @c(cons), lo que satisface la propiedad de
     cierre, nos permitió construir fácilmente estructura de lista
@@ -12267,7 +12266,7 @@ Company.
      pintor, pero con respecto a cuatro marcos diferentes. Los pintores pueden
      ser más elaborados que esto: El pintor primitivo llamado @c(rogers) pinta
      una imagen del fundador del @A(MIT), William Barton Rogers, como se muestra
-     en la @l(#Figura 2.11). @n(89) Las cuatro imágenes de la
+     en la @l(#Figura 2.11).@n(89) Las cuatro imágenes de la
      figura 2.@c(wave)
 
 #      ..figure > @t(Figure 2.10) Images produced by the @c(wave) painter, with
@@ -12624,7 +12623,7 @@ Company.
 #      Then @c(flipped-pairs) can be defined in terms of @c(square-of-four) as
 #      follows:@n(90)
      Entonces @c(flipped-pairs) se puede definir en términos de
-     @c(square-of-four) lo siguiente: @n(90)
+     @c(square-of-four) lo siguiente:@n(90)
 
 #      ..src > scheme
 #        (define (flipped-pairs painter)
@@ -12646,7 +12645,7 @@ Company.
      < src..
 
 #      and @c(square-limit) can be expressed as@n(91)
-     Y @c(square-limit) puede expresarse como @n(91)
+     Y @c(square-limit) puede expresarse como@n(91)
 
 #      ..src > scheme
 #        (define (square-limit painter n)
@@ -12789,7 +12788,7 @@ Company.
      Por ejemplo, se asigna (0, 0) al origen de la trama, (1, 1) al vértice
      diagonalmente opuesto al origen, y (0,5, 0,5) al centro de la
      trama. Podemos crear el mapa de coordenadas de un marco con el siguiente
-     procedimiento: @n(92)
+     procedimiento:@n(92)
 
 #      ..src > scheme
 #        (define (frame-coord-map frame)
@@ -12916,7 +12915,7 @@ Company.
      que dibuja una línea en la pantalla entre dos puntos
      especificados. Entonces podemos crear pintores para dibujos lineales, como
      el @c(wave) pintor en la @l(#Figura 2.10), de listas de
-     segmentos de línea como sigue: @n(93)
+     segmentos de línea como sigue:@n(93)
 
 #      ..src > scheme
 #        (define (segments->painter segment-list)
@@ -12962,7 +12961,7 @@ Company.
      tipo de pintores primitivos, basados en una variedad de capacidades
      gráficas. Los detalles de su implementación no importan. Cualquier
      procedimiento puede servir como un pintor, siempre que se tome un marco
-     como argumento y dibuja algo escalado para ajustarse al marco. @n(94)
+     como argumento y dibuja algo escalado para ajustarse al marco.@n(94)
 
 #      :: @t(Exercise 2.48) :: A directed line segment in the plane can be
 #         represented as a pair of vectors––the vector running from the origin to the
@@ -13105,7 +13104,7 @@ Company.
 
 #      Other transformations rotate images counterclockwise by 90 degrees@n(95)
      Otras transformaciones giran las imágenes en sentido antihorario 90 grados
-     @n(95)
+    @n(95)
 
 #      ..src > scheme
 #        (define (rotate90 painter)
@@ -13123,7 +13122,7 @@ Company.
      < src..
 
 #      or squash images towards the center of the frame:@n(96)
-     O imágenes de squash hacia el centro del cuadro: @n(96)
+     O imágenes de squash hacia el centro del cuadro:@n(96)
 
 #      ..src > scheme
 #        (define (squash-inwards painter)
@@ -13276,7 +13275,7 @@ Company.
      se combinan (y se describen usando un lenguaje de circuitos analógicos)
      para producir partes tales como y-puertas y puertas o puertas que forman
      las primitivas de un lenguaje para diseño de circuitos
-     digitales. @n(97) Estas piezas se combinan para construir
+     digitales.@n(97) Estas piezas se combinan para construir
      procesadores, estructuras de bus, y sistemas de memoria, que a su vez se
      combinan para formar los equipos, utilizando los lenguajes adecuados a la
      arquitectura de computadores. Las computadoras se combinan para formar
@@ -13442,7 +13441,7 @@ Company.
     embargo, si le decimos a alguien que @"(diga 'su nombre' en voz alta,)
     esperamos escuchar las palabras de @"(su nombre. ) Tenga en cuenta que
     estamos obligados a anidar las comillas para describir lo que alguien más
-    podría decir. @n(98)
+    podría decir.@n(98)
 
 #     We can follow this same practice to identify lists and symbols that are to be
 #     treated as data objects rather than as expressions to be evaluated. However,
@@ -13459,7 +13458,7 @@ Company.
     citar. Podemos salirse con esto en la sintaxis Scheme porque nos basamos en
     espacios en blanco y paréntesis para delimitar objetos. Por lo tanto, el
     significado del carácter de comilla simple es citar el siguiente
-    objeto. @n(99)
+    objeto.@n(99)
 
 #     Now we can distinguish between symbols and their values:
     Ahora podemos distinguir entre símbolos y sus valores:
@@ -13488,7 +13487,7 @@ Company.
 #     Quotation also allows us to type in compound objects, using the conventional
 #     printed representation for lists:@n(100)
     La cotización también nos permite escribir objetos compuestos, usando la
-    representación impresa convencional para las listas: @n(100)
+    representación impresa convencional para las listas:@n(100)
 
 #     ..srci > scheme
 #       > (car '(a b c))
@@ -13516,7 +13515,7 @@ Company.
 #     false. Otherwise, it returns the sublist of the list beginning with the first
 #     occurrence of the symbol:
     Una primitiva adicional utilizada en la manipulación de símbolos es @c(eq?),
-    que toma dos símbolos como argumentos y prueba si son iguales. @n(101)
+    que toma dos símbolos como argumentos y prueba si son iguales.@n(101)
     El uso @c(eq?), podemos implementar un procedimiento útil llamada
     @c(memq). Esto toma dos argumentos, un símbolo y una lista. Si el símbolo no
     está contenido en la lista (es decir, no está @c(eq?) en ningún elemento de
@@ -13621,7 +13620,7 @@ Company.
        son @c(eq?), o si ambos son listas de tal manera que @c((car a)) es
        @c(equal?)  a @c((car b)), y @c((cdr a)) es @c(equal?) a @c((cdr
        b)). Utilizando esta idea, implementar @c(equal?) como un
-       procedimiento. @n(102)
+       procedimiento.@n(102)
 
 #     :: @t(Exercise 2.55) :: Eva Lu Ator types to the interpreter the expression
     :: @t(Ejercicio 2.55) :: Eva Lu Ator escribe al intérprete la expresión
@@ -14283,7 +14282,7 @@ Company.
     argumentos. Desde el punto de vista de la abstracción de datos, Somos libres
     de diseñar cualquier representación que implemente estas operaciones de una
     manera consistente con las interpretaciones dadas
-    anteriormente. @n(103)
+    anteriormente.@n(103)
 
 # **** Sets as unordered lists
 **** Establece como listas no ordenadas
@@ -14664,7 +14663,7 @@ Company.
      árbol de tamaño @m(n) a la búsqueda de un árbol de tamaño @m(n / 2). Dado
      que el tamaño del árbol se reduce a la mitad en cada paso, @m(Debemos
      esperar que el número de pasos necesarios para buscar un árbol de tamaño n)
-     crezca como @m(Θ (log n)). @n(104) Para los conjuntos grandes, esto
+     crezca como @m(Θ (log n)).@n(104) Para los conjuntos grandes, esto
      será una aceleración significativa sobre las representaciones anteriores.
 
 #      We can represent trees by using lists. Each node will be a list of three
@@ -14676,7 +14675,7 @@ Company.
      elementos: la entrada en el nodo, el subárbol izquierdo y el subárbol
      derecho. Una subárbol izquierda o derecha de la lista vacía indicará que no
      hay ningún subárbol conectado allí. Podemos describir esta representación
-     mediante los siguientes procedimientos: @n(105)
+     mediante los siguientes procedimientos:@n(105)
 
 #      ..src > scheme
 #        (define (entry tree) (car tree))
@@ -14815,7 +14814,7 @@ Company.
      equilibrio. También hay otras formas de resolver este problema, la mayoría
      de las cuales implican el diseño de nuevas estructuras de datos para las
      cuales la búsqueda y la inserción se pueden realizar en pasos @m(Θ (log
-     n)). @n(106) En este árbol todos los subárboles izquierdo están
+     n)).@n(106) En este árbol todos los subárboles izquierdo están
      vacíos, por lo que no tiene ventaja sobre una simple lista ordenada. Una
      forma de resolver este problema es definir una operación que transforma un
      árbol arbitrario en un árbol equilibrado con los mismos elementos. Entonces
@@ -14823,7 +14822,7 @@ Company.
      mantener nuestro conjunto en equilibrio. También hay otras formas de
      resolver este problema, la mayoría de las cuales implican el diseño de
      nuevas estructuras de datos para las cuales la búsqueda y la inserción se
-     pueden realizar en pasos @m(Θ (log n)). @n(106) En este árbol todos
+     pueden realizar en pasos @m(Θ (log n)).@n(106) En este árbol todos
      los subárboles izquierdo están vacíos, por lo que no tiene ventaja sobre
      una simple lista ordenada. Una forma de resolver este problema es definir
      una operación que transforma un árbol arbitrario en un árbol equilibrado
@@ -14832,13 +14831,13 @@ Company.
      equilibrio. También hay otras formas de resolver este problema, la mayoría
      de las cuales implican el diseño de nuevas estructuras de datos para las
      cuales la búsqueda y la inserción se pueden realizar en pasos @m(Θ (log
-     n)). @n(106) También hay otras formas de resolver este problema, la
+     n)).@n(106) También hay otras formas de resolver este problema, la
      mayoría de las cuales implican el diseño de nuevas estructuras de datos
      para las cuales la búsqueda y la inserción se pueden realizar en pasos @m(Θ
-     (log n)). @n(106) También hay otras formas de resolver este
+     (log n)).@n(106) También hay otras formas de resolver este
      problema, la mayoría de las cuales implican el diseño de nuevas estructuras
      de datos para las cuales la búsqueda y la inserción se pueden realizar en
-     pasos @m(Θ (log n)). @n(106)
+     pasos @m(Θ (log n)).@n(106)
 
 #      ..figure > @t(Figure 2.17) Unbalanced tree produced by adjoining 1 through 7
 #        in sequence.
@@ -15046,7 +15045,7 @@ Company.
         @l(#Ejercicio 2.63) y del @l(#Ejercicio
         2.64) para dar @m(Θ (n)) implementaciones de @c(union-set) y
         @c(intersection-set) para conjuntos implementados como árboles binarios
-        (balanceados). @n(107)
+        (balanceados).@n(107)
 
 # **** Sets and information retrieval
 **** Conjuntos y recuperación de información
@@ -15417,7 +15416,7 @@ Company.
      variable para los mensajes donde la frecuencia relativa de los símbolos
      coincide con las frecuencias con Que el código fue construido. No
      probaremos esta optimalidad de los códigos de Huffman aquí, pero
-     mostraremos cómo se construyen los árboles Huffman. @n(108)
+     mostraremos cómo se construyen los árboles Huffman.@n(108)
 
 #      The algorithm for generating a Huffman tree is very simple. The idea is to
 #      arrange the tree so that the symbols with the lowest frequency appear farthest
@@ -16177,7 +16176,7 @@ Company.
     operaciones genéricas. Comenzamos discutiendo dos representaciones
     plausibles para números complejos como pares ordenados: forma rectangular
     (parte real e parte imaginaria) y forma polar (magnitud y
-    ángulo). @n(109) Sección @l(#2.4.2) mostrará cómo se puede hacer
+    ángulo).@n(109) Sección @l(#2.4.2) mostrará cómo se puede hacer
     que ambas representaciones convivan en un solo sistema mediante el uso de
     etiquetas de tipo y operaciones genéricas.
 
@@ -16434,7 +16433,7 @@ Company.
 #     angle @m[(r, A)].@n(110) Ben's representation is therefore given by the
 #     following selectors and constructors:
     Que relacionan las partes real e imaginaria @m((x, y)) con la magnitud y el
-    ángulo @m((r, A)). @n(110) Por lo tanto, la representación de Ben es
+    ángulo @m((r, A)).@n(110) Por lo tanto, la representación de Ben es
     dada por los siguientes selectores y constructores:
 
 #     ..src > scheme
@@ -17212,7 +17211,7 @@ Company.
     rectangular. Para interconectar estos con el resto del sistema, Ben instala
     su @c(real-part) procedimiento bajo el nombre de operación @c(real-part) y
     el tipo @c((rectangular)), y de manera similar para los otros
-    selectores. @n(111) La interfaz también define los constructores para
+    selectores.@n(111) La interfaz también define los constructores para
     ser utilizados por el sistema externo.@n(112) Estos son idénticos a
     los constructores definidos internamente de Ben, excepto que adjuntan la
     etiqueta.
@@ -17293,7 +17292,7 @@ Company.
     procedimiento de @"(operación) general llamado @c(apply-generic), que aplica
     una operación genérica a algunos argumentos. @c(Apply-generic) Mira en la
     tabla bajo el nombre de la operación y los tipos de los argumentos y aplica
-    el procedimiento resultante si uno está presente: @n(113)
+    el procedimiento resultante si uno está presente:@n(113)
 
 #     ..src > scheme
 #       (define (apply-generic op . args)
@@ -17660,7 +17659,7 @@ Company.
      El @c(apply-generic) procedimiento correspondiente, que aplica una
      operación genérica a un argumento, ahora simplemente alimenta el nombre de
      la operación al objeto de datos y permite al objeto realizar el trabajo:
-     @n(114)
+    @n(114)
 
 #      ..src > scheme
 #        (define (apply-generic op arg) (arg op))
@@ -18341,7 +18340,7 @@ Company.
     es válida. Por ejemplo, podríamos extender el paquete de número complejo
     para que proporcione un procedimiento para agregar números complejos a
     números ordinarios e instalarlo en la tabla usando la etiqueta @c((complex
-    scheme-number)): @n(115)
+    scheme-number)):@n(115)
 
 #     ..src > scheme
 #       (define (add-complex-to-schemenum z x)
@@ -18495,7 +18494,7 @@ Company.
      como antes. Si es así, enviamos al procedimiento que se encuentra en la
      tabla de operación y tipo. De lo contrario, tratamos de coerción. Para
      simplificar, consideramos solamente el caso donde hay dos
-     argumentos. @n(116) Comprobamos la tabla de coerción para ver si los
+     argumentos.@n(116) Comprobamos la tabla de coerción para ver si los
      objetos del primer tipo pueden ser coagidos al segundo tipo. Si es así,
      coaccionamos el primer argumento y probamos la operación nuevamente. Si los
      objetos del primer tipo no pueden coaccionar en general al segundo tipo,
@@ -18587,7 +18586,7 @@ Company.
      coacción para relacionar los tipos (posiblemente @m(n²) procedimientos para
      un sistema con @m(n) tipos), necesitamos escribir sólo un procedimiento
      para cada par de tipos en lugar de un procedimiento diferente para cada
-     colección de tipos y cada operación genérica. @n(117) Lo que contamos
+     colección de tipos y cada operación genérica.@n(117) Lo que contamos
      aquí es el hecho de que la transformación apropiada entre tipos depende
      solamente de los tipos mismos, no de la operación a ser aplicada.
 
@@ -18793,15 +18792,15 @@ Company.
      existe un problema similar al forzar un valor @"(por) la jerarquía de
      tipos. Tratar con un gran número de tipos interrelacionados, sin dejar de
      preservar la modularidad en el diseño de grandes sistemas es muy difícil, y
-     es un área de mucha investigación actual. @n(118)@"(Existe un
+     es un área de mucha investigación actual.@n(118)@"(Existe un
      problema similar al forzar un valor por) la jerarquía de tipos. Tratar con
      un gran número de tipos interrelacionados, sin dejar de preservar la
      modularidad en el diseño de grandes sistemas es muy difícil, y es un área
-     de mucha investigación actual. @n(118)@"(Existe un problema similar
+     de mucha investigación actual.@n(118)@"(Existe un problema similar
      al forzar un valor por) la jerarquía de tipos. Tratar con un gran número de
      tipos interrelacionados, sin dejar de preservar la modularidad en el diseño
      de grandes sistemas es muy difícil, y es un área de mucha investigación
-     actual. @n(118)
+     actual.@n(118)
 
 #      ..figure > @t(Figure 2.26) Relations among types of geometric figures.
      ..figure > @t(Figura 2.26) Relaciones entre tipos de figuras geométricas.
@@ -19027,7 +19026,7 @@ Company.
         a lo que empezamos. Muestre cómo implementar esta idea en detalle,
         escribiendo un @c(drop) procedimiento que suelte un objeto en la medida
         de lo posible. Deberá diseñar las diversas operaciones de proyección
-        @n(119) e instalarlas @c(project) como una operación genérica en
+       @n(119) e instalarlas @c(project) como una operación genérica en
         el sistema. También necesitará hacer uso de un predicado genérico de
         igualdad, tal como se describe en el @l(#Ejercicio
         2.79). Finalmente, use @c(drop) para reescribir @c(apply-generic) desde
@@ -19122,7 +19121,7 @@ Company.
      en polinomios es decidir lo que es un polinomio. Los polinomios se definen
      normalmente con respecto a ciertas variables (los @e(indeterminados) del
      polinomio). Por simplicidad, nos restringiremos a polinomios que tengan
-     sólo un @e(polinomio) indeterminado (@e(univariante) ). @n(120)
+     sólo un @e(polinomio) indeterminado (@e(univariante) ).@n(120)
      definiremos un polinomio ser una suma de términos, cada uno de los cuales
      es o bien un coeficiente, una potencia de la indeterminada, o un producto
      de un coeficiente y una potencia de la indeterminada. Un coeficiente se
@@ -19370,7 +19369,7 @@ Company.
 #      Here is the procedure that constructs the term list for the sum of two
 #      polynomials:@n(122)
      Aquí está el procedimiento que construye la lista de términos para la suma
-     de dos polinomios: @n(122)
+     de dos polinomios:@n(122)
 
 #      ..src > scheme
 #        (define (add-terms L1 L2)
@@ -19559,7 +19558,7 @@ Company.
      utilizado para representar polinomios en tres variables), la dirección de
      datos aseguraría que el sistema seguiría a través de otro nivel de llamadas
      recursivas, y así sucesivamente a través de tantos niveles como la
-     estructura de Dicta la información. @n(123)
+     estructura de Dicta la información.@n(123)
 
 # **** Representing term lists
 **** Representación de listas de términos
@@ -19631,7 +19630,7 @@ Company.
      eficientemente como listas de los coeficientes. Por ejemplo, @m(un) arriba
      sería representado agradablemente como @c((1 2 0 3 -2 -5)). El orden de un
      término en esta representación es la longitud de la sublista que comienza
-     con el coeficiente de dicho término, decrementado por 1. @n(124) Esta
+     con el coeficiente de dicho término, decrementado por 1.@n(124) Esta
      sería una representación terrible para un polinomio escaso tal como @m(B) :
      Habría una lista gigante de ceros puntuada por un Pocos términos solitarios
      no distintos de cero. Una representación más razonable del término lista de
@@ -19642,7 +19641,7 @@ Company.
      de las manipulaciones polinomiales se realizan en polinomios escasos, vamos
      a utilizar este método. Supondremos que las listas de términos se
      representan como listas de términos, ordenadas desde el orden más alto al
-     término más bajo. @n(125)
+     término más bajo.@n(125)
 
 #      ..src > scheme
 #        (define (adjoin-term term term-list)
@@ -20017,7 +20016,7 @@ Company.
      común. La noción de @"(mayor divisor común) tiene sentido para los
      polinomios. De hecho, podemos calcular el @A(GCD) de dos polinomios usando
      esencialmente el mismo Algoritmo de Euclides que funciona para
-     enteros. @n(126) La versión entera es
+     enteros.@n(126) La versión entera es
 
 #      ..src > scheme
 #        (define (gcd a b)
@@ -20133,7 +20132,7 @@ Company.
         para calcular el @A(GCD) de @m(Q $ ₁ $) y @m(Q $ ₂ $). Observe que la
         respuesta no es la misma que @m(P₁). Este ejemplo introduce operaciones
         no integradas en el cálculo, causando dificultades con el algoritmo
-        @A(GCD). @n(127) Para entender lo que está sucediendo, trate de
+        @A(GCD).@n(127) Para entender lo que está sucediendo, trate de
         rastreo @c(gcd-terms) mientras que el cálculo de la @A(GCD) o intente
         llevar a cabo la división con la mano.
 
@@ -20347,7 +20346,7 @@ Company.
      enorme tamaño de los coeficientes intermedios generados por las
      seudodivisiones. Una de las áreas activas en el desarrollo de sistemas de
      manipulación algebraica es el diseño de mejores algoritmos para el cálculo
-     de polinomios @A(GCD) s. @n(128)
+     de polinomios @A(GCD) s.@n(128)
 
 # * Chapter 3 <> Modularity, Objects, and State
 * Capitulo 3 <> Modularidad, Objetos y Estado
@@ -20583,7 +20582,7 @@ Company.
     como especificaciones para el cálculo de funciones matemáticas. Una llamada
     a un procedimiento calculó el valor de la función aplicada a los argumentos
     dados, y dos llamadas al mismo procedimiento con los mismos argumentos
-    siempre produjeron el mismo resultado. @n(129)
+    siempre produjeron el mismo resultado.@n(129)
 
 #     To implement @c(withdraw), we can use a variable @c(balance) to indicate the
 #     balance of money in the account and define @c(withdraw) as a procedure that
@@ -20649,7 +20648,7 @@ Company.
     @c(Set!) Cambia @c((name)) para que su valor sea el resultado obtenido
     evaluando @c((new-value)). En el caso que nos ocupa, estamos cambiando
     @c(balance) para que su nuevo valor sea el resultado de sustraer @c(amount)
-    del valor anterior de @c(balance). @n(130)
+    del valor anterior de @c(balance).@n(130)
 
 #     @c(Withdraw) also uses the @c(begin) special form to cause two expressions to
 #     be evaluated in the case where the @c(if) test is true: first decrementing
@@ -20672,7 +20671,7 @@ Company.
 #     the value of the entire @c(begin) form.@n(131)
     Hace que las expresiones @m(⟨exp₁⟩) a @m(⟨expₙ⟩) sean evaluadas en secuencia
     y el valor de la expresión final @m(⟨expₙ⟩) sea devuelto como el valor de
-    todo el @c(begin) formulario. @n(131)
+    todo el @c(begin) formulario.@n(131)
 
 #     Although @c(withdraw) works as desired, the variable @c(balance) presents a
 #     problem. As specified above, @c(balance) is a name defined in the global
@@ -20735,7 +20734,7 @@ Company.
     anterior. Este procedimiento - devuelto como resultado de la evaluación de
     la @c(let) expresión - es @c(new-withdraw), que se comporta exactamente de
     la misma manera que @c(withdraw) pero cuya variable @c(balance) no es
-    accesible por ningún otro procedimiento. @n(132)
+    accesible por ningún otro procedimiento.@n(132)
 
 #     Combining @c(set!) with local variables is the general programming technique
 #     we will use for constructing computational objects with local state.
@@ -20778,7 +20777,7 @@ Company.
 #     amount of money in the account.@n(133)
     El siguiente procedimiento @c(make-withdraw), crea @"(procesadores de
     retiro. ) El parámetro formal @c(balance) en @c(make-withdraw) especifica la
-    cantidad inicial de dinero en la cuenta. @n(133)
+    cantidad inicial de dinero en la cuenta.@n(133)
 
 #     ..src > scheme
 #       (define (make-withdraw balance)
@@ -21101,7 +21100,7 @@ Company.
 #     then the sequence of values @m(x₁), @m(x₂), @m(x₃), … will have the desired
 #     statistical properties.@n(134)
     Entonces la secuencia de valores @m(x₁), @m(x₂), @m(x₃), ... tendrá las
-    propiedades estadísticas deseadas. @n(134)
+    propiedades estadísticas deseadas.@n(134)
 
 #     We can implement @c(rand) as a procedure with a local state variable @c(x)
 #     that is initialized to some fixed value @c(random-init). Each call to @c(rand)
@@ -21154,7 +21153,7 @@ Company.
     experimentos. Por ejemplo, podemos aproximar @m(π) usando el hecho de que
     @m(6 / π²) es la probabilidad de que dos enteros elegidos al azar no tengan
     factores en común; Es decir, que su mayor divisor común
-    será 1. @n(135) Para obtener la aproximación a @m(π), realizamos un
+    será 1.@n(135) Para obtener la aproximación a @m(π), realizamos un
     gran número de experimentos. En cada experimento elegimos dos enteros al
     azar y realizamos una prueba para ver si su @A(GCD) es 1. La fracción de
     veces que pasa la prueba nos da nuestra estimación de @m(6 / π²) ,@m()
@@ -21402,7 +21401,7 @@ Company.
        azar de un rango dado. El @c(random-in-range) procedimiento siguiente
        implementa esto en términos del @c(random) procedimiento utilizado en
        @l(#1.2.6), que devuelve un número no negativo menor que su
-       entrada. @n(136)
+       entrada.@n(136)
 
 #        ..src > scheme
 #          (define (random-in-range low high)
@@ -21588,7 +21587,7 @@ Company.
 #     of @c(make-simplified-withdraw). This reduces the expression to@n(137)
     En primer lugar, simplificar el operador mediante la sustitución de 25
     @c(balance) en el cuerpo de @c(make-simplified-withdraw). Esto reduce la
-    expresión a @n(137)
+    expresión a@n(137)
 
 #     ..src > scheme
 #       ((lambda (amount)
@@ -21948,7 +21947,7 @@ Company.
      programación con asignación obliga a considerar cuidadosamente los órdenes
      relativos de las asignaciones para asegurarse de que cada instrucción está
      utilizando la versión correcta de las variables que se han cambiado. Esta
-     cuestión simplemente no surge en los programas funcionales. @n(139)
+     cuestión simplemente no surge en los programas funcionales.@n(139)
 
 #      The complexity of imperative programs becomes even worse if we consider
 #      applications in which several processes execute concurrently. We will return
@@ -22189,7 +22188,7 @@ Company.
     - Para evaluar una combinación:
 
 #       1. Evaluate the subexpressions of the combination.@n(140)
-      1. Evaluar las subexpresiones de la combinación. @n(140)
+      1. Evaluar las subexpresiones de la combinación.@n(140)
 
 #       2. Apply the value of the operator subexpression to the values of the operand
 #          subexpressions.
@@ -22425,7 +22424,7 @@ Company.
 #     variable is unbound in the environment, then @c(set!) signals an error.
     También especificamos que la definición de un símbolo usando @c(define) crea
     un enlace en el marco de entorno actual y asigna al símbolo el valor
-    indicado. @n(141) Finalmente, especificamos el comportamiento de
+    indicado.@n(141) Finalmente, especificamos el comportamiento de
     @c(set!), la operación que nos obligó a introducir el modelo de entorno en
     primer lugar. La evaluación de la expresión @c((set! ⟨variable⟩ ⟨value⟩)) en
     algún entorno localiza el enlace de la variable en el entorno y cambia la
@@ -22706,7 +22705,7 @@ Company.
 #        Show the environment structures created by evaluating @c[(factorial 6)]
 #        using each version of the @c(factorial) procedure.@n(142)
        Muestre las estructuras de entorno creadas al evaluar @c((factorial 6))
-       cada versión del @c(factorial) procedimiento. @n(142)
+       cada versión del @c(factorial) procedimiento.@n(142)
 
 # *** 3.2.3 <> Frames as the Repository of Local State
 *** 3.2.3 <> Marcos como el Repositorio del Estado Local
@@ -23105,7 +23104,7 @@ Company.
     llamada a @c(make-withdraw). Contiene un marco con su propia vinculación
     local para @c(balance). Por otro lado, @c(W1) y @c(W2) tienen el mismo
     código: el código especificado por la λ-expresión en el cuerpo de
-    @c(make-withdraw). @n(143) Vemos aquí por qué @c(W1) y se @c(W2)
+    @c(make-withdraw).@n(143) Vemos aquí por qué @c(W1) y se @c(W2)
     comportan como objetos independientes. Llamadas para @c(W1) referenciar la
     variable de estado @c(balance) almacenada en E1, mientras que las llamadas
     para @c(W2) referenciar la @c(balance) almacenada en E2. Por lo tanto, los
@@ -23607,7 +23606,7 @@ Company.
     Los mutadores primitivos para pares son @c(set-car!) y
     @c(set-cdr!). @c(Set-car!) Toma dos argumentos, el primero de los cuales
     debe ser un par. Modifica este par, sustituyendo el @c(car) puntero por un
-    puntero al segundo argumento de @c(set-car!). @n(144)
+    puntero al segundo argumento de @c(set-car!).@n(144)
 
 #     As an example, suppose that @c(x) is bound to the list @c[((a b) c d)] and
 #     @c(y) to the list @c[(e f)] as illustrated in @l(#Figure 3.12).  Evaluating
@@ -23625,7 +23624,7 @@ Company.
     estructura @c(x) se ha modificado y ahora se imprimirá como @c(((e f) c
     d)). Los pares que representan la lista @c((a b)), identificados por el
     puntero que fue reemplazado, ahora están separados de la estructura
-    original. @n(145)
+    original.@n(145)
 
 #     ..figure > @t(Figure 3.12) Lists @c(x): @c[((a b) c d)] and @c(y): @c[(e f)].
     ..figure > @t(Figura 3.12) Listas @c(x): @c(((a b) c d)) y @c(y): @c((e f)).
@@ -23884,7 +23883,7 @@ Company.
     nuevo par que no forma parte de ninguna estructura de lista
     existente. Obtenemos el nuevo par, establece sus @c(car) y @c(cdr) punteros
     a los objetos designados, y devolver el nuevo par como resultado de la
-    @c(cons). @n(146)
+    @c(cons).@n(146)
 
 #     ..src > scheme
 #       (define (cons x y)
@@ -24193,7 +24192,7 @@ Company.
 #      In this structure, the pairs in the two @c[(a b)] lists are distinct, although
 #      the actual symbols are shared.@n(147)
      En esta estructura, los pares en las dos @c((a b)) listas son distintos,
-     aunque los símbolos reales son compartidos. @n(147)
+     aunque los símbolos reales son compartidos.@n(147)
 
 #      When thought of as a list, @c(z1) and @c(z2) both represent @"(the same) list,
 #      @c[((a b) a b)]. In general, sharing is completely undetectable if we operate
@@ -24282,7 +24281,7 @@ Company.
      partes modificadas. Las operaciones de mutación @c(set-car!) y se
      @c(set-cdr!) deben utilizar con cuidado; A menos que tengamos una buena
      comprensión de cómo nuestros objetos de datos son compartidos, la mutación
-     puede tener resultados imprevistos. @n(148)
+     puede tener resultados imprevistos.@n(148)
 
 #      :: @t(Exercise 3.15) :: Draw box-and-pointer diagrams to explain the effect of
 #         @c(set-to-wow!) on the structures @c(z1) and @c(z2) above.
@@ -24454,7 +24453,7 @@ Company.
      La asignación es todo lo que se necesita, teóricamente, para explicar el
      comportamiento de los datos mutables. Tan pronto como admitimos @c(set!) a
      nuestro lenguaje, planteamos todos los temas, no sólo de asignación, sino
-     de datos mutables en general. @n(149)
+     de datos mutables en general.@n(149)
 
 #      :: @t(Exercise 3.20) :: Draw environment diagrams to illustrate the evaluation
 #         of the sequence of expressions
@@ -24859,7 +24858,7 @@ Company.
     Para borrar el elemento en la parte delantera de la cola, simplemente
     modificamos el puntero frontal para que ahora apunte al segundo elemento de
     la cola, que se puede encontrar siguiendo el @c(cdr) puntero del primer
-    elemento (véase la @l(#Figura 3.21) ): @n(150)
+    elemento (véase la @l(#Figura 3.21) ):@n(150)
 
 #     ..src > scheme
 #       (define (delete-queue! queue)
@@ -25025,7 +25024,7 @@ Company.
        y @c(rear-deque), y mutadores @c(front-insert-deque!),
        @c(rear-insert-deque!), @c(front-delete-deque!),
        @c(rear-delete-deque!). Muestre cómo representar deques utilizando pares,
-       y dar implementaciones de las operaciones. @n(151) Todas las
+       y dar implementaciones de las operaciones.@n(151) Todas las
        operaciones deben realizarse en @m(Θ (1)) pasos.
 
 # *** 3.3.3 <> Representing Tables
@@ -25138,7 +25137,7 @@ Company.
     términos de la @c(assoc) operación, que espera una clave y una lista de
     registros como argumentos. Tenga en cuenta que @c(assoc) nunca ve el
     registro ficticio. @c(Assoc) Devuelve el registro que tiene la clave dada
-    como su @c(car). @n(152) @c(Lookup) entonces comprueba para ver que el
+    como su @c(car).@n(152) @c(Lookup) entonces comprueba para ver que el
     registro resultante devuelto por @c(assoc) no es falso, y devuelve el valor
     (el @c(cdr)) del registro.
 
@@ -25183,7 +25182,7 @@ Company.
     la tabla, después del registro ficticio. Si ya hay un registro con esta
     clave, ajustamos el @c(cdr) registro de este registro al nuevo valor
     designado. El encabezado de la tabla nos proporciona una ubicación fija a
-    modificar para insertar el nuevo registro. @n(153)
+    modificar para insertar el nuevo registro.@n(153)
 
 #     ..src > scheme
 #       (define (insert! key value table)
@@ -25924,7 +25923,7 @@ Company.
     como un bloque de construcción para crear circuitos más
     complejos. @l(#Figura 3.26), por ejemplo, muestra un
     @e(sumador completo) compuesto por dos medios sumadores y un
-    or-gate. @n(154) Podemos construir un sumador completo como sigue:
+    or-gate.@n(154) Podemos construir un sumador completo como sigue:
 
 #     ..src > scheme
 #       (define (full-adder a b c-in sum c-out)
@@ -26326,7 +26325,7 @@ Company.
 #      following procedures to access the local operations on wires:@n(155)
      Con el @c(dispatch) procedimiento local configurado como se especifica,
      podemos proporcionar los siguientes procedimientos para acceder a las
-     operaciones locales en los cables: @n(155)
+     operaciones locales en los cables:@n(155)
 
 #      ..src > scheme
 #        (define (get-signal wire)
@@ -26660,7 +26659,7 @@ Company.
      segmentos se clasificarán en orden creciente de tiempo. Además, almacenamos
      el @e(tiempo actual) (es decir, el tiempo de la última acción que se
      procesó) en la cabeza de la agenda. Una agenda recién construida no tiene
-     segmentos de tiempo y tiene un tiempo actual de 0: @n(156)
+     segmentos de tiempo y tiene un tiempo actual de 0:@n(156)
 
 #      ..src > scheme
 #        (define (make-agenda) (list 0))
@@ -26792,7 +26791,7 @@ Company.
      El procedimiento que elimina el primer elemento de la agenda elimina el
      elemento al principio de la cola en el primer segmento de tiempo. Si esta
      supresión hace que el segmento de tiempo esté vacío, lo eliminamos de la
-     lista de segmentos: @n(157)
+     lista de segmentos:@n(157)
 
 #      ..src > scheme
 #        (define (remove-first-agenda-item! agenda)
@@ -26819,7 +26818,7 @@ Company.
 #      segment. Whenever we extract an item, we also update the current time:@n(158)
      El primer punto del orden del día se encuentra al principio de la cola en
      el primer segmento de tiempo. Siempre que extraemos un elemento, también
-     actualizamos la hora actual: @n(158)
+     actualizamos la hora actual:@n(158)
 
 #      ..src > scheme
 #        (define (first-agenda-item agenda)
@@ -26905,7 +26904,7 @@ Company.
     cantidades a calcular en términos de las otras cuatro. Por lo tanto, un
     procedimiento para calcular el área de @m(un) no podría ser utilizado para
     calcular la desviación @m(d), a pesar de que los cálculos de @m(una) y @m(d)
-    se derivan de la misma ecuación. @n(159)
+    se derivan de la misma ecuación.@n(159)
 
 #     In this section, we sketch the design of a language that enables us to work in
 #     terms of relations themselves. The primitive elements of the language are
@@ -27353,12 +27352,12 @@ Company.
 #      @c(Adder) connects the new adder to the designated connectors and returns it
 #      as its value. The procedure @c(me), which represents the adder, acts as a
 #      dispatch to the local procedures. The following @"(syntax interfaces) (see
-#      @n(155<>Footnote 155) in @l(#3.3.4)) are used in conjunction with the
+#     @n(155<>Footnote 155) in @l(#3.3.4)) are used in conjunction with the
 #      dispatch:
      @c(Adder) Conecta el nuevo sumador a los conectores designados y lo
      devuelve como su valor. El procedimiento @c(me), que representa el sumador,
      actúa como un despacho a los procedimientos locales. Las siguientes
-     @"(interfaces de sintaxis) (véase la @n(155<>Nota 155) en
+     @"(interfaces de sintaxis) (véase la@n(155<>Nota 155) en
      @l(#3.3.4)) se utilizan conjuntamente con el envío:
 
 #      ..src > scheme
@@ -27694,7 +27693,7 @@ Company.
      El procedimiento local del conector @c(set-my-value) se llama cuando hay
      una petición para establecer el valor del conector. Si el conector no tiene
      actualmente un valor, establecerá su valor y recordará como @c(informant)
-     la restricción que solicitó el valor que se va a establecer. @n(160)
+     la restricción que solicitó el valor que se va a establecer.@n(160)
      A continuación, el conector notificará todas sus restricciones
      participantes, excepto la restricción que solicitó el valor que se va a
      establecer. Esto se logra utilizando el siguiente iterador, que aplica un
@@ -27942,7 +27941,7 @@ Company.
 #         example above.@n(161)
         Definir procedimientos análogos @c(c-), @c(c*), @c(c/), y @c(cv)(valor
         constante) que nos permiten definir restricciones compuesto como en el
-        ejemplo convertidor anteriormente. @n(161)
+        ejemplo convertidor anteriormente.@n(161)
 
 # ** 3.4 <> Concurrency: Time Is of the Essence
 ** 3.4 <> Concurrencia: El tiempo es de la esencia
@@ -28043,7 +28042,7 @@ Company.
    proporcionar una ventaja de la velocidad sobre la computación secuencial. Los
    equipos secuenciales ejecutan sólo una operación a la vez, por lo que la
    cantidad de tiempo que se tarda en realizar una tarea es proporcional al
-   número total de operaciones realizadas. @n(162) Sin embargo, si es
+   número total de operaciones realizadas.@n(162) Sin embargo, si es
    posible descomponer un problema en piezas que son relativamente
    independientes y necesitan comunicarse sólo en raras ocasiones, puede ser
    posible asignar piezas para separar los procesadores de cálculo, que produce
@@ -28073,7 +28072,7 @@ Company.
 #     sequence of balances could be modeled by successive assignments to a variable
 #     @c(balance).
     En la superficie, el tiempo parece sencillo. Es un orden impuesto a los
-    acontecimientos. @n(163) Para cualquier eventos @m(una) y @m(B), ya
+    acontecimientos.@n(163) Para cualquier eventos @m(una) y @m(B), ya
     sea @m(una) ocurre antes de @m(B), @m(un) y @m(B) son simultáneos, o @m(una)
     ocurre después @m(B). Por ejemplo, al regresar al ejemplo de la cuenta
     bancaria, supongamos que Peter retira $ 10 y Paul retira $ 25 de una cuenta
@@ -28178,7 +28177,7 @@ Company.
     fracaso catastrófico para el sistema bancario, porque la cantidad total de
     dinero en el sistema no es conservado. Antes de las transacciones, la
     cantidad total de dinero era de $ 100. Después, Peter tiene $ 10, Paul tiene
-    $ 25, y el banco tiene $ 75. @n(164)
+    $ 25, y el banco tiene $ 75.@n(164)
 
 #     ..figure > @t(Figure 3.29) Timing diagram showing how interleaving the order
 #       of events in two banking withdrawals can lead to an incorrect final balance.
@@ -28283,7 +28282,7 @@ Company.
      asignaciones a variables que se comparten entre los diferentes procesos. Ya
      sabemos que debemos ser cuidadosos en la escritura de programas que usamos
      @c(set!), porque los resultados de un cálculo dependen del orden en el que
-     ocurren las asignaciones. @n(165) Con procesos concurrentes tenemos
+     ocurren las asignaciones.@n(165) Con procesos concurrentes tenemos
      que ser especialmente cuidadoso acerca de las asignaciones, porque es
      posible que no sea capaz de controlar el orden de las asignaciones hechas
      por los diferentes procesos. Si varios de estos cambios pueden realizarse
@@ -28314,7 +28313,7 @@ Company.
      Paul compartiendo una cuenta bancaria, donde Paul también tiene una cuenta
      privada. El diagrama ilustra dos retiros de la cuenta compartida (uno por
      Pedro y uno por Pablo) y un depósito a la cuenta privada de
-     Pablo. @n(166) Los dos retiros de la cuenta compartida no deben ser
+     Pablo.@n(166) Los dos retiros de la cuenta compartida no deben ser
      concurrentes (ya que tanto el acceso como la actualización de la misma
      cuenta), y Paul ' El depósito y la retirada de la cuenta no deben ser
      simultáneos (ya que tanto el acceso como la actualización de la cantidad en
@@ -28404,7 +28403,7 @@ Company.
      conjunta de Peter y Paul comienza con $ 100, y Peter deposita $ 40 mientras
      que Paul al mismo tiempo retira la mitad del dinero en la cuenta. Entonces
      la ejecución secuencial podría resultar en el saldo de la cuenta sea $ 70 o
-     $ 90 (véase el @l(#Ejercicio 3.38) ). @n(167)
+     $ 90 (véase el @l(#Ejercicio 3.38) ).@n(167)
 
 #      There are still weaker requirements for correct execution of concurrent
 #      programs. A program for simulating diffusion (say, the flow of heat in an
@@ -28587,7 +28586,7 @@ Company.
      Cada uno @c((p)) debe ser un procedimiento sin
      argumentos. @c(Parallel-execute) Crea un proceso separado para cada uno
      @c((p)), que se aplica @c((p))(sin argumentos). Todos estos procesos se
-     ejecutan simultáneamente. @n(168)
+     ejecutan simultáneamente.@n(168)
 
 #      As an example of how this is used, consider
      Como ejemplo de cómo se usa esto, considere
@@ -28986,7 +28985,7 @@ Company.
      deseamos intercambiar los saldos en dos cuentas bancarias. Accedemos a cada
      cuenta para encontrar el saldo, calcular la diferencia entre los saldos,
      retirar esta diferencia de una cuenta y depositarla en la otra
-     cuenta. Podríamos implementar esto como sigue: @n(169)
+     cuenta. Podríamos implementar esto como sigue:@n(169)
 
 #      ..src > scheme
 #        (define (exchange account1 account2)
@@ -29099,7 +29098,7 @@ Company.
      a diferencia de nuestra cuenta serializada anterior, ahora es
      responsabilidad de cada usuario de objetos de cuenta bancaria administrar
      explícitamente la serialización, por ejemplo de la siguiente manera:
-     @n(171)
+    @n(171)
 
 #      ..src > scheme
 #        (define (deposit account amount)
@@ -29311,7 +29310,7 @@ Company.
      operaciones - el mutex puede ser @e(adquirido), y el mutex puede ser
      @e(liberado). Una vez que se ha adquirido un mutex, ninguna otra operación
      de adquisición en ese mutex puede continuar hasta que se muestre el
-     mutex. @n(172) En nuestra implementación, cada serializador tiene un
+     mutex.@n(172) En nuestra implementación, cada serializador tiene un
      mutex asociado. Dado un procedimiento @c(p), el serializador devuelve un
      procedimiento que adquiere el mutex, se ejecuta @c(p) y, a continuación,
      libera el mutex. Esto garantiza que sólo uno de los procedimientos
@@ -29362,7 +29361,7 @@ Company.
      célula. Si el mutex está disponible, ponemos el contenido de la celda a
      true y procedemos. De lo contrario, esperamos en un bucle, tratando de
      adquirir una y otra vez, hasta que encontremos que el mutex está
-     disponible. @n(173) Para liberar el mutex, fijamos los contenidos de
+     disponible.@n(173) Para liberar el mutex, fijamos los contenidos de
      las celdas en false.
 
 #      ..src > scheme
@@ -29445,9 +29444,9 @@ Company.
      permitiendo que cada proceso se ejecute por un corto tiempo antes de
      interrumpirlo y pasar al siguiente proceso. En ese caso, @c(test-and-set!)
      puede funcionar desactivando el corte de tiempo durante la prueba y la
-     configuración. @n(174) Como alternativa, los equipos de
+     configuración.@n(174) Como alternativa, los equipos de
      multiprocesamiento proporcionan instrucciones que admiten operaciones
-     atómicas directamente en hardware. @n(175)
+     atómicas directamente en hardware.@n(175)
 
 #      :: @t(Exercise 3.46) :: Suppose that we implement @c(test-and-set!)  using an
 #         ordinary procedure as shown in the text, without attempting to make the
@@ -29525,7 +29524,7 @@ Company.
      problema de intercambio, hay otras situaciones que requieren técnicas de
      evasión de bloqueo más sofisticadas, o en las que no se puede evitar el
      bloqueo absoluto. (Véase el @l(#Ejercicio 3.48) y el
-     @l(#Ejercicio 3.49) .) @n(176)
+     @l(#Ejercicio 3.49) .)@n(176)
 
 #      :: @t(Exercise 3.48) :: Explain in detail why the deadlock-avoidance method
 #         described above, (i.e., the accounts are numbered, and each process
@@ -29584,7 +29583,7 @@ Company.
      consistente en cada instante. En los sistemas contemporáneos de
      multiprocesamiento, por lo tanto, el paradigma del serializador está siendo
      suplantado por nuevos enfoques para el control de la
-     concurrencia. @n(177)
+     concurrencia.@n(177)
 
 #      The problematic aspects of shared state also arise in large, distributed
 #      systems. For instance, imagine a distributed banking system where individual
@@ -29617,7 +29616,7 @@ Company.
      y Pablo individualmente y el @"(estado) de la cuenta inmediatamente después
      de la sincronización. Las preguntas sobre el saldo @"(real de la) cuenta o
      el orden de sucesos entre las sincronizaciones pueden ser irrelevantes o
-     carentes de significado. @n(178)
+     carentes de significado.@n(178)
 
 #      The basic phenomenon here is that synchronizing different processes,
 #      establishing shared state, or imposing an order on events requires
@@ -29633,7 +29632,7 @@ Company.
      un estado compartido o imponer un orden sobre los eventos requiere
      comunicación entre los procesos. En esencia, cualquier noción de tiempo en
      el control de la concurrencia debe estar íntimamente ligada a la
-     comunicación. @n(179) Es intrigante que una conexión similar entre el
+     comunicación.@n(179) Es intrigante que una conexión similar entre el
      tiempo y la comunicación también se plantea en la teoría de la relatividad,
      donde la velocidad de la luz (la señal más rápida que se puede utilizar
      para sincronizar eventos) es una constante fundamental tiempo y el espacio
@@ -29690,7 +29689,7 @@ Company.
    (t)). Si nos concentramos en @m(x) instante a instante, pensamos en ella como
    una cantidad variable. Sin embargo, si nos concentramos en toda la historia
    de los valores, no hacemos hincapié en el cambio, la función en sí no
-   cambia. @n(180)
+   cambia.@n(180)
 
 #    If time is measured in discrete steps, then we can model a time function as a
 #    (possibly infinite) sequence. In this section, we will see how to model change
@@ -29759,7 +29758,7 @@ Company.
 #     iterative style:@n(181)
     Para ver por qué esto es cierto, vamos a comparar dos programas para
     calcular la suma de todos los números primos en un intervalo. El primer
-    programa está escrito en un estilo iterativo estándar: @n(181)
+    programa está escrito en un estilo iterativo estándar:@n(181)
 
 #     ..src > scheme
 #       (define (sum-primes a b)
@@ -29903,12 +29902,12 @@ Company.
 #     @c(for-each):@n(183)
     Hay un objeto distinguible,, @c(the-empty-stream) que no puede ser el
     resultado de ninguna @c(cons-stream) operación, y que se puede identificar
-    con el predicado @c(stream-null?). @n(182) De este modo podemos hacer
+    con el predicado @c(stream-null?).@n(182) De este modo podemos hacer
     y usar corrientes, exactamente de la misma manera que podemos hacer y usar
     listas, para representar los datos agregados dispuestos en una secuencia. En
     particular, podemos construir análogos corriente de las operaciones de lista
     de @l(#Capitulo 2), como @c(list-ref), @c(map) y @c(for-each):
-    @n(183)
+   @n(183)
 
 #     ..src > scheme
 #       (define (stream-ref s n)
@@ -30073,7 +30072,7 @@ Company.
 #     the rest of the stream.@n(184)
     @c(Stream-car) Selecciona el @c(car) del par; @c(stream-cdr) Selecciona el
     @c(cdr) del par y evalúa la expresión retrasada encontrada allí para obtener
-    el resto del flujo. @n(184)
+    el resto del flujo.@n(184)
 
 # **** The stream implementation in action
 **** La implementación del flujo en acción
@@ -30131,7 +30130,7 @@ Company.
 #      and thus the result returned by @c(stream-enumerate-interval), formed by the
 #      @c(cons-stream), is@n(185)
      Y así el resultado devuelto por @c(stream-enumerate-interval), formado por
-     el @c(cons-stream), es @n(185)
+     el @c(cons-stream), es@n(185)
 
 #      ..src > scheme
 #        (cons 10000
@@ -30421,15 +30420,15 @@ Company.
      < src..
 
 #      and @c(force) is as defined previously.@n(186)
-     Y @c(force) es tal como se ha definido anteriormente. @n(186)
+     Y @c(force) es tal como se ha definido anteriormente.@n(186)
 
 #      :: @t(Exercise 3.50) :: Complete the following definition, which generalizes
 #         @c(stream-map) to allow procedures that take multiple arguments, analogous
-#         to @c(map) in @l(#2.2.1), @n(78<>Footnote 78).
+#         to @c(map) in @l(#2.2.1),@n(78<>Footnote 78).
      :: @t(Ejercicio 3.50) :: Complete la siguiente definición, que se
         generaliza @c(stream-map) para permitir procedimientos que toman
         múltiples argumentos, análogo a @c(map) en @l(#2.2.1),
-        @n(78<>Nota 78).
+       @n(78<>Nota 78).
 
 #         ..src > scheme
 #           (define (stream-map proc . argstreams)
@@ -30475,7 +30474,7 @@ Company.
 #         What does the interpreter print in response to evaluating each expression
 #         in the following sequence?@n(187)
         ¿Qué imprime el intérprete en respuesta a la evaluación de cada
-        expresión en la siguiente secuencia? @n(187)
+        expresión en la siguiente secuencia?@n(187)
 
 #         ..src > scheme
 #           (define x
@@ -30672,7 +30671,7 @@ Company.
 #     is readily described in terms of stream operations:
     Para una mirada a un flujo infinito más emocionante, podemos generalizar el
     @c(no-sevens) ejemplo para construir el flujo infinito de números primos,
-    usando un método conocido como el @e(tamiz de Eratóstenes). @n(188)
+    usando un método conocido como el @e(tamiz de Eratóstenes).@n(188)
     Empezamos con los números enteros empezando con 2, que es el primer
     jefe. Para obtener el resto de los primos, comenzamos por filtrar los
     múltiplos de 2 del resto de los enteros. Esto deja una corriente que
@@ -30736,7 +30735,7 @@ Company.
 #     also infinite, because the sieve contains a sieve within it.
     Es interesante contemplar el sistema de procesamiento de señales creado por
     @c(sieve), mostrado en el @"(diagrama de Henderson) en la
-    @l(#Figura 3.31). @n(189) corriente La entrada alimenta
+    @l(#Figura 3.31).@n(189) corriente La entrada alimenta
     en una @"(ONU @c(cons) er) que separa el primer elemento de la secuencia del
     resto de la corriente. El primer elemento se utiliza para construir un
     filtro de divisibilidad, a través del cual se pasa el resto, y la salida del
@@ -30822,7 +30821,7 @@ Company.
 #      streams:@n(190)
      Podemos hacer cosas más interesantes manipulando corrientes con operaciones
      tales como @c(add-streams), que produce la suma elemental de dos flujos
-     dados: @n(190)
+     dados:@n(190)
 
 #      ..src > scheme
 #        (define (add-streams s1 s2)
@@ -30990,7 +30989,7 @@ Company.
      probamos la primalidad, o bien @m(n) no es primo (en cuyo caso hay un primo
      ya generado que lo divide) o @m(n) es primo (en cuyo caso hay un primo ya
      generado - es decir, un primo Menor que @m(n) - que es mayor que @m(√n)
-     ). @n(191)
+     ).@n(191)
 
 #      :: @t(Exercise 3.53) :: Without running the program, describe the elements of
 #         the stream defined by
@@ -31149,7 +31148,7 @@ Company.
         adiciones sería exponencialmente mayor si hubiéramos implementado
         @c((delay ⟨exp⟩)) simplemente como @c((lambda () ⟨exp⟩)), sin utilizar
         la optimización proporcionada por el @c(memo-proc) procedimiento
-        descrito en @l(#3.5.1). @n(192)
+        descrito en @l(#3.5.1).@n(192)
 
 #      :: @t(Exercise 3.58) :: Give an interpretation of the stream computed by the
 #         following procedure:
@@ -31433,7 +31432,7 @@ Company.
      En nuestro @c(sqrt) procedimiento original, hicimos estas suposiciones ser
      los valores sucesivos de una variable de estado. En su lugar podemos
      generar la corriente infinita de conjeturas, comenzando con una estimación
-     inicial de 1: @n(193)
+     inicial de 1:@n(193)
 
 #      ..srci > scheme
 #        > (define (sqrt-stream x)             \
@@ -31864,7 +31863,7 @@ Company.
      @e(todos los) enteros @m((i, j)) con @m(i ≤ j) tal que @m(i + j) sea
      primo. Si @c(int-pairs) es la secuencia de todos los pares de enteros
      @m((i, j)) con @m(i ≤ j), entonces nuestra corriente requerida es
-     simplemente @n(194)
+     simplemente@n(194)
 
 #      ..src > scheme
 #        (stream-filter
@@ -31927,7 +31926,7 @@ Company.
 #      first row, and the remaining pairs:@n(195)
      Llamar a la corriente general de pares @c((pairs S T)), y considerar que se
      compone de tres partes: el par @m((S₀, T₀)), el resto de los pares en la
-     primera fila, y los pares restantes: @n(195)
+     primera fila, y los pares restantes:@n(195)
 
 #      ..example >
 #        (S₀, T₀)   | (S₀, T₁)  (S₀, T₂)  ...
@@ -32043,7 +32042,7 @@ Company.
      Para manejar flujos infinitos, necesitamos idear un orden de combinación
      que asegure que cada elemento sea alcanzado eventualmente si dejamos que
      nuestro programa funcione lo suficiente. Una forma elegante de lograr esto
-     es con el siguiente @c(interleave) procedimiento: @n(196)
+     es con el siguiente @c(interleave) procedimiento:@n(196)
 
 #      ..src > scheme
 #        (define (interleave s1 s2)
@@ -32190,7 +32189,7 @@ Company.
         @c(merge), excepto que @c(merge-weighted) toma un argumento adicional
         @c(weight), que es un procedimiento que calcula el peso de un par, Y se
         utiliza para determinar el orden en que los elementos deben aparecer en
-        el flujo combinado resultante. @n(197) Usando esto, generalizar
+        el flujo combinado resultante.@n(197) Usando esto, generalizar
         @c(pairs) a un procedimiento @c(weighted-pairs) que se lleva a dos
         corrientes, junto con un procedimiento que calcula una función de
         ponderación, y genera el flujo de pares, ordenados de acuerdo con el
@@ -32220,7 +32219,7 @@ Company.
 #         1,729. What are the next five?
      :: @t(Ejercicio 3.71) :: Los números que se pueden expresar como la suma de
         dos cubos en más de una manera se llaman a veces @e(números de
-        Ramanujan), en honor del matemático Srinivasa Ramanujan. @n(198)
+        Ramanujan), en honor del matemático Srinivasa Ramanujan.@n(198)
         Los flujos ordenados de pares proporcionan una solución elegante al
         problema de calcular estos números. Para encontrar un número que se
         puede escribir como la suma de dos cubos de dos maneras diferentes, sólo
@@ -32779,7 +32778,7 @@ Company.
 #     Now we can implement our @c(solve) procedure by delaying the evaluation of
 #     @c(dy) in the definition of @c(y):@n(199)
     Ahora podemos implementar nuestro @c(solve) procedimiento retrasando la
-    evaluación de @c(dy) en la definición de @c(y): @n(199)
+    evaluación de @c(dy) en la definición de @c(y):@n(199)
 
 #     ..src > scheme
 #       (define (solve f y0 dt)
@@ -33167,7 +33166,7 @@ Company.
      dos clases de procedimientos: procedimientos ordinarios y procedimientos
      que toman argumentos demorados. En general, crear clases separadas de
      procedimientos nos obliga a crear clases separadas de procedimientos de
-     orden superior también. @n(200)
+     orden superior también.@n(200)
 
 #      One way to avoid the need for two different classes of procedures is to make
 #      all procedures take delayed arguments. We could adopt a model of evaluation in
@@ -33534,7 +33533,7 @@ Company.
      que es la existencia temporal del usuario la que impone el estado en el
      sistema. Si el usuario pudiera retroceder de la interacción y pensar en
      términos de flujos de saldos en lugar de transacciones individuales, el
-     sistema parecería apátrida. @n(201)
+     sistema parecería apátrida.@n(201)
 
 #      From the point of view of one part of a complex process, the other parts
 #      appear to change with time. They have hidden time-varying local state. If we
@@ -33578,7 +33577,7 @@ Company.
      asignación o mutable de datos. En tal lenguaje, todos los procedimientos
      implementan funciones matemáticas bien definidas de sus argumentos, cuyo
      comportamiento no cambia. El enfoque funcional es extremadamente atractivo
-     para tratar con sistemas concurrentes. @n(202)
+     para tratar con sistemas concurrentes.@n(202)
 
 #      On the other hand, if we look closely, we can see time-related problems
 #      creeping into functional models as well. One particularly troublesome area
@@ -33662,7 +33661,7 @@ Company.
      @"(el tiempo real) según lo perciben Pedro y Pablo, en el sentido de que si
      Pedro y Pablo se encuentran, pueden convenir que ciertas transacciones
      fueron procesadas antes La reunión, y otras transacciones fueron procesadas
-     después de la reunión. @n(203) Esta es precisamente la misma
+     después de la reunión.@n(203) Esta es precisamente la misma
      restricción con la que hemos tenido que lidiar en @l(#3.4.1), Donde
      encontramos la necesidad de introducir sincronización explícita para
      asegurar un orden @"(correcto) de eventos en el procesamiento concurrente
@@ -33683,7 +33682,7 @@ Company.
      el estado, o podemos modelar el mundo como una unidad única, atemporal,
      apátrida. Cada vista tiene poderosas ventajas, pero ninguna de las dos es
      completamente satisfactoria. Una gran unificación aún no ha
-     surgido. @n(204)
+     surgido.@n(204)
 
 # * Chapter 4 <> Metalinguistic Abstraction
 * Capitulo 4 <> Abstracción metalingüística
@@ -33748,7 +33747,7 @@ Company.
   un problema complejo adoptando un nuevo lenguaje que nos permite describir (y
   por lo tanto pensar) el problema de una manera diferente, usando primitivos,
   medios de combinación y medios de abstracción que son particularmente Bien
-  adaptado al problema en cuestión. @n(205)
+  adaptado al problema en cuestión.@n(205)
 
 #   Programming is endowed with a multitude of languages. There are physical
 #   languages, such as the machine languages for particular computers. These
@@ -33872,7 +33871,7 @@ Company.
   simplificado con fines de ilustración y discusión, y algunas características
   se han dejado de lado que sería importante incluir en un sistema Lisp de
   calidad de producción. Sin embargo, este simple evaluador es adecuado para
-  ejecutar la mayoría de los programas en este libro. @n(206)
+  ejecutar la mayoría de los programas en este libro.@n(206)
 
 #   An important advantage of making the evaluator accessible as a Lisp program is
 #   that we can implement alternative evaluation rules by describing these as
@@ -33946,7 +33945,7 @@ Company.
    evaluador que se implementa en Lisp. Sin embargo, la evaluación es un
    proceso, por lo que es apropiado describir el proceso de evaluación con Lisp,
    que, después de todo, es nuestra herramienta para describir
-   procesos. @n(207) Un evaluador que está escrito en el mismo lenguaje
+   procesos.@n(207) Un evaluador que está escrito en el mismo lenguaje
    que evalúa se dice que es @e(metacircular).
 
 #    The metacircular evaluator is essentially a Scheme formulation of the
@@ -33990,7 +33989,7 @@ Company.
    nuevas expresiones para ser evaluadas en nuevos ambientes, etc., Hasta llegar
    a los símbolos, cuyos valores se buscan en el entorno, ya los procedimientos
    primitivos, que se aplican directamente (véase la @l(#Figura 4.1)
-   ). @n(208) Este ciclo de evaluación se materializará mediante la
+   ).@n(208) Este ciclo de evaluación se materializará mediante la
    interacción entre los dos procedimientos críticos del evaluador, @c(eval) y
    @c(apply) que se describen en @l(#4.1.1) (véase la
    @l(#Figura 4.1) ).
@@ -34340,7 +34339,7 @@ Company.
      @c(list-of-values) para producir la lista de argumentos a la que se va a
      aplicar el procedimiento. @c(List-of-values) Toma como argumento los
      operandos de la combinación. Evalúa cada operando y devuelve una lista de
-     los valores correspondientes: @n(209)
+     los valores correspondientes:@n(209)
 
 #      ..src > scheme
 #        (define (list-of-values exps env)
@@ -34397,7 +34396,7 @@ Company.
      tanto, produce un valor en ese idioma. El predicado del intérprete
      @c(true?) traduce ese valor en un valor que puede ser probado por el @c(if)
      lenguaje de implementación: La representación metacircular de la verdad
-     puede no ser la misma que la del Esquema subyacente. @n(210)
+     puede no ser la misma que la del Scheme subyacente.@n(210)
 
 # **** Sequences
 **** Secuencias
@@ -34462,7 +34461,7 @@ Company.
      < src..
 
 #      Definitions of variables are handled in a similar manner.@n(211)
-     Las definiciones de variables se manejan de manera similar. @n(211)
+     Las definiciones de variables se manejan de manera similar.@n(211)
 
 #      ..src > scheme
 #        (define (eval-definition exp env)
@@ -34484,7 +34483,7 @@ Company.
 #      We have chosen here to return the symbol @c(ok) as the value of an assignment
 #      or a definition.@n(212)
      Hemos elegido aquí para devolver el símbolo @c(ok) como el valor de una
-     asignación o una definición. @n(212)
+     asignación o una definición.@n(212)
 
 #      :: @t(Exercise 4.1) :: Notice that we cannot tell whether the metacircular
 #         evaluator evaluates operands from left to right or from right to left. Its
@@ -34570,7 +34569,7 @@ Company.
       < src..
 
 #     - Quotations have the form @c[(quote ⟨text-of-quotation⟩)]:@n(213)
-    - Las citas tienen la forma @c((quote ⟨text-of-quotation⟩)): @n(213)
+    - Las citas tienen la forma @c((quote ⟨text-of-quotation⟩)):@n(213)
 
 #       ..src > scheme
 #         (define (quoted? exp)
@@ -34737,7 +34736,7 @@ Company.
     - Los condicionales comienzan con @c(if) y tienen un predicado, una
       consecuencia y una alternativa (opcional). Si la expresión no tiene
       ninguna parte alternativa, se proporciona @c(false) como la
-      alternativa. @n(214)
+      alternativa.@n(214)
 
 #       ..src > scheme
 #         (define (if? exp) (tagged-list? exp 'if))
@@ -34791,7 +34790,7 @@ Company.
       expresión. Incluimos operaciones de sintaxis en @c(begin) expresiones para
       extraer la secuencia real de la @c(begin) expresión, así como selectores
       que devuelven la primera expresión y el resto de las expresiones de la
-      secuencia. @n(215)
+      secuencia.@n(215)
 
 #       ..src > scheme
 #         (define (begin? exp)
@@ -34919,7 +34918,7 @@ Company.
      expresión y un procedimiento @c(cond->if) que transforma @c(cond)
      expresiones en @c(if) expresiones. Un análisis de casos comienza con
      @c(cond) y tiene una lista de cláusulas predicado-acción. Una cláusula es
-     una @c(else) cláusula si su predicado es el símbolo @c(else). @n(216)
+     una @c(else) cláusula si su predicado es el símbolo @c(else).@n(216)
 
 #      ..src > scheme
 #        (define (cond? exp)
@@ -34988,7 +34987,7 @@ Company.
      Las expresiones (como @c(cond)) que elegimos implementar como
      transformaciones sintácticas se llaman @e(expresiones derivadas). @c(Let)
      Las expresiones también son expresiones derivadas (véase el
-     @l(#Ejercicio 4.6) ). @n(217)
+     @l(#Ejercicio 4.6) ).@n(217)
 
 #      :: @t(Exercise 4.2) :: Louis Reasoner plans to reorder the @c(cond) clauses in
 #         @c(eval) so that the clause for procedure applications appears before the
@@ -35081,7 +35080,7 @@ Company.
 #         one argument; this procedure is then invoked on the value of the
 #         @c[(test)], and the result is returned as the value of the @c(cond)
 #         expression. For example
-     :: @t(Ejercicio 4.5) :: Esquema permite una sintaxis adicional para
+     :: @t(Ejercicio 4.5) :: Scheme permite una sintaxis adicional para
         @c(cond) cláusulas, @c((⟨test⟩ => ⟨recipient⟩)). Si se @c((test))
         evalúa a un valor verdadero, entonces @c((recipient)) se evalúa. Su
         valor debe ser un procedimiento de un argumento; Este procedimiento se
@@ -35427,7 +35426,7 @@ Company.
 #      variables bound in that frame and a list of the associated values.@n(218)
      Cada trama de un entorno se representa como un par de listas: una lista de
      las variables enlazadas en ese marco y una lista de los valores
-     asociados. @n(218)
+     asociados.@n(218)
 
 #      ..src > scheme
 #        (define (make-frame variables values)
@@ -35631,7 +35630,7 @@ Company.
      del evaluador -especialmente la de la búsqueda de variables- tiene un
      impacto importante en el rendimiento del sistema. La representación aquí
      descrita, aunque conceptualmente simple, no es eficiente y normalmente no
-     se usaría en un sistema de producción. @n(219)
+     se usaría en un sistema de producción.@n(219)
 
 #      :: @t(Exercise 4.11) :: Instead of representing a frame as a pair of lists, we
 #         can represent a frame as a list of bindings, where each binding is a
@@ -35662,7 +35661,7 @@ Company.
 #         specified. For example, should we remove only the binding in the first
 #         frame of the environment?  Complete the specification and justify any
 #         choices you make.
-     :: @t(Ejercicio 4.13) :: Esquema nos permite crear nuevos enlaces para
+     :: @t(Ejercicio 4.13) :: Scheme nos permite crear nuevos enlaces para
         variables mediante @c(define), pero no proporciona ninguna manera de
         deshacerse de enlaces. Implementar para el evaluador un formulario
         especial @c(make-unbound!) que elimine la vinculación de un símbolo dado
@@ -35775,7 +35774,7 @@ Company.
 #     @c(Setup-environment) will get the primitive names and implementation
 #     procedures from a list:@n(220)
     @c(Setup-environment) Obtendrá los nombres primitivos y los procedimientos
-    de implementación de una lista: @n(220)
+    de implementación de una lista:@n(220)
 
 #     ..src > scheme
 #       (define primitive-procedures
@@ -35814,7 +35813,7 @@ Company.
 #     to the arguments, using the underlying Lisp system:@n(221)
     Para aplicar un procedimiento primitivo, simplemente aplicamos el
     procedimiento de implementación a los argumentos, usando el sistema Lisp
-    subyacente: @n(221)
+    subyacente:@n(221)
 
 #     ..src > scheme
 #       (define (apply-primitive-procedure proc args)
@@ -35839,7 +35838,7 @@ Company.
     entrada, evalúa esta expresión en el entorno global e imprime el
     resultado. Prevemos cada resultado impreso mediante un @e(aviso de salida)
     para distinguir el valor de la expresión de otra salida que se puede
-    imprimir. @n(222)
+    imprimir.@n(222)
 
 #     ..src > scheme
 #       (define input-prompt  ";;; M-Eval input:")
@@ -36122,13 +36121,13 @@ Company.
 #     that the program evaluator is a rather simple program.@n(224)
     Desde esta perspectiva, nuestro evaluador es visto como una @e(máquina
     universal). Se imita a otras máquinas cuando se describen como programas
-    Lisp. @n(223) Esta es sorprendente. Trate de imaginar un evaluador
+    Lisp.@n(223) Esta es sorprendente. Trate de imaginar un evaluador
     análogo para circuitos eléctricos. Esto sería un circuito que toma como
     entrada una señal que codifica los planes para algún otro circuito, como un
     filtro. Dada esta entrada, el evaluador de circuito se comportaría entonces
     como un filtro con la misma descripción. Este circuito eléctrico universal
     es casi inimaginablemente complejo. Es notable que el evaluador del programa
-    sea un programa bastante simple. @n(224)
+    sea un programa bastante simple.@n(224)
 
 #     Another striking aspect of the evaluator is that it acts as a bridge between
 #     the data objects that are manipulated by our programming language and the
@@ -36164,7 +36163,7 @@ Company.
     de datos como una expresión Lisp, poniéndolo @c(eval) disponible para su uso
     en programas. Muchos dialectos Lisp proporcionan un @c(eval) procedimiento
     primitivo que toma como argumentos una expresión y un entorno y evalúa la
-    expresión relativa al entorno. @n(225) Así,
+    expresión relativa al entorno.@n(225) Así,
 
 #     ..src > scheme
 #       (eval '(* 5 5) user-initial-environment)
@@ -36186,7 +36185,7 @@ Company.
     < src..
 
 #     will both return 25.@n(226)
-    Ambos regresarán 25. @n(226)
+    Ambos regresarán 25.@n(226)
 
 #     :: @t(Exercise 4.15) :: Given a one-argument procedure @c(p) and an object
 #        @c(a), @c(p) is said to @"(halt) on @c(a) if evaluating the expression
@@ -36229,7 +36228,7 @@ Company.
 #        behavior of @c(halts?).@n(227)
        Ahora considere la posibilidad de evaluar la expresión @c((try try)) y
        mostrar que cualquier posible resultado (ya sea detener o correr para
-       siempre) viola el comportamiento previsto de @c(halts?). @n(227)
+       siempre) viola el comportamiento previsto de @c(halts?).@n(227)
 
 # *** 4.1.6 <> Internal Definitions
 *** 4.1.6 <> Definiciones internas
@@ -36395,7 +36394,7 @@ Company.
     muestra en el @l(#Ejercicio 4.18). A diferencia de la
     transformación mostrada anteriormente, esto impone la restricción de que los
     valores de las variables definidas pueden ser evaluados sin usar ninguno de
-    los valores de las variables. @n(229)
+    los valores de las variables.@n(229)
 
 #     :: @t(Exercise 4.16) :: In this exercise we implement the method just
 #        described for interpreting internal definitions. We assume that the
@@ -36549,7 +36548,7 @@ Company.
        @c(a) En la opinión de Eva debe ser 5, @c(b) debe ser 15, y el resultado
        debe ser 20. ¿Cuál (si alguno) de estos puntos de vista apoya? ¿Puedes
        idear una forma de implementar definiciones internas para que se
-       comporten como Eva prefiere? @n(230)
+       comporten como Eva prefiere?@n(230)
 
 #     :: @t(Exercise 4.20) :: Because internal definitions look sequential but are
 #        actually simultaneous, some people prefer to avoid them entirely, and use
@@ -36679,7 +36678,7 @@ Company.
        especificar los procedimientos recursivos sin usar @c(letrec)(o incluso
        @c(define)), aunque el método para lograr esto es mucho más sutil que
        Louis imaginado. La siguiente expresión computa el factorial 10 aplicando
-       un procedimiento factorial recursivo: @n(231)
+       un procedimiento factorial recursivo:@n(231)
 
 #        ..src > scheme
 #          ((lambda (n)
@@ -36824,7 +36823,7 @@ Company.
 #     expression, while the execution procedure may be called many times.
     Podemos transformar al evaluador para ser significativamente más eficiente
     organizando las cosas para que el análisis sintáctico se realice sólo una
-    vez. @n(232) Nos dividimos @c(eval), que toma una expresión y un
+    vez.@n(232) Nos dividimos @c(eval), que toma una expresión y un
     ambiente, en dos partes. El procedimiento @c(analyze) toma sólo la
     expresión. Realiza el análisis sintáctico y devuelve un nuevo procedimiento,
     el @e(procedimiento de ejecución), que encapsula el trabajo a realizar en la
@@ -36947,7 +36946,7 @@ Company.
 #     Looking up a variable value must still be done in the execution phase, since
 #     this depends upon knowing the environment.@n(233)
     La búsqueda de un valor variable debe realizarse en la fase de ejecución, ya
-    que esto depende de conocer el entorno. @n(233)
+    que esto depende de conocer el entorno.@n(233)
 
 #     ..src > scheme
 #       (define (analyze-variable exp)
@@ -37067,7 +37066,7 @@ Company.
 #     environment as argument and sequentially calls each individual execution
 #     procedure with the environment as argument.
     El análisis de una secuencia de expresiones (como en a @c(begin) o el cuerpo
-    de una @c(lambda) expresión) es más complicado. @n(234) Cada expresión
+    de una @c(lambda) expresión) es más complicado.@n(234) Cada expresión
     en la secuencia se analiza, dando lugar a un procedimiento de
     ejecución. Estos procedimientos de ejecución se combinan para producir un
     procedimiento de ejecución que toma un entorno como argumento y llama
@@ -37292,7 +37291,7 @@ Company.
    destinatario puede experimentar con el nuevo evaluador y enviar comentarios
    como modificaciones adicionales. No sólo la base de implementación de alto
    nivel facilita la prueba y depuración del evaluador; Además, la incrustación
-   permite al diseñador snarf @n(235) características del lenguaje
+   permite al diseñador snarf@n(235) características del lenguaje
    subyacente, Así como nuestro evaluador Lisp incorporado utiliza primitivas y
    estructura de control del Lisp subyacente. Sólo más tarde (si alguna vez)
    necesita el diseñador se vaya a la molestia de construir una implementación
@@ -37319,7 +37318,7 @@ Company.
     se necesitan los valores de los argumentos reales. Retrasar la evaluación de
     los argumentos de procedimiento hasta el último momento posible (por
     ejemplo, hasta que sean requeridos por una operación primitiva) se denomina
-    @e(evaluación perezosa). @n(236) Considere el procedimiento
+    @e(evaluación perezosa).@n(236) Considere el procedimiento
 
 #     ..src > scheme
 #       (define (try a b)
@@ -37402,7 +37401,7 @@ Company.
     sido evaluado, decimos que el procedimiento @e(no) es @e(estricto) en ese
     argumento. Si el argumento se evalúa antes de introducir el cuerpo del
     procedimiento, decimos que el procedimiento es @e(estricto) en ese
-    argumento. @n(237) En un lenguaje de orden puramente aplicacional,
+    argumento.@n(237) En un lenguaje de orden puramente aplicacional,
     todos los procedimientos son estrictos en cada argumento. En un lenguaje de
     orden normal, todos los procedimientos compuestos no son estrictos en cada
     argumento y los procedimientos primitivos pueden ser estrictos o no
@@ -37501,7 +37500,7 @@ Company.
     La idea básica es que, al aplicar un procedimiento, el intérprete debe
     determinar qué argumentos deben evaluarse y cuáles deben ser retrasados. Los
     argumentos demorados no se evalúan; En cambio, se transforman en objetos
-    llamados @e(thunks). @n(238) El thunk debe contener la información
+    llamados @e(thunks).@n(238) El thunk debe contener la información
     necesaria para producir el valor del argumento cuando sea necesario, como si
     hubiera sido evaluado en el momento de la solicitud. Por lo tanto, el thunk
     debe contener la expresión del argumento y el entorno en el que se está
@@ -37519,7 +37518,7 @@ Company.
 #     our interpreter memoize, because this is more efficient for many applications.
 #     There are tricky considerations here, however.@n(240)
     El proceso de evaluar la expresión en un thunk se llama
-    @e(forzar). @n(239) En general, un thunk se forzará sólo cuando su
+    @e(forzar).@n(239) En general, un thunk se forzará sólo cuando su
     valor sea necesario: cuando se pasa a un procedimiento primitivo que
     utilizará el valor del thunk; Cuando es el valor de un predicado de un
     condicional; Y cuando es el valor de un operador que está a punto de ser
@@ -37530,7 +37529,7 @@ Company.
     posteriores simplemente devuelven el valor almacenado sin repetir el
     cálculo. Haremos que nuestro intérprete recuerde, porque esto es más
     eficiente para muchas aplicaciones. Hay consideraciones difíciles aquí, sin
-    embargo. @n(240)
+    embargo.@n(240)
 
 # **** Modifying the evaluator
 **** Modificación del evaluador
@@ -37858,7 +37857,7 @@ Company.
      esto, sino más bien thunks que se han memorizado. Cuando se invierte un
      thunk, lo convertiremos en thunk evaluado reemplazando la expresión
      almacenada por su valor y cambiando la @c(thunk) etiqueta para que pueda
-     reconocerse como ya evaluada. @n(241)
+     reconocerse como ya evaluada.@n(241)
 
 #      ..src > scheme
 #        (define (evaluated-thunk? obj)
@@ -37929,7 +37928,7 @@ Company.
 #         Give the missing values in the following sequence of interactions, and
 #         explain your answers.@n(242)
         Dé los valores faltantes en la siguiente secuencia de interacciones y
-        explique sus respuestas. @n(242)
+        explique sus respuestas.@n(242)
 
 #         ..srci > scheme
 #           > (define w (id (id 10)))
@@ -38233,7 +38232,7 @@ Company.
     necesitamos más control sobre el proceso de evaluación, pero esto es
     incómodo. Por una parte, una forma especial no es un objeto de primera clase
     como un procedimiento, por lo que no podemos usarlo junto con procedimientos
-    de orden superior. @n(243) Además, nos vimos obligados a crear flujos
+    de orden superior.@n(243) Además, nos vimos obligados a crear flujos
     como un nuevo tipo de datos de objeto similar pero no idéntica a las listas,
     y esto nos exige volver a implementar muchas operaciones de lista ordinaria
     (@c(map), @c(append), etc.) para su uso con corrientes.
@@ -38253,7 +38252,7 @@ Company.
     implementar @c(cons) como una de estas. Una manera más fácil es recordar (
     @l(#2.1.3)) que no hay ninguna necesidad fundamental de implementar
     @c(cons) como un primitivo en absoluto. En cambio, podemos representar pares
-    como procedimientos: @n(244)
+    como procedimientos:@n(244)
 
 #     ..src > scheme
 #       (define (cons x y) (lambda (m) (m x y)))
@@ -38342,7 +38341,7 @@ Company.
 #     answer.
     Tenga en cuenta que estas listas perezosas son incluso más perezosas que las
     corrientes del @l(#Capitulo 3) : El @c(car) de la lista, así como
-    el @c(cdr), se retrasa. @n(245) De hecho, incluso el acceso al @c(car)
+    el @c(cdr), se retrasa.@n(245) De hecho, incluso el acceso al @c(car)
     o @c(cdr) de un par perezoso no necesita forzar el valor de un elemento de
     lista. El valor sólo se forzará cuando sea realmente necesario, por ejemplo,
     para utilizarlo como argumento de una primitiva o para imprimirse como
@@ -38508,7 +38507,7 @@ Company.
 #    nondeterministic program.@n(246)
    Podría parecer como si este procedimiento simplemente reafirmar el problema,
    en lugar de especificar una manera de resolverlo. Sin embargo, este es un
-   programa legítimo no determinista. @n(246)
+   programa legítimo no determinista.@n(246)
 
 #    The key idea here is that expressions in a nondeterministic language can have
 #    more than one possible value. For instance, @c(an-element-of) might return any
@@ -38598,7 +38597,7 @@ Company.
    determinismo a través del mecanismo automático de búsqueda del evaluador.
    @l(#4.3.2) presenta ejemplos de programas no determinísticos, y
    @l(#4.3.3) da los detalles de cómo implementar el @c(amb) evaluador
-   modificando el evaluador del Esquema ordinario.
+   modificando el evaluador del Scheme ordinario.
 
 # *** 4.3.1 <> Amb and Search
 *** 4.3.1 <> Amb y Búsqueda
@@ -38606,7 +38605,7 @@ Company.
 #     To extend Scheme to support nondeterminism, we introduce a new special form
 #     called @c(amb).@n(247) The expression
     Para extender el esquema para apoyar el no determinismo, introducimos una
-    nueva forma especial llamada @c(amb). @n(247) La expresión
+    nueva forma especial llamada @c(amb).@n(247) La expresión
 
 #     ..src > scheme
 #       (amb ⟨e₁⟩ ⟨e₂⟩ … ⟨eₙ⟩)
@@ -38709,7 +38708,7 @@ Company.
     en @l(#3.5.2), pero con una diferencia importante: El procedimiento
     de flujo devuelve un objeto que representa la secuencia de todos los enteros
     que empiezan por @m(n), mientras que el @c(amb) procedimiento devuelve un
-    solo entero. @n(248)
+    solo entero.@n(248)
 
 #     Abstractly, we can imagine that evaluating an @c(amb) expression causes time
 #     to split into branches, where the computation continues on each branch with
@@ -38766,20 +38765,20 @@ Company.
     el evaluador encuentra una aplicación de @c(amb), inicialmente selecciona la
     primera alternativa. Esta selección puede conducir a otra elección. El
     evaluador siempre seleccionará inicialmente la primera alternativa en cada
-    punto de elección. @n(#250<>Si una opción resulta en un fracaso, a
+    punto de elección.@n(#250<>Si una opción resulta en un fracaso, a
     continuación, el evaluador automágicamente 250) @e( preclasificación) a la
     más reciente punto de elección y trata la siguiente alternativa. Si se queda
     sin alternativas en cualquier punto de elección, el evaluador volverá al
     punto de selección anterior y se reanudará desde allí. Este proceso conduce
     a una estrategia de búsqueda conocida como búsqueda en @e(profundidad) o
-    @e(retroceso cronológico). @n(251) El evaluador realizará una copia
+    @e(retroceso cronológico).@n(251) El evaluador realizará una copia
     de seguridad hasta el punto de elección anterior y se reanudará desde
     allí. @e(Este proceso conduce a una estrategia de búsqueda conocida como
-    búsqueda en profundidad) o @e(retroceso cronológico). @n(251) El
+    búsqueda en profundidad) o @e(retroceso cronológico).@n(251) El
     evaluador realizará una copia de seguridad hasta el punto de elección
     anterior y se reanudará desde allí. @e(Este proceso conduce a una estrategia
     de búsqueda conocida como búsqueda en profundidad) o @e(retroceso
-    cronológico). @n(251)
+    cronológico).@n(251)
 
 # **** Driver loop
 **** Bucle del conductor
@@ -38994,7 +38993,7 @@ Company.
 #      enumerating all the possibilities and imposing the given restrictions:@n(252)
      Podemos determinar que vive en cada piso de una manera directa mediante la
      enumeración de todas las posibilidades y la imposición de las restricciones
-     dadas: @n(252)
+     dadas:@n(252)
 
 #      ..src > scheme
 #        (define (multiple-dwelling)
@@ -39109,7 +39108,7 @@ Company.
 
 #      :: @t(Exercise 4.41) :: Write an ordinary Scheme program to solve the multiple
 #         dwelling puzzle.
-     :: @t(Ejercicio 4.41) :: Escriba un programa de Esquema ordinario para
+     :: @t(Ejercicio 4.41) :: Escriba un programa de Scheme ordinario para
         resolver el rompecabezas de múltiples viviendas.
 
 #      :: @t(Exercise 4.42) :: Solve the following @"(Liars) puzzle (from
@@ -39150,7 +39149,7 @@ Company.
 #      :: @t(Exercise 4.43) :: Use the @c(amb) evaluator to solve the following
 #         puzzle:@n(253)
      :: @t(Ejercicio 4.43) :: Usa el @c(amb) evaluador para resolver el
-        siguiente rompecabezas: @n(253)
+        siguiente rompecabezas:@n(253)
 
 #         ..tab >
        ..tab >
@@ -39204,7 +39203,7 @@ Company.
      artículo seguido de un sustantivo seguido de un verbo, como @"(El gato
      come. )  Para lograr tal análisis, debemos ser capaces de identificar las
      partes del discurso de las palabras individuales. Podríamos comenzar con
-     algunas listas que clasifican varias palabras: @n(254)
+     algunas listas que clasifican varias palabras:@n(254)
 
 #      ..src > scheme
 #        (define nouns
@@ -39304,7 +39303,7 @@ Company.
      @c(*unparsed*) no sea vacía y que comience con una palabra de la lista
      designada. Si es así, eliminamos esa palabra @c(*unparsed*) y le devolvemos
      la palabra junto con su parte del discurso (que se encuentra al principio
-     de la lista): @n(255)
+     de la lista):@n(255)
 
 #      ..src > scheme
 #        (define (parse-word word-list)
@@ -39419,7 +39418,7 @@ Company.
 #      prepositional phrase:@n(256)
      Ahora podemos definir una oración como una frase nominal seguida por una
      frase verbal, donde una frase verbal puede ser un verbo o una frase verbal
-     extendida por una frase preposicional: @n(256)
+     extendida por una frase preposicional:@n(256)
 
 #      ..src > scheme
 #        (define (parse-sentence)
@@ -39698,7 +39697,7 @@ Company.
      :: @t(Ejercicio 4.48) :: Extender la gramática dada anteriormente para
         manejar oraciones más complejas. Por ejemplo, podrías extender frases
         nominales y verbales para incluir adjetivos y adverbios, o puedes
-        manejar oraciones compuestas. @n(257)
+        manejar oraciones compuestas.@n(257)
 
 #      :: @t(Exercise 4.49) :: Alyssa P. Hacker is more interested in generating
 #         interesting sentences than in parsing them. She reasons that by simply
@@ -39714,7 +39713,7 @@ Company.
         apropiada, podemos usar los programas que habíamos construido para
         analizar para hacer generación en su lugar. Implementar la idea de
         Alyssa, y mostrar la primera media docena o más oraciones
-        generadas. @n(258)
+        generadas.@n(258)
 
 # *** 4.3.3 <> Implementing the @c(Amb) Evaluator
 *** 4.3.3 <> Implementación del @c(Amb) Evaluador
@@ -39738,7 +39737,7 @@ Company.
 #     interpretation of ordinary Scheme and the interpretation of nondeterministic
 #     Scheme will be entirely in the execution procedures.
     Construiremos el @c(amb) evaluador para el esquema no determinístico
-    modificando el evaluador de análisis de @l(#4.1.7). @n(259) Al
+    modificando el evaluador de análisis de @l(#4.1.7).@n(259) Al
     igual que en el evaluador de análisis, la evaluación de una expresión se
     realiza llamando a un procedimiento de ejecución producido por el análisis
     de esa expresión. La diferencia entre la interpretación del esquema
@@ -39892,7 +39891,7 @@ Company.
      evaluador, así como el @c(analyze) procedimiento básico, son idénticos a
      los del evaluador de @l(#4.1.7), excepto por el hecho de que
      necesitamos procedimientos de sintaxis adicionales para reconocer el
-     @c(amb) formulario especial: @n(260)
+     @c(amb) formulario especial:@n(260)
 
 #      ..src > scheme
 #        (define (amb? exp) (tagged-list? exp 'amb))
@@ -40236,7 +40235,7 @@ Company.
      debemos considerar la posibilidad de que esta rama del cálculo pueda fallar
      posteriormente, lo que nos obligará a retroceder fuera de la
      asignación. Por lo tanto, debemos arreglar para deshacer la asignación como
-     parte del proceso de retroceso. @n(261)
+     parte del proceso de retroceso.@n(261)
 
 #      This is accomplished by giving @c(vproc) a success continuation (marked with
 #      the comment @"(*1*) below) that saves the old value of the variable before
@@ -40929,7 +40928,7 @@ Company.
    de relaciones más que de funciones de un solo valor. La programación lógica
    extiende esta idea combinando una visión relacional de la programación con un
    poderoso tipo de concordancia simbólica de patrones llamada
-   @e(unificación). @n(262)
+   @e(unificación).@n(262)
 
 #    This approach, when it works, can be a very powerful way to write programs.
 #    Part of the power comes from the fact that a single @"(what is) fact can be
@@ -40978,7 +40977,7 @@ Company.
 
    - Para cualquier @c(u), @c(v), @c(y), y @c(z), @c((cons u v)) y @c(y)
      @c(append) para formar @c((cons u z)) si @c(v) y @c(y) @c(append) para
-     formar @c(z). @n(263)
+     formar @c(z).@n(263)
 
 #    Using the @c(append) procedure, we can answer questions such as
    Utilizando el @c(append) procedimiento, podemos responder preguntas como
@@ -41013,7 +41012,7 @@ Company.
   @"(procedimiento) indicando las dos reglas sobre @c(append) dado
   arriba. @"(Cómo el) conocimiento es proporcionado automáticamente por el
   intérprete para permitir que este solo par de reglas para ser utilizado para
-  responder a los tres tipos de preguntas sobre @c(append). @n(264)
+  responder a los tres tipos de preguntas sobre @c(append).@n(264)
 
 #    Contemporary logic programming languages (including the one we implement here)
 #    have substantial deficiencies, in that their general @"(how to) methods can
@@ -41023,7 +41022,7 @@ Company.
   implementamos aquí) tienen deficiencias sustanciales, en que su general
   @"(cómo a los) métodos puede conducirlos a espirales bucles infinitos u otro
   comportamiento indeseable. La programación lógica es un campo activo de
-  investigación en informática. @n(265)
+  investigación en informática.@n(265)
 
 #    Earlier in this chapter we explored the technology of implementing
 #    interpreters and described the elements that are essential to an interpreter
@@ -41467,7 +41466,7 @@ Company.
      tercer elemento del patrón especifica que debe haber dos elementos. Si
      queríamos cambiar el patrón de modo que el tercer elemento pudiera ser
      cualquier lista comenzando con @c(computer), podríamos especificar
-     @n(266)
+    @n(266)
 
 #      ..src > scheme
 #        (job ?x (computer . ?type))
@@ -41748,7 +41747,7 @@ Company.
 #      is satisfied by all assignments to the pattern variables that do not satisfy
 #      @m[⟨query₁⟩].@n(267)
      Se satisface por todas las asignaciones a las variables de patrón que no
-     satisfacen @m(⟨query₁⟩). @n(267)
+     satisfacen @m(⟨query₁⟩).@n(267)
 
 #      The final combining form is called @c(lisp-value). When @c(lisp-value) is the
 #      first element of a pattern, it specifies that the next element is a Lisp
@@ -41773,7 +41772,7 @@ Company.
      Será satisfecho por asignaciones a las variables de patrón para las cuales
      la @c((predicate)) aplicada a la @m(⟨arg₁⟩) ...  @m(⟨arg )@m(inst)
      instanciada es verdadera. Por ejemplo, para encontrar a todas las personas
-     cuyo salario es mayor a $ 30,000 podríamos escribir @n(268)
+     cuyo salario es mayor a $ 30,000 podríamos escribir@n(268)
 
 #      ..src > scheme
 #        (and (salary ?person ?amount)
@@ -41839,7 +41838,7 @@ Company.
      Especifica que dos personas viven cerca unas de otras si viven en la misma
      ciudad. La @c(not) cláusula final impide que la regla diga que todas las
      personas viven cerca de sí mismas. La @c(same) relación se define por una
-     regla muy simple: @n(269)
+     regla muy simple:@n(269)
 
 #      ..src > scheme
 #        (rule (same ?x ?x))
@@ -41885,7 +41884,7 @@ Company.
 #      base as an assertion. It can be an implicit assertion implied by a rule. For
 #      example, the query
      Donde @c((conclusion)) es un patrón y @c((body)) es cualquier
-     consulta. @n(270) Se puede pensar en una regla como la representación
+     consulta.@n(270) Se puede pensar en una regla como la representación
      de un grande (incluso infinito) conjunto de afirmaciones, es decir, todas
      las instancias de la conclusión de la regla con las asignaciones de
      variables que satisfacen la regla cuerpo. Cuando describimos consultas
@@ -42468,7 +42467,7 @@ Company.
      las entradas de la base de datos se recogen en un flujo, que se pasa a
      través de un filtro para eliminar las fallas. El resultado es un flujo de
      todos los cuadros que amplían la trama dada mediante una coincidencia con
-     alguna aserción en la base de datos. @n(271)
+     alguna aserción en la base de datos.@n(271)
 
 #      In our system, a query takes an input stream of frames and performs the above
 #      matching operation for every frame in the stream, as indicated in @l(#Figure
@@ -42705,10 +42704,10 @@ Company.
      de entrada, y cada consulta en una @c(and) obtiene sus tramas de entrada de
      la consulta anterior, una @c(and) consulta podría, en el peor de los casos,
      tener que realizar una serie de coincidencias Exponencial en el número de
-     consultas (véase el @l(#Ejercicio 4.76) ). @n(272)
+     consultas (véase el @l(#Ejercicio 4.76) ).@n(272)
      Aunque los sistemas para manejar sólo consultas simples son bastante
      prácticos, tratar con consultas complejas es extremadamente
-     difícil. @n(273)
+     difícil.@n(273)
 
 #      From the stream-of-frames viewpoint, the @c(not) of some query acts as a
 #      filter that removes all frames for which the query can be satisfied. For
@@ -42753,7 +42752,7 @@ Company.
      La primera cláusula generará marcos con enlaces para @c(?x) y @c(?y). La
      @c(not) cláusula a continuación, filtrar estos mediante la eliminación de
      todos los marcos en los que el enlace para @c(?x) satisfacer la restricción
-     que @c(?x) es un programador de computadoras. @n(274)
+     que @c(?x) es un programador de computadoras.@n(274)
 
 #      The @c(lisp-value) special form is implemented as a similar filter on frame
 #      streams. We use each frame in the stream to instantiate any variables in the
@@ -42819,7 +42818,7 @@ Company.
      @c((a b c)), @c(?y) debe ser @c(b), y @c(?z) debe ser @c(c). Podemos pensar
      en este proceso como la solución de un conjunto de ecuaciones entre los
      componentes del patrón. En general, se trata de ecuaciones simultáneas, que
-     pueden requerir manipulación sustancial para resolver. @n(275) Por
+     pueden requerir manipulación sustancial para resolver.@n(275) Por
      ejemplo, unificando @c((?x ?x)) y @c(((a ?y c) (a b ?z))) pudiendo
      considerarse como especificando las ecuaciones simultáneas
 
@@ -42898,7 +42897,7 @@ Company.
      así en el marco. Si @c(?y) posteriormente se determina un valor para y se
      agrega a la trama (mediante una coincidencia o unificación de patrones que
      se requiere para ser consistente con esta trama) @c(?x) El límite anterior
-     se referirá a este valor. @n(276)
+     se referirá a este valor.@n(276)
 
 # **** Applying rules
 **** Aplicación de reglas
@@ -43033,7 +43032,7 @@ Company.
 #      - a stream of extended frames obtained by applying all possible rules (using
 #        the unifier).@n(277)
      - Una corriente de tramas extendidas obtenidas aplicando todas las reglas
-       posibles (usando el unificador). @n(277)
+       posibles (usando el unificador).@n(277)
 
 #      Appending these two streams produces a stream that consists of all the ways
 #      that the given pattern can be satisfied consistent with the original frame.
@@ -43092,7 +43091,7 @@ Company.
      vacío). Para cada trama en el flujo resultante, instancia la consulta
      original utilizando los valores de las variables encontradas en el
      marco. Esta secuencia de consultas instanciadas se imprime a
-     continuación. @n(278)
+     continuación.@n(278)
 
 #      The driver also checks for the special command @c(assert!), which signals that
 #      the input is not a query but rather an assertion or rule to be added to the
@@ -43141,7 +43140,7 @@ Company.
     Los medios de combinación utilizados en el lenguaje de consulta pueden
     parecer al principio idénticos a las operaciones @c(and), @c(or) y @c(not)
     de la lógica matemática, y la aplicación de reglas de lenguaje de consulta
-    se logra de hecho mediante un método legítimo de inferencia. @n(279)
+    se logra de hecho mediante un método legítimo de inferencia.@n(279)
     Esta identificación del lenguaje de consulta con la lógica matemática no es
     realmente válida, sin embargo, porque el lenguaje de consulta proporciona
     una @e(estructura de control) que interpreta los estados lógicos de
@@ -43229,7 +43228,7 @@ Company.
     pueden considerarse como declaraciones de lógica matemática, podemos
     justificar cualquier @"(inferencia) lograda por un programa lógico afirmando
     que el mismo resultado podría obtenerse trabajando totalmente dentro de la
-    lógica matemática. @n(280)
+    lógica matemática.@n(280)
 
 # **** Infinite loops
 **** Bucles infinitos
@@ -43335,7 +43334,7 @@ Company.
      difíciles de prever, y la aparición de un bucle puede depender del orden de
      las cláusulas de un @l(#Ejercicio)@c(and) (véase el
      @l(#Ejercicio 4.64) ) o de detalles de bajo nivel relativos
-     al orden en que el sistema procesa las consultas. @n(281)
+     al orden en que el sistema procesa las consultas.@n(281)
 
 # **** Problems with @c(not)
 **** Problemas con @c(not)
@@ -43416,10 +43415,10 @@ Company.
      ejemplo, dada la base de datos del personal de @l(#4.4.1), el
      sistema deduciría felizmente todo tipo de @c(not) enunciados, tales como
      que Ben Bitdiddle no es un aficionado al béisbol, que no está lloviendo
-     fuera y que 2 + 2 no es 4. @n(282) En otras palabras, @c(not) El de
+     fuera y que 2 + 2 no es 4.@n(282) En otras palabras, @c(not) El de
      los lenguajes de programación lógica refleja la supuesta @e(suposición de
      mundo cerrado de) que toda la información relevante ha sido incluida en la
-     base de datos. @n(283)
+     base de datos.@n(283)
 
 #      :: @t(Exercise 4.64) :: Louis Reasoner mistakenly deletes the @c(outranked-by)
 #         rule (@l(#4.4.1)) from the data base. When he realizes this, he quickly
@@ -44614,15 +44613,15 @@ Company.
      iguales, Entonces estos patrones implican instrucciones para encontrar un
      tal que sea igual a la expresión que implica. No existe un método general
      para resolver estas ecuaciones, por lo que rechazamos tales ataduras; Estos
-     casos son reconocidos por el predicado. @n(284) Por otra parte, no
+     casos son reconocidos por el predicado.@n(284) Por otra parte, no
      queremos rechazar los intentos de obligar a una variable a sí mismo. Por
      ejemplo, considere unificar y. El segundo intento de vincular a
      coincidencias (el valor almacenado de ) contra (el nuevo valor de ). Esto
-     es atendido por la cláusula de. @n(284) Por otra parte, no queremos
+     es atendido por la cláusula de.@n(284) Por otra parte, no queremos
      rechazar los intentos de obligar a una variable a sí mismo. Por ejemplo,
      considere unificar y. El segundo intento de vincular a coincidencias (el
      valor almacenado de ) contra (el nuevo valor de ). Esto es atendido por la
-     cláusula de. @n(284) Por otra parte, no queremos rechazar los
+     cláusula de.@n(284) Por otra parte, no queremos rechazar los
      intentos de obligar a una variable a sí mismo. Por ejemplo, considere
      unificar y. El segundo intento de vincular a coincidencias (el valor
      almacenado de ) contra (el nuevo valor de ). Esto es atendido por la
@@ -45291,7 +45290,7 @@ Company.
      si una expresión es una variable de patrón comprobando si la @c(car) de la
      expresión es el símbolo @c(?), en lugar de tener que extraer caracteres del
      símbolo. La transformación de sintaxis se realiza mediante el siguiente
-     procedimiento: @n(285)
+     procedimiento:@n(285)
 
 #      ..src > scheme
 #        (define (query-syntax-process exp)
@@ -45954,7 +45953,7 @@ Company.
   procedimientos simples como máquinas registradoras, diseñaremos una máquina
   que realice el algoritmo descrito por el evaluador metacircular de
   @l(#4.1). Esto llenará la brecha en nuestra comprensión de cómo se
-  interpretan las expresiones del Esquema, proporcionando un modelo explícito
+  interpretan las expresiones del Scheme, proporcionando un modelo explícito
   para los mecanismos de control en el evaluador. En @l(#5.5) estudiaremos
   un compilador simple que traducirá los programas Scheme en secuencias de
   instrucciones que se pueden ejecutar directamente con los registros y
@@ -46526,7 +46525,7 @@ Company.
      números cuyo @A(GCD) queremos y obtener la respuesta impresa en nuestro
      terminal. No discutiremos cómo hacer una máquina que pueda leer e imprimir,
      sino asumir (como lo hacemos cuando usamos @c(read) y @c(display) en
-     Scheme) que están disponibles como operaciones primitivas. @n(286)
+     Scheme) que están disponibles como operaciones primitivas.@n(286)
 
 #      @c(Read) is like the operations we have been using in that it produces a value
 #      that can be stored in a register. But @c(read) does not take inputs from any
@@ -47501,7 +47500,7 @@ Company.
     subproblema sea resuelto para que estos puedan ser restaurados para
     continuar el cálculo suspendido. En el caso de factorial, se ahorrará el
     valor antiguo de @c(n), para ser restaurado cuando haya terminado de
-    calcular el factorial del @c(n) registro decrementado. @n(287)
+    calcular el factorial del @c(n) registro decrementado.@n(287)
 
 #     Since there is no @e(a priori) limit on the depth of nested recursive calls,
 #     we may need to save an arbitrary number of register values. These values must
@@ -47526,7 +47525,7 @@ Company.
     @c(save) instrucción y se restauran de la pila usando una @c(restore)
     instrucción. Después de que una secuencia de valores ha sido @c(save) d en
     la pila, una secuencia de @c(restore) s recuperará estos valores en orden
-    inverso. @n(288)
+    inverso.@n(288)
 
 #     With the aid of the stack, we can reuse a single copy of the factorial
 #     machine's data paths for each factorial subproblem. There is a similar design
@@ -48865,7 +48864,7 @@ Company.
     @c(text) y acumulando el @c(insts) y el @c(labels). Si un elemento es un
     símbolo (y por lo tanto una etiqueta), se agrega una entrada apropiada a la
     @c(labels) tabla. De lo contrario, el elemento se acumula en la @c(insts)
-    lista. @n(289)
+    lista.@n(289)
 
 #     @c(Update-insts!) modifies the instruction list, which initially contains only
 #     the text of the instructions, to include the corresponding execution
@@ -50214,8 +50213,8 @@ Company.
     estructura de datos denominado @e(vector). Resumenmente, un vector es un
     objeto de datos compuesto cuyos elementos individuales se pueden acceder por
     medio de un índice entero en una cantidad de tiempo que es independiente del
-    índice. @n(290) Con el fin de describir las operaciones de memoria,
-    utilizamos dos procedimientos Esquema de primitivas para la manipulación de
+    índice.@n(290) Con el fin de describir las operaciones de memoria,
+    utilizamos dos procedimientos Scheme de primitivas para la manipulación de
     vectores:
 
 #     - @c[(vector-ref ⟨vector⟩ ⟨n⟩)] returns the @m(nᵗʰ) element of the vector.
@@ -50235,7 +50234,7 @@ Company.
 #     @e(index) that specifies the offset of a particular element of the vector.
     Por ejemplo, si @c(v) es un vector, @c((vector-ref v 5)) obtiene la quinta
     entrada en el vector @c(v) y @c((vector-set! v 5 7)) cambia el valor de la
-    quinta entrada del vector @c(v) a 7. @n(291) Para la memoria del
+    quinta entrada del vector @c(v) a 7.@n(291) Para la memoria del
     ordenador, este acceso se puede implementar mediante el uso de aritmética de
     direcciones para combinar una @e(base Dirección) que especifica la ubicación
     inicial de un vector en la memoria con un @e(índice) que especifica el
@@ -50280,12 +50279,12 @@ Company.
      una manera de distinguir un tipo de datos de otro. Hay muchos métodos para
      lograr esto, pero todos ellos reducen el uso de @e(punteros tipados), es
      decir, ampliar la noción de @"(puntero) para incluir información sobre el
-     tipo de datos. @n(292) El tipo de datos permite al sistema distinguir
+     tipo de datos.@n(292) El tipo de datos permite al sistema distinguir
      un puntero de un par (que consiste en el tipo de datos de @"(par) y un
      índice en los vectores de memoria) de punteros a otros tipos de datos (que
      consisten en algún otro tipo de datos y lo que se está utilizando Para
      representar datos de ese tipo). Dos objetos de datos se consideran iguales
-     (@c(eq?)) si sus punteros son idénticos. @n(293)
+     (@c(eq?)) si sus punteros son idénticos.@n(293)
      @l(#Figure-5.14<> figura 5.14) ilustra el uso de este método para
      representar la lista @c(((1 2) 3 4)), cuyo diagrama de cuadro y puntero
      también se muestra. Utilizamos prefijos de letras para denotar la
@@ -50358,11 +50357,11 @@ Company.
 #      number are stored.@n(295)
      Un puntero a un número, tal como @c(n4), puede consistir en un tipo que
      indica datos numéricos junto con la representación real del
-     número 4. @n(294) Para tratar con números que son demasiado grandes
+     número 4.@n(294) Para tratar con números que son demasiado grandes
      para representarse en la cantidad fija de espacio asignada para un único
      puntero, Podríamos usar un tipo de datos @e(bignum) distinto, para el cual
      el puntero designa una lista en la que se almacenan las partes del
-     número. @n(295)
+     número.@n(295)
 
 #      A symbol might be represented as a typed pointer that designates a sequence of
 #      the characters that form the symbol's printed representation. This sequence is
@@ -50504,7 +50503,7 @@ Company.
      vector indexada. Suponemos que hay un registro especial,, @c(free) que
      siempre tiene un puntero de par que contiene el siguiente índice
      disponible, y que podemos incrementar la parte del índice de ese puntero
-     para encontrar la siguiente ubicación libre. @n(296) Por ejemplo, la
+     para encontrar la siguiente ubicación libre.@n(296) Por ejemplo, la
      instrucción
 
 #      ..src > scheme
@@ -50522,7 +50521,7 @@ Company.
 
 #      is implemented as the following sequence of vector operations:@n(297)
      Se implementa como la siguiente secuencia de operaciones vectoriales:
-     @n(297)
+    @n(297)
 
 #      ..src > scheme
 #        (perform (op vector-set!)
@@ -50727,7 +50726,7 @@ Company.
     El método de representación descrito en @l(#5.3.1) resuelve el
     problema de implementar la estructura de lista, siempre que tengamos una
     cantidad infinita de memoria. Con una computadora real, eventualmente nos
-    quedaremos sin espacio libre para construir pares nuevos. @n(298) Sin
+    quedaremos sin espacio libre para construir pares nuevos.@n(298) Sin
     embargo, la mayoría de los pares generados en un cálculo típico sólo se
     utilizan para mantener los resultados intermedios. Después de acceder a
     estos resultados, los pares ya no son necesarios - son @e(basura). Por
@@ -50776,7 +50775,7 @@ Company.
     Lisp, los únicos objetos que pueden afectar el futuro de la computación son
     las que se puede llegar en alguna sucesión de @c(car) y @c(cdr) operaciones
     a partir de los punteros que están actualmente en la máquina Registros
-    @n(299) Cualquier celda de memoria que no esté tan accesible puede ser
+   @n(299) Cualquier celda de memoria que no esté tan accesible puede ser
     reciclada.
 
 #     There are many ways to perform garbage collection. The method we shall examine
@@ -50810,7 +50809,7 @@ Company.
     continuar procesando; Se asignarán nuevos pares en la nueva memoria de
     trabajo (que era la antigua memoria libre). Cuando está lleno, podemos
     copiar los pares útiles en la nueva memoria libre (que era la memoria de
-    trabajo antigua). @n(300)
+    trabajo antigua).@n(300)
 
 # **** Implementation of a stop-and-copy garbage collector
 **** Implementación de un recolector de basura stop-and-copy
@@ -50831,7 +50830,7 @@ Company.
      eventualmente apunta a todos los datos accesibles. Esto se puede arreglar
      almacenando el contenido de todos los registros de máquina en una lista
      previamente asignada apuntada en @c(root) justo antes de comenzar la
-     recolección de basura. @n(301) También suponemos que, además de la
+     recolección de basura.@n(301) También suponemos que, además de la
      memoria de trabajo actual, hay memoria disponible en la que podemos copiar
      los datos útiles. La memoria de trabajo actual consiste en vectores cuyas
      direcciones de base están en registros llamados @c(the-cars) y
@@ -51176,7 +51175,7 @@ Company.
      almacenando una etiqueta de corazón roto y dirección de reenvío en la
      ubicación antigua.  @c(Relocate-old-result-in-new) Usa un registro
      @c(oldcr) para sostener el @c(car) o el @c(cdr) del objeto señalado por
-     @c(old). @n(303)
+     @c(old).@n(303)
 
 #      ..src > scheme
 #        relocate-old-result-in-new
@@ -51342,7 +51341,7 @@ Company.
    las especificaciones de ruta de datos y controlador para una máquina de
    registro similar al evaluador descrito en esta sección y usaron programas de
    automatización de diseño para construir la disposición de circuitos
-   integrados. @n(304) Alternativamente, puede utilizarse como punto de
+   integrados.@n(304) Alternativamente, puede utilizarse como punto de
    partida para construir una implementación de lenguaje de máquina de un
    evaluador de Scheme, o incluso una máquina de propósito especial para evaluar
    expresiones de Scheme. @l(#Figura 5.16) muestra tal
@@ -51350,7 +51349,7 @@ Company.
    para Scheme. Los diseñadores de chips comenzaron con las especificaciones de
    ruta de datos y controlador para una máquina de registro similar al evaluador
    descrito en esta sección y usaron programas de automatización de diseño para
-   construir la disposición de circuitos integrados. @n(304)
+   construir la disposición de circuitos integrados.@n(304)
    Alternativamente, puede utilizarse como punto de partida para construir una
    implementación de lenguaje de máquina de un evaluador de Scheme, o incluso
    una máquina de propósito especial para evaluar expresiones de
@@ -51359,16 +51358,16 @@ Company.
    diseñadores de chips comenzaron con las especificaciones de ruta de datos y
    controlador para una máquina de registro similar al evaluador descrito en
    esta sección y usaron programas de automatización de diseño para construir la
-   disposición de circuitos integrados. @n(304) Un chip de silicio que
+   disposición de circuitos integrados.@n(304) Un chip de silicio que
    actúa como evaluador de Scheme. Los diseñadores de chips comenzaron con las
    especificaciones de ruta de datos y controlador para una máquina de registro
    similar al evaluador descrito en esta sección y usaron programas de
    automatización de diseño para construir la disposición de circuitos
-   integrados. @n(304) Un chip de silicio que actúa como evaluador de
+   integrados.@n(304) Un chip de silicio que actúa como evaluador de
    Scheme. Los diseñadores de chips comenzaron con las especificaciones de ruta
    de datos y controlador para una máquina de registro similar al evaluador
    descrito en esta sección y usaron programas de automatización de diseño para
-   construir la disposición de circuitos integrados. @n(304)
+   construir la disposición de circuitos integrados.@n(304)
 
 #    ..figure > @t(Figure 5.16) A silicon-chip implementation of an evaluator for
 #      Scheme.
@@ -51419,7 +51418,7 @@ Company.
 #     itself recursively, since evaluating an expression requires evaluating its
 #     subexpressions.)  The registers @c(proc), @c(argl), and @c(unev) are used in
 #     evaluating combinations.
-    Nuestra máquina registradora Esquema evaluador incluye una pila y siete
+    Nuestra máquina registradora Scheme evaluador incluye una pila y siete
     registros: @c(exp), @c(env), @c(val), @c(continue), @c(proc), @c(argl), y
     @c(unev). @c(Exp) Se utiliza para contener la expresión a evaluar, y @c(env)
     contiene el entorno en el que se va a realizar la evaluación. Al final de
@@ -51460,7 +51459,7 @@ Company.
     @c(continue) y el @c(val) registro mantendrá el valor de la expresión. Al
     igual que con el metacircular @c(eval), la estructura de @c(eval-dispatch)
     es un análisis de caso sobre el tipo sintáctico de la expresión que se va a
-    evaluar. @n(305)
+    evaluar.@n(305)
 
 #     ..src > scheme
 #       eval-dispatch
@@ -51615,7 +51614,7 @@ Company.
      para guardar los registros que se restaurarán después de que la llamada
      recursiva regrese. Antes de cada llamada vamos a tener cuidado de
      identificar qué registros deben ser guardados (porque sus valores serán
-     necesarios más tarde). @n(306)
+     necesarios más tarde).@n(306)
 
 #      We begin the evaluation of an application by evaluating the operator to
 #      produce a procedure, which will later be applied to the evaluated operands. To
@@ -51678,7 +51677,7 @@ Company.
      lista vacía. Entonces asignamos al @c(proc) registro el procedimiento que
      se produjo evaluando al operador. Si no hay operandos, vamos directamente a
      @c(apply-dispatch). De lo contrario, guardamos @c(proc) en la pila e
-     iniciamos el bucle de evaluación de argumentos: @n(307)
+     iniciamos el bucle de evaluación de argumentos:@n(307)
 
 #      ..src > scheme
 #        ev-appl-did-operator
@@ -51797,7 +51796,7 @@ Company.
      último operando se evalúa. Por lo tanto, regresamos de la evaluación a un
      punto de entrada especial @c(ev-appl-accum-last-arg), que restaura la lista
      de argumentos, acumula el nuevo argumento, restaura el procedimiento
-     guardado y se apaga para realizar la aplicación. @n(308)
+     guardado y se apaga para realizar la aplicación.@n(308)
 
 #      ..src > scheme
 #        ev-appl-last-arg
@@ -51841,8 +51840,8 @@ Company.
      que el intérprete evalúa los operandos de una combinación (por ejemplo, de
      izquierda a derecha o de derecha a izquierda, véase el
      @l(#Ejercicio 3.8) ). Este orden no está determinado por el
-     evaluador metacircular, que hereda su estructura de control del Esquema
-     subyacente en el que se implementa. @n(309) Como el @c(first-operand)
+     evaluador metacircular, que hereda su estructura de control del Scheme
+     subyacente en el que se implementa.@n(309) Como el @c(first-operand)
      selector (utilizado @c(ev-appl-operand-loop) para extraer sucesivos
      operandos de @c(unev)) se implementa como @c(car) y el @c(rest-operands)
      selector se implementa como @c(cdr), el evaluador de control explícito
@@ -52164,13 +52163,13 @@ Company.
      Es un proceso iterativo. Aunque el procedimiento es sintácticamente
      recursivo (definido en términos de sí mismo), no es lógicamente necesario
      que un evaluador guarde información pasando de una llamada @c(sqrt-iter) a
-     la siguiente. @n(310) Un evaluador que puede ejecutar un
+     la siguiente.@n(310) Un evaluador que puede ejecutar un
      procedimiento como @c(sqrt-iter) sin necesidad de aumentar el
      almacenamiento como el procedimiento continúa para llamar a sí mismo se
      llama una @e(cola recursiva) evaluador. La implementación metacircular del
      evaluador en el @l(#Capitulo 4) no especifica si el evaluador es
      recursivo de cola, porque ese evaluador hereda su mecanismo para guardar el
-     estado del Esquema subyacente. Sin embargo, con el evaluador de control
+     estado del Scheme subyacente. Sin embargo, con el evaluador de control
      explícito,
 
 #      Our evaluator is tail-recursive, because in order to evaluate the final
@@ -52187,7 +52186,7 @@ Company.
      procedimiento (como en @c(sqrt-iter), donde la @c(if) expresión, que es la
      última expresión en el cuerpo del procedimiento, se reduce a una llamada a
      @c(sqrt-iter)) - no causará ninguna información Se acumulan en la
-     pila. @n(311)
+     pila.@n(311)
 
 #      If we did not think to take advantage of the fact that it was unnecessary to
 #      save information in this case, we might have implemented @c(eval-sequence) by
@@ -52199,7 +52198,7 @@ Company.
      tratando todas las expresiones en una secuencia de la misma manera -
      guardar los registros, evaluar la expresión, volver a Restaurar los
      registros y repetir esto hasta que se hayan evaluado todas las expresiones:
-     @n(312)
+    @n(312)
 
 #      ..src > scheme
 #        ev-sequence
@@ -52504,7 +52503,7 @@ Company.
         derivadas tales como @c(cond), @c(let), y así sucesivamente (
         @l(#4.1.2)). Usted puede @"(engañar) y asumir que los
         transformadores sintácticos, tales como @c(cond->if) están
-        disponibles como operaciones de la máquina. @n(313)
+        disponibles como operaciones de la máquina.@n(313)
 
 #      :: @t(Exercise 5.24) :: Implement @c(cond) as a new basic special form without
 #         reducing it to @c(if). You will have to construct a loop that tests the
@@ -52565,7 +52564,7 @@ Company.
     @l(#4.1.4). El evaluador imprimirá repetidamente un mensaje, leerá
     una expresión, evaluará la expresión @c(eval-dispatch) y se imprimirá el
     resultado. Las siguientes instrucciones forman el comienzo de la secuencia
-    de control del evaluador de control explícito: @n(314)
+    de control del evaluador de control explícito:@n(314)
 
 #     ..src > scheme
 #       read-eval-print-loop
@@ -52603,7 +52602,7 @@ Company.
 #     return to the driver loop.@n(315)
     Cuando encontramos un error en un procedimiento (como el @"(error de tipo de
     procedimiento desconocido) indicado en @c(apply-dispatch)), imprimimos un
-    mensaje de error y volvemos al bucle del controlador. @n(315)
+    mensaje de error y volvemos al bucle del controlador.@n(315)
 
 #     ..src > scheme
 #       unknown-expression-type
@@ -52646,7 +52645,7 @@ Company.
     Para los propósitos de la simulación, inicializamos la pila cada vez a
     través del bucle de controlador, ya que puede no estar vacía después de un
     error (como una variable indefinida) interrumpe una
-    evaluación. @n(316)
+    evaluación.@n(316)
 
 #     If we combine all the code fragments presented in @l(#5.4.1)--@l(#5.4.4), we
 #     can create an evaluator machine model that we can run using the
@@ -52679,7 +52678,7 @@ Company.
 #     by the evaluator. These are the same procedures we used for the metacircular
 #     evaluator in @l(#4.1), together with the few additional ones defined in
 #     footnotes throughout @l(#5.4).
-    Debemos definir los procedimientos del Esquema para simular las operaciones
+    Debemos definir los procedimientos del Scheme para simular las operaciones
     utilizadas como primitivas por el evaluador. Estos son los mismos
     procedimientos que utilizamos para el evaluador metacircular en
     @l(#4.1), junto con los pocos adicionales definidos en las notas a pie
@@ -53014,7 +53013,7 @@ Company.
         utilizando el simulador registrador-máquina, estos errores son
         capturados por el sistema Scheme subyacente. Esto es análogo a la caída
         del ordenador cuando un programa de usuario comete un
-        error. @n(317) Es un gran proyecto hacer un verdadero sistema de
+        error.@n(317) Es un gran proyecto hacer un verdadero sistema de
         errores funcionar, pero vale la pena el esfuerzo de entender lo que está
         involucrado aquí.
 
@@ -53087,7 +53086,7 @@ Company.
    controlador del evaluador orquesta el uso de sus rutas de datos para realizar
    el cálculo deseado. Por lo tanto, las trayectorias de datos del evaluador son
    universales: son suficientes para realizar cualquier cálculo que deseemos,
-   dado un controlador apropiado. @n(318)
+   dado un controlador apropiado.@n(318)
 
 #    Commercial general-purpose computers are register machines organized around a
 #    collection of registers and operations that constitute an efficient and
@@ -53148,7 +53147,7 @@ Company.
    idioma nativo de la máquina. El compilador que implementamos en esta sección
    traduce los programas escritos en Scheme en secuencias de instrucciones a
    ejecutar utilizando las rutas de datos de la máquina evaluadora de control
-   explícito. @n(319)
+   explícito.@n(319)
 
 #    Compared with interpretation, compilation can provide a great increase in the
 #    efficiency of program execution, as we will explain below in the overview of
@@ -53364,7 +53363,7 @@ Company.
     @c(analyze) procedimiento de @l(#4.1.7) y al @c(eval-dispatch) punto
     de entrada del evaluador explícito de control en @l(#5.4.1). El
     compilador, al igual que los intérpretes, utiliza los procedimientos de
-    expresión y sintaxis definidos en @l(#4.1.2). @n(320)
+    expresión y sintaxis definidos en @l(#4.1.2).@n(320)
     @c(Compile) realiza un análisis de caso sobre el tipo sintáctico de la
     expresión a compilar. Para cada tipo de expresión, envía a un @e(generador
     de código) especializado :
@@ -53818,7 +53817,7 @@ Company.
      @c(next), entonces no necesitamos incluir ninguna instrucción adicional. De
      lo contrario, la vinculación es una etiqueta, y generamos una @c(goto)
      etiqueta a esa, una instrucción que no necesita o modificar ningún
-     registro. @n(321)
+     registro.@n(321)
 
 #      ..src > scheme
 #        (define (compile-linkage linkage)
@@ -54123,7 +54122,7 @@ Company.
      Para generar este código, compilamos el predicado, consecuente y
      alternativo y combinamos el código resultante con instrucciones para probar
      el resultado del predicado y con etiquetas recién generadas para marcar las
-     ramas verdaderas y falsas y el final del condicional. @n(322) En esta
+     ramas verdaderas y falsas y el final del condicional.@n(322) En esta
      disposición de código, debemos derivar alrededor de la rama verdadera si la
      prueba es falsa. La única complicación leve es en cómo se debe manejar el
      enlace para la rama verdadera. Si el enlace para el condicional es
@@ -54332,7 +54331,7 @@ Company.
      objeto de procedimiento se construirá en tiempo de ejecución combinando el
      entorno actual (el entorno en el punto de definición) con el punto de
      entrada al cuerpo de procedimiento compilado (una etiqueta generada
-     recientemente). @n(323)
+     recientemente).@n(323)
 
 #      ..src > scheme
 #        (define (compile-lambda exp target linkage)
@@ -55001,7 +55000,7 @@ Company.
 #      the procedure will @"(return) directly to the place specified by the caller's
 #      linkage:
      De hecho, si el objetivo no es @c(val), ese es exactamente el código
-     generador de nuestro compilador. @n(324) Normalmente, sin embargo, el
+     generador de nuestro compilador.@n(324) Normalmente, sin embargo, el
      objetivo es @c(val)(la única vez que el compilador especifica un registro
      diferente cuando se dirige la evaluación de un operador a @c(proc)), por lo
      que el resultado del procedimiento se pone directamente en el registro de
@@ -55094,7 +55093,7 @@ Company.
      expresión. Pero cada vez que llamamos a un procedimiento, nos gustaría
      guardar @c(continue) y volver después de la llamada para deshacer la
      (inútil) guardar. Estos ahorros adicionales se acumularían durante un nido
-     de llamadas de procedimiento. @n(325)
+     de llamadas de procedimiento.@n(325)
 
 #      @c(Compile-proc-appl) generates the above procedure-application code by
 #      considering four cases, depending on whether the target for the call is
@@ -55110,7 +55109,7 @@ Company.
      llamada es @c(val) y si el enlace es @c(return). Observe que las secuencias
      de instrucción se declaran para modificar todos los registros, ya que
      ejecutar el cuerpo del procedimiento puede cambiar los registros de manera
-     arbitraria. @n(326) Tenga en cuenta también que la secuencia de
+     arbitraria.@n(326) Tenga en cuenta también que la secuencia de
      código para el caso con destino @c(val) y vinculación @c(return) se declara
      necesario @c(continue): Aunque @c(continue) no se utiliza explícitamente en
      la secuencia de dos instrucciones, debemos estar seguros de que
@@ -55434,7 +55433,7 @@ Company.
     por los que se guardan y restauran. Esta secuencia aumentada y @c(seq2)
     luego se añaden de la manera habitual. El siguiente procedimiento implementa
     esta estrategia de forma recursiva, recorriendo la lista de registros a
-    preservar: @n(327)
+    preservar:@n(327)
 
 #     ..src > scheme
 #       (define (preserving regs seq1 seq2)
@@ -56514,7 +56513,7 @@ Company.
        compilador podría código abierto) primitivas - es decir, si podría
        generar código para utilizar directamente estas operaciones de la máquina
        primitiva. La expresión @c((+ a 1)) podría ser compilada en algo tan
-       simple como @n(328)
+       simple como@n(328)
 
 #        ..src > scheme
 #          (assign val (op lookup-variable-value)
@@ -56560,7 +56559,7 @@ Company.
        de codificación abierta en el programa de origen. Aumentaremos el envío
        en el @c(compile) procedimiento para reconocer los nombres de estos
        primitivos además de las palabras reservadas (los formularios especiales)
-       que actualmente reconoce. @n(329) Para cada formulario especial
+       que actualmente reconoce.@n(329) Para cada formulario especial
        nuestro compilador tiene un generador de código. En este ejercicio
        construiremos una familia de generadores de código para los primitivos de
        codificación abierta.
@@ -56691,7 +56690,7 @@ Company.
     sólo están vinculadas con @c(lambda). Debido a que nuestro lenguaje tiene un
     alcance léxico, el entorno de ejecución para cualquier expresión tendrá una
     estructura paralela a la estructura léxica del programa en el que aparece la
-    expresión. @n(330) Así, el compilador puede saber, al analizar la
+    expresión.@n(330) Así, el compilador puede saber, al analizar la
     expresión anterior,@c(x)@c((* x y z))
 
 #     We can exploit this fact by inventing a new kind of variable-lookup operation,
@@ -56811,7 +56810,7 @@ Company.
        argumentos - una dirección léxica y un entorno de tiempo de ejecución - y
        devolver el valor de la variable almacenada en la dirección léxica
        especificada. @c(Lexical-address-lookup) Debe indicar un error si el
-       valor de la variable es el símbolo @c(*unassigned*). @n(331)
+       valor de la variable es el símbolo @c(*unassigned*).@n(331)
        Escriba también un procedimiento @c(lexical-address-set!) que implemente
        la operación que cambia el valor de la variable en una dirección léxica
        especificada.
@@ -56885,7 +56884,7 @@ Company.
        único lugar una variable que no se encuentra en tiempo de compilación
        puede ser es en el entorno global, el cual es parte del entorno de tiempo
        de ejecución, pero no es parte del entorno de tiempo de
-       compilación. @n(332) Por lo tanto, si se desea, puede Hacer que las
+       compilación.@n(332) Por lo tanto, si se desea, puede Hacer que las
        operaciones del evaluador miren directamente en el entorno global, que se
        puede obtener con la operación @c((op get-global-environment)), en lugar
        de hacer que busquen todo el entorno de ejecución encontrado en
@@ -56962,7 +56961,7 @@ Company.
 #     We have not yet explained how to load compiled code into the evaluator machine
 #     or how to run it. We will assume that the explicit-control-evaluator machine
 #     has been defined as in @l(#5.4.4), with the additional operations specified in
-#     @n(323<>Footnote 323). We will implement a procedure @c(compile-and-go) that
+#    @n(323<>Footnote 323). We will implement a procedure @c(compile-and-go) that
 #     compiles a Scheme expression, loads the resulting object code into the
 #     evaluator machine, and causes the machine to run the code in the evaluator
 #     global environment, print the result, and enter the evaluator's driver
@@ -56972,7 +56971,7 @@ Company.
     Aún no hemos explicado cómo cargar código compilado en la máquina evaluadora
     o cómo ejecutarla. Supondremos que la máquina explícita de control-evaluador
     se ha definido como en @l(#5.4.4), con las operaciones adicionales
-    especificadas en la @n(323<>Nota 323). Implementaremos un procedimiento
+    especificadas en la@n(323<>Nota 323). Implementaremos un procedimiento
     @c(compile-and-go) que compile una expresión Scheme, cargue el código objeto
     resultante en la máquina evaluadora y haga que la máquina ejecute el código
     en el entorno global del evaluador, imprima el resultado e ingrese el bucle
@@ -57018,7 +57017,7 @@ Company.
     cambiar el código en @c(apply-dispatch)(@l(#5.4.1)) para que
     reconozca procedimientos compilados (distintos de procedimientos compuestos
     o primitivos) y control de transferencias Directamente al punto de entrada
-    del código compilado: @n(333)
+    del código compilado:@n(333)
 
 #     ..src > scheme
 #       apply-dispatch
@@ -57074,7 +57073,7 @@ Company.
     Para poder ejecutar algún código compilado al iniciar la máquina evaluadora,
     añadimos una @c(branch) instrucción al principio de la máquina evaluadora,
     lo que hace que la máquina vaya a un nuevo punto de entrada si el @c(flag)
-    registro está establecido. @n(334)
+    registro está establecido.@n(334)
 
 #     ..src > scheme
 #       ;; branches if @c(flag) is set:
@@ -57103,7 +57102,7 @@ Company.
     entrada salta a la ubicación designada por @c(val), pero primero asigna
     @c(continue) para que la ejecución regrese a @c(print-result), que imprime
     el valor en @c(val) y luego va al comienzo del lazo de lectura-eval-print
-    del evaluador. @n(335)
+    del evaluador.@n(335)
 
 #     ..src > scheme
 #       external-entry
@@ -57239,7 +57238,7 @@ Company.
 #      abstractions.@n(337)
      Con los programas de esta sección, ahora podemos experimentar con las
      estrategias de ejecución alternativas de interpretación y
-     compilación. @n(336) Un intérprete eleva la máquina al nivel del
+     compilación.@n(336) Un intérprete eleva la máquina al nivel del
      programa de usuario; Un compilador reduce el programa de usuario al nivel
      del lenguaje de máquina. Podemos considerar el lenguaje Scheme (o cualquier
      lenguaje de programación) como una familia coherente de abstracciones
@@ -57250,7 +57249,7 @@ Company.
      compilado puede ejecutarse más rápido, ya que los pasos de la ejecución del
      programa están organizados en términos del lenguaje de la máquina, Y el
      compilador es libre de hacer optimizaciones que atraviesan las
-     abstracciones de nivel superior. @n(337)
+     abstracciones de nivel superior.@n(337)
 
 #      The alternatives of interpretation and compilation also lead to different
 #      strategies for porting languages to new computers. Suppose that we wish to
@@ -57275,7 +57274,7 @@ Company.
      segunda estrategia nos permite ejecutar cualquier programa Lisp en la nueva
      máquina compilándolo primero con el compilador que se ejecuta en nuestro
      sistema Lisp original y enlazándolo con una versión compilada de la
-     libreria en tiempo de ejecución. @n(338) Mejor aún, podemos
+     libreria en tiempo de ejecución.@n(338) Mejor aún, podemos
      compilar el propio compilador y ejecutar esto en la nueva máquina para
      compilar otros programas Lisp.@n(339) @l(#4.1)
 
@@ -57528,7 +57527,7 @@ Company.
 #   Wisdom. 1992. The Supercomputer Toolkit: A general framework for
 #   special-purpose computing.  @q(International Journal of High-Speed
 #   Electronics) 3(3): 337-361. @l(http://www.hpl.hp.com/techreports/94/HPL-94-30.html<>–›)
-  @t(Abelson et al. 1992) Abelson, Harold, Andrew Berlín, Jacob Katzenelson,
+  @t(Abelson y otros. 1992) Abelson, Harold, Andrew Berlín, Jacob Katzenelson,
   William McAllister, Guillermo Rozas, Gerald Jay Sussman y Jack
   Wisdom. 1992. The Supercomputer Toolkit: Un marco general para la computación
   de propósito especial.  @"(Revista Internacional de Electrónica de Alta
@@ -57912,7 +57911,7 @@ Company.
 #   @t(IEEE 1990) @A(IEEE) Std 1178-1990. 1990. @q(@A(IEEE) Standard for the
 #   Scheme Programming Language).
   @t(IEEE 1990 ) @A(IEEE) Std 1178-1990. 1990. @"(Norma )@"(@A(IEEE) para el
-  Lenguaje de Programación del Esquema).
+  Lenguaje de Programación del Scheme).
 
 #   @t(Ingerman et al. 1960) Ingerman, Peter, Edgar Irons, Kirk Sattley, and
 #   Wallace Feurzeig; assisted by M. Lind, Herbert Kanner, and Robert
@@ -58067,7 +58066,7 @@ Company.
 #   1965. @q(Lisp 1.5 Programmer's Manual). 2nd edition. Cambridge, @A(MA):
 #   @A(MIT) Press.
 #   @l(http://www.softwarepreservation.org/projects/LISP/book/LISP%201.5%20Programmers%20Manual.pdf/view<>–›)
-  @t(McCarthy et al. 1965) McCarthy, John, PW Abrahams, DJ Edwards, TP Hart y MI
+  @t(McCarthy y otros. 1965) McCarthy, John, PW Abrahams, DJ Edwards, TP Hart y MI
   Levin. 1965. @"(Lisp 1.5 Manual del programador). 2ª edición. Cambridge,
   @A(MA) : Prensa del
   @A(MIT). @l(http://www.softwarepreservation.org/projects/LISP/book/LISP%201.5%20Programmers%20Manual.pdf/view<>->)
@@ -58162,7 +58161,7 @@ Company.
 #   algorithmic language Scheme. @q(Lisp Pointers), 4(3).
 #   @l(http://people.csail.mit.edu/jaffer/r4rs.pdf<>–›)
   Rees, Jonathan y William Clinger (eds). 1991. El informe revisado4 sobre el
-  Esquema del lenguaje algorítmico. @"(Lisp Pointers), 4
+  Scheme del lenguaje algorítmico. @"(Lisp Pointers), 4
   (3). @l(http://people.csail.mit.edu/jaffer/r4rs.pdf<>->)
 
 #   @t[Rivest et al. (1977)] Rivest, Ronald, Adi Shamir, and Leonard
@@ -58217,7 +58216,7 @@ Company.
 #   349, @A(MIT) Artificial Intelligence Laboratory.
 #   @l(http://dspace.mit.edu/handle/1721.1/5794<>–›)
   @t(Steele y Sussman 1975) Steele, Guy Lewis, Jr., y Gerald Jay
-  Sussman. 1975. Esquema: Un intérprete para el cálculo lambda extendido. Memo
+  Sussman. 1975. Scheme: Un intérprete para el cálculo lambda extendido. Memo
   349, @A(Laboratorio de) Inteligencia Artificial del
   MIT. @l(http://dspace.mit.edu/handle/1721.1/5794<>->)
 
@@ -58256,7 +58255,7 @@ Company.
 #   @t(Sussman and Wisdom 1992) Sussman, Gerald Jay, and Jack
 #   Wisdom. 1992. Chaotic evolution of the solar system. @q(Science) 257: 256-262.
 #   @l(http://groups.csail.mit.edu/mac/users/wisdom/ss-chaos.pdf<>–›)
-  @t(Sussman y Sabiduría 1992) Sussman, Gerald Jay y Jack
+  @t(Sussman y Wisdom 1992) Sussman, Gerald Jay y Jack
   Wisdom. 1992. Evolución caótica del sistema solar. @"(Science) 257:
   256 - 262. @l(http://groups.csail.mit.edu/mac/users/wisdom/ss-chaos.pdf<>->)
 
@@ -58389,12 +58388,12 @@ Company.
 #   :: @N(1) :: The @q(Lisp 1 Programmer's Manual) appeared in 1960 and the
 #      @q(Lisp 1.5 Programmer's Manual) (@l(#McCarthy et al. 1965)) was published
 #      in 1962. The early history of Lisp is described in @l(#McCarthy 1978).
-  :: @N(1) :: El @"(Manual del Programador de Lisp 1) apareció en 1960 y el
-     @"(Manual del Programador de Lisp 1.5) (@l(#McCarthy-et-al.-1965<>McCarthy
-     et al., 1965) ) fue publicado en 1962. La historia temprana de Lisp se
-     describe en @l(#McCarthy-1978<>McCarthy 1978).
+  :: @N(1) :: El @q(Manual del Programador Lisp 1) apareció en 1960 y el
+     @q(Manual del Programador Lisp 1.5) (@l(#McCarthy y otros. 1965)) fue
+     publicado en 1962. La historia temprana de Lisp se describe en
+     @l(#McCarthy 1978).
 
-#   :: @N(2) ::{The two dialects in which most major Lisp programs of the 1970s
+#   :: @N(2) :: The two dialects in which most major Lisp programs of the 1970s
 #      were written are MacLisp (@l(#Moon 1978); @l(#Pitman 1983)), developed at
 #      the @A(MIT) Project @A(MAC), and Interlisp (@l(#Teitelman 1974)), developed
 #      at Bolt Beranek and Newman Inc. and the Xerox Palo Alto Research Center.
@@ -58412,27 +58411,26 @@ Company.
 #      1982), @l(#Steele 1990)) was developed by the Lisp community to combine
 #      features from the earlier Lisp dialects to make an industrial standard for
 #      Lisp. Common Lisp became an @A(ANSI) standard in 1994 (@l(#ANSI 1994)).
-  :: @N(2) :: MacLisp (@l(#Moon-1978<>Moon 1978), @l(#Pitman-1983<>Pitman
-     1983)), desarrollado en el @A(MIT) Project @A(MAC), e Interlisp (
-     @l(#Teitelman-1974<>Teitelman 1974) ), desarrollado en Bolt Beranek y
-     Newman Inc. y el Xerox Centro de Investigación de Palo Alto. Portable Lisp
-     estándar (@l(#Hearn-1969<>Hearn 1969), @l(#Griss-1981<>Griss 1981) ) era
-     un dialecto Lisp diseñado para ser fácilmente portátil entre diferentes
-     máquinas. MacLisp generó una serie de subdialectos, tales como Franz Lisp,
-     que se desarrolló en la Universidad de California en Berkeley, y Zetalisp (
-     @l(#Moon-and-Weinreb-1981<>Moon y Weinreb 1981) ), @A(Que se basó en un
-     procesador de propósito especial diseñado en el Laboratorio de)
-     Inteligencia Artificial del MIT para ejecutar Lisp de manera muy
-     eficiente. El dialecto Lisp utilizado en este libro, llamado Esquema (
-     @l(#Steele-and-Sussman-1975<>Steele y Sussman 1975) ), fue inventado en
-     1975 por Guy Lewis Steele Jr. y Gerald Jay Sussman del @A(MIT) Laboratorio
-     de Inteligencia Artificial y más tarde reimplementada para uso de
-     instrucción en @A(MIT). Esquema se convirtió en un estándar @A(IEEE) en
-     1990 (@l(#IEEE-1990<>IEEE 1990) ). El dialecto común de Lisp (
-     @l(#Steele-1982<>Steele 1982), @l(#Steele-1990<>Steele 1990) ) fue
-     desarrollado por la comunidad de Lisp para combinar características de los
-     dialectos anteriores de Lisp para hacer un estándar industrial para
-     Lisp.@A()  (@l(#ANSI 1994))
+  :: @N(2) :: En los 1970s los dos dialectos en los que la mayoria de los
+     principales programas Lisp estaban escritos fueron MacLisp (@l(#Moon 1978),
+     @l(#Pitman 1983)), desarrollado en el @A(MIT) Project @A(MAC), e Interlisp
+     (@l(#Teitelman 1974)), desarrollado en Bolt Beranek y Newman Inc. y el
+     Xerox Palo Alto Research Center. Portable Standard Lisp (@l(#Hearn 1969),
+     @l(#Griss 1981)) era un dialecto Lisp diseñado para ser fácilmente portátil
+     entre diferentes máquinas. MacLisp generó una serie de subdialectos, como
+     Franz Lisp, que se desarrolló en la Universidad de California en Berkeley,
+     y Zetalisp (@l(#Moon y Weinreb 1981)), Que se basó en un procesador de
+     propósito especial diseñado en el Laboratorio de Inteligencia Artificial
+     del @A(MIT) para ejecutar Lisp de manera muy eficiente. El dialecto Lisp
+     utilizado en este libro, llamado Scheme (@l(#Steele y Sussman 1975)), fue
+     inventado en 1975 por Guy Lewis Steele Jr. y Gerald Jay Sussman del
+     Laboratorio de Inteligencia Artificial del @A(MIT) y más tarde
+     reimplementada para uso didactico en el @A(MIT). Scheme se convirtió en un
+     estándar @A(IEEE) en 1990 (@l(#IEEE 1990)). El dialecto común de Lisp
+     (@l(#Steele 1982), @l(#Steele 1990) ) fue desarrollado por la comunidad
+     Lisp para combinar características de los primeros dialectos Lisp para
+     hacer un estándar industrial para Lisp. Common Lisp se convirtio en un
+     estandar @A(ANSI) en 1994 (@l(#ANSI 1994)).
 
 #   :: @N(3) :: One such special application was a breakthrough computation of
 #      scientific importance––an integration of the motion of the Solar System
@@ -58443,14 +58441,13 @@ Company.
 #      with the aid of software tools written in Lisp (@l(#Abelson et al. 1992);
 #      @l(#Sussman and Wisdom 1992)).
   :: @N(3) :: Una aplicación especial de este tipo fue un descubrimiento de
-     importancia científica - una integración del movimiento del Sistema Solar
+     importancia científica––una integración del movimiento del Sistema Solar
      que amplió los resultados anteriores en casi dos órdenes de magnitud y
      demostró que la dinámica del Sistema Solar es caótica. Este cálculo fue
      posible gracias a nuevos algoritmos de integración, un compilador de
      propósito especial, y un ordenador de propósito especial todos
-     implementados con la ayuda de herramientas de software escrito en Lisp (
-     @l(#Abelson-et-al.-1992<>Abelson et al., 1992) ;
-     @l(#Sussman-and-Wisdom-1992<>Sussman y la sabiduría 1992) ).
+     implementados con la ayuda de herramientas de software escrito en Lisp
+     (@l(#Abelson y otros. 1992); @l(#Sussman y Wisdom 1992)).
 
 #   :: @N(4) :: The characterization of numbers as @"(simple data) is a barefaced
 #      bluff. In fact, the treatment of numbers is one of the trickiest and most
@@ -58638,7 +58635,7 @@ Company.
 #      will use names @c(true) and @c(false), which are associated with the values
 #      @c(#t) and @c(#f) respectively.
   :: @N(17) :: @"(Interpretado como verdadero o falso) significa esto: En
-     Esquema, hay dos valores distinguidos que son denotados por las constantes
+     Scheme, hay dos valores distinguidos que son denotados por las constantes
      @c(#t) y @c(#f). Cuando el intérprete comprueba el valor de un predicado,
      interpreta @c(#f) como falso. Cualquier otro valor es tratado como
      verdadero. (Por lo tanto, proveer @c(#t) es lógicamente innecesario, pero
@@ -59550,7 +59547,7 @@ Company.
   :: @N(76) :: Es notable cuánta energía en la estandarización de los dialectos
      Lisp se ha disipado en argumentos que literalmente están sobre nada: ¿Debe
      @c(nil) ser un nombre ordinario? ¿Debe el valor de @c(nil) ser un símbolo?
-     ¿Debe ser una lista? ¿Debe ser un par? En Esquema, @c(nil) es un nombre
+     ¿Debe ser una lista? ¿Debe ser un par? En Scheme, @c(nil) es un nombre
      ordinario, que usamos en esta sección como una variable cuyo valor es el
      marcador de fin de lista (al igual @c(true) que una variable ordinaria que
      tiene un valor verdadero). Otros dialectos de Lisp, incluyendo Common Lisp,
@@ -59674,9 +59671,9 @@ Company.
      and Munro (1975)]
 
 #   :: @N(83) :: This definition uses the extended version of @c(map) described in
-#      @n(78<>Footnote 78).
+#     @n(78<>Footnote 78).
   :: @N(83) :: Esta definición utiliza la versión ampliada de la @c(map)
-     descrita en la @n(78<>Nota 78).
+     descrita en la@n(78<>Nota 78).
 
 #   :: @N(84) :: This approach to nested mappings was shown to us by David Turner,
 #      whose languages KRC and Miranda provide elegant formalisms for dealing with
@@ -59706,7 +59703,7 @@ Company.
 #      Everything from the semicolon to the end of the line is ignored by the
 #      interpreter. In this book we don't use many comments; we try to make our
 #      programs self-documenting by using descriptive names.
-  :: @N(87) :: Se utilizan puntos y comas en el código del Esquema para
+  :: @N(87) :: Se utilizan puntos y comas en el código del Scheme para
      introducir @e(comentarios). Todo desde el punto y coma hasta el final de la
      línea es ignorado por el intérprete. En este libro no usamos muchos
      comentarios; Tratamos de hacer que nuestros programas se auto-documenten
@@ -60086,7 +60083,7 @@ Company.
 #      and to return the angle whose tangent is @m(y / x).  The signs of the
 #      arguments determine the quadrant of the angle.
   :: @N(110) :: La función arco tangente se hace referencia aquí, calculada por
-     del Esquema @c(atan) procedimiento, se define a fin de tener dos argumentos
+     del Scheme @c(atan) procedimiento, se define a fin de tener dos argumentos
      @m(y) y @m(x) y para devolver el ángulo cuya tangente es @m(y / x). Los
      signos de los argumentos determinan el cuadrante del ángulo.
 
@@ -60377,7 +60374,7 @@ Company.
 #      This is similar to the convention of designating predicates by names that
 #      end with a question mark.
      El nombre @c(set!) refleja una convención de nomenclatura utilizada en el
-     Esquema: Las operaciones que cambian los valores de las variables (o que
+     Scheme: Las operaciones que cambian los valores de las variables (o que
      cambian las estructuras de datos, como veremos en @l(#3.3)) reciben
      nombres que terminan con un signo de exclamación. Esto es similar a la
      convención de designar predicados por nombres que terminan con un signo de
@@ -60926,8 +60923,8 @@ Company.
 #      processes also run concurrently with the original Scheme process. Also, in
 #      our implementation, the value returned by @c(parallel-execute) is a special
 #      control object that can be used to halt the newly created processes.
-  :: @N(168) :: @c(Parallel-execute) No es parte del Esquema estándar, pero
-     puede implementarse en @A(el) Esquema del @A(MIT). En nuestra
+  :: @N(168) :: @c(Parallel-execute) No es parte del Scheme estándar, pero
+     puede implementarse en @A(el) Scheme del @A(MIT). En nuestra
      implementación, los nuevos procesos simultáneos también se ejecutan
      simultáneamente con el proceso Scheme original. Además, en nuestra
      implementación, el valor devuelto por @c(parallel-execute) es un objeto de
@@ -61902,7 +61899,7 @@ Company.
 
 #   :: @N(228) :: Wanting programs to not depend on this evaluation mechanism is
 #      the reason for the @"(management is not responsible) remark in
-#      @n(28<>Footnote 28) of @l(#Chapter 1). By insisting that internal
+#     @n(28<>Footnote 28) of @l(#Chapter 1). By insisting that internal
 #      definitions come first and do not use each other while the definitions are
 #      being evaluated, the @A(IEEE) standard for Scheme leaves implementors some
 #      choice in the mechanism used to evaluate these definitions. The choice of
@@ -61913,7 +61910,7 @@ Company.
 #      arise in implementing a compiler.
   :: @N(228) :: Deseando programas para no depender de este mecanismo de
      evaluación es la razón de la @"(gestión no es responsable) en la
-     @n(28<>Nota 28) del @l(Capitulo 1). Al insistir en que las
+    @n(28<>Nota 28) del @l(Capitulo 1). Al insistir en que las
      definiciones internas vienen primero y no se utilizan entre sí mientras se
      están evaluando las definiciones, el estándar @A(IEEE) para Scheme deja a
      los implementadores alguna opción en el mecanismo usado para evaluar estas
@@ -62846,7 +62843,7 @@ Company.
 #      procedures with @c(string) in their names. These are Scheme primitives.
      @c(Expand-question-mark) Y @c(contract-question-mark) utilizar varios
      procedimientos con @c(string) sus nombres. Estas son primitivas del
-     Esquema.
+     Scheme.
 
 #   :: @N(286) :: This assumption glosses over a great deal of complexity. Usually
 #      a large portion of the implementation of a Lisp system is dedicated to

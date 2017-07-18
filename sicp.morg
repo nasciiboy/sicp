@@ -30649,7 +30649,7 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      @q(Lisp 1.5 Programmer's Manual) (@l(#McCarthy et al. 1965)) was published
      in 1962. The early history of Lisp is described in @l(#McCarthy 1978).
 
-  :: @N(2) ::{The two dialects in which most major Lisp programs of the 1970s
+  :: @N(2) :: The two dialects in which most major Lisp programs of the 1970s
      were written are MacLisp (@l(#Moon 1978); @l(#Pitman 1983)), developed at
      the @A(MIT) Project @A(MAC), and Interlisp (@l(#Teitelman 1974)), developed
      at Bolt Beranek and Newman Inc. and the Xerox Palo Alto Research Center.
