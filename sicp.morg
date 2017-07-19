@@ -725,7 +725,7 @@ production-distribution arrangement with the McGraw-Hill Book Company.
     and the entire combination is delimited by the parentheses.
 
     A second advantage of prefix notation is that it extends in a straightforward
-    way to allow combinations to be @i{nested}, that is, to have combinations
+    way to allow combinations to be @e(nested), that is, to have combinations
     whose elements are themselves combinations:
 
     ..srci > scheme
@@ -799,7 +799,7 @@ production-distribution arrangement with the McGraw-Hill Book Company.
       62.8318
     < srci..
 
-    @c(Define) is our language's simplest means of abstraction, for it allows us
+    @c(define) is our language's simplest means of abstraction, for it allows us
     to use simple names to refer to the results of compound operations, such as
     the @c(circumference) computed above. In general, computational objects may
     have very complex structures, and it would be extremely inconvenient to have
@@ -824,14 +824,14 @@ production-distribution arrangement with the McGraw-Hill Book Company.
     procedurally. As a case in point, let us consider that, in evaluating
     combinations, the interpreter is itself following a procedure.
 
-    ..tab >
-      To evaluate a combination, do the following:
+    - To evaluate a combination, do the following:
 
       1. Evaluate the subexpressions of the combination.
 
       2. Apply the procedure that is the value of the leftmost subexpression (the
          operator) to the arguments that are the values of the other
          subexpressions (the operands).
+
 
     Even this simple rule illustrates some important points about processes in
     general. First, observe that the first step dictates that in order to
@@ -912,7 +912,7 @@ production-distribution arrangement with the McGraw-Hill Book Company.
     @c(x) with a value. (That is, @c[(define x 3)] is not a combination.)
 
     Such exceptions to the general evaluation rule are called @e(special forms).
-    @c(Define) is the only example of a special form that we have seen so far, but
+    @c(define) is the only example of a special form that we have seen so far, but
     we will meet others shortly. Each special form has its own evaluation
     rule. The various kinds of expressions (each with its associated evaluation
     rule) constitute the syntax of the programming language. In comparison with
@@ -30697,7 +30697,7 @@ production-distribution arrangement with the McGraw-Hill Book Company.
 
   :: @N(5) :: Throughout this book, when we wish to emphasize the distinction
      between the input typed by the user and the response printed by the
-     interpreter, we will show the latter in slanted characters.
+     interpreter, we will show the latter in evenly highlighted characters.
 
   :: @N(6) :: Lisp systems typically provide features to aid the user in
      formatting expressions. Two especially useful features are one that

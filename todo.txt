@@ -36,7 +36,15 @@
   - [X] - nasciiboy :: traduccion :: Acknowledgments
   - [X] - nasciiboy :: traduccion :: Building Abstractions with Procedures
   - [X] - nasciiboy :: traduccion :: Programación en Lisp
-  - [ ] - nasciiboy :: traduccion :: The Elements of Programming
-  - [ ] - nasciiboy :: traduccion :: Expressions
-  - [ ] - nasciiboy :: traduccion :: Naming and the Environment
-  - [ ] - nasciiboy :: traduccion :: Evaluating Combinations
+  - [X] - nasciiboy :: traduccion :: The Elements of Programming
+  - [X] - nasciiboy :: traduccion :: Expressions
+  - [X] - nasciiboy :: traduccion :: Naming and the Environment
+  - [X] - nasciiboy :: traduccion :: Evaluating Combinations
+  - [ ] - nasciiboy :: traduccion :: Compound Procedures
+  - [ ] - nasciiboy :: traduccion :: The Substitution Model for Procedure Application
+  - [ ] - nasciiboy :: traduccion :: Applicative order versus normal order
+  - [ ] - nasciiboy :: traduccion :: Conditional Expressions and Predicates
+  - [ ] - nasciiboy :: traduccion :: Example: Square Roots by Newton's Method
+  - [ ] - nasciiboy :: traduccion :: Procedures as Black-Box Abstractions
+  - [ ] - nasciiboy :: traduccion :: Local names
+  - [ ] - nasciiboy :: traduccion :: Internal definitions and block structure
