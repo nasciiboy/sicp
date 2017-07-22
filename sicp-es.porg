@@ -11,7 +11,7 @@
 @ dircategory The Algorithmic Language Scheme
 @ utfversion      2.andresraba6.6
 @ utfversiondate  September 16, 2015
-@ ↵
+@ ↵ ƒ ⟨⟩
 
 # ..pret >
 ..pret >
@@ -490,7 +490,7 @@ Company.
   ..quote >
 #     Is it possible that software is not like anything else, that it is meant to
 #     be discarded: that the whole point is to always see it as a soap bubble?
-    ¿Es posible que el software no sea como cualquier otra cosa, que está
+    Es posible que el software no sea como cualquier otra cosa, que está
     destinado a ser descartado: que el punto es siempre verlo como una burbuja
     de jabón?
 
@@ -1762,8 +1762,8 @@ Company.
     cualquier lenguaje de programación poderoso:
 
 #     - Numbers and arithmetic operations are primitive data and procedures.
-    - Los números y operaciones aritméticas son datos y procedimientos
-      primitivos.
+    - Los números y operaciones aritméticas son datos primitivos y
+      procedimientos.
 
 #     - Nesting of combinations provides a means of combining operations.
     - El anidamiento de combinaciones proporciona un medio de combinar
@@ -1777,15 +1777,15 @@ Company.
 #     Now we will learn about @e(procedure definitions), a much more powerful
 #     abstraction technique by which a compound operation can be given a name and
 #     then referred to as a unit.
-    Ahora aprenderemos acerca de @e(las definiciones de los procedimientos), una
-    técnica de abstracción mucho más poderosa mediante la cual una operación
-    compuesta puede darse un nombre y luego denominarse como una unidad.
+    Ahora aprenderemos sobre las @e(definiciones de los procedimientos), una
+    técnica de abstracción mucho más poderosa mediante la cual puede darse un
+    nombre a una operación compuesta y luego referirla como una unidad.
 
 #     We begin by examining how to express the idea of @"(squaring.)  We might say,
 #     @"(To square something, multiply it by itself.)  This is expressed in our
 #     language as
-    Comenzamos examinando cómo expresar la idea de @"(cuadratura. )  Podríamos
-    decir: @"(Para cuadrar algo, multiplíquelo por sí mismo. )  Esto se expresa
+    Comenzamos examinando cómo expresar la idea de @"(cuadratura). Podríamos
+    decir: @"(Para cuadrar algo, multiplíquelo por sí mismo).  Esto se expresa
     en nuestro lenguaje como
 
 #     ..src > scheme
@@ -1804,9 +1804,9 @@ Company.
 #        To square something, multiply it by itself.
 #     < example..
     ..example >
-      (define (square x)    (*       x       x))
-        |      |      |      |       |       |
-       To square something, multiply it by itself.
+      (define (square x)     (*          x       x))
+        |      |      |       |          |       |
+       Para cuadrar algo, multipliquelo por si mismo
     < example..
 
 #     We have here a @e(compound procedure), which has been given the name
@@ -1817,7 +1817,7 @@ Company.
 #     @c(square).@n(12)
     Tenemos aquí un @e(procedimiento compuesto), al que se ha dado el nombre
     @c(square). El procedimiento representa la operación de multiplicar algo por
-    sí mismo. La cosa a ser multiplicada se da un nombre local @c(x), que juega
+    sí mismo. La cosa a ser multiplicada recive un nombre local @c(x), que juega
     el mismo papel que un pronombre juega en lenguaje natural. La evaluación de
     la definición crea este procedimiento compuesto y lo asocia con el nombre
     @c(square).@n(12)
@@ -1829,29 +1829,29 @@ Company.
 #       (define (⟨name⟩ ⟨formal parameters⟩) ⟨body⟩)
 #     < src..
     ..src > scheme
-      (define (⟨name⟩ ⟨formal parameters⟩) ⟨body⟩)
+      (define (⟨nombre⟩ ⟨parametros formales⟩) ⟨cuerpo⟩)
     < src..
 
-#     The @c[(name)] is a symbol to be associated with the procedure definition in
-#     the environment.@n(13) The @c[(formal parameters)] are the names used within
+#     The @c[⟨name⟩] is a symbol to be associated with the procedure definition in
+#     the environment.@n(13) The @c[⟨formal parameters⟩] are the names used within
 #     the body of the procedure to refer to the corresponding arguments of the
-#     procedure. The @c[(body)] is an expression that will yield the value of the
+#     procedure. The @c[⟨body⟩] is an expression that will yield the value of the
 #     procedure application when the formal parameters are replaced by the actual
-#     arguments to which the procedure is applied.@n(14) The @c[(name)] and the
-#     @c[(formal parameters)] are grouped within parentheses, just as they would be
+#     arguments to which the procedure is applied.@n(14) The @c[⟨name⟩] and the
+#     @c[⟨formal parameters⟩] are grouped within parentheses, just as they would be
 #     in an actual call to the procedure being defined.
-    El @c[(name)] símbolo es un símbolo asociado con la definición del
-    procedimiento en el entorno.@n(13) El @c[(formal parameters)] son los
+    El @c[⟨nombre⟩] símbolo es un símbolo asociado con la definición del
+    procedimiento en el entorno.@n(13) Los @c[⟨parametros formales⟩] son los
     nombres utilizados dentro del cuerpo del procedimiento para referirse a los
-    argumentos correspondientes del procedimiento. El @c[(body)] es una expresión
+    argumentos correspondientes del procedimiento. El @c[⟨cuerpo⟩] es una expresión
     que dará el valor de la aplicación de procedimiento cuando los parámetros
     formales son reemplazados por los argumentos reales a los que se aplica el
-    procedimiento.@n(14) El @c[(name)] y el @c[(formal parameters)] se
-    agrupan entre paréntesis, tal como serían en una llamada real al
+    procedimiento.@n(14) El @c[⟨nombre⟩] y los @c[⟨parametros formales⟩] se
+    agrupan entre paréntesis, como serían en una llamada real al
     procedimiento que se está definiendo.
 
 #     Having defined @c(square), we can now use it:
-    Una vez definido @c(square), ahora podemos usarlo:
+    Una vez definido @c(square), podemos utilizarlo:
 
 #     ..srci > scheme
 #       > (square 21)
@@ -1872,7 +1872,7 @@ Company.
 
 #     We can also use @c(square) as a building block in defining other procedures.
 #     For example, @m(x² + y²) can be expressed as
-    También podemos utilizarlo @c(square) como un elemento fundamental en la
+    También podemos utilizar @c(square) como un elemento fundamental en la
     definición de otros procedimientos. Por ejemplo, @m(x² + y²) puede
     expresarse como
 
@@ -1903,7 +1903,7 @@ Company.
 
 #     Now we can use @c(sum-of-squares) as a building block in constructing further
 #     procedures:
-    Ahora podemos usarlo @c(sum-of-squares) como un elemento fundamental en la
+    Ahora podemos usar @c(sum-of-squares) como un elemento fundamental en la
     construcción de procedimientos adicionales:
 
 #     ..srci > scheme
@@ -1925,12 +1925,12 @@ Company.
 #     @c(*), or defined as a compound procedure.
     Los procedimientos compuestos se usan exactamente de la misma manera que los
     procedimientos primitivos. De hecho, uno no podría decir al mirar la
-    definición de @c(sum-of-squares) dado arriba si @c(square) fue construido en
-    el intérprete, como @c(+) y @c(*), o definido como un procedimiento
+    definición de @c(sum-of-squares) anterior si @c(square) fue construido en el
+    intérprete igual a @c(+) y @c(*), o definido como un procedimiento
     compuesto.
 
 # *** 1.1.5 <> The Substitution Model for Procedure Application
-*** 1.1.5 <> El modelo de sustitución para la aplicación de procedimiento
+*** 1.1.5 <> El Modelo de Sustitución para la Aplicación de Procedimientos
 
 #     To evaluate a combination whose operator names a compound procedure, the
 #     interpreter follows much the same process as for combinations whose operators
@@ -1941,7 +1941,7 @@ Company.
     Para evaluar una combinación cuyo operador nombra un procedimiento
     compuesto, el intérprete sigue mucho el mismo proceso que para las
     combinaciones cuyos operadores denominan procedimientos primitivos, que
-    describimos en @l(#1.1.3). Es decir, el intérprete evalúa los
+    describimos en la seccion @l(#1.1.3). Es decir, el intérprete evalúa los
     elementos de la combinación y aplica el procedimiento (que es el valor del
     operador de la combinación) a los argumentos (que son los valores de los
     operandos de la combinación).
@@ -1953,15 +1953,12 @@ Company.
     argumentos está incorporado en el intérprete. Para procedimientos
     compuestos, el proceso de aplicación es el siguiente:
 
-#     ..tab >
-   ..tab >
-#       To apply a compound procedure to arguments, evaluate the body of the
+#     - To apply a compound procedure to arguments, evaluate the body of the
 #       procedure with each formal parameter replaced by the corresponding argument.
-     Para aplicar un procedimiento compuesto a los argumentos, evalúe el cuerpo
-     del procedimiento con cada parámetro formal reemplazado por el argumento
-     correspondiente.
-#     < tab..
-   < tab..
+    - Para aplicar un procedimiento compuesto a los argumentos, evalúe el cuerpo
+      del procedimiento con cada parámetro formal reemplazado por el argumento
+      correspondiente.
+
 
 #     To illustrate this process, let's evaluate the combination
    Para ilustrar este proceso, vamos a evaluar la combinación
@@ -1975,8 +1972,8 @@ Company.
 
 #     where @c(f) is the procedure defined in @l(#1.1.4). We begin by retrieving the
 #     body of @c(f):
-    Donde @c(f) está el procedimiento definido en @l(#1.1.4). Comenzamos
-    recuperando el cuerpo de @c(f):
+    Donde @c(f) está el procedimiento definido en la seccion @l(#1.1.4).
+    Comenzamos recuperando el cuerpo de @c(f):
 
 #     ..src > scheme
 #       (sum-of-squares (+ a 1) (* a 2))
@@ -2004,11 +2001,11 @@ Company.
 #     formal parameters @c(x) and @c(y) in the body of @c(sum-of-squares), reducing
 #     the expression to
     Así, el problema se reduce a la evaluación de una combinación con dos
-    operandos y un operador @c(sum-of-squares). La evaluación de esta
+    operandos y el operador @c(sum-of-squares). La evaluación de esta
     combinación implica tres subproblemas. Debemos evaluar al operador para
     obtener el procedimiento a aplicar, y debemos evaluar los operandos para
     obtener los argumentos. Ahora @c[(+ 5 1)] produce 6 y @c[(* 5 2)] produce
-    10, por lo que debemos aplicar el @c(sum-of-squares) procedimiento a 6
+    10, por lo que debemos aplicar el procedimiento @c(sum-of-squares) a 6
     y 10. Estos valores son sustituidos por los parámetros formales @c(x) y
     @c(y) en el cuerpo de @c(sum-of-squares), reduciendo la expresión a
 
@@ -2069,13 +2066,13 @@ Company.
 #       an interpreter in detail.
     - El propósito de la sustitución es ayudarnos a pensar en la aplicación del
       procedimiento, no a proporcionar una descripción de cómo el intérprete
-      realmente funciona. Los intérpretes típicos no evalúan las aplicaciones de
+      funciona realmente. Los intérpretes típicos no evalúan las aplicaciones de
       procedimiento manipulando el texto de un procedimiento para sustituir
       valores por los parámetros formales. En la práctica, la @"(sustitución) se
-      logra utilizando un entorno local para los parámetros
-      formales. Discutiremos esto más detalladamente en el
-      @l(#Capitulo 3) y el @l(#Capitulo 4) cuando
-      examinemos la implementación de un intérprete en detalle.
+      logra utilizando un entorno local para los parámetros formales.
+      Discutiremos esto más detalladamente en el @l(#Capitulo 3) y el
+      @l(#Capitulo 4) cuando examinemos la implementación de un intérprete en
+      detalle.
 
 #     - Over the course of this book, we will present a sequence of increasingly
 #       elaborate models of how interpreters work, culminating with a complete
@@ -2091,21 +2088,20 @@ Company.
 #       procedure application.@n(15)
     - A lo largo de este libro, presentaremos una secuencia de modelos cada vez
       más elaborados de cómo funcionan los intérpretes, culminando con la
-      implementación completa de un intérprete y compilador en el
-      @l(#Capitulo 5). El modelo de sustitución es sólo el primero de
-      estos modelos - una forma de empezar a pensar formalmente sobre el proceso
-      de evaluación. En general, al modelar fenómenos en la ciencia y la
-      ingeniería, comenzamos con modelos simplificados e incompletos. A medida
-      que examinamos las cosas con mayor detalle, estos modelos simples se
-      vuelven inadecuados y deben ser reemplazados por modelos más refinados. El
-      modelo de sustitución no es una excepción. En particular, cuando abordamos
-      en el @l(#Capitulo 3) el uso de procedimientos con @"(datos
-      mutables, ) Veremos que el modelo de sustitución se descompone y debe ser
-      reemplazado por un modelo de aplicación de procedimiento más
-      complicado.@n(15)
+      implementación completa de un intérprete y compilador en el @l(#Capitulo 5).
+      El modelo de sustitución es sólo el primero de estos modelos––una forma de
+      empezar a pensar formalmente sobre el proceso de evaluación. En general,
+      al modelar fenómenos en la ciencia y la ingeniería, comenzamos con modelos
+      simplificados e incompletos. A medida que examinamos las cosas con mayor
+      detalle, estos modelos simples se vuelven inadecuados y deben ser
+      reemplazados por modelos más refinados. El modelo de sustitución no es una
+      excepción. En particular, cuando abordemos el uso de procedimientos con
+      @"(datos mutables) en el @l(#Capitulo 3), veremos que el modelo de
+      sustitución se quiebra y debe ser reemplazado por un modelo de aplicación
+      de procedimiento más complicado.@n(15)
 
 # **** Applicative order versus normal order
-**** Orden aplicable versus orden normal
+**** Orden aplicable vs orden normal
 
 #      According to the description of evaluation given in @l(#1.1.3), the
 #      interpreter first evaluates the operator and operands and then applies the
@@ -2116,16 +2112,16 @@ Company.
 #      only primitive operators, and would then perform the evaluation. If we used
 #      this method, the evaluation of @c[(f 5)] would proceed according to the
 #      sequence of expansions
-     De acuerdo con la descripción de la evaluación dada en @l(#1.1.3),
-     el intérprete evalúa primero el operador y los operandos y luego aplica el
-     procedimiento resultante a los argumentos resultantes. Esta no es la única
-     manera de realizar la evaluación. Un modelo de evaluación alternativo no
-     evaluaría los operandos hasta que sus valores fueran necesarios. En su
-     lugar, primero sustituiría las expresiones de operando por los parámetros
-     hasta que obtuviera una expresión que sólo involucraría a operadores
-     primitivos, y luego realizaría la evaluación. Si usamos este método, la
-     evaluación de @c[(f 5)] se procedería de acuerdo con la secuencia de
-     expansiones
+     De acuerdo con la descripción de la evaluación dada en la seccion
+     @l(#1.1.3), el intérprete evalúa primero el operador y los operandos y
+     luego aplica el procedimiento resultante a los argumentos resultantes. Esta
+     no es la única manera de realizar la evaluación. Un modelo de evaluación
+     alternativo no evaluaría los operandos hasta que sus valores fueran
+     necesarios. En su lugar, primero sustituiría las expresiones de operando
+     por los parámetros hasta que obtuviera una expresión que sólo involucraría
+     a operadores primitivos, y luego realizaría la evaluación. Si usamos este
+     método, la evaluación de @c[(f 5)] procedería de acuerdo con la secuencia
+     de expansiones
 
 #      ..src > scheme
 #        (sum-of-squares (+ 5 1) (* 5 2))
@@ -2169,9 +2165,9 @@ Company.
 #      @c[(* 5 2)].
      Esto da la misma respuesta que nuestro modelo de evaluación anterior, pero
      el proceso es diferente. En particular, las evaluaciones de @c[(+ 5 1)] y
-     @c[(* 5 2)] se realizan cada una dos veces aquí, que corresponden a la
-     reducción de la expresión @c[(* x x)] con @c(x) sustituido respectivamente
-     por @c[(+ 5 1)] y @c[(* 5 2)].
+     @c[(* 5 2)] se realizan cada una dos veces, que corresponden a la reducción
+     de la expresión @c[(* x x)] con @c(x) sustituido respectivamente por @c[(+
+     5 1)] y @c[(* 5 2)].
 
 #      This alternative @"(fully expand and then reduce) evaluation method is known
 #      as @e(normal-order evaluation), in contrast to the @"(evaluate the arguments
@@ -2182,17 +2178,17 @@ Company.
 #      values, normal-order and applicative-order evaluation produce the same value.
 #      (See @l(#Exercise 1.5) for an instance of an @"(illegitimate) value where
 #      normal-order and applicative-order evaluation do not give the same result.)
-     Esta alternativa de @"(expandir completamente y luego reducir el) método de
+     Esta alternativa de @"(expandir completamente y luego reducir) el método de
      evaluación se conoce como @e(evaluación de orden normal), en contraste con
-     la @"(evaluación de los argumentos y luego aplicar el) método que el
+     la @"(evaluación de los argumentos y luego aplicar) el método que el
      intérprete realmente utiliza, que se llama @e(aplicación de orden de
      evaluación). Se puede demostrar que para aplicaciones de procedimiento que
      pueden ser modeladas usando sustitución (incluyendo todos los
      procedimientos en los dos primeros capítulos de este libro) y que producen
-     valores legítimos, la orden normal y la evaluación de pedido aplicacional
-     producen el mismo valor. (Véase el @l(#Ejercicio 1.5) para
-     una instancia de un valor @"(ilegítimo) donde la orden normal y la
-     evaluación por pedido no dan el mismo resultado).
+     valores legítimos, la evaluacion de orden normal y de orden aplicativo
+     producen el mismo valor. (Vea el @l(#Ejercicio 1.5) para una instancia de
+     un valor @"(ilegítimo) donde el orden normal y el orden aplicativo no dan
+     el mismo resultado).
 
 #      Lisp uses applicative-order evaluation, partly because of the additional
 #      efficiency obtained from avoiding multiple evaluations of expressions such as
@@ -2202,15 +2198,14 @@ Company.
 #      substitution. On the other hand, normal-order evaluation can be an extremely
 #      valuable tool, and we will investigate some of its implications in @l(#Chapter
 #      3) and @l(#Chapter 4).@n(16)
-     Lisp utiliza la evaluación de orden aplicacional, en parte debido a la
+     Lisp utiliza la evaluación de orden aplicativo, en parte debido a la
      eficiencia adicional obtenida evitando evaluaciones múltiples de
-     expresiones tales como las ilustradas con @c[(+ 5 1)] y @c[(* 5 2)] encima
-     y, más significativamente, porque la evaluación de orden normal se vuelve
-     mucho más complicada cuando salimos del reino de Procedimientos que pueden
-     ser modelados por sustitución. Por otro lado, la evaluación de orden normal
+     expresiones como las ilustradas arriba con @c[(+ 5 1)] y @c[(* 5 2)], más
+     significativamente, porque la evaluación de orden normal se vuelve mucho
+     más complicada cuando salimos del reino de procedimientos que pueden ser
+     modelados por sustitución. Por otro lado, la evaluación de orden normal
      puede ser una herramienta extremadamente valiosa, e investigaremos algunas
-     de sus implicaciones en el @l(#Capitulo 3) y el
-     @l(#Capitulo 4).@n(16)
+     de sus implicaciones en el @l(#Capitulo 3) y el @l(#Capitulo 4).@n(16)
 
 # *** 1.1.6 <> Conditional Expressions and Predicates
 *** 1.1.6 <> Expresiones Condicionales y Predicados
@@ -2247,8 +2242,8 @@ Company.
 #     Lisp for notating such a case analysis. It is called @c(cond) (which stands
 #     for @"(conditional)), and it is used as follows:
     Esta construcción se llama un @e(análisis de casos), y hay una forma
-    especial en Lisp para anotar tal análisis de caso. Se llama @c(cond) (que
-    significa @"(condición) ), y se utiliza de la siguiente manera:
+    especial en Lisp para anotar tal análisis de casos. Se llama @c(cond) (que
+    significa @"(condicional)), y se utiliza de la siguiente manera:
 
 #     ..src > scheme
 #       (define (abs x)
@@ -2293,23 +2288,26 @@ Company.
 
 #     called @e(clauses). The first expression in each pair is a @e(predicate)––that
 #     is, an expression whose value is interpreted as either true or false.@n(17)
-#     Conditional expressions are evaluated as follows. The predicate @m[⟨p₁⟩] is
+    llamadas @e(cláusulas). La primera expresión de cada par es un
+    @e(predicado)––es decir, una expresión cuyo valor se interpreta como
+    verdadero o falso.@n(17)
+
+#     Conditional expressions are evaluated as follows.  The predicate @m[⟨p₁⟩] is
 #     evaluated first. If its value is false, then @m[⟨p₂⟩] is evaluated. If
 #     @m[⟨p₂⟩]'s value is also false, then @m[⟨p₃⟩] is evaluated. This process
 #     continues until a predicate is found whose value is true, in which case the
 #     interpreter returns the value of the corresponding @e(consequent expression)
-#     @m[⟨e⟩] of the clause as the value of the conditional expression.  If none of
-#     the @m[⟨p⟩]'s is found to be true, the value of the @c(cond) is undefined.
-    Llamadas @e(cláusulas). La primera expresión de cada par es un
-    @e(predicado), es decir, una expresión cuyo valor se interpreta como
-    verdadero o falso.@n(17) Las expresiones condicionales se evalúan de
-    la siguiente manera. El predicado @m(⟨p₁⟩) se evalúa primero. Si su valor es
-    falso, se evalúa @m(⟨p₂⟩). Si el valor de @m(⟨p₂⟩) es también falso, se
-    evalúa @m(⟨p₃⟩). Este proceso continúa hasta que se encuentra un predicado
-    cuyo valor es verdadero, en cuyo caso el intérprete devuelve el valor de la
-    correspondiente @e(expresión ) @m(⟨e⟩) de la cláusula como el valor de la
-    expresión condicional. Si ninguna de las @m(⟨p⟩) 's se encuentra para ser
-    verdad,@c(cond)
+#     @m[⟨e⟩] of the clause as the value of the conditional expression.  If none
+#     of the @m[⟨p⟩]'s is found to be true, the value of the @c(cond) is
+#     undefined.
+    Las expresiones condicionales se evalúan de la siguiente manera. El
+    predicado @m(⟨p₁⟩) se evalúa primero. Si su valor es falso, se evalúa
+    @m(⟨p₂⟩). Si el valor de @m(⟨p₂⟩) es también falso, se evalúa @m(⟨p₃⟩). Este
+    proceso continúa hasta que se encuentra un predicado cuyo valor es
+    verdadero, en cuyo caso el intérprete devuelve el valor de la @e(expresión)
+    correspondiente @m(⟨e⟩) de la cláusula como el valor de la expresión
+    condicional. Si ningun valor de los predicados @m(⟨p⟩) es verdadero, el
+    valor de @c(cond) es indefinido
 
 #     The word @e(predicate) is used for procedures that return true or false, as
 #     well as for expressions that evaluate to true or false. The absolute-value
@@ -2320,9 +2318,9 @@ Company.
     La palabra @e(predicado) se utiliza para los procedimientos que devuelven
     verdadero o falso, así como para las expresiones que evalúan a verdadero o
     falso. El procedimiento de valor absoluto @c(abs) hace uso de los predicados
-    primitivos @c(>), @c(<) y @c(=).@n(18) Estos toman dos números
-    como argumentos y prueban si el primer número es, respectivamente, mayor
-    que, menor o igual al segundo número, devolviendo verdadero o falso en
+    primitivos @c(>), @c(<) y @c(=).@n(18) Estos toman dos números como
+    argumentos y prueban si el primer número es, respectivamente, mayor que,
+    menor que o igual a al segundo número, devolviendo verdadero o falso en
     consecuencia.
 
 #     Another way to write the absolute-value procedure is
@@ -2340,18 +2338,18 @@ Company.
     < src..
 
 #     which could be expressed in English as @"(If @m(x) is less than zero return
-#     @m(-x); otherwise return @m(x).)  @c(else) is a special symbol that can be
+#     @m(-x); otherwise return @m(x).) @c(else) is a special symbol that can be
 #     used in place of the @m[⟨p⟩] in the final clause of a @c(cond). This causes
 #     the @c(cond) to return as its value the value of the corresponding @m[⟨e⟩]
 #     whenever all previous clauses have been bypassed. In fact, any expression that
 #     always evaluates to a true value could be used as the @m[⟨p⟩] here.
-    Que podría expresarse en inglés como @"(si @m(x) es menor que cero return
-    @m(-x) ; De lo contrario devuelve @m(x). )  @c(else) Es un símbolo especial
-    que se puede utilizar en lugar del @m(⟨p⟩) en la cláusula final de a
-    @c(cond). Esto hace que @c(cond) para devolver como su valor el valor de la
-    @m(⟨e) corresponding correspondiente siempre que se @m(hayan omitido) todas
-    las cláusulas anteriores. De hecho, cualquier expresión que siempre se
-    evalúa a un valor verdadero podría ser utilizada como @m(⟨p⟩) aquí.
+    Que podría expresarse en inglés como @"(si @m(x) es menor que cero regresa
+    @m(-x); de lo contrario devuelve @m(x)). @c(else) es un símbolo especial que
+    se puede utilizar en lugar de @m(⟨p⟩) en la cláusula final de @c(cond).
+    Esto hace que @c(cond) devuelva como su valor el valor de la @m(⟨e⟩)
+    correspondiente siempre que se hayan omitido todas las cláusulas anteriores.
+    De hecho, cualquier expresión que siempre se evalúa a un valor verdadero
+    podría ser utilizada aqui como @m(⟨p⟩).
 
 #     Here is yet another way to write the absolute-value procedure:
     Aquí hay otra manera de escribir el procedimiento de valor absoluto:
@@ -2372,83 +2370,82 @@ Company.
 #     This uses the special form @c(if), a restricted type of conditional that can
 #     be used when there are precisely two cases in the case analysis. The general
 #     form of an @c(if) expression is
-    Esto utiliza el formulario especial @c(if), un tipo restringido de
-    condicional que puede usarse cuando hay precisamente dos casos en el
-    análisis del caso. La forma general de una @c(if) expresión es
+    Esto utiliza la forma @c(if), un tipo restringido de condicional que puede
+    usarse cuando hay precisamente dos casos en el análisis del caso. La forma
+    general de una expresión @c(if) es
 
 #     ..src > scheme
 #       (if ⟨predicate⟩ ⟨consequent⟩ ⟨alternative⟩)
 #     < src..
     ..src > scheme
-      (if ⟨predicate⟩ ⟨consequent⟩ ⟨alternative⟩)
+      (if ⟨predicado⟩ ⟨consecuente⟩ ⟨alternativo⟩)
     < src..
 
 #     To evaluate an @c(if) expression, the interpreter starts by evaluating the
-#     @c[(predicate)] part of the expression. If the @c[(predicate)] evaluates to a
-#     true value, the interpreter then evaluates the @c[(consequent)] and returns
-#     its value. Otherwise it evaluates the @c[(alternative)] and returns its
+#     @c[⟨predicate⟩] part of the expression. If the @c[⟨predicate⟩] evaluates to a
+#     true value, the interpreter then evaluates the @c[⟨consequent⟩] and returns
+#     its value. Otherwise it evaluates the @c[⟨alternative⟩] and returns its
 #     value.@n(19)
-    Para evaluar una @c(if) expresión, el intérprete comienza evaluando la
-    @c[(predicate)] parte de la expresión. Si se @c[(predicate)] evalúa a un
-    valor verdadero, el intérprete evalúa @c[(consequent)] y devuelve su
-    valor. De lo contrario, evalúa @c[(alternative)] y devuelve su
-    valor.@n(19)
+    Para evaluar una expresión @c(if), el intérprete comienza evaluando la parte
+    @c[⟨predicado⟩] de la expresión. Si el @c[⟨predicado⟩] se evalúa a un valor
+    verdadero, el intérprete evalúa @c[⟨consecuente⟩] y devuelve su valor. De lo
+    contrario, evalúa @c[⟨alternativo⟩] y devuelve su valor.@n(19)
 
 #     In addition to primitive predicates such as @c(<), @c(=), and @c(>), there are
 #     logical composition operations, which enable us to construct compound
 #     predicates. The three most frequently used are these:
-    Además de predicados primitivos tales como @c(<), @c(=), y @c(>), hay
-    operaciones de composición lógicos, que nos permiten construir predicados
+    Además de predicados primitivos como @c(<), @c(=), y @c(>), hay operaciones
+    de composición lógicos, que nos permiten construir predicados
     compuestos. Los tres más utilizados son los siguientes:
 
 #     - @c[(and ⟨e₁⟩ … ⟨eₙ⟩)]
     - @c[(and ⟨e₁⟩ … ⟨eₙ⟩)]
 
-#       The interpreter evaluates the expressions @c[(e)] one at a time, in
-#       left-to-right order. If any @c[(e)] evaluates to false, the value of the
-#       @c(and) expression is false, and the rest of the @c[(e)]'s are not
-#       evaluated. If all @c[(e)]'s evaluate to true values, the value of the
+#       The interpreter evaluates the expressions @c(⟨e⟩) one at a time, in
+#       left-to-right order. If any @c(⟨e⟩) evaluates to false, the value of the
+#       @c(and) expression is false, and the rest of the @c(⟨e⟩)'s are not
+#       evaluated. If all @c(⟨e⟩)'s evaluate to true values, the value of the
 #       @c(and) expression is the value of the last one.
-    El intérprete evalúa las expresiones @c[(e)] una a la vez, de izquierda a
-    derecha. Si alguno @c[(e)] evalúa a false, el valor de la @c(and) expresión
-    es falso, y el resto de los @c[(e)]'s no se evalúan. Si todos se @c[(e)]
-    evalen a valores verdaderos, el valor de la @c(and) expresión es el valor de
-    la última.
+    El intérprete evalúa las expresiones @c(⟨e⟩) una a la vez, de izquierda a
+    derecha. Si alguna @c(⟨e⟩) se evalúa como falsa, el valor de la expresión
+    @c(and) es falso, y el resto de expresiones @c(⟨e⟩) no se evalúan. Si todas
+    las @c(⟨e⟩) se evaluan a valores verdaderos, el valor de la expresión
+    @c(and) es el valor de la última.
 
 #     - @c[(or ⟨e₁⟩ … ⟨eₙ⟩)]
     - @c[(or ⟨e₁⟩ … ⟨eₙ⟩)]
 
-#       The interpreter evaluates the expressions @c[(e)] one at a time, in
-#       left-to-right order. If any @c[(e)] evaluates to a true value, that value is
+#       The interpreter evaluates the expressions @c(⟨e⟩) one at a time, in
+#       left-to-right order. If any @c(⟨e⟩) evaluates to a true value, that value is
 #       returned as the value of the @c(or) expression, and the rest of the
-#       @c[(e)]'s are not evaluated. If all @c[(e)]'s evaluate to false, the value
+#       @c(⟨e⟩)'s are not evaluated. If all @c(⟨e⟩)'s evaluate to false, the value
 #       of the @c(or) expression is false.
-      El intérprete evalúa las expresiones @c[(e)] una a la vez, de izquierda a
-      derecha. Si alguno @c[(e)] evalúa un valor verdadero, ese valor se
-      devuelve como el valor de la @c(or) expresión, y el resto de los @c[(e)]'s
-      no se evalúan. Si todos se @c[(e)] evalen a false, el valor de la @c(or)
-      expresión es false.
+      El intérprete evalúa las expresiones @c(⟨e⟩) una a la vez, de izquierda a
+      derecha. Si alguna @c(⟨e⟩) evalúa un valor verdadero, ese valor se
+      devuelve como el valor de la expresión @c(or), y el resto de expresiones
+      @c(⟨e⟩) no se evalúan. Si todas las @c(⟨e⟩) se evaluan a un valor falso,
+      el valor de la expresión @c(or) es falso.
 
 #     - @c[(not ⟨e⟩)]
     - @c[(not ⟨e⟩)]
 
-#       The value of a @c(not) expression is true when the expression @c[(e)]
+#       The value of a @c(not) expression is true when the expression @c(⟨e⟩)
 #       evaluates to false, and false otherwise.
-      El valor de una @c(not) expresión es verdadero cuando la expresión se
-      @c[(e)] evalúa como falsa, y false en caso contrario.
+      El valor de una expresión @c(not) es verdadero cuando la expresión @c(⟨e⟩)
+      se evalúa como falsa, y falso en caso contrario.
 
 
 #     Notice that @c(and) and @c(or) are special forms, not procedures, because the
-#     subexpressions are not necessarily all evaluated. @c(Not) is an ordinary
+#     subexpressions are not necessarily all evaluated. @c(not) is an ordinary
 #     procedure.
-    Observe que @c(and) y @c(or) son formas especiales, no los procedimientos,
-    porque las subexpresiones no son necesariamente todos evaluados. @c(Not) Es
-    un procedimiento ordinario.
+    Observe que @c(and) y @c(or) son formas especiales, no procedimientos,
+    porque no tadas las subexpresiones se evaluan necesariamente. @c(not) Es un
+    procedimiento ordinario.
 
 #     As an example of how these are used, the condition that a number @m(x) be in
 #     the range @m(5 < x < 10) may be expressed as
     Como ejemplo de cómo se usan, la condición de que un número @m(x) esté en el
-    intervalo @m(5 <x <10) puede expresarse como
+    intervalo @m(5 < x < 10) puede expresarse como
 
 #     ..src > scheme
 #       (and (> x 5) (< x 10))
@@ -2541,14 +2538,14 @@ Company.
     :: @t(Ejercicio 1.2) :: Traduce la siguiente expresión en forma de prefijo:
 
 #        ..example >
-#          5 + 4 + (2 − (3 − (6 + 4/5)))
-#          -----------------------------
-#                 3(6 − 2)(2 − 7)
+#          5 + 4 + (2 − (3 − (6 + ⅘)))
+#          –––––––––––––––––––––––––––
+#               3(6 − 2)(2 − 7)
 #        < example..
        ..example >
-         5 + 4 + (2 − (3 − (6 + 4/5)))
-         -----------------------------
-                3(6 − 2)(2 − 7)
+         5 + 4 + (2 − (3 − (6 + ⅘)))
+         –––––––––––––––––––––––––––
+              3(6 − 2)(2 − 7)
        < example..
 
 #     :: @t(Exercise 1.3) :: Define a procedure that takes three numbers as
@@ -2575,9 +2572,9 @@ Company.
 #     :: @t(Exercise 1.5) :: Ben Bitdiddle has invented a test to determine whether
 #        the interpreter he is faced with is using applicative-order evaluation or
 #        normal-order evaluation. He defines the following two procedures:
-    :: @t(Ejercicio 1.5) :: Ben Bitdiddle ha inventado una prueba para determinar si
-       el intérprete con el que se enfrenta es el uso de la evaluación de orden
-       aplicacional o la evaluación de orden normal. Él define los dos
+    :: @t(Ejercicio 1.5) :: Ben Bitdiddle ha inventado una prueba para
+       determinar si el intérprete con el que se enfrenta utiliza evaluacion de
+       orden aplicativo o evaluacion de orden normal. Él define los dos
        procedimientos siguientes:
 
 #        ..src > scheme
@@ -2615,16 +2612,15 @@ Company.
 #        predicate expression is evaluated first, and the result determines whether
 #        to evaluate the consequent or the alternative expression.)
        ¿Qué comportamiento observará Ben con un intérprete que utilice una
-       evaluación de orden aplicacional? ¿Qué comportamiento observará con un
+       evaluación de orden aplicativo? ¿Qué comportamiento observará con un
        intérprete que use la evaluación de orden normal? Explica tu
-       respuesta. (Supongamos que la regla de evaluación para el formulario
-       especial @c(if) es la misma si el intérprete está usando el orden normal
-       o de aplicación: primero se evalúa la expresión de predicado y el
-       resultado determina si se debe evaluar la expresión resultante o la
-       alternativa).
+       respuesta. (Supongamos que la regla de evaluación para la forma especial
+       @c(if) es la misma si el intérprete está usando el orden normal o
+       aplicativo: primero se evalúa la expresión de predicado y el resultado
+       determina si se debe evaluar la expresión resultante o la alternativa.)
 
 # *** 1.1.7 <> Example: Square Roots by Newton's Method
-*** 1.1.7 <> Ejemplo: Raíces cuadradas según el método de Newton
+*** 1.1.7 <> Ejemplo: Raíces Cuadradas por el Método Newton
 
 #     Procedures, as introduced above, are much like ordinary mathematical
 #     functions.  They specify a value that is determined by one or more
@@ -2638,14 +2634,14 @@ Company.
 
 #     As a case in point, consider the problem of computing square roots. We can
 #     define the square-root function as
-    Como un caso en el punto, considere el problema de computar raíces
+    Como un caso demostrativo, considere el problema de computar raíces
     cuadradas. Podemos definir la función raíz cuadrada como
 
 #     ..example >
 #       √x = the y such that y ≥ 0 and y² = x
 #     < example..
     ..example >
-      √x = the y such that y ≥ 0 and y² = x
+      √x = la y tal que y ≥ 0 e y² = x
     < example..
 
 #     This describes a perfectly legitimate mathematical function. We could use it
@@ -2687,7 +2683,7 @@ Company.
     distinción entre conocimiento declarativo y conocimiento imperativo. En
     matemáticas nos referimos generalmente a descripciones declarativas (lo que
     es), mientras que en informática normalmente nos referimos a las
-    descripciones imperativas (cómo).@n(20)
+    descripciones imperativas (cómo es).@n(20)
 
 #     How does one compute square roots?  The most common way is to use Newton's
 #     method of successive approximations, which says that whenever we have a guess
@@ -2699,7 +2695,7 @@ Company.
     método de aproximaciones sucesivas de Newton, que dice que siempre que
     tengamos una suposición @m(y) para el valor de la raíz cuadrada de un número
     @m(x), podemos realizar una manipulación simple para obtener una mejor
-    conjetura (una más cercana a la Raíz cuadrada real) haciendo un promedio de
+    conjetura (una más cercana a la raíz cuadrada real) haciendo un promedio de
     @m(y) con @m(x / y).@n(21) Por ejemplo, podemos calcular la raíz
     cuadrada de 2 como sigue. Supongamos que nuestra conjetura inicial es 1:
 
@@ -2717,17 +2713,17 @@ Company.
 #       1.4142    ...           ...
 #     < example..
     ..example >
-      Guess     Quotient      Average
+      Conjetura   Cociente      Promedio
 
-      1         (2/1)  = 2    ((2 + 1)/2)  = 1.5
+      1           (2/1)  = 2    ((2 + 1)/2)  = 1.5
 
-      1.5       (2/1.5)       ((1.3333 + 1.5)/2)
-                  = 1.3333      = 1.4167
+      1.5         (2/1.5)       ((1.3333 + 1.5)/2)
+                    = 1.3333      = 1.4167
 
-      1.4167    (2/1.4167)    ((1.4167 + 1.4118)/2)
-                  = 1.4118      = 1.4142
+      1.4167      (2/1.4167)    ((1.4167 + 1.4118)/2)
+                    = 1.4118      = 1.4142
 
-      1.4142    ...           ...
+      1.4142      ...           ...
     < example..
 
 #     Continuing this process, we obtain better and better approximations to the
@@ -2740,12 +2736,12 @@ Company.
 #     value for the guess. If the guess is good enough for our purposes, we are
 #     done; if not, we must repeat the process with an improved guess. We write this
 #     basic strategy as a procedure:
-    Ahora vamos a formalizar el proceso en términos de
-    procedimientos. Comenzamos con un valor para la radicand (el número cuya
-    raíz cuadrada estamos tratando de calcular) y un valor para la conjetura. Si
-    la suposición es lo suficientemente buena para nuestros propósitos, hemos
-    terminado; Si no, debemos repetir el proceso con una conjetura
-    mejorada. Escribimos esta estrategia básica como un procedimiento:
+    Ahora vamos a formalizar el proceso en términos de procedimientos.
+    Comenzamos con un valor para la radicand (el número cuya raíz cuadrada
+    estamos tratando de calcular) y un valor para la conjetura. Si la suposición
+    es lo suficientemente buena para nuestros propósitos, hemos terminado; Si
+    no, debemos repetir el proceso con una conjetura mejorada. Escribimos esta
+    estrategia básica como un procedimiento:
 
 #     ..src > scheme
 #       (define (sqrt-iter guess x)
@@ -2762,8 +2758,8 @@ Company.
 
 #     A guess is improved by averaging it with the quotient of the radicand and the
 #     old guess:
-    Una suposición es mejorada haciendo un promedio con el cociente de la
-    radicand y la vieja conjetura:
+    Una suposición es mejorada haciendo un promedio con el cociente de radicand
+    y la vieja conjetura:
 
 #     ..src > scheme
 #       (define (improve guess x)
@@ -2791,12 +2787,12 @@ Company.
 #     1.7).)  The idea is to improve the answer until it is close enough so that its
 #     square differs from the radicand by less than a predetermined tolerance (here
 #     0.001):@n(22)
-    También tenemos que decir lo que queremos decir con @"(lo suficientemente
-    bueno. )  Lo siguiente hará por ejemplo, pero no es realmente una prueba muy
-    buena. (Ver @l(#Ejercicio 1.7) .) La idea es mejorar la
-    respuesta hasta que esté lo suficientemente cerca como para que su plaza se
-    diferencia del radicando en menos de una tolerancia predeterminada (en este
-    caso 0.001):@n(22)
+    También tenemos que decir lo que significa @"(suficientemente bueno.) Por
+    ejemplo, lo siguiente lo hara, pero no es realmente una prueba muy
+    buena. (Ver @l(#Ejercicio 1.7).) La idea es mejorar la respuesta hasta que
+    esté lo suficientemente cerca como para que su posicion se diferencie del
+    radicando en menos de una tolerancia predeterminada (en este caso
+    0.001):@n(22)
 
 #     ..src > scheme
 #       (define (good-enough? guess x)
@@ -2823,8 +2819,8 @@ Company.
 
 #     If we type these definitions to the interpreter, we can use @c(sqrt) just as
 #     we can use any procedure:
-    Si escribimos estas definiciones para el intérprete, podemos usarlo de la
-    @c(sqrt) misma manera que podemos usar cualquier procedimiento:
+    Si escribimos estas definiciones para el intérprete, podemos usar @c(sqrt)
+    de misma manera que podemos usar cualquier procedimiento:
 
 #     ..srci > scheme
 #       > (sqrt 9)
@@ -2854,12 +2850,12 @@ Company.
 #     direct the computer to do something over and over again. @c(Sqrt-iter), on the
 #     other hand, demonstrates how iteration can be accomplished using no special
 #     construct other than the ordinary ability to call a procedure.@n(24)
-    El @c(sqrt) programa también ilustra que el lenguaje de procedimiento simple
+    El programa @c(sqrt) también ilustra que el lenguaje de procedimiento simple
     que hemos introducido hasta ahora es suficiente para escribir cualquier
     programa puramente numérico que se pueda escribir en, por ejemplo, C o
     Pascal. Esto puede parecer sorprendente, ya que no hemos incluido en nuestro
-    lenguaje cualquier iterativo (bucles) construcciones que dirigen la
-    computadora a hacer algo una y otra vez. @c(Sqrt-iter), Por otro lado,
+    lenguaje ninguna construccion iterativa (bucles) construcciones que dirigen
+    la computadora a hacer algo una y otra vez. @c(sqrt-iter), por otro lado,
     demuestra cómo la iteración se puede lograr sin utilizar un constructo
     especial distinto de la capacidad ordinaria de llamar a un
     procedimiento.@n(24)
@@ -2869,9 +2865,9 @@ Company.
 #        procedure in terms of @c(cond)?) she asks. Alyssa's friend Eva Lu Ator
 #        claims this can indeed be done, and she defines a new version of @c(if):
     :: @t(Ejercicio 1.6) :: Alyssa P. Hacker no ve por qué @c(if) necesita ser
-       proporcionada como una forma especial. @"(¿Por qué no puedo definirlo
-       como un procedimiento ordinario en términos de @c(cond)? ) ella
-       pregunta. La amiga de Alyssa, Eva Lu Ator, afirma que esto puede
+       proporcionado como una forma especial. @"(¿Por qué no puedo definirlo
+       como un procedimiento ordinario en términos de @c(cond)?) pregunta
+       ella. La amiga de Alyssa, Eva Lu Ator, afirma que esto puede
        efectivamente hacerse, y define una nueva versión de @c(if):
 
 #        ..src > scheme
@@ -2906,8 +2902,8 @@ Company.
        < srci..
 
 #        Delighted, Alyssa uses @c(new-if) to rewrite the square-root program:
-       Encantado, Alyssa utiliza @c(new-if) para reescribir el programa de raíz
-       cuadrada:
+       Encantada, Alyssa utiliza @c(new-if) para reescribir el programa
+       raíz-cuadrada:
 
 #        ..src > scheme
 #          (define (sqrt-iter guess x)
@@ -2937,34 +2933,34 @@ Company.
 #        the next and to stop when the change is a very small fraction of the
 #        guess. Design a square-root procedure that uses this kind of end test. Does
 #        this work better for small and large numbers?
-    :: @t(Ejercicio 1.7) :: La @c(good-enough?) prueba utilizada en el cálculo
-       de raíces cuadradas no será muy eficaz para encontrar las raíces
-       cuadradas de números muy pequeños. Además, en las computadoras reales,
-       las operaciones aritméticas se realizan casi siempre con una precisión
+    :: @t(Ejercicio 1.7) :: La prueba @c(good-enough?) usada en el cálculo de
+       raíces cuadradas no será muy eficaz para encontrar las raíces cuadradas
+       de números muy pequeños. Además, en las computadoras reales, las
+       operaciones aritméticas se realizan casi siempre con una precisión
        limitada. Esto hace que nuestra prueba sea inadecuada para números muy
        grandes. Explique estas declaraciones, con ejemplos que muestren cómo
        falla la prueba para números pequeños y grandes. Una estrategia
        alternativa para implementar @c(good-enough?) es observar cómo @c(guess)
-       cambia de una iteración a la siguiente y detenerse cuando el cambio es
+       cambia de una iteración a la siguiente y se detene cuando el cambio es
        una fracción muy pequeña de la suposición. Diseñe un procedimiento de
        raíz cuadrada que utilice este tipo de prueba final. ¿Funciona mejor para
-       pequeños y grandes números?
+       números pequeños y grandes?
 
 #     :: @t(Exercise 1.8) :: Newton's method for cube roots is based on the fact
 #        that if @m(y) is an approximation to the cube root of @m(x), then a better
 #        approximation is given by the value
-    :: @t(Ejercicio 1.8) :: El método de Newton para raíces cúbicas se basa en
-       el hecho de que si @m(y) es una aproximación a la raíz cúbica de @m(x),
+    :: @t(Ejercicio 1.8) :: El método de Newton para raíces cuadradas se basa en
+       el hecho de que si @m(y) es una aproximación a la raíz cuadrada de @m(x),
        entonces una mejor aproximación es dada por el valor
 
 #        ..example >
 #          x/y² + 2y
-#          ----------
+#          –––––––––
 #              3
 #        < example..
        ..example >
          x/y² + 2y
-         ----------
+         –––––––––
              3
        < example..
 
@@ -2973,14 +2969,14 @@ Company.
 #        method in general as an abstraction of these square-root and cube-root
 #        procedures.)
        Utilice esta fórmula para implementar un procedimiento de raíz cúbica
-       análogo al procedimiento de raíz cuadrada. (En @l(#1.3.4) veremos
-       cómo implementar el método de Newton en general como abstracción de estos
-       procedimientos de raíz cuadrada y raíz cúbica).
+       análogo al procedimiento de raíz cuadrada. (En la seccion @l(#1.3.4)
+       veremos cómo implementar el método Newton en general como abstracción de
+       estos procedimientos de raíz cuadrada y raíz cúbica).
 
 # *** 1.1.8 <> Procedures as Black-Box Abstractions
-*** 1.1.8 <> Procedimientos como abstracciones de caja negra
+*** 1.1.8 <> Procedimientos como Abstracciones de Caja Negra
 
-#     @c(Sqrt) is our first example of a process defined by a set of mutually
+#     @c(sqrt) is our first example of a process defined by a set of mutually
 #     defined procedures. Notice that the definition of @c(sqrt-iter) is
 #     @e(recursive); that is, the procedure is defined in terms of itself. The idea
 #     of being able to define a procedure in terms of itself may be disturbing; it
@@ -2988,16 +2984,16 @@ Company.
 #     much less specify a well-defined process to be carried out by a computer. This
 #     will be addressed more carefully in @l(#1.2). But first let's consider some
 #     other important points illustrated by the @c(sqrt) example.
-    @c(Sqrt) Es nuestro primer ejemplo de un proceso definido por un conjunto de
+    @c(sqrt) Es nuestro primer ejemplo de un proceso definido por un conjunto de
     procedimientos definidos mutuamente. Observe que la definición de
-    @c(sqrt-iter) es @e(recursiva) ; Es decir, el procedimiento se define en
+    @c(sqrt-iter) es @e(recursiva); Es decir, el procedimiento se define en
     términos de sí mismo. La idea de ser capaz de definir un procedimiento en
     términos de sí mismo puede ser inquietante; Puede parecer poco claro cómo
-    una definición @"(circular de este tipo) podría tener sentido en absoluto, y
+    una definición @"(circular) de este tipo podría tener sentido en absoluto, y
     mucho menos especificar un proceso bien definido que debe ser llevado a cabo
-    por un ordenador. Esto se tratará con mayor atención en @l(#1.2). Pero
-    primero vamos a considerar algunos otros puntos importantes ilustrados por
-    el @c(sqrt) ejemplo.
+    por un ordenador. Esto se tratará con mayor atención en la seccion
+    @l(#1.2). Pero primero vamos a considerar algunos otros puntos importantes
+    ilustrados por el ejemplo @c(sqrt).
 
 #     Observe that the problem of computing square roots breaks up naturally into a
 #     number of subproblems: how to tell whether a guess is good enough, how to
@@ -3008,13 +3004,13 @@ Company.
     Observe que el problema de calcular raíces cuadradas se descompone de forma
     natural en una serie de subproblemas: cómo saber si una suposición es lo
     suficientemente buena, cómo mejorar una conjetura, etc. Cada una de estas
-    tareas se realiza mediante un procedimiento separado. Todo el @c(sqrt)
-    programa puede ser visto como un conjunto de procedimientos (que se muestra
-    en la @l(#Figura 1.2) ) que refleja la descomposición del
-    problema en subproblemas.
+    tareas se realiza mediante un procedimiento separado. Todo el programa
+    @c(sqrt) puede ser visto como un conjunto de procedimientos (que se muestra
+    en la @l(#Figura 1.2) ) que refleja la descomposición del problema en
+    subproblemas.
 
 #     ..figure > @t(Figure 1.2) Procedural decomposition of the @c(sqrt) program.
-    ..figure > @t(Figura 1.2) Descomposición procesal del @c(sqrt) programa.
+    ..figure > @t(Figura 1.2) Descomposición procedural del programa @c(sqrt).
 
 #       ..art >
 #                       sqrt
@@ -3055,27 +3051,27 @@ Company.
     La importancia de esta estrategia de descomposición no es simplemente que se
     está dividiendo el programa en partes. Después de todo, podríamos tomar
     cualquier programa grande y dividirlo en partes: las primeras diez líneas,
-    las siguientes diez líneas, las siguientes diez líneas, y así
-    sucesivamente. Más bien, es crucial que cada procedimiento lleve a cabo una
-    tarea identificable que pueda ser utilizada como módulo para definir otros
-    procedimientos. Por ejemplo, cuando definimos el @c(good-enough?)
-    procedimiento en términos de @c(square), podemos considerar el @c(square)
-    procedimiento como una @"(caja negra. )  No estamos en ese momento
+    las siguientes diez líneas, las siguientes diez líneas, y así sucesivamente.
+    Más bien, es crucial que cada procedimiento lleve a cabo una tarea
+    identificable que pueda ser utilizada como módulo para definir otros
+    procedimientos. Por ejemplo, cuando definimos el procedimiento
+    @c(good-enough?) en términos de @c(square), podemos considerar el
+    procedimiento @c(square) como una @"(caja negra).  No estamos en ese momento
     interesados en @e(cómo) el procedimiento calcula su resultado, sólo con el
     hecho de que calcula el cuadrado. Los detalles de cómo se calcula el
     cuadrado pueden ser suprimidos, para ser considerados en un momento
-    posterior. De hecho, en lo que @c(good-enough?) se refiere al procedimiento,
+    posterior. De hecho, en lo que al procedimiento @c(good-enough?) se refiere,
     @c(square) No es un procedimiento sino una abstracción de un procedimiento,
-    una llamada @e(abstracción procedimental). En este nivel de abstracción,
+    una denominada @e(abstracción procedural). En este nivel de abstracción,
     cualquier procedimiento que calcule el cuadrado es igualmente bueno.
 
 #     Thus, considering only the values they return, the following two procedures
 #     for squaring a number should be indistinguishable. Each takes a numerical
 #     argument and produces the square of that number as the value.@n(25)
-    Así, considerando sólo los valores que devuelven, los dos procedimientos
-    siguientes para cuadrar un número deben ser indistinguibles. Cada uno toma
-    un argumento numérico y produce el cuadrado de ese número como el
-    valor.@n(25)
+    Por lo tanto, considerando sólo los valores que devuelven, los dos
+    siguientes procedimientos para cuadrar un número deben ser indistinguibles.
+    Cada uno toma un argumento numérico y produce el cuadrado de ese número como
+    el valor.@n(25)
 
 #     ..src > scheme
 #       (define (square x) (* x x))
@@ -3099,9 +3095,9 @@ Company.
 #     it from another programmer as a black box. A user should not need to know how
 #     the procedure is implemented in order to use it.
     Así que una definición de procedimiento debe ser capaz de suprimir el
-    detalle. Los usuarios del procedimiento no pueden haber escrito el
-    procedimiento ellos mismos, pero pueden haberlo obtenido de otro programador
-    como caja negra. Un usuario no debería necesitar saber cómo se implementa el
+    detalle. Los usuarios del procedimiento pueden no haber escrito el
+    procedimiento ellos mismos, pueden haberlo obtenido de otro programador como
+    una caja negra. Un usuario no debería necesitar saber cómo se implementa el
     procedimiento para usarlo.
 
 # **** Local names
@@ -3131,13 +3127,13 @@ Company.
 #      parameter names of a procedure must be local to the body of the procedure. For
 #      example, we used @c(square) in the definition of @c(good-enough?) in our
 #      square-root procedure:
-     Este principio -que el significado de un procedimiento debe ser
-     independiente de los nombres de parámetros utilizados por su autor- parece
+     Este principio––que el significado de un procedimiento debe ser
+     independiente del nombres de los parámetros utilizados por su autor––parece
      evidente en la superficie, pero sus consecuencias son profundas. La
      consecuencia más simple es que los nombres de los parámetros de un
      procedimiento deben ser locales al cuerpo del procedimiento. Por ejemplo,
      hemos utilizado @c(square) en la definición de @c(good-enough?) en nuestro
-     procedimiento de raíz cuadrada:
+     procedimiento de raíz-cuadrada:
 
 #      ..src > scheme
 #        (define (good-enough? guess x)
@@ -3161,25 +3157,24 @@ Company.
      La intención del autor de @c(good-enough?) es determinar si el cuadrado del
      primer argumento está dentro de una tolerancia dada del segundo
      argumento. Vemos que el autor de @c(good-enough?) usó el nombre @c(guess)
-     para referirse al primer argumento y @c(x) referirse al segundo
+     para referirse al primer argumento y @c(x) para referirse al segundo
      argumento. El argumento de @c(square) es @c(guess). Si el autor de
-     @c(square) usado @c(x) (como arriba) para referirse a ese argumento, vemos
-     que el @c(x) in @c(good-enough?) debe ser diferente @c(x) que el de
+     @c(square) usa @c(x) (como arriba) para referirse a ese argumento, vemos
+     que el @c(x) en @c(good-enough?) debe ser diferente al @c(x) en
      @c(square). Ejecutar el procedimiento @c(square) no debe afectar el valor
-     de @c(x) que se utiliza @c(good-enough?), ya que el valor de @c(x) puede
-     ser necesario @c(good-enough?) después de que @c(square) se haga la
-     computación.
+     de @c(x) que utiliza @c(good-enough?), ya que el valor de @c(x) puede ser
+     necesario en @c(good-enough?) después de que @c(square) termine el calculo.
 
 #      If the parameters were not local to the bodies of their respective procedures,
 #      then the parameter @c(x) in @c(square) could be confused with the parameter
 #      @c(x) in @c(good-enough?), and the behavior of @c(good-enough?) would depend
 #      upon which version of @c(square) we used.  Thus, @c(square) would not be the
 #      black box we desired.
-     Si los parámetros no eran locales a los cuerpos de sus respectivos
+     Si los parámetros no fueran locales a los cuerpos de sus respectivos
      procedimientos, entonces el parámetro @c(x) en @c(square) podría
      confundirse con el parámetro @c(x) en @c(good-enough?), y el comportamiento
-     de @c(good-enough?) dependería de qué versión de la @c(square) que
-     utilizamos. Por @c(square) lo tanto, no sería la caja negra que deseábamos.
+     de @c(good-enough?) dependería de la versión de @c(square) que
+     utilizamos. Por lo tanto @c(square), no sería la caja negra que deseábamos.
 
 #      A formal parameter of a procedure has a very special role in the procedure
 #      definition, in that it doesn't matter what name the formal parameter has. Such
@@ -3193,15 +3188,15 @@ Company.
 #      procedure as their scope.
      Un parámetro formal de un procedimiento tiene un papel muy especial en la
      definición del procedimiento, ya que no importa qué nombre tenga el
-     parámetro formal. Tal nombre se llama una @e(variable ligada), y decimos
+     parámetro formal. Este nombre se denomina @e(variable enlazada), y decimos
      que la definición del procedimiento @e(enlaza) sus parámetros formales. El
      significado de una definición de procedimiento no cambia si una variable
-     enlazada se renombre constantemente a lo largo de la
-     definición.@n(26) Si una variable no está unida, decimos que es
-     @e(libre). El conjunto de expresiones para las que un enlace define un
-     nombre se denomina @e(ámbito) de ese nombre. En una definición de
-     procedimiento, las variables enlazadas declaradas como los parámetros
-     formales del procedimiento tienen como ámbito el cuerpo del procedimiento.
+     enlazada se renombra constantemente a lo largo de la definición.@n(26) Si
+     una variable no está unida, decimos que es @e(libre). El conjunto de
+     expresiones para las que un enlace define un nombre se denomina @e(alcance)
+     de ese nombre. En una definición de procedimiento, las variables enlazadas
+     declaradas como los parámetros formales del procedimiento tienen como
+     alcance el cuerpo del procedimiento.
 
 #      In the definition of @c(good-enough?) above, @c(guess) and @c(x) are bound
 #      variables but @c(<), @c(-), @c(abs), and @c(square) are free.  The meaning of
@@ -3214,17 +3209,18 @@ Company.
 #      (external to this definition) that the symbol @c(abs) names a procedure for
 #      computing the absolute value of a number. @c(good-enough?) will compute a
 #      different function if we substitute @c(cos) for @c(abs) in its definition.
-     En la definición de @c(good-enough?) arriba, @c(guess) y @c(x) son
-     variables ligadas, pero @c(<), @c(-), @c(abs), y @c(square) son
-     gratuitas. El significado de @c(good-enough?) debe ser independiente de los
-     nombres que elegimos para @c(guess) y @c(x) con tal de que son distintos y
-     diferentes de @c(<), @c(-), @c(abs), y @c(square). Sin embargo, el
-     significado de no es independiente de los nombres de sus variables libres
-     (si cambiamos el nombre @c(guess) a @c(abs) que habríamos introducido un
-     error @e(capturando) la variable. Seguramente depende del hecho (externo a
-     esta definición) que el símbolo nombra un procedimiento para calcular el
-     valor absoluto de un
-     número.@c(abs) @c(good-enough?) @c(abs) @c(good-enough?) @c(cos) @c(abs)
+     En la definición de @c(good-enough?) anterior, @c(guess) y @c(x) son
+     variables enlazadas, pero @c(<), @c(-), @c(abs), y @c(square) estan
+     libres. El significado de @c(good-enough?) debe ser independiente de los
+     nombres que elegimos para @c(guess) y @c(x) cuando sean distintos y
+     diferentes de @c(<), @c(-), @c(abs), y @c(square). (Si renombramos
+     @c(guess) a @c(abs), habríamos introducido un error @e(capturando) la
+     variable @c(abs). Habria cambiado de libre a enlazada.) El significado de
+     @c(good-enough?) no es independiente de los nombres de sus variables
+     libres. Seguramente depende del hecho (externo a esta definición) que el
+     símbolo @c(abs) nombra un procedimiento para calcular el valor absoluto de
+     un número. @c(good-enough?) calculara una funcion diferente si sustituimos
+     @c(cos) por @c(abs) en esta definicion.
 
 # **** Internal definitions and block structure
 **** Definiciones internas y estructura de bloques
@@ -3233,10 +3229,10 @@ Company.
 #      parameters of a procedure are local to the body of the procedure. The
 #      square-root program illustrates another way in which we would like to control
 #      the use of names. The existing program consists of separate procedures:
-     Tenemos un tipo de aislamiento del nombre disponible hasta ahora: Los
+     Hasta ahora tenemos un tipo de aislamiento del nombre disponible: Los
      parámetros formales de un procedimiento son locales al cuerpo del
-     procedimiento. El programa de raíz cuadrada ilustra otra forma en la que
-     nos gustaría controlar el uso de nombres. El programa existente consta de
+     procedimiento. El programa raíz-cuadrada ilustra otra forma en la que nos
+     gustaría controlar el uso de nombres. El programa existente consta de
      procedimientos separados:
 
 #      ..src > scheme
@@ -3287,22 +3283,21 @@ Company.
 #      problem we can write
      El problema con este programa es que el único procedimiento que es
      importante para los usuarios de @c(sqrt) es @c(sqrt). Los otros
-     procedimientos (@c(sqrt-iter), @c(good-enough?) y @c(improve)), sólo el
-     desorden de sus mentes. No pueden definir ningún otro procedimiento llamado
+     procedimientos (@c(sqrt-iter), @c(good-enough?) e @c(improve)), sólo
+     confundira sus mentes. No pueden definir ningún otro procedimiento llamado
      @c(good-enough?) como parte de otro programa para trabajar junto con el
-     programa de raíz cuadrada, porque lo @c(sqrt) necesita. El problema es
-     especialmente grave en la construcción de grandes sistemas por muchos
+     programa raiz-cuadrada, porque @c(sqrt) lo necesita. El problema es
+     especialmente grave en la construcción sistemas grandes por muchos
      programadores independientes. Por ejemplo, en la construcción de una gran
      libreria de procedimientos numéricos, muchas funciones numéricas se
      calculan como aproximaciones sucesivas y por lo tanto pueden tener
-     procedimientos nombrados @c(good-enough?) y @c(improve) como procedimientos
-     auxiliares. Nos gustaría localizar los subprocedimientos, @c(sqrt)
-     Ocultándolos dentro para que @c(sqrt) pudieran coexistir con otras
-     aproximaciones sucesivas, cada una teniendo su propio @c(good-enough?)
-     procedimiento privado. Para hacer esto posible, permitimos que un
-     procedimiento tenga definiciones internas que son locales a ese
-     procedimiento. Por ejemplo, en el problema de raíz cuadrada podemos
-     escribir
+     procedimientos llamados @c(good-enough?) e @c(improve) como procedimientos
+     auxiliares. Nos gustaría localizar los subprocedimientos, ocultándolos
+     dentro para que @c(sqrt) para que @c(sqrt) pudieran coexistir con otras
+     aproximaciones sucesivas, cada una teniendo su propio procedimiento privado
+     @c(good-enough?). Para hacer esto posible, permitimos que un procedimiento
+     tenga definiciones internas que son locales a ese procedimiento. Por
+     ejemplo, en el problema de raíz cuadrada podemos escribir
 
 #      ..src > scheme
 #        (define (sqrt x)
@@ -3343,15 +3338,16 @@ Company.
      Este anidamiento de definiciones, denominado @e(estructura de bloques), es
      básicamente la solución correcta al problema más simple del empaquetado de
      nombres. Pero hay una mejor idea acechando aquí. Además de internalizar las
-     definiciones de los procedimientos auxiliares, podemos
-     simplificarlos. Puesto que @c(x) está vinculado en la definición de
-     @c(sqrt), los procedimientos @c(good-enough?), @c(improve) y @c(sqrt-iter),
-     que se definen internamente a @c(sqrt), están en el ámbito de @c(x). Por lo
+     definiciones de los procedimientos auxiliares, podemos simplificarlos.
+     Puesto que @c(x) está enlazado en la definición de @c(sqrt), los
+     procedimientos @c(good-enough?), @c(improve) y @c(sqrt-iter), que se
+     definen internamente en @c(sqrt), están en el ámbito de @c(x). Por lo
      tanto, no es necesario pasar @c(x) explícitamente a cada uno de estos
-     procedimientos. En cambio, permitimos @c(x) ser una variable libre en las
+     procedimientos. En cambio, permitimos a @c(x) ser una variable libre en las
      definiciones internas, como se muestra a continuación. A continuación,
      @c(x) obtiene su valor del argumento con el que @c(sqrt) se llama al
-     procedimiento de inclusión. Esta disciplina se denomina @e(escaneo léxico).@n(27)
+     procedimiento interno @c(sqrt). Esta disciplina se denomina @e(escaneo
+     léxico).@n(27)
 
 #      ..src > scheme
 #        (define (sqrt x)
@@ -3383,14 +3379,14 @@ Company.
 #      programming language Algol 60. It appears in most advanced programming
 #      languages and is an important tool for helping to organize the construction of
 #      large programs.
-     Usaremos extensivamente la estructura de bloques para ayudarnos a dividir
-     grandes programas en piezas tratables.@n(28) La idea de estructura de
+     Usaremos extensivamente la estructura de bloques para ayudarnos a descomponer
+     grandes programas en piezas manejables.@n(28) La idea de estructura de
      bloques se originó con el lenguaje de programación Algol 60. Aparece en la
      mayoría de los lenguajes de programación avanzados y es una herramienta
      importante para ayudar a organizar la construcción de grandes programas.
 
 # ** 1.2 <> Procedures and the Processes They Generate
-** 1.2 <> Procedimientos y procesos que generan
+** 1.2 <> Procedimientos y Procesos que los Generan
 
 #    We have now considered the elements of programming: We have used primitive
 #    arithmetic operations, we have combined these operations, and we have
@@ -4303,15 +4299,15 @@ Company.
      recursivos arbóreos en procedimientos más eficientes que Calcular el mismo
      resultado.@n(34)
 
-#      :: @t(Exercise 1.11) :: A function @m[f] is defined by the rule that @m[f(n) =
-#         n] if @m[n < 3] and @m[f(n) = f(n-1) + 2f(n-2) + 3f(n-3)] if @m[n ≥
-#         3]. Write a procedure that computes @m[f] by means of a recursive
-#         process. Write a procedure that computes @m[f] by means of an iterative
+#      :: @t(Exercise 1.11) :: A function @m(ƒ) is defined by the rule that @m[ƒ(n) =
+#         n] if @m[n < 3] and @m[ƒ(n) = ƒ(n-1) + 2ƒ(n-2) + 3ƒ(n-3)] if @m[n ≥
+#         3]. Write a procedure that computes @m(ƒ) by means of a recursive
+#         process. Write a procedure that computes @m(ƒ) by means of an iterative
 #         process.
-     :: @t(Ejercicio 1.11) :: Una función @m(f) se define por la regla de que
-        @m(f (n) = n) si @m(n <3) y @m(f (n) = f (n-1) + 2f (n-2) + 3f (n-3))
-        si @m(n ≥ 3). Escriba un procedimiento que calcule @m(f) por medio de un
-        proceso recursivo. Escriba un procedimiento que calcule @m(f) por medio
+     :: @t(Ejercicio 1.11) :: Una función @m(ƒ) se define por la regla de que
+        @m(ƒ (n) = n) si @m(n <3) y @m(ƒ (n) = f (n-1) + 2f (n-2) + 3f (n-3))
+        si @m(n ≥ 3). Escriba un procedimiento que calcule @m(ƒ) por medio de un
+        proceso recursivo. Escriba un procedimiento que calcule @m(ƒ) por medio
         de un proceso iterativo.
 
 #      :: @t(Exercise 1.12) :: The following pattern of numbers is called @e(Pascal's
@@ -4398,13 +4394,13 @@ Company.
     fijo de operaciones a la vez, el tiempo requerido será proporcional al
     número de operaciones elementales realizadas por la máquina.
 
-#     We say that @m[R(n)] has order of growth @m[Θ(f(n))], written @m[R(n) =
-#     Θ(f(n))] (pronounced @"(theta of @m[f(n)]), if there are positive constants
-#     @m[k₁] and @m[k₂] independent of @m[n] such that @m[k₁ f(n) ≤ R(n) ≤ k₂ f(n)]
+#     We say that @m[R(n)] has order of growth @m[Θ(ƒ(n))], written @m[R(n) =
+#     Θ(ƒ(n))] (pronounced @"(theta of @m[ƒ(n)]), if there are positive constants
+#     @m[k₁] and @m[k₂] independent of @m[n] such that @m[k₁ ƒ(n) ≤ R(n) ≤ k₂ ƒ(n)]
 #     for any sufficiently large value of @m[n]. (In other words, for large @m[n],
-#     the value @m[R(n)] is sandwiched between @m[k₁ f(n)] and @m[k₂ f(n)].)
-    Se dice que @m(R (n)) tiene orden de crecimiento @m(Θ (f (n))), escrita @m(R
-    (n) = Θ (f (n))) (pronunciada @"(theta de @m(f (n))), si hay constantes
+#     the value @m[R(n)] is sandwiched between @m[k₁ ƒ(n)] and @m[k₂ ƒ(n)].)
+    Se dice que @m(R (n)) tiene orden de crecimiento @m(Θ (ƒ (n))), escrita @m(R
+    (n) = Θ (ƒ (n))) (pronunciada @"(theta de @m(ƒ (n))), si hay constantes
     positivas @m(k₁) y @m(k₂) independientes De @m(n) tal que @m(k₁ f (n) ≤ R
     (n) ≤ k₂ f (n)) para cualquier valor suficientemente grande de @m(n) (es
     decir, para @m(n) grande, el valor @m(R (n)) está intercalado entre @m(k₁ f
@@ -5735,12 +5731,12 @@ Company.
 
 #     ..example >
 #        b
-#        ∑ f(n) = f(a) + ⋯ + f(b)
+#        ∑ ƒ(n) = ƒ(a) + ⋯ + ƒ(b)
 #       n=a
 #     < example..
     ..example >
        b
-       ∑ f(n) = f(a) + ⋯ + f(b)
+       ∑ ƒ(n) = ƒ(a) + ⋯ + ƒ(b)
       n=a
     < example..
 
@@ -5880,11 +5876,11 @@ Company.
     < srci..
 
 #     Once we have @c(sum), we can use it as a building block in formulating further
-#     concepts. For instance, the definite integral of a function @m(f) between the
+#     concepts. For instance, the definite integral of a function @m(ƒ) between the
 #     limits @m(a) and @m(b) can be approximated numerically using the formula
     Una vez que lo tengamos @c(sum), podemos usarlo como un elemento fundamental
     en la formulación de otros conceptos. Por ejemplo, la integral definida de
-    una función @m(f) entre los límites @m(a) y @m(b) puede aproximarse
+    una función @m(ƒ) entre los límites @m(a) y @m(b) puede aproximarse
     numéricamente usando la fórmula
 
 #     ..example >
@@ -5932,10 +5928,10 @@ Company.
 
 #     :: @t(Exercise 1.29) :: Simpson's Rule is a more accurate method of numerical
 #        integration than the method illustrated above. Using Simpson's Rule, the
-#        integral of a function @m(f) between @m(a) and @m(b) is approximated as
+#        integral of a function @m(ƒ) between @m(a) and @m(b) is approximated as
     :: @t(Ejercicio 1.29) :: La Regla de Simpson es un método más preciso de
        integración numérica que el método ilustrado anteriormente. Usando la
-       Regla de Simpson, la integral de una función @m(f) entre @m(a) y @m(b) se
+       Regla de Simpson, la integral de una función @m(ƒ) entre @m(a) y @m(b) se
        aproxima como
 
 #        ..example >
@@ -5949,16 +5945,16 @@ Company.
          3
        < example..
 
-#        where @m[h = (b - a)/n], for some even integer @m(n), and @m[yₙ = f(a +
+#        where @m[h = (b - a)/n], for some even integer @m(n), and @m[yₙ = ƒ(a +
 #        kh)]. (Increasing @m(n) increases the accuracy of the approximation.)
-#        Define a procedure that takes as arguments @m(f), @m(a), @m(b), and @m(n)
+#        Define a procedure that takes as arguments @m(ƒ), @m(a), @m(b), and @m(n)
 #        and returns the value of the integral, computed using Simpson's Rule. Use
 #        your procedure to integrate @c(cube) between 0 and 1 (with @m(n = 100) and
 #        @m(n = 1000), and compare the results to those of the @c(integral)
 #        procedure shown above.
        donde @m(h = (b - a) / n), para algunos incluso número entero @m(n), y
        @m(yₙ = f (a + kh)). (El aumento de @m(n) aumenta la precisión de la
-       aproximación.) Definir un procedimiento que toma como argumentos @m(f),
+       aproximación.) Definir un procedimiento que toma como argumentos @m(ƒ),
        @m(un), @m(b), y @m(n) y devuelve el valor de la integral, calcula
        utilizando la regla de Simpson. Utilice su procedimiento para integrar
        @c(cube) entre 0 y 1 (con @m(n = 100) y @m(n = 1000), y compare los
@@ -6259,10 +6255,10 @@ Company.
      supongamos que deseamos calcular la función
 
 #      ..example >
-#        f(x,y) = x(1 + xy)² + y(1 − y) + (1 + xy)(1 − y)
+#        ƒ(x,y) = x(1 + xy)² + y(1 − y) + (1 + xy)(1 − y)
 #      < example..
      ..example >
-       f(x,y) = x(1 + xy)² + y(1 − y) + (1 + xy)(1 − y)
+       ƒ(x,y) = x(1 + xy)² + y(1 − y) + (1 + xy)(1 − y)
      < example..
 
 #      which we could also express as
@@ -6271,19 +6267,19 @@ Company.
 #      ..example >
 #             a = 1 + xy
 #             b = 1 − y
-#        f(x,y) = xa² + yb + ab
+#        ƒ(x,y) = xa² + yb + ab
 #      < example..
      ..example >
             a = 1 + xy
             b = 1 − y
-       f(x,y) = xa² + yb + ab
+       ƒ(x,y) = xa² + yb + ab
      < example..
 
-#      In writing a procedure to compute @m(f), we would like to include as local
+#      In writing a procedure to compute @m(ƒ), we would like to include as local
 #      variables not only @m(x) and @m(y) but also the names of intermediate
 #      quantities like @m(a) and @m(b). One way to accomplish this is to use an
 #      auxiliary procedure to bind the local variables:
-     Al escribir un procedimiento para calcular @m(f), nos gustaría incluir como
+     Al escribir un procedimiento para calcular @m(ƒ), nos gustaría incluir como
      variables locales no solo @m(x) e @m(y), sino también los nombres de
      cantidades intermedias como @m(una) y @m(b). Una manera de lograr esto es
      usar un procedimiento auxiliar para enlazar las variables locales:
@@ -6573,29 +6569,29 @@ Company.
 **** Encontrar raíces de ecuaciones por el método de medio intervalo
 
 #      The @e(half-interval method) is a simple but powerful technique for finding
-#      roots of an equation @m[f(x) = 0], where @m(f) is a continuous function. The
-#      idea is that, if we are given points @m(a) and @m(b) such that @m[f(a) < 0 <
-#      f(b)], then @m(f) must have at least one zero between @m(a) and @m(b). To
+#      roots of an equation @m[ƒ(x) = 0], where @m(ƒ) is a continuous function. The
+#      idea is that, if we are given points @m(a) and @m(b) such that @m[ƒ(a) < 0 <
+#      ƒ(b)], then @m(ƒ) must have at least one zero between @m(a) and @m(b). To
 #      locate a zero, let @m(x) be the average of @m(a) and @m(b), and compute
-#      @m[f(x)]. If @m[f(x) > 0], then @m(f) must have a zero between @m(a) and
-#      @m(x). If @m[f(x) < 0], then @m(f) must have a zero between @m(x) and
+#      @m[ƒ(x)]. If @m[ƒ(x) > 0], then @m(ƒ) must have a zero between @m(a) and
+#      @m(x). If @m[ƒ(x) < 0], then @m(ƒ) must have a zero between @m(x) and
 #      @m(b). Continuing in this way, we can identify smaller and smaller intervals
-#      on which @m(f) must have a zero. When we reach a point where the interval is
+#      on which @m(ƒ) must have a zero. When we reach a point where the interval is
 #      small enough, the process stops. Since the interval of uncertainty is reduced
 #      by half at each step of the process, the number of steps required grows as
 #      @m[Θ(log(L / T))], where @m(L) is the length of the original interval and
 #      @m(T) is the error tolerance (that is, the size of the interval we will
 #      consider @"(small enough)]. Here is a procedure that implements this strategy:
      El @e(método del medio-intervalo) es una técnica simple pero de gran
-     alcance para encontrar raíces de una ecuación @m(f (x) = 0), donde @m(f) es
+     alcance para encontrar raíces de una ecuación @m(f (x) = 0), donde @m(ƒ) es
      una función continua. La idea es que, si se nos dan los puntos @m(a) y
-     @m(b) tales que @m(f (a) <0 <f (b)), entonces @m(f) debe tener al
+     @m(b) tales que @m(f (a) <0 <f (b)), entonces @m(ƒ) debe tener al
      menos un cero entre @m(a) y @m(b). Para localizar un cero, dejar que @m(x)
      sea el promedio de @m(un) y @m(b), y calcular @m(f (x)). Si @m(f (x)>
-     0), entonces @m(f) debe tener un cero entre @m(a) y @m(x). Si @m(f (x)
+     0), entonces @m(ƒ) debe tener un cero entre @m(a) y @m(x). Si @m(f (x)
      <0), @m(Entonces f) debe tener un cero entre @m(x) y @m(b). Continuando
      de esta manera, podemos identificar intervalos cada vez más pequeños en los
-     que @m(f) debe tener un cero. Cuando llegamos a un punto donde el intervalo
+     que @m(ƒ) debe tener un cero. Cuando llegamos a un punto donde el intervalo
      es lo suficientemente pequeño, el proceso se detiene. Dado que el intervalo
      de incertidumbre se reduce a la mitad en cada paso del proceso, el número
      de pasos requeridos crece como @m(Θ (log (L / T))), donde @m(L) es la
@@ -6649,22 +6645,22 @@ Company.
                   (else midpoint))))))
      < src..
 
-#      We assume that we are initially given the function @m(f) together with points
+#      We assume that we are initially given the function @m(ƒ) together with points
 #      at which its values are negative and positive. We first compute the midpoint
 #      of the two given points. Next we check to see if the given interval is small
 #      enough, and if so we simply return the midpoint as our answer. Otherwise, we
-#      compute as a test value the value of @m(f) at the midpoint. If the test value
+#      compute as a test value the value of @m(ƒ) at the midpoint. If the test value
 #      is positive, then we continue the process with a new interval running from the
 #      original negative point to the midpoint. If the test value is negative, we
 #      continue with the interval from the midpoint to the positive point. Finally,
 #      there is the possibility that the test value is 0, in which case the midpoint
 #      is itself the root we are searching for.
-     Suponemos que se nos da inicialmente la función @m(f) junto con los puntos
+     Suponemos que se nos da inicialmente la función @m(ƒ) junto con los puntos
      en que sus valores son negativos y positivos. Primero calculamos el punto
      medio de los dos puntos dados. A continuación verificamos si el intervalo
      dado es lo suficientemente pequeño, y si es así simplemente devolvemos el
      punto medio como nuestra respuesta. De lo contrario, calculamos como valor
-     de prueba el valor de @m(f) en el punto medio. Si el valor de la prueba es
+     de prueba el valor de @m(ƒ) en el punto medio. Si el valor de la prueba es
      positivo, entonces continuamos el proceso con un nuevo intervalo que va
      desde el punto negativo original hasta el punto medio. Si el valor de la
      prueba es negativo, continuamos con el intervalo desde el punto medio hasta
@@ -6688,7 +6684,7 @@ Company.
      < src..
 
 #      @c(Search) is awkward to use directly, because we can accidentally give it
-#      points at which @m(f)'s values do not have the required sign, in which case we
+#      points at which @m(ƒ)'s values do not have the required sign, in which case we
 #      get a wrong answer. Instead we will use @c(search) via the following
 #      procedure, which checks to see which of the endpoints has a negative function
 #      value and which has a positive value, and calls the @c(search) procedure
@@ -6696,7 +6692,7 @@ Company.
 #      half-interval method cannot be used, in which case the procedure signals an
 #      error.@n(56)
      @c(Search) Es incómodo de usar directamente, porque podemos accidentalmente
-     darle puntos en los que los valores de @m(f) no tienen el signo requerido,
+     darle puntos en los que los valores de @m(ƒ) no tienen el signo requerido,
      en cuyo caso recibimos una respuesta equivocada. En su lugar, utilizaremos
      @c(search) el siguiente procedimiento, que verifica para ver cuál de los
      puntos finales tiene un valor de función negativo y cuál tiene un valor
@@ -6771,19 +6767,19 @@ Company.
 # **** Finding fixed points of functions
 **** Encontrar puntos fijos de funciones
 
-#      A number @m(x) is called a @e(fixed point) of a function @m(f) if @m(x)
-#      satisfies the equation @m[f(x) = x]. For some functions @m(f) we can locate a
-#      fixed point by beginning with an initial guess and applying @m(f) repeatedly,
-     Un número @m(x) se llama @e(punto fijo) de una función @m(f) si @m(x)
-     satisface la ecuación @m(f (x) = x). Para algunas funciones @m(f) podemos
+#      A number @m(x) is called a @e(fixed point) of a function @m(ƒ) if @m(x)
+#      satisfies the equation @m[ƒ(x) = x]. For some functions @m(ƒ) we can locate a
+#      fixed point by beginning with an initial guess and applying @m(ƒ) repeatedly,
+     Un número @m(x) se llama @e(punto fijo) de una función @m(ƒ) si @m(x)
+     satisface la ecuación @m(f (x) = x). Para algunas funciones @m(ƒ) podemos
      localizar un punto fijo empezando con una conjetura inicial y aplicando
-     @m(f) repetidamente,
+     @m(ƒ) repetidamente,
 
 #      ..example >
-#        f(x), f(f(x)), f(f(f(x))), ...
+#        ƒ(x), ƒ(ƒ(x)), ƒ(ƒ(ƒ(x))), ...
 #      < example..
      ..example >
-       f(x), f(f(x)), f(f(f(x))), ...
+       ƒ(x), ƒ(ƒ(x)), ƒ(ƒ(ƒ(x))), ...
      < example..
 
 #      until the value does not change very much. Using this idea, we can devise a
@@ -7131,16 +7127,16 @@ Company.
 #     square-root procedure as a fixed-point search, starting with the observation
 #     that @m(√x) is a fixed-point of the function @m(y ↦ x / y). Then we used
 #     average damping to make the approximations converge.  Average damping is a
-#     useful general technique in itself. Namely, given a function @m(f), we
+#     useful general technique in itself. Namely, given a function @m(ƒ), we
 #     consider the function whose value at @m(x) is equal to the average of @m(x)
-#     and @m[f(x)].
+#     and @m[ƒ(x)].
     Podemos ilustrar esta idea mirando de nuevo el ejemplo de punto fijo
     descrito al final de @l(#1.3.3). Hemos formulado una nueva versión
     del procedimiento de raíz cuadrada como una búsqueda de punto fijo,
     comenzando con la observación de que @m(√x) es un punto fijo de la función
     @m(y ↦ x / y). Luego usamos el amortiguamiento promedio para hacer converger
     las aproximaciones. El amortiguamiento medio es una técnica general útil en
-    sí mismo. Es decir, dada una función @m(f), consideramos que la función cuyo
+    sí mismo. Es decir, dada una función @m(ƒ), consideramos que la función cuyo
     valor en @m(x) es igual a la media de @m(x) y @m(f (x)).
 
 #     We can express the idea of average damping by means of the following
@@ -7252,7 +7248,7 @@ Company.
 #      When we first introduced the square-root procedure, in @l(#1.1.7), we
 #      mentioned that this was a special case of @e(Newton's method).  If @m[x ↦
 #      g(x)] is a differentiable function, then a solution of the equation @m[g(x) =
-#      0] is a fixed point of the function @m[x ↦ f(x)] where
+#      0] is a fixed point of the function @m[x ↦ ƒ(x)] where
      Cuando introdujimos el procedimiento de raíz cuadrada, en
      @l(#1.1.7), mencionamos que este era un caso especial @e(del método)
      de @e(Newton). Si @m(x ↦ g (x)) es una función diferenciable, entonces una
@@ -7261,22 +7257,22 @@ Company.
 
 #      ..example >
 #                   g(x)
-#        f(x) = x − -----
+#        ƒ(x) = x − -----
 #                   Dg(x)
 #      < example..
      ..example >
                   g(x)
-       f(x) = x − -----
+       ƒ(x) = x − -----
                   Dg(x)
      < example..
 
 #      and @m[Dg(x)] is the derivative of @m(g) evaluated at @m(x). Newton's method
 #      is the use of the fixed-point method we saw above to approximate a solution of
-#      the equation by finding a fixed point of the function @m(f).@n(61)
+#      the equation by finding a fixed point of the function @m(ƒ).@n(61)
      Y @m(Dg (x)) es la derivada de @m(g) evaluada en @m(x). El método de Newton
      es el uso del método de punto fijo que vimos anteriormente para aproximar
      una solución de la ecuación encontrando un punto fijo de la función
-     @m(f).@n(61)
+     @m(ƒ).@n(61)
 
 #      For many functions @m(g) and for sufficiently good initial guesses for @m(x),
 #      Newton's method converges very rapidly to a solution of @m[g(x) = 0].@n(62)
@@ -7590,12 +7586,12 @@ Company.
           (((double (double double)) inc) 5)
         < src..
 
-#      :: @t(Exercise 1.42) :: Let @m(f) and @m(g) be two one-argument functions. The
-#         @e(composition) @m(f) after @m(g) is defined to be the function @m[x ↦
-#         f(g(x))]. Define a procedure @c(compose) that implements composition. For
+#      :: @t(Exercise 1.42) :: Let @m(ƒ) and @m(g) be two one-argument functions. The
+#         @e(composition) @m(ƒ) after @m(g) is defined to be the function @m[x ↦
+#         ƒ(g(x))]. Define a procedure @c(compose) that implements composition. For
 #         example, if @c(inc) is a procedure that adds 1 to its argument,
-     :: @t(Ejercicio 1.42) :: Deje que @m(f) y @m(g) sea dos funciones de un
-     argumento. La @e(composición ) @m(f) después de @m(g) se define como la
+     :: @t(Ejercicio 1.42) :: Deje que @m(ƒ) y @m(g) sea dos funciones de un
+     argumento. La @e(composición ) @m(ƒ) después de @m(g) se define como la
      función @m(x ↦ f (g (x))). Definir un procedimiento @c(compose) que
      implemente la composición. Por ejemplo, si @c(inc) es un procedimiento que
      añade 1 a su argumento,
@@ -7609,28 +7605,28 @@ Company.
           49
         < srci..
 
-#      :: @t(Exercise 1.43) :: If @m(f) is a numerical function and @m(n) is a
+#      :: @t(Exercise 1.43) :: If @m(ƒ) is a numerical function and @m(n) is a
 #         positive integer, then we can form the @m(nᵗʰ) repeated application of
-#         @m(f), which is defined to be the function whose value at @m(x) is @m[f(f(…
-#         (f(x))… ))]. For example, if @m(f) is the function @m(x ↦ x + 1), then the
-#         @m(nᵗʰ) repeated application of @m(f) is the function @m(x ↦ x + n). If
-#         @m(f) is the operation of squaring a number, then the @m(nᵗʰ) repeated
-#         application of @m(f) is the function that raises its argument to the
+#         @m(ƒ), which is defined to be the function whose value at @m(x) is @m[ƒ(ƒ(…
+#         (ƒ(x))… ))]. For example, if @m(ƒ) is the function @m(x ↦ x + 1), then the
+#         @m(nᵗʰ) repeated application of @m(ƒ) is the function @m(x ↦ x + n). If
+#         @m(ƒ) is the operation of squaring a number, then the @m(nᵗʰ) repeated
+#         application of @m(ƒ) is the function that raises its argument to the
 #         @m(2ⁿ-th) power. Write a procedure that takes as inputs a procedure that
-#         computes @m(f) and a positive integer @m(n) and returns the procedure that
-#         computes the @m(nᵗʰ) repeated application of @m(f). Your procedure should
+#         computes @m(ƒ) and a positive integer @m(n) and returns the procedure that
+#         computes the @m(nᵗʰ) repeated application of @m(ƒ). Your procedure should
 #         be able to be used as follows:
-     :: @t(Ejercicio 1.43) :: Si @m(f) es una función numérica y @m(n) es un
+     :: @t(Ejercicio 1.43) :: Si @m(ƒ) es una función numérica y @m(n) es un
         entero positivo, entonces podemos formar la @m(nᵗʰ) aplicación de
-        repetida @m(f), que se define como la función cuyo valor en @m(x) es
-        @m(f (f (... (f (x)) ...))). Por ejemplo, si @m(f) es la función @m(x ↦
-        x + 1), entonces el @m(nᵗʰ) aplicación repetida de @m(f) es la función
-        @m(x ↦ x + n). Si @m(f) es la operación de elevar al cuadrado un número,
-        entonces el @m(nᵗʰ) aplicación repetida de @m(f) es la función que eleva
+        repetida @m(ƒ), que se define como la función cuyo valor en @m(x) es
+        @m(f (f (... (f (x)) ...))). Por ejemplo, si @m(ƒ) es la función @m(x ↦
+        x + 1), entonces el @m(nᵗʰ) aplicación repetida de @m(ƒ) es la función
+        @m(x ↦ x + n). Si @m(ƒ) es la operación de elevar al cuadrado un número,
+        entonces el @m(nᵗʰ) aplicación repetida de @m(ƒ) es la función que eleva
         su argumento a la @m(2ⁿ-ésima) potencia. @m(Escribir un procedimiento
         que toma como entradas un procedimiento que calcula f) y un entero
         positivo @m(n) y devuelve el procedimiento que calcula la aplicación
-        repetida @m(nᵗʰ) de @m(f). Su procedimiento debe ser capaz de ser
+        repetida @m(nᵗʰ) de @m(ƒ). Su procedimiento debe ser capaz de ser
         utilizado de la siguiente manera:
 
 #         ..srci > scheme
@@ -7648,23 +7644,23 @@ Company.
         @l(#Ejercicio 1.42).
 
 #      :: @t(Exercise 1.44) :: The idea of @e(smoothing) a function is an important
-#         concept in signal processing. If @m(f) is a function and @m(dx) is some
-#         small number, then the smoothed version of @m(f) is the function whose
-#         value at a point @m(x) is the average of @m[f(x - dx)], @m[f(x)], and
-#         @m[f(x + dx)]. Write a procedure @c(smooth) that takes as input a procedure
-#         that computes @m(f) and returns a procedure that computes the smoothed
-#         @m(f). It is sometimes valuable to repeatedly smooth a function (that is,
+#         concept in signal processing. If @m(ƒ) is a function and @m(dx) is some
+#         small number, then the smoothed version of @m(ƒ) is the function whose
+#         value at a point @m(x) is the average of @m[ƒ(x - dx)], @m[ƒ(x)], and
+#         @m[ƒ(x + dx)]. Write a procedure @c(smooth) that takes as input a procedure
+#         that computes @m(ƒ) and returns a procedure that computes the smoothed
+#         @m(ƒ). It is sometimes valuable to repeatedly smooth a function (that is,
 #         smooth the smoothed function, and so on) to obtain the @e(@i{n}-fold
 #         smoothed function). Show how to generate the @i{n}-fold smoothed function
 #         of any given function using @c(smooth) and @c(repeated) from @l(#Exercise
 #         1.43).
      :: @t(Ejercicio 1.44) :: La idea de @e(suavizar) una función es un concepto
-        importante en el procesamiento de señales. Si @m(f) es una función y
-        @m(dx) es un número pequeño, entonces la versión suavizada de @m(f) es
+        importante en el procesamiento de señales. Si @m(ƒ) es una función y
+        @m(dx) es un número pequeño, entonces la versión suavizada de @m(ƒ) es
         la función cuyo valor en un punto @m(x) es la media de @m(f (x - dx)),
         @m(f (x)), y @m(f (x + dx)). Escriba un procedimiento @c(smooth) que
-        toma como entrada un procedimiento que calcula @m(f) y devuelve un
-        procedimiento que calcula el @m(f) alisado. A veces es valioso suavizar
+        toma como entrada un procedimiento que calcula @m(ƒ) y devuelve un
+        procedimiento que calcula el @m(ƒ) alisado. A veces es valioso suavizar
         repetidamente una función (es decir, suavizar la función suavizada, y
         así sucesivamente) para obtener la @e(función suavizada )@e(@i(n-)
         plegada) .@i()@c(smooth)@c(repeated)@l(#Ejercicio 1.43)
@@ -26878,7 +26874,7 @@ Company.
 #     On the other hand, we often model systems in terms of relations among
 #     quantities. For example, a mathematical model of a mechanical structure might
 #     include the information that the deflection @m(d) of a metal rod is related to
-#     the force @m(F) on the rod, the length @m(L) of the rod, the cross-sectional
+#     the force @m(ƒ) on the rod, the length @m(L) of the rod, the cross-sectional
 #     area @m(a), and the elastic modulus @m(E) via the equation
     Los programas informáticos se organizan tradicionalmente como cálculos
     unidireccionales, que realizan operaciones sobre argumentos preespecificados
@@ -26886,7 +26882,7 @@ Company.
     en términos de relaciones entre cantidades. Por ejemplo, un modelo
     matemático de una estructura mecánica podría incluir la información de que
     la deflexión @m(d) de un vástago metálico está relacionada con la fuerza
-    @m(F) de la varilla, la longitud @m(L) de la varilla, el área de la sección
+    @m(ƒ) de la varilla, la longitud @m(L) de la varilla, el área de la sección
     transversal @m(a) y el módulo elástico @m(E a) través de la ecuación
 
 #     ..example >
@@ -27013,7 +27009,7 @@ Company.
 #     information to proceed. If the user (or some other part of the network) sets
 #     @m(C) to a value (say 25), the leftmost multiplier will be awakened, and it
 #     will set @m(u) to @m(25 ⋅ 9 = 225). Then @m(u) awakens the second multiplier,
-#     which sets @m(v) to 45, and @m(v) awakens the adder, which sets @m(f) to 77.
+#     which sets @m(v) to 45, and @m(v) awakens the adder, which sets @m(ƒ) to 77.
     El cálculo por una red de este tipo procede de la siguiente manera: Cuando
     se da un valor a un conector (por el usuario o por un cuadro de
     restricciones al cual está enlazado), despierta todas sus restricciones
@@ -27029,7 +27025,7 @@ Company.
     usuario (o alguna otra parte de la red) establece C) en un valor (digamos
     25), el multiplicador más a la izquierda se despertará y fijará @m(u) a
     @m(25 ⋅ 9 = 225). Entonces @m(u) despierta el segundo multiplicador, que
-    pone @m(v) a 45, @m(yv) despierta el sumador, que fija @m(f) a 77.
+    pone @m(v) a 45, @m(yv) despierta el sumador, que fija @m(ƒ) a 77.
 
 # **** Using the constraint system
 **** Uso del sistema de restricciones
@@ -28584,12 +28580,12 @@ Company.
                          ⟨pₖ⟩)
      < src..
 
-#      Each @c[(p)] must be a procedure of no arguments. @c(Parallel-execute) creates
-#      a separate process for each @c[(p)], which applies @c[(p)] (to no
+#      Each @c(⟨p⟩) must be a procedure of no arguments. @c(Parallel-execute) creates
+#      a separate process for each @c(⟨p⟩), which applies @c(⟨p⟩) (to no
 #      arguments). These processes all run concurrently.@n(168)
-     Cada uno @c[(p)] debe ser un procedimiento sin
+     Cada uno @c(⟨p⟩) debe ser un procedimiento sin
      argumentos. @c(Parallel-execute) Crea un proceso separado para cada uno
-     @c[(p)], que se aplica @c[(p)](sin argumentos). Todos estos procesos se
+     @c(⟨p⟩), que se aplica @c(⟨p⟩)(sin argumentos). Todos estos procesos se
      ejecutan simultáneamente.@n(168)
 
 #      As an example of how this is used, consider
@@ -32652,22 +32648,22 @@ Company.
 #     Unfortunately, stream models of systems with loops may require uses of
 #     @c(delay) beyond the @"(hidden) @c(delay) supplied by @c(cons-stream).  For
 #     instance, @l(#Figure 3.34) shows a signal-processing system for solving the
-#     differential equation @m[dy / dt = f(y)] where @m(f) is a given function. The
-#     figure shows a mapping component, which applies @m(f) to its input signal,
+#     differential equation @m[dy / dt = ƒ(y)] where @m(ƒ) is a given function. The
+#     figure shows a mapping component, which applies @m(ƒ) to its input signal,
 #     linked in a feedback loop to an integrator in a manner very similar to that of
 #     the analog computer circuits that are actually used to solve such equations.
     Desafortunadamente, los modelos de flujo de sistemas con bucles pueden
     requerir usos de @c(delay) más allá de lo @"(oculto) @c(delay) proporcionado
     por @c(cons-stream). Por ejemplo, la @l(#Figura 3.34) muestra
     un sistema de procesamiento de señales para resolver la ecuación diferencial
-    @m(dy / dt = f (y)) donde @m(f) es una función dada. La figura muestra un
-    componente de mapeo, que se aplica @m(f) a su señal de entrada, enlazado en
+    @m(dy / dt = f (y)) donde @m(ƒ) es una función dada. La figura muestra un
+    componente de mapeo, que se aplica @m(ƒ) a su señal de entrada, enlazado en
     un bucle de realimentación a un integrador de una manera muy similar a la de
     los circuitos de computadora analógicos que se utilizan realmente para
     resolver dichas ecuaciones.
 
 #     ..figure > @t(Figure 3.34) An @"(analog computer circuit) that solves the
-#       equation @m[dy / dt = f(y)].
+#       equation @m[dy / dt = ƒ(y)].
     ..figure > @t(Figura 3.34) Un @"(circuito de computadora analógico) que
       resuelve la ecuación @m(dy / dt = f (y)).
 
@@ -32943,7 +32939,7 @@ Company.
 
 #     :: @t(Exercise 3.79) :: Generalize the @c(solve-2nd) procedure of @l(#Exercise
 #        3.78) so that it can be used to solve general second-order differential
-#        equations @m[d²y / dt² = f(dy / dt, y)].
+#        equations @m[d²y / dt² = ƒ(dy / dt, y)].
     :: @t(Ejercicio 3.79) :: Generalizar el @c(solve-2nd) procedimiento del
        @l(#Ejercicio 3.78) para que pueda usarse para resolver
        ecuaciones diferenciales generales de segundo orden @m(d²y / dt² = f (dy
@@ -42309,14 +42305,14 @@ Company.
           (son Ada Jubal)
         < src..
 
-#         Formulate rules such as @"(If @m(S) is the son of @m(f), and @m(f) is the
+#         Formulate rules such as @"(If @m(S) is the son of @m(ƒ), and @m(ƒ) is the
 #         son of @m(G), then @m(S) is the grandson of @m(G)) and @"(If @m(W) is the
 #         wife of @m(M), and @m(S) is the son of @m(W), then @m(S) is the son of
 #         @m(M)) (which was supposedly more true in biblical times than today) that
 #         will enable the query system to find the grandson of Cain; the sons of
 #         Lamech; the grandsons of Methushael. (See @l(#Exercise 4.69) for some rules
 #         to deduce more complicated relationships.)
-        Formular reglas tales como @"(Si @m(S) es el hijo de @m(f), y @m(f) es
+        Formular reglas tales como @"(Si @m(S) es el hijo de @m(ƒ), y @m(ƒ) es
         el hijo de @m(G), entonces @m(S) es el nieto de @m(G)) y @"(Si @m(W) es
         la esposa de @m(M), y @m(S) es el hijo de @m(W), entonces @m(S) es el
         hijo de @m(M)) (que supuestamente era más cierto en tiempos bíblicos que
@@ -58578,28 +58574,27 @@ Company.
 #      procedures that have already been created. We will see how to do this in
 #      @l(#1.3.2).
   :: @N(12) :: Observe que hay dos operaciones diferentes que se combinan aquí:
-     estamos creando el procedimiento, y le estamos dando el nombre
-     @c(square). Es posible, de hecho importante, poder separar estas dos
-     nociones: crear procedimientos sin nombrarlos y dar nombres a los
-     procedimientos que ya se han creado. Veremos cómo hacerlo en
-     @l(#1.3.2).
+     estamos creando el procedimiento, y le estamos dando el nombre @c(square).
+     Es posible, de hecho importante, poder separar estas dos nociones: crear
+     procedimientos sin nombrarlos y dar nombres a los procedimientos que ya se
+     han creado. Veremos cómo hacerlo en la seccion @l(#1.3.2).
 
 #   :: @N(13) :: Throughout this book, we will describe the general syntax of
 #      expressions by using italic symbols delimited by angle brackets––e.g.,
 #      @c[(name)]––to denote the @"(slots) in the expression to be filled in when
 #      such an expression is actually used.
   :: @N(13) :: A lo largo de este libro, describiremos la sintaxis general de
-     las expresiones usando símbolos en cursiva delimitados por paréntesis
-     angulares, por ejemplo, para @c[(name)] indicar las @"(ranuras) en la
-     expresión que se rellenará cuando tal expresión se use realmente.
+     las expresiones delimitadas por paréntesis angulares––por ejemplo,
+     @c[⟨nombre⟩]––para indicar las @"(espacios) en la expresión que se llenaran
+     cuando la expresión se use realmente.
 
 #   :: @N(14) :: More generally, the body of the procedure can be a sequence of
 #      expressions. In this case, the interpreter evaluates each expression in the
 #      sequence in turn and returns the value of the final expression as the value
 #      of the procedure application.
-  :: @N(14) :: Más generalmente, el cuerpo del procedimiento puede ser una
-     secuencia de expresiones. En este caso, el intérprete evalúa cada expresión
-     en la secuencia a su vez y devuelve el valor de la expresión final como el
+  :: @N(14) :: Generalmente, el cuerpo del procedimiento puede ser una secuencia
+     de expresiones. En este caso, el intérprete evalúa cada expresión en la
+     secuencia sucesivamente y devuelve el valor de la expresión final como el
      valor de la aplicación de procedimiento.
 
 #   :: @N(15) :: Despite the simplicity of the substitution idea, it turns out to
@@ -58617,19 +58612,19 @@ Company.
      procedimiento y los nombres (posiblemente idénticos) utilizados en las
      expresiones a las que puede aplicarse el procedimiento. De hecho, existe
      una larga historia de definiciones erróneas de @e(sustitución) en la
-     literatura de la lógica y la semántica de programación. Véase
-     @l(#Stoy-1977<>Stoy 1977) para una cuidadosa discusión de la sustitución.
+     literatura de la lógica y la semántica en programación. Ver @l(#Stoy 1977)
+     para una cuidadosa discusión de la sustitución.
 
 #   :: @N(16) :: In @l(#Chapter 3) we will introduce @e(stream processing), which
 #      is a way of handling apparently @"(infinite) data structures by
 #      incorporating a limited form of normal-order evaluation. In @l(#4.2) we
 #      will modify the Scheme interpreter to produce a normal-order variant of
 #      Scheme.
-  :: @N(16) :: En el @l(#Capitulo 3) introduciremos el
-     @e(procesamiento de flujos), que es una manera de manejar estructuras de
-     datos aparentemente @"(infinitas) incorporando una forma limitada de
-     evaluación de orden normal. En @l(#4.2) modificaremos el intérprete
-     Scheme para producir una variante de orden normal de Scheme.
+  :: @N(16) :: En el @l(#Capitulo 3) introduciremos el @e(procesamiento de
+     flujos), que es una manera de manejar estructuras de datos aparentemente
+     @"(infinitas) incorporando una forma limitada de evaluación de orden
+     normal. En la seccion @l(#4.2) modificaremos el intérprete Scheme para
+     producir una variante de orden normal de Scheme.
 
 #   :: @N(17) :: @"(Interpreted as either true or false) means this: In Scheme,
 #      there are two distinguished values that are denoted by the constants @c(#t)
@@ -58639,31 +58634,31 @@ Company.
 #      will use names @c(true) and @c(false), which are associated with the values
 #      @c(#t) and @c(#f) respectively.
   :: @N(17) :: @"(Interpretado como verdadero o falso) significa esto: En
-     Scheme, hay dos valores distinguidos que son denotados por las constantes
-     @c(#t) y @c(#f). Cuando el intérprete comprueba el valor de un predicado,
-     interpreta @c(#f) como falso. Cualquier otro valor es tratado como
-     verdadero. (Por lo tanto, proveer @c(#t) es lógicamente innecesario, pero
-     es conveniente.) En este libro usaremos nombres @c(true) y @c(false), que
-     están asociados con los valores @c(#t) y @c(#f) respectivamente.
+     Scheme, hay dos valores distinguidos denotados por las constantes @c(#t) y
+     @c(#f). Cuando el intérprete comprueba el valor de un predicado, interpreta
+     @c(#f) como falso. Cualquier otro valor es tratado como verdadero. (Por lo
+     tanto, proveer @c(#t) es lógicamente innecesario, pero es conveniente.) En
+     este libro usaremos nombres @c(true) y @c(false), que están asociados con
+     los valores @c(#t) y @c(#f) respectivamente.
 
-#   :: @N(18) :: @c(Abs) also uses the @"(minus) operator @c(-), which, when used
-#      with a single operand, as in @c[(- x)], indicates negation.}
-  :: @N(18) :: @c(Abs) También utiliza el operador @"(menos)@c(-), que, cuando
-     se utiliza con un solo operando, como en @c[(- x)], indica negación.}
+#   :: @N(18) :: @c(abs) also uses the @"(minus) operator @c(-), which, when used
+#      with a single operand, as in @c[(- x)], indicates negation.
+  :: @N(18) :: @c(abs) También utiliza el operador @"(menos) @c(-), que, cuando
+     se utiliza con un solo operando, como en @c[(- x)], indica negación.
 
 #   :: @N(19) :: A minor difference between @c(if) and @c(cond) is that the
-#      @c[(e)] part of each @c(cond) clause may be a sequence of expressions. If
-#      the corresponding @c[(p)] is found to be true, the expressions @c[(e)] are
+#      @c[⟨e⟩] part of each @c(cond) clause may be a sequence of expressions. If
+#      the corresponding @c[⟨p⟩] is found to be true, the expressions @c[⟨e⟩] are
 #      evaluated in sequence and the value of the final expression in the sequence
 #      is returned as the value of the @c(cond). In an @c(if) expression, however,
-#      the @c[(consequent)] and @c[(alternative)] must be single expressions.
-  :: @N(19) :: Una pequeña diferencia entre @c(if) y @c(cond) es que la @c[(e)]
-     parte de cada @c(cond) cláusula puede ser una secuencia de expresiones. Si
-     @c[(p)] se comprueba que el valor correspondiente es verdadero, las
-     expresiones @c[(e)] se evalúan en secuencia y el valor de la expresión
-     final en la secuencia se devuelve como el valor de @c(cond). En una @c(if)
-     expresión, sin embargo, el @c[(consequent)] y @c[(alternative)] debe ser
-     expresiones individuales.
+#      the @c[⟨consequent⟩] and @c[⟨alternative⟩] must be single expressions.
+  :: @N(19) :: Una pequeña diferencia entre @c(if) y @c(cond) es que la parte
+     @c[⟨e⟩] de cada clausula @c(cond) puede ser una secuencia de
+     expresiones. Si se comprueba que el valor @c[⟨p⟩] correspondiente es
+     verdadero, se evalúan las expresiones @c[⟨e⟩] en secuencia y el valor de la
+     expresión final en la secuencia se devuelve como el valor de @c(cond). En
+     una expresión @c(if), sin embargo, @c[⟨consecuente⟩] y @c[⟨alternativo⟩]
+     debe ser expresiones individuales.
 
 #   :: @N(20) :: Declarative and imperative descriptions are intimately related,
 #      as indeed are mathematics and computer science. For instance, to say that
@@ -58689,36 +58684,35 @@ Company.
      programas son correctos y gran parte de la dificultad técnica de este tema
      tiene que ver con la negociación de la transición entre declaraciones
      imperativas (de las que se construyen los programas) y declaraciones
-     declarativas Ser utilizado para deducir las cosas). En una línea
+     declarativas (que se pueden utilizar para deducir las cosas). En una línea
      relacionada, una importante área actual en el diseño de lenguajes de
      programación es la exploración de los llamados lenguajes de muy alto nivel,
      en los cuales uno realmente programa en términos de declaraciones
-     declarativas. @"(La idea es hacer que los intérpretes lo suficientemente
-     sofisticados como para que, dada lo que es) el conocimiento especificado
-     por el programador, que pueden generar @"(la forma de) conocimiento de
-     forma automática. Esto no se puede hacer en general, pero hay áreas
-     importantes donde se han hecho progresos. Revisaremos esta idea en el
-     @l(#Capitulo 4).
+     declarativas. La idea es hacer que los intérpretes sean lo suficientemente
+     sofisticados para que, dado @"(lo que es) el conocimiento especificado por
+     el programador, pueda generar el conocimiento de @"(como) de forma
+     automática. Esto no se puede hacer en general, pero hay áreas importantes
+     donde se han hecho progresos. Revisaremos esta idea en el @l(#Capitulo 4).
 
 #   :: @N(21) :: This square-root algorithm is actually a special case of Newton's
 #      method, which is a general technique for finding roots of equations. The
 #      square-root algorithm itself was developed by Heron of Alexandria in the
-#      first century @A(A.D.)  We will see how to express the general Newton's
+#      first century A.D. We will see how to express the general Newton's
 #      method as a Lisp procedure in @l(#1.3.4).
   :: @N(21) :: Este algoritmo de raíz cuadrada es en realidad un caso especial
-     del método de Newton, que es una técnica general para encontrar raíces de
+     del método Newton, que es una técnica general para encontrar raíces de
      ecuaciones. El algoritmo de raíz cuadrada en sí mismo fue desarrollado por
-     Heron of Alexandria en el primer siglo @A(dC) Veremos cómo expresar el
-     método general de Newton como un procedimiento Lisp en @l(#1.3.4).
+     Heron of Alexandria en el primer siglo D.C. Veremos cómo expresar el método
+     general de Newton como un procedimiento Lisp en la seccion @l(#1.3.4).
 
 #   :: @N(22) :: We will usually give predicates names ending with question marks,
 #      to help us remember that they are predicates.  This is just a stylistic
 #      convention. As far as the interpreter is concerned, the question mark is
 #      just an ordinary character.
   :: @N(22) :: Por lo general, daremos a los predicados nombres que terminen con
-     signos de interrogación, para ayudarnos a recordar que ellos son
-     predicados. Esto es sólo una convención estilística. En cuanto al
-     intérprete, el signo de interrogación es simplemente un carácter ordinario.
+     signos de interrogación, para ayudarnos a recordar que son predicados. Esto
+     es sólo una convención estilística. En cuanto al intérprete, el signo de
+     interrogación es simplemente un carácter ordinario.
 
 #   :: @N(23) :: Observe that we express our initial guess as 1.0 rather
 #      than 1. This would not make any difference in many Lisp
@@ -58738,13 +58732,13 @@ Company.
      valores decimales, y dividir dos enteros produce un número racional en
      lugar de un decimal. Por ejemplo, la división de 10 por 6 produce 5/3,
      mientras que la división de 10,0 por 6,0 produce 1,6666666666666667. (Vamos
-     a aprender cómo implementar la aritmética de números racionales en
-     @l(#2.1.1) .) Si partimos de un valor inicial de 1 en nuestro
-     programa de raíz cuadrada, y @m(x) es un número entero exacto, todos los
-     valores posteriores producidos en el cálculo de la raíz cuadrada Serán
-     números racionales en lugar de decimales. Operaciones mixtas en números
-     racionales y decimales siempre dan decimales, comenzando con una estimación
-     inicial de 1.
+     a aprender cómo implementar la aritmética de números racionales en la
+     seccion @l(#2.1.1).) Si en nuestro programa de raíz cuadrada partimos de un
+     valor inicial de 1, y @m(x) es un número entero exacto, todos los valores
+     posteriores producidos en el cálculo de la raíz cuadrada serán números
+     racionales en lugar de decimales. Operaciones mixtas en números racionales
+     y decimales siempre dan decimales, de modo que comenzamos con una
+     estimación inicial de 1.0.
 
 #   :: @N(24) :: Readers who are worried about the efficiency issues involved in
 #      using procedure calls to implement iteration should note the remarks on
@@ -58752,14 +58746,14 @@ Company.
   :: @N(24) :: Los lectores que están preocupados por los problemas de
      eficiencia involucrados en el uso de llamadas de procedimiento para
      implementar la iteración deben tener en cuenta las observaciones sobre la
-     @"(recursión de cola) en @l(#1.2.1).
+     @"(recursión de cola) en la seccion @l(#1.2.1).
 
 #   :: @N(25) :: It is not even clear which of these procedures is a more
 #      efficient implementation. This depends upon the hardware available. There
 #      are machines for which the @"(obvious) implementation is the less efficient
 #      one. Consider a machine that has extensive tables of logarithms and
 #      antilogarithms stored in a very efficient manner.
-  :: @N(25) :: Ni siquiera está claro cuál de estos procedimientos es una
+  :: @N(25) :: Ni siquiera está claro cuál de estos procedimientos es la
      implementación más eficiente. Esto depende del hardware disponible. Hay
      máquinas para las cuales la implementación @"(obvia) es la menos
      eficiente. Considere una máquina que tiene extensas tablas de logaritmos y
@@ -58776,20 +58770,20 @@ Company.
 #      taken to refer to bindings made by enclosing procedure definitions; that
 #      is, they are looked up in the environment in which the procedure was
 #      defined. We will see how this works in detail in chapter 3 when we study
-#      environments and the detailed behavior of the interpreter.@t(Footnote 28)
+#      environments and the detailed behavior of the interpreter.
   :: @N(27) :: El ámbito léxico dicta que las variables libres en un
      procedimiento se toman para referirse a los enlaces que se hacen al incluir
-     las definiciones del procedimiento; Es decir, se buscan en el entorno en el
+     las definiciones del procedimiento; es decir, se buscan en el entorno en el
      que se definió el procedimiento. Veremos cómo esto funciona en detalle en
      el capítulo 3 cuando estudiamos los entornos y el comportamiento detallado
-     del intérprete. <span id="Footnote-28">Nota 28</span>
+     del intérprete.
 
 #   :: @N(28) :: Embedded definitions must come first in a procedure body. The
 #      management is not responsible for the consequences of running programs that
 #      intertwine definition and use.
-  :: @N(28) :: Definiciones incrustadas deben venir primero en un cuerpo de
-     procedimiento. La dirección no es responsable de las consecuencias de
-     ejecutar programas que entrelazan la definición y el uso.
+  :: @N(28) :: Las definiciones incrustadas deben aparecer al pricipio en el
+     cuerpo del procedimiento. El administrador no es responsable de las
+     consecuencias de ejecutar programas que entrelazan la definición y el uso.
 
 #   :: @N(29) :: In a real program we would probably use the block structure
 #      introduced in the last section to hide the definition of @c(fact-iter):
@@ -61313,14 +61307,14 @@ Company.
      qué elegimos esta descomposición.
 
 #   :: @N(196) :: The precise statement of the required property on the order of
-#      combination is as follows: There should be a function @m(f) of two
+#      combination is as follows: There should be a function @m(ƒ) of two
 #      arguments such that the pair corresponding to element @m(i) of the first
 #      stream and element @m(j) of the second stream will appear as element number
-#      @m[f(i, j)] of the output stream. The trick of using @c(interleave) to
+#      @m[ƒ(i, j)] of the output stream. The trick of using @c(interleave) to
 #      accomplish this was shown to us by David Turner, who employed it in the
 #      language KRC (@l(#Turner 1981)).
   :: @N(196) :: La declaración exacta de la propiedad requerida en el orden de
-     combinación es la siguiente: Debería haber una función @m(f) de dos
+     combinación es la siguiente: Debería haber una función @m(ƒ) de dos
      argumentos de tal manera que el par que corresponde al elemento @m(i) de la
      primera corriente y el elemento @m(j) de la segunda corriente aparecerá
      como número de elemento @m(f (I, j)) de la corriente de salida. El truco de
@@ -62715,8 +62709,8 @@ Company.
 #      as detectors for particular kinds of loops (@l(#Exercise 4.67)). However,
 #      there can be no general scheme for reliably preventing a system from going
 #      down infinite paths in performing deductions. Imagine a diabolical rule of
-#      the form @"(To show @m[P(x)] is true, show that @m[P(f(x))] is true,) for
-#      some suitably chosen function @m(f).
+#      the form @"(To show @m[P(x)] is true, show that @m[P(ƒ(x))] is true,) for
+#      some suitably chosen function @m(ƒ).
   :: @N(281) :: Esto no es un problema de la lógica, sino uno de la
      interpretación procedimental de la lógica proporcionada por nuestro
      intérprete. Podríamos escribir un intérprete que no caería en un bucle
@@ -62731,8 +62725,8 @@ Company.
      @l(#Ejercicio 4.67) ). Sin embargo, No puede haber un
      esquema general para evitar de manera fiable que un sistema pase por sendas
      infinitas al realizar deducciones. @"(Imaginemos una regla diabólica de la
-     forma Para demostrar que @m(P (x)) es verdadera, demostrar que @m(P (f
-     (x))) es verdadera,) para alguna función @m(f) apropiadamente escogida.
+     forma Para demostrar que @m(P (x)) es verdadera, demostrar que @m(P (ƒ
+     (x))) es verdadera,) para alguna función @m(ƒ) apropiadamente escogida.
 
 #   :: @N(282) :: Consider the query @c[(not (baseball-fan (Bitdiddle Ben)))]. The
 #      system finds that @c[(baseball-fan (Bitdiddle Ben))] is not in the data

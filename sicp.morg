@@ -30808,8 +30808,8 @@ production-distribution arrangement with the McGraw-Hill Book Company.
   :: @N(21) :: This square-root algorithm is actually a special case of Newton's
      method, which is a general technique for finding roots of equations. The
      square-root algorithm itself was developed by Heron of Alexandria in the
-     first century @A(A.D.)  We will see how to express the general Newton's
-     method as a Lisp procedure in @l(#1.3.4).
+     first century A.D. We will see how to express the general Newton's method
+     as a Lisp procedure in @l(#1.3.4).
 
   :: @N(22) :: We will usually give predicates names ending with question marks,
      to help us remember that they are predicates.  This is just a stylistic

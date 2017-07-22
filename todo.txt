@@ -5,6 +5,13 @@
 
   dentro de los comandos @m y @M substituir @c(f) por ƒ
 
+  Corregir algunos "predicados" colocando parentesis angulares ⟨⟩ siguiendo el
+  estilo del pdf original
+
+  Las correcciones deben realizarse tanto en la traduccion como en la region
+  comentada "original", al finalizar se reconstruira la version en ingles,
+  apartir del fichero de traduccion
+
 * Tareas por colaborador
 
   agregar tarea siguiendo el formato
@@ -40,11 +47,22 @@
   - [X] - nasciiboy :: traduccion :: Expressions
   - [X] - nasciiboy :: traduccion :: Naming and the Environment
   - [X] - nasciiboy :: traduccion :: Evaluating Combinations
-  - [ ] - nasciiboy :: traduccion :: Compound Procedures
-  - [ ] - nasciiboy :: traduccion :: The Substitution Model for Procedure Application
-  - [ ] - nasciiboy :: traduccion :: Applicative order versus normal order
-  - [ ] - nasciiboy :: traduccion :: Conditional Expressions and Predicates
-  - [ ] - nasciiboy :: traduccion :: Example: Square Roots by Newton's Method
-  - [ ] - nasciiboy :: traduccion :: Procedures as Black-Box Abstractions
-  - [ ] - nasciiboy :: traduccion :: Local names
-  - [ ] - nasciiboy :: traduccion :: Internal definitions and block structure
+  - [X] - nasciiboy :: traduccion :: Compound Procedures
+  - [X] - nasciiboy :: traduccion :: The Substitution Model for Procedure Application
+  - [X] - nasciiboy :: traduccion :: Applicative order versus normal order
+  - [X] - nasciiboy :: traduccion :: Conditional Expressions and Predicates
+  - [X] - nasciiboy :: traduccion :: Example: Square Roots by Newton's Method
+  - [X] - nasciiboy :: traduccion :: Procedures as Black-Box Abstractions
+  - [X] - nasciiboy :: traduccion :: Local names
+  - [X] - nasciiboy :: traduccion :: Internal definitions and block structure
+  - [ ] - nasciiboy :: traduccion :: Procedures and the Processes They Generate
+  - [ ] - nasciiboy :: traduccion :: Linear Recursion and Iteration
+  - [ ] - nasciiboy :: traduccion :: Tree Recursion
+  - [ ] - nasciiboy :: traduccion :: Example: Counting change
+  - [ ] - nasciiboy :: traduccion :: Orders of Growth
+  - [ ] - nasciiboy :: traduccion :: Exponentiation
+  - [ ] - nasciiboy :: traduccion :: Greatest Common Divisors
+  - [ ] - nasciiboy :: traduccion :: Example: Testing for Primality
+  - [ ] - nasciiboy :: traduccion :: Searching for divisors
+  - [ ] - nasciiboy :: traduccion :: The Fermat test
+  - [ ] - nasciiboy :: traduccion :: Probabilistic methods
