@@ -55,12 +55,12 @@
   - [X] - nasciiboy :: traduccion :: Procedures as Black-Box Abstractions
   - [X] - nasciiboy :: traduccion :: Local names
   - [X] - nasciiboy :: traduccion :: Internal definitions and block structure
-  - [ ] - nasciiboy :: traduccion :: Procedures and the Processes They Generate
-  - [ ] - nasciiboy :: traduccion :: Linear Recursion and Iteration
-  - [ ] - nasciiboy :: traduccion :: Tree Recursion
-  - [ ] - nasciiboy :: traduccion :: Example: Counting change
-  - [ ] - nasciiboy :: traduccion :: Orders of Growth
-  - [ ] - nasciiboy :: traduccion :: Exponentiation
+  - [X] - nasciiboy :: traduccion :: Procedures and the Processes They Generate
+  - [X] - nasciiboy :: traduccion :: Linear Recursion and Iteration
+  - [X] - nasciiboy :: traduccion :: Tree Recursion
+  - [X] - nasciiboy :: traduccion :: Example: Counting change
+  - [X] - nasciiboy :: traduccion :: Orders of Growth
+  - [X] - nasciiboy :: traduccion :: Exponentiation
   - [ ] - nasciiboy :: traduccion :: Greatest Common Divisors
   - [ ] - nasciiboy :: traduccion :: Example: Testing for Primality
   - [ ] - nasciiboy :: traduccion :: Searching for divisors
