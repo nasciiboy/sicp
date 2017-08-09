@@ -61,8 +61,15 @@
   - [X] - nasciiboy :: traduccion :: Example: Counting change
   - [X] - nasciiboy :: traduccion :: Orders of Growth
   - [X] - nasciiboy :: traduccion :: Exponentiation
-  - [ ] - nasciiboy :: traduccion :: Greatest Common Divisors
-  - [ ] - nasciiboy :: traduccion :: Example: Testing for Primality
-  - [ ] - nasciiboy :: traduccion :: Searching for divisors
-  - [ ] - nasciiboy :: traduccion :: The Fermat test
-  - [ ] - nasciiboy :: traduccion :: Probabilistic methods
+  - [X] - nasciiboy :: traduccion :: Greatest Common Divisors
+  - [X] - nasciiboy :: traduccion :: Example: Testing for Primality
+  - [X] - nasciiboy :: traduccion :: Searching for divisors
+  - [X] - nasciiboy :: traduccion :: The Fermat test
+  - [X] - nasciiboy :: traduccion :: Probabilistic methods
+  - [ ] - nasciiboy :: traduccion :: Formulating Abstractions with Higher-Order Procedures
+  - [ ] - nasciiboy :: traduccion :: Procedures as Arguments
+  - [ ] - nasciiboy :: traduccion :: Constructing Procedures Using Lambda
+  - [ ] - nasciiboy :: traduccion :: Using let to create local variables
+  - [ ] - nasciiboy :: traduccion :: Procedures as General Methods
+  - [ ] - nasciiboy :: traduccion :: Finding roots of equations by the half-interval method
+  - [ ] - nasciiboy :: traduccion :: Finding fixed points of functions

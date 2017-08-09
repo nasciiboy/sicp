@@ -4854,15 +4854,16 @@ Company.
 #     4/7.)  One way to find the @A(GCD) of two integers is to factor them and
 #     search for common factors, but there is a famous algorithm that is much more
 #     efficient.
-    El mayor divisor común (@A(GCD) ) de dos enteros @m(a) y @m(b) se define
-    como el entero más grande que divide @m(a) y @m(b) sin resto. Por ejemplo,
-    el @A(GCD) de 16 y 28 es 4. En el @l(Capitulo 2), cuando
-    investigamos cómo implementar la aritmética del número racional, tendremos
-    que ser capaces de calcular @A(GCD) s para reducir los números racionales a
-    los términos más bajos. (Para reducir un número racional a los términos más
-    bajos, debemos dividir el numerador y el denominador por su @A(GCD). Por
-    ejemplo, 16/28 se reduce a 4/7.) Una forma de encontrar el @A(GCD) de dos
-    enteros es factorizarlos y Búsqueda de factores comunes,
+    El maximo común divisor (o @A(GCD) por greatest common divisor) de dos
+    enteros @m(a) y @m(b) se define como el entero más grande que divide a @m(a)
+    y @m(b) sin resto. Por ejemplo, el @A(GCD) de 16 y 28 es 4. En el
+    @l(Capitulo 2), cuando investiguemos cómo implementar la aritmética del
+    número racional, tendremos que ser capaces de calcular @A(GCD)s en orden
+    para reducir números racionales a los términos más bajos. (Para reducir un
+    número racional a los términos más bajos, debemos dividir el numerador y el
+    denominador por su @A(GCD). Por ejemplo, 16/28 se reduce a 4/7.) Una forma
+    de encontrar el @A(GCD) de dos entero s es factorizarlos y búscar los
+    factores comunes,
 
 #     The idea of the algorithm is based on the observation that, if @m(r) is the
 #     remainder when @m(a) is divided by @m(b), then the common divisors of @m(a)
@@ -4882,7 +4883,7 @@ Company.
 
 #     to successively reduce the problem of computing a @A(GCD) to the problem of
 #     computing the @A(GCD) of smaller and smaller pairs of integers. For example,
-    Para reducir sucesivamente el problema de calcular un @A(GCD) al problema de
+    para reducir sucesivamente el problema de calcular un @A(GCD) al problema de
     calcular el @A(GCD) de pares de números enteros más pequeños y más
     pequeños. Por ejemplo,
 
@@ -4904,7 +4905,7 @@ Company.
 #     reductions will always eventually produce a pair where the second number
 #     is 0. Then the @A(GCD) is the other number in the pair. This method for
 #     computing the @A(GCD) is known as @e(Euclid's Algorithm).@n(42)
-    Reduce @A(GCD) (206, 40) a @A(GCD) (2, 0), que es 2. Es posible mostrar que
+    Reduce @A(GCD)(206, 40) a @A(GCD)(2, 0), que es 2. Es posible mostrar que
     comenzar con dos enteros positivos y realizar reducciones repetidas siempre
     producirá un par donde el segundo número es 0. Entonces el @A(GCD) es el
     otro número en el par. Este método para calcular el @A(GCD) se conoce como
@@ -4940,21 +4941,21 @@ Company.
 #     - Lamé's Theorem :: If Euclid's Algorithm requires @m(k) steps to compute the
 #       @A(GCD) of some pair, then the smaller number in the pair must be greater
 #       than or equal to the @m(kᵗʰ) Fibonacci number.@n(43)
-    - Teorema de Lamé :: Si el Algoritmo de Euclides requiere @m(k) pasos para
-         calcular el @A(GCD) de algún par, entonces el número más pequeño en el
-         par debe ser mayor o igual al número de @m(kᵗʰ) Fibonacci.@n(43)
+    - Teorema de Lamé -: Si el Algoritmo de Euclides requiere @m(k) pasos para
+      calcular el @A(GCD) de algún par, entonces el número más pequeño en el par
+      debe ser mayor o igual al número de @m(kᵗʰ) Fibonacci.@n(43)
 
 #     We can use this theorem to get an order-of-growth estimate for Euclid's
 #     Algorithm. Let @m(n) be the smaller of the two inputs to the procedure. If
-#     the process takes @m(k) steps, then we must have @m[n ≥ Fib(k) ≈ φᵏ / √5].
+#     the process takes @m(k) steps, then we must have @m[n ≥ Fib(k) ≈ φᵏ/√5].
 #     Therefore the number of steps @m(k) grows as the logarithm (to the base
 #     @m(φ) of @m(n). Hence, the order of growth is @m[Θ(log n)].
     Podemos usar este teorema para obtener una estimación de orden de
     crecimiento para el Algoritmo de Euclides. Sea @m(n) la menor de las dos
     entradas del procedimiento. Si el proceso toma @m(k) pasos, entonces debemos
-    tener @m(n ≥ Fib (k) ≈ φᵏ / √5). Por lo tanto, el número de pasos @m(k)
-    crece como el logaritmo (a la base @m(φ) de @m(n). Por lo tanto, el orden de
-    crecimiento es @m(Θ (log n)).
+    tener @m[n ≥ Fib(k) ≈ φᵏ/√5]. Por lo tanto, el número de pasos @m(k) crece
+    como el logaritmo (a la base @m(φ) de @m(n). Por lo tanto, el orden de
+    crecimiento es @m[Θ(log n)].
 
 #     :: @t(Exercise 1.20) :: The process that a procedure generates is of course
 #        dependent on the rules used by the interpreter. As an example, consider the
@@ -4968,27 +4969,26 @@ Company.
 #        In the applicative-order evaluation?
     :: @t(Ejercicio 1.20) :: El proceso que genera un procedimiento depende, por
        supuesto, de las reglas utilizadas por el intérprete. Como ejemplo,
-       considere el procedimiento @c(gcd) iterativo dado
-       anteriormente. Supongamos que debemos interpretar este procedimiento
-       usando la evaluación de orden normal, como se discutió en
-       @l(#1.1.5). (La regla de evaluación de orden normal para @c(if) se
-       describe en el @l(#Ejercicio 1.5) ). Usando el método de
-       sustitución (para el orden normal), ilustrar el proceso generado en la
-       evaluación @c[(gcd 206 40)] e indicar las @c(remainder) operaciones que
-       se realizan realmente. ¿Cuántas @c(remainder) operaciones se realizan
-       realmente en la evaluación de orden normal de @c[(gcd 206 40)]? ¿En la
-       evaluación por pedido?
+       considere el procedimiento iterativo @c(gcd) anterior. Supongamos que
+       debemos interpretar este procedimiento usando la evaluación de orden
+       normal, como se discutió en @l(#1.1.5). (La regla de evaluación de orden
+       normal para @c(if) se describe en el @l(#Ejercicio 1.5).) Usando el
+       método de sustitución (para el orden normal), ilustrar el proceso
+       generado en la evaluación @c[(gcd 206 40)] e indicar las operaciones
+       @c(remainder) que se realizan realmente. ¿Cuántas operaciones
+       @c(remainder) se realizan realmente en la evaluación de orden normal de
+       @c[(gcd 206 40)]? ¿En la evaluación de orden aplicativo?
 
 # *** 1.2.6 <> Example: Testing for Primality
-*** 1.2.6 <> Ejemplo: Prueba de Primality
+*** 1.2.6 <> Ejemplo: Prueba de Primalidad
 
 #     This section describes two methods for checking the primality of an integer
 #     @m(n), one with order of growth @m[Θ(√n)], and a @"(probabilistic) algorithm
 #     with order of growth @m[Θ(log n)].  The exercises at the end of this section
 #     suggest programming projects based on these algorithms.
     Esta sección describe dos métodos para comprobar la primalidad de un entero
-    @m(n), uno con orden de crecimiento @m(Θ (√n)) y un algoritmo
-    @"(probabilístico) con orden de crecimiento @m(Θ (log n)). Los ejercicios al
+    @m(n), uno con orden de crecimiento @m[Θ(√n)] y un algoritmo
+    @"(probabilístico) con orden de crecimiento @m[Θ(log n)]. Los ejercicios al
     final de esta sección sugieren proyectos de programación basados en estos
     algoritmos.
 
@@ -5064,34 +5064,34 @@ Company.
 #      the number of steps required to identify @m(n) as prime will have order of
 #      growth @m(Θ(√n)).
      La prueba final @c(find-divisor) se basa en el hecho de que si @m(n) no es
-     primo debe tener un divisor inferior o igual a @m(√n).@n(44) Esto
-     significa que el algoritmo sólo necesita probar divisores entre 1 y
-     @m(√n). En consecuencia, el número de pasos necesarios para identificar
-     @m(n) como primo tendrá orden de crecimiento @m(Θ (√n) ).
+     primo debe tener un divisor inferior o igual a @m(√n).@n(44) Esto significa
+     que el algoritmo sólo necesita probar divisores entre 1 y @m(√n). En
+     consecuencia, el número de pasos necesarios para identificar @m(n) como
+     primo tendrá orden de crecimiento @m[Θ(√n)].
 
 # **** The Fermat test
 **** La prueba de Fermat
 
 #      The @m[Θ(log n)] primality test is based on a result from number theory known
 #      as Fermat's Little Theorem.@n(45)
-     La prueba de primalidad @m(Θ (log n)) se basa en un resultado de la teoría
+     La prueba de primalidad @m[Θ(log n)] se basa en un resultado de la teoría
      de números conocida como el Pequeño Teorema de Fermat.@n(45)
 
 #      - Fermat's Little Theorem :: If @m(n) is a prime number and @m(a) is any
 #        positive integer less than @m(n), then @m(a) raised to the @m(nᵗʰ) power is
 #        congruent to @m(a) modulo @m(n).
-     - El pequeño teorema de Fermat :: Si @m(n) es un número primo y @m(una) es
-          cualquier número entero positivo menor que @m(n), entonces @m(un)
-          elevado a la @m(nᵗʰ) potencia es congruente con @m(un) modulo @m(n).
+     - El pequeño teorema de Fermat :: Si @m(n) es un número primo y @m(a) es
+       cualquier número entero positivo menor que @m(n), entonces @m(a) elevado
+       a la @m(nᵗʰ) potencia es congruente con @m(a) modulo @m(n).
 
 #      (Two numbers are said to be @e(congruent modulo) @m(n) if they both have the
 #      same remainder when divided by @m(n). The remainder of a number @m(a) when
 #      divided by @m(n) is also referred to as the @e(remainder of) @m(a) @e(modulo)
 #      @m(n), or simply as @m(a) @e(modulo) @m(n).)
-     (Se dice que dos números son @e(congruentes modulo ) @m(n) si ambos tienen
-     el mismo resto cuando se dividen por @m(N.) El resto de un número @m(a)
-     cuando se divide por @m(n) también se denomina el @e(resto de ) @m(un )
-     @e(módulo ) @m(n), o simplemente como @m(un ) @e(módulo ) @m(n) .)
+     (Se dice que dos números son @e(congruentes) @m(n) si ambos tienen el mismo
+     resto cuando se dividen por @m(n). El resto de un número @m(a) cuando se
+     divide por @m(n) también se denomina el @e(resto de) @m(a) @e(módulo)
+     @m(n), o simplemente como @m(a) @e(módulo) @m(n).)
 
 #      If @m(n) is not prime, then, in general, most of the numbers @m(a < n) will
 #      not satisfy the above relation. This leads to the following algorithm for
@@ -5104,14 +5104,14 @@ Company.
 #      we can increase our confidence in the result. This algorithm is known as the
 #      Fermat test.
      Si @m(n) no es primo, entonces, en general, la mayoría de los números @m(a
-     <n) no satisfarán la relación anterior. Esto conduce al siguiente
+     < n) no satisfarán la relación anterior. Esto conduce al siguiente
      algoritmo para probar la primalidad: Dado un número @m(n), escoja un número
-     aleatorio @m(a <n) y calcule el resto de @m(aⁿ) módulo @m(n). Si el
-     resultado no es igual a @m(una), entonces @m(n) ciertamente no es primo. Si
-     es @m(una), entonces las posibilidades son buenas de que @m(n) es
+     aleatorio @m(a < n) y calcule el resto de @m(aⁿ) módulo @m(n). Si el
+     resultado no es igual a @m(a), entonces @m(n) ciertamente no es primo. Si
+     es @m(a), entonces las posibilidades son buenas de que @m(n) es
      primo. Ahora escoja otro número aleatorio @m(a) y pruebe con el mismo
      método. Si también satisface la ecuación, entonces podemos estar aún más
-     seguros de que @m(n) es primo. @m(Al intentar cada vez más valores de a),
+     seguros de que @m(n) es primo. Al intentar cada vez más valores de @m(a),
      podemos aumentar nuestra confianza en el resultado. Este algoritmo es
      conocido como la prueba de Fermat.
 
@@ -5148,9 +5148,9 @@ Company.
 #      This is very similar to the @c(fast-expt) procedure of section @l(#1.2.4).  It uses
 #      successive squaring, so that the number of steps grows logarithmically with
 #      the exponent.@n(46)
-     Esto es muy similar al procedimiento @c(fast-expt) de
-     @l(#1.2.4). Utiliza la cuadratura sucesiva, de manera que el número
-     de pasos crece logarítmicamente con el exponente.@n(46)
+     Esto es muy similar al procedimiento @c(fast-expt) de la seccion
+     @l(#1.2.4). Utiliza cuadrados sucesivos, de manera que el número de pasos
+     crece logarítmicamente con el exponente.@n(46)
 
 #      The Fermat test is performed by choosing at random a number @m(a) between 1
 #      and @m(n-1) inclusive and checking whether the remainder modulo @m(n) of the
@@ -5159,13 +5159,13 @@ Company.
 #      Scheme. @c(Random) returns a nonnegative integer less than its integer
 #      input. Hence, to obtain a random number between 1 and @m(n-1), we call
 #      @c(random) with an input of @m(n-1) and add 1 to the result:
-     La prueba de Fermat se realiza eligiendo al azar un número @m(de un) entre
-     1 y @m(n-1) inclusive y comprobando si el resto de módulo @m(n) de la
-     @m(nᵗʰ) poder de @m(una) es igual a @m(una). El número aleatorio @m(a) se
-     elige utilizando el procedimiento @c(random), que suponemos que se incluye
-     como primitiva en Scheme. @c(Random) Devuelve un entero no negativo menor
-     que su entrada entera. Por lo tanto, para obtener un número aleatorio entre
-     1 y @m(n-1), llamamos @c(random) con una entrada de @m(n-1) y añadimos 1 al
+     La prueba de Fermat se realiza eligiendo al azar un número @m(a) entre 1 y
+     @m(n-1) inclusive y verificando si el resto de módulo @m(n) de la patencia
+     @m(nᵗʰ) de @m(a) es igual a @m(a). El número aleatorio @m(a) se elige
+     utilizando el procedimiento @c(random), que suponemos que se incluye como
+     primitiva en Scheme. @c(Random) Devuelve un entero no negativo menor que su
+     entrada entera. Por lo tanto, para obtener un número aleatorio entre 1 y
+     @m(n-1), llamamos a @c(random) con una entrada de @m(n-1) y añadimos 1 al
      resultado:
 
 #      ..src > scheme
@@ -5185,8 +5185,8 @@ Company.
 #      a parameter. Its value is true if the test succeeds every time, and false
 #      otherwise.
      El siguiente procedimiento ejecuta la prueba un número dado de veces, según
-     lo especificado por un parámetro. Su valor es verdadero si la prueba tiene
-     éxito cada vez, y false en caso contrario.
+     lo especificado por el parámetro. Su valor es verdadero si la prueba tiene
+     éxito cada vez, y falso en caso contrario.
 
 #      ..src > scheme
 #        (define (fast-prime? n times)
@@ -5219,7 +5219,7 @@ Company.
      en los que se calcula una respuesta que se garantiza que es correcta. Aquí,
      la respuesta obtenida es probablemente sólo correcta. Más precisamente, si
      @m(n) falla alguna vez la prueba de Fermat, podemos estar seguros de que
-     @m(n) no es primo. Pero el hecho de que @m(n) pase la prueba, mientras que
+     @m(n) no es primo. Pero el hecho de que @m(n) pase la prueba, si bien es
      una indicación extremadamente fuerte, todavía no es una garantía de que
      @m(n) es primo. Lo que queremos decir es que para cualquier número @m(n),
      si realizamos la prueba bastantes veces y encontramos que @m(n) pasa
@@ -5233,9 +5233,9 @@ Company.
 #      practice.@n(47)
      Lamentablemente, esta afirmación no es del todo correcta. Existen números
      que engañan la prueba de Fermat: números @m(n) que no son primos y que
-     tienen la propiedad de que @m(aⁿ) es congruente a @m(un) módulo @m(n) para
-     todos los enteros @m(a <n). Estos números son extremadamente raros, por
-     lo que la prueba de Fermat es bastante fiable en la práctica.@n(47)
+     tienen la propiedad de que @m(aⁿ) es congruente a @m(a) módulo @m(n) para
+     todos los enteros @m(a < n). Estos números son extremadamente raros, por lo
+     que la prueba de Fermat es bastante fiable en la práctica.@n(47)
 
 #      There are variations of the Fermat test that cannot be fooled. In these tests,
 #      as with the Fermat method, one tests the primality of an integer @m(n) by
@@ -5250,18 +5250,17 @@ Company.
 #      values of @m(a) we can make the probability of error as small as we like.
      Hay variaciones de la prueba de Fermat que no pueden ser engañadas. En
      estas pruebas, como con el método de Fermat, se somete a prueba la
-     primalidad de un número entero @m(n) por elegir un entero aleatorio @m(a
-     <n) y de comprobar alguna condición que depende de @m(n) y @m(un). (Ver
-     @l(#Ejercicio 1,28) para un ejemplo de dicha prueba.) Por
-     otro lado, en contraste con la prueba de Fermat, se puede demostrar que,
-     para cualquier @m(n), la condición no se cumple para la mayoría de los
-     enteros @m(a <n) menos que @m(n) es principal. Por lo tanto, si @m(n)
-     pasa la prueba para alguna elección aleatoria de @m(a), las posibilidades
-     son mejores que incluso que @m(n) es primo. @m(Si n) pasa la prueba para
-     dos opciones aleatorias de @m(a), las posibilidades son mejores que 3 de 4
-     que @m(n) es primo. Al ejecutar la prueba con valores cada vez más
-     aleatorios de @m(a), podemos hacer que la probabilidad de error sea tan
-     pequeña como queramos.
+     primalidad de un número entero @m(n) por elegir un entero aleatorio @m(a <
+     n) comprobando alguna condición que depende de @m(n) y @m(a). (Vea el
+     @l(#Ejercicio 1.28) para un ejemplo de dicha prueba.) Por otro lado, en
+     contraste con la prueba de Fermat, se puede demostrar que, para cualquier
+     @m(n), la condición no se cumple para la mayoría de los enteros @m(a < n) a
+     menos que @m(n) sea primo. Por lo tanto, si @m(n) pasa la prueba para
+     alguna elección aleatoria de @m(a), las posibilidades son mejores incluso
+     que @m(n) es primo.Si @m(n) pasa la prueba para dos opciones aleatorias de
+     @m(a), las posibilidades son mejores que 3 de 4 que @m(n) es primo. Al
+     ejecutar la prueba con valores cada vez más aleatorios de @m(a), podemos
+     hacer que la probabilidad de error sea tan pequeña como queramos.
 
 #      The existence of tests for which one can prove that the chance of error
 #      becomes arbitrarily small has sparked interest in algorithms of this type,
@@ -5271,9 +5270,9 @@ Company.
      La existencia de pruebas para las cuales se puede probar que la
      probabilidad de que el error se haga arbitrariamente pequeño ha despertado
      interés en algoritmos de este tipo, que han llegado a ser conocidos como
-     @e(algoritmos probabilísticos). Hay una gran cantidad de actividades de
-     investigación en esta área, y los algoritmos probabilísticos se han
-     aplicado con éxito en muchos campos.@n(48)
+     @e(algoritmos probabilísticos). Hay una gran cantidad de investigación en
+     esta área, y los algoritmos probabilísticos se han aplicado con éxito en
+     muchos campos.@n(48)
 
 #      :: @t(Exercise 1.21) :: Use the @c(smallest-divisor) procedure to find the
 #         smallest divisor of each of the following numbers: 199, 1999, 19999.
@@ -5289,45 +5288,40 @@ Company.
 #         the procedure prints three asterisks followed by the amount of time used in
 #         performing the test.
      :: @t(Ejercicio 1.22) :: La mayoría de las implementaciones Lisp incluyen
-        un primitivo llamado @c(runtime) que devuelve un entero que especifica
-        la cantidad de tiempo que el sistema ha estado ejecutando (medido, por
-        ejemplo, en microsegundos). El siguiente procedimiento @c(timed-prime-test), cuando se llama con un número entero @m(n), imprime @m(n)
-        y comprueba si @m(n) es primo. Si @m(n) es primo, el procedimiento
-        imprime tres asteriscos seguido de la cantidad de tiempo utilizado en la
-        realización de la prueba.
+        una primitiva llamada @c(runtime) que devuelve un entero que especifica
+        la cantidad de tiempo que el sistema se ha estado ejecutando (medido,
+        por ejemplo, en microsegundos). El siguiente procedimiento
+        @c(timed-prime-test), cuando se llama con un número entero @m(n),
+        imprime @m(n) y comprueba si @m(n) es primo. Si @m(n) es primo, el
+        procedimiento imprime tres asteriscos seguido de la cantidad de tiempo
+        utilizado en la realización de la prueba.
 
 #         ..src > scheme
 #           (define (timed-prime-test n)
 #             (newline)
 #             (display n)
 #             (start-prime-test n (runtime)))
+#
+#           (define (start-prime-test n start-time)
+#             (if (prime? n)
+#                 (report-prime (- (runtime)
+#                                  start-time))))
+#
+#           (define (report-prime elapsed-time)
+#             (display " *** ")
+#             (display elapsed-time))
 #         < src..
         ..src > scheme
           (define (timed-prime-test n)
             (newline)
             (display n)
             (start-prime-test n (runtime)))
-        < src..
 
-#         ..src > scheme
-#           (define (start-prime-test n start-time)
-#             (if (prime? n)
-#                 (report-prime (- (runtime)
-#                                  start-time))))
-#         < src..
-        ..src > scheme
           (define (start-prime-test n start-time)
             (if (prime? n)
                 (report-prime (- (runtime)
                                  start-time))))
-        < src..
 
-#         ..src > scheme
-#           (define (report-prime elapsed-time)
-#             (display " *** ")
-#             (display elapsed-time))
-#         < src..
-        ..src > scheme
           (define (report-prime elapsed-time)
             (display " *** ")
             (display elapsed-time))
@@ -5347,14 +5341,14 @@ Company.
         Utilizando este procedimiento, escriba un procedimiento
         @c(search-for-primes) que compruebe la primalidad de números enteros
         impares consecutivos en un rango especificado. Utilice su procedimiento
-        para encontrar los tres primos más pequeños más grandes que 1000; Mayor
-        de 10.000; Mayor de 100.000; Mayor de 1.000.000. Anote el tiempo
+        para encontrar los tres primos más grandes menores que 1000; mayores de
+        10.000; mayores de 100.000; mayores de 1.000.000. Anote el tiempo
         necesario para probar cada primo. Dado que el algoritmo de prueba tiene
         un orden de crecimiento de @m(Θ (√n)), debe esperar que la prueba de
         primos alrededor de 10.000 debe tomar alrededor de @m(√10) veces el
         tiempo que la prueba de primos alrededor de 1000. ¿Sus datos de tiempo
-        soportar esto? ¿Qué tan bien los datos de 100.000 y 1.000.000 apoyan la
-        predicción @m(Θ (√n)) ? ¿Es su resultado compatible con la noción de que
+        soportan esto? ¿Qué tan bien los datos de 100.000 y 1.000.000 apoyan la
+        predicción @m[Θ(√n)]? ¿Es su resultado compatible con la noción de que
         los programas en su máquina funcionan en el tiempo proporcional al
         número de pasos requeridos para el cálculo?
 
@@ -5375,22 +5369,22 @@ Company.
 #         different from 2?
      :: @t(Ejercicio 1.23) :: El procedimiento @c(smallest-divisor) que se
         muestra al comienzo de esta sección hace un montón de pruebas
-        innecesarias: Después de comprobar para ver si el número es divisible
-        por 2 no hay ningún punto en la comprobación para ver si es divisible
-        por cualquier número par más grande. Esto sugiere que los valores
-        utilizados @c(test-divisor) no deben ser 2, 3, 4, 5, 6, ..., sino más
-        bien 2, 3, 5, 7, 9, .... Para implementar este cambio, defina un
-        procedimiento @c(next) que devuelve 3 si su entrada es igual a 2 y, de
-        lo contrario, devuelve su entrada más 2. Modifique el
-        procedimiento @c(smallest-divisor) a utilizar en @c[(next test-divisor)]
-        lugar de @c[(+ test-divisor 1)]. Con la @c(timed-prime-test)
-        incorporación de esta versión modificada de @c(smallest-divisor),
-        ejecute la prueba para cada uno de los 12 primos encontrados en el
-        @l(#Ejercicio 1.22). Dado que esta modificación reduce a
-        la mitad el número de pasos de prueba, debería esperar que se ejecute
-        aproximadamente el doble de rápido. ¿Se confirma esta expectativa? Si
-        no, ¿cuál es la relación observada de las velocidades de los dos
-        algoritmos, y cómo se explica el hecho de que es diferente de 2?
+        innecesarias: Después de comprobar si el número es divisible por 2 no
+        hay ningún punto en la comprobación para ver si es divisible por
+        cualquier número par más grande. Esto sugiere que los valores utilizados
+        @c(test-divisor) no deben ser 2, 3, 4, 5, 6, ..., sino más bien 2, 3, 5,
+        7, 9, .... Para implementar este cambio, defina un procedimiento
+        @c(next) que devuelve 3 si su entrada es igual a 2 y, de lo contrario,
+        devuelve su entrada más 2. Modifique el procedimiento
+        @c(smallest-divisor) a utilizar en @c[(next test-divisor)] en lugar de
+        @c[(+ test-divisor 1)]. Con la @c(timed-prime-test) incorporación de
+        esta versión modificada de @c(smallest-divisor), ejecute la prueba para
+        cada uno de los 12 primos encontrados en el @l(#Ejercicio 1.22). Ya que
+        esta modificación reduce a la mitad el número de pasos de la prueba,
+        debería esperar que se ejecute aproximadamente el doble de rápido. ¿Se
+        confirma esta expectativa? Si no, ¿cuál es la relación observada de las
+        velocidades de los dos algoritmos, y cómo se explica el hecho de que es
+        diferente de 2?
 
 #      :: @t(Exercise 1.24) :: Modify the @c(timed-prime-test) procedure of
 #         @l(#Exercise 1.22) to use @c(fast-prime?) (the Fermat method), and test
@@ -5399,21 +5393,20 @@ Company.
 #         1,000,000 to compare with the time needed to test primes near 1000?  Do
 #         your data bear this out?  Can you explain any discrepancy you find?
      :: @t(Ejercicio 1.24) :: Modifique el procedimiento @c(timed-prime-test)
-        del @l(#Ejercicio 1.22) para usar @c(fast-prime?) (el
-        método de Fermat) y pruebe cada uno de los 12 primos que encontró en ese
-        ejercicio. Dado que la prueba de Fermat tiene crecimiento @m(Θ (log n)),
-        ¿cómo esperaría que el tiempo para probar primos cerca de 1.000.000 para
-        comparar con el tiempo necesario para probar primos cerca de 1000? ¿Sus
-        datos confirman esto? ¿Puedes explicar cualquier discrepancia que
-        encuentres?
+        del @l(#Ejercicio 1.22) para usar @c(fast-prime?) (el método de Fermat)
+        y pruebe cada uno de los 12 primos que encontró en ese ejercicio. Dado
+        que la prueba de Fermat tiene crecimiento @m[Θ(log n)], ¿cuanto tiempo
+        esperaría para probar primos cerca de 1.000.000 comparado con el tiempo
+        necesario para probar primos cerca de 1000? ¿Sus datos confirman esto?
+        ¿Puedes explicar cualquier discrepancia que encuentres?
 
 #      :: @t(Exercise 1.25) :: Alyssa P. Hacker complains that we went to a lot of
 #         extra work in writing @c(expmod). After all, she says, since we already
 #         know how to compute exponentials, we could have simply written
-     :: @t(Ejercicio 1.25) :: Alyssa P. Hacker se queja de que fuimos a un
-     montón de trabajo extra por escrito @c(expmod). Después de todo, dice, ya
-     que ya sabemos cómo calcular exponenciales, podríamos haber escrito
-     simplemente
+     :: @t(Ejercicio 1.25) :: Alyssa P. Hacker se queja de que tubimos un montón
+        de trabajo extra por escribir @c(expmod). Después de todo, ella dice,
+        que ya que sabemos cómo calcular exponenciales, podríamos haber escrito
+        simplemente
 
 #         ..src > scheme
 #           (define (expmod base exp m)
@@ -5425,9 +5418,9 @@ Company.
         < src..
 
 #         Is she correct?  Would this procedure serve as well for our fast prime
-#         tester?  Explain.
-        ¿Está ella correcta? ¿Funcionaría este procedimiento también para
-        nuestro probador rápido? Explique.
+#         tester? Explain.
+        ¿Es correcto? ¿Funcionaría este procedimiento también para nuestra
+        prueba de primos rapida? Explique.
 
 #      :: @t(Exercise 1.26) :: Louis Reasoner is having great difficulty doing
 #         @l(#Exercise 1.24). His @c(fast-prime?) test seems to run more slowly than
@@ -5436,11 +5429,11 @@ Company.
 #         procedure to use an explicit multiplication, rather than calling
 #         @c(square):
      :: @t(Ejercicio 1.26) :: Louis Reasoner está teniendo grandes dificultades
-        para hacer el @l(#Ejercicio 1.24). Su @c(fast-prime?)
-        prueba parece correr más lentamente que su @c(prime?) prueba. Louis
-        llama a su amiga Eva Lu Ator para ayudar. Cuando examinan el código de
-        Louis, encuentran que ha reescrito el procedimiento @c(expmod) para
-        utilizar una multiplicación explícita, en lugar de llamar @c(square):
+        para hacer el @l(#Ejercicio 1.24). Su prueba @c(fast-prime?) parece
+        correr más lentamente que su prueba @c(prime?). Louis llama a su amiga
+        Eva Lu Ator para ayudar. Cuando examinan el código de Louis, encuentran
+        que ha reescrito el procedimiento @c(expmod) para utilizar una
+        multiplicación explícita, en lugar de llamar @c(square):
 
 #         ..src > scheme
 #           (define (expmod base exp m)
@@ -5474,20 +5467,20 @@ Company.
 #         @"(I don't see what difference that could make,) says Louis. @"(I do.)
 #         says Eva. @"{By writing the procedure like that, you have transformed the
 #         @m[Θ(log n)] process into a @m[Θ(n)] process.}  Explain.
-        @"(No veo qué diferencia podría hacer,) dice Louis. @"(Hago. ) Dice
+        @"(No veo qué diferencia podría hacer), dice Louis. @"(Yo si). Dice
         Eva. @"(Al escribir el procedimiento de este modo, ha transformado el
-        proceso @m(Θ (log n)) en un proceso @m[Θ(n)]. )  Explique.
+        proceso @m[Θ(log n)] en un proceso @m[Θ(n)].) Explique.
 
 #      :: @t(Exercise 1.27) :: Demonstrate that the Carmichael numbers listed in
 #        @n(47<>Footnote 47) really do fool the Fermat test. That is, write a
 #         procedure that takes an integer @m(n) and tests whether @m(aⁿ) is congruent
 #         to @m(a) modulo @m(n) for every @m(a < n), and try your procedure on the
 #         given Carmichael numbers.
-     :: @t(Ejercicio 1.27) :: Demostrar que los números de Carmichael enumerados
-        en la@n(47<>Nota 47) hacen realmente engañar a la prueba de Fermat. Es
-        decir, escribe un procedimiento que toma un entero @m(n) y prueba si
-        @m(aⁿ) es congruente a @m(un) módulo @m(n) para cada @m(a <n), e
-        intenta tu procedimiento en los números de Carmichael dados.
+     :: @t(Ejercicio 1.27) :: Demuestre que los números de Carmichael enumerados
+        en la @n(47<>Nota 47) realmente engañan a la prueba de Fermat. Es decir,
+        escriba un procedimiento que toma un entero @m(n) y prueba si @m(aⁿ) es
+        congruente a @m(a) módulo @m(n) para cada @m(a < n), e intenta tu
+        procedimiento en los números de Carmichael dados.
 
 #      :: @t(Exercise 1.28) :: One variant of the Fermat test that cannot be fooled
 #         is called the @e(Miller-Rabin test) (@l(#Miller 1976); @l(#Rabin
@@ -5511,29 +5504,28 @@ Company.
 #         testing various known primes and non-primes. Hint: One convenient way to
 #         make @c(expmod) signal is to have it return 0.
      :: @t(Ejercicio 1.28) :: Una variante de la prueba de Fermat que no puede
-        ser engañada se denomina @e(prueba de Miller-Rabin)
-        (@l(#Miller-1976<>Miller 1976), @l(#Rabin-1980<>Rabin 1980) ). Esto
-        comienza a partir de una forma alternativa del Pequeño Teorema de
-        Fermat, que establece que si @m(n) es un número primo y @m(a) es
-        cualquier entero positivo menor que @m(n), entonces @m(un) elevado a la
-        potencia @m[(n-1)] -st es congruente a 1 módulo @m(n). Para probar la
-        primalidad de un número @m(n) por el ensayo de Miller-Rabin, escogemos
-        un número aleatorio @m(a <n) y elevar @m(una) a la @m[(n-1)] -st
-        poder modulo @m(n) usando el procedimiento @c(expmod). Sin embargo,
-        @c(expmod) Cada vez que realizamos el paso de cuadratura, verificamos si
-        hemos descubierto una @"(raíz cuadrada no trivial de 1 módulo @m(n) ,)
-        es decir, un número no igual a 1 o @m(n-1) cuyo cuadrado es igual a 1
-        módulo @m(n). Es posible probar que si una raíz cuadrada no trivial de 1
-        existe, entonces @m(n) no es primo. También es posible probar que si
-        @m(n) es un número impar que no es primo, entonces, para al menos la
-        mitad de los números @m(a <n), calcular @m(aⁿ⁻¹) de esta manera
-        revelará una raíz cuadrada no trivial de 1 módulo @m(n). (Esta es la
-        razón por la prueba Miller-Rabin no puede ser engañado. @c(expmod))
-        Modifique el procedimiento para señalar si descubre una raíz cuadrada no
+        ser engañada se denomina @e(prueba de Miller-Rabin) (@l(#Miller 1976),
+        @l(#Rabin 1980)). Esto comienza a partir de una forma alternativa del
+        Pequeño Teorema de Fermat, que establece que si @m(n) es un número primo
+        y @m(a) es cualquier entero positivo menor que @m(n), entonces @m(a)
+        elevado a la enesima potencia @m[(n-1)] es congruente a 1 módulo @m(n).
+        Para probar la primalidad de un número @m(n) por el ensayo de
+        Miller-Rabin, escogemos un número aleatorio @m(a < n) y levamos @m(a) a
+        la potencia @m[(n-1)] modulo @m(n) usando el procedimiento @c(expmod).
+        Sin embargo, Cada vez que realizamos el paso de cuadratura @c(expmod),
+        verificamos si hemos descubierto una @"(raíz cuadrada no trivial de 1
+        módulo @m(n)), es decir, un número no igual a 1 o @m(n-1) cuyo cuadrado
+        es igual a 1 módulo @m(n). Es posible probar que si una raíz cuadrada no
+        trivial de 1 existe, entonces @m(n) no es primo. También es posible
+        probar que si @m(n) es un número impar que no es primo, entonces, para
+        al menos la mitad de los números @m(a < n), calcular @m(aⁿ⁻¹) de esta
+        manera revelará una raíz cuadrada no trivial de 1 módulo @m(n). (Esta es
+        la razón por la prueba Miller-Rabin no puede ser engañado.) Modifique el
+        procedimiento @c(expmod) para señalar si descubre una raíz cuadrada no
         trivial de 1, y usar esto para implementar la prueba de Miller-Rabin con
         un procedimiento análogo a @c(fermat-test). Revise su procedimiento
         probando varios primos conocidos y no primos. Sugerencia: Una manera
-        conveniente de hacer la @c(expmod) señal es tenerlo devuelto 0.
+        conveniente de hacer la señal @c(expmod) es tenerla regresando 0.
 
 # ** 1.3 <> Formulating Abstractions with Higher-Order Procedures
 ** 1.3 <> Formulación de abstracciones con procedimientos de orden superior
@@ -5948,7 +5940,7 @@ Company.
        donde @m(h = (b - a) / n), para algunos incluso número entero @m(n), y
        @m(yₙ = f (a + kh)). (El aumento de @m(n) aumenta la precisión de la
        aproximación.) Definir un procedimiento que toma como argumentos @m(ƒ),
-       @m(un), @m(b), y @m(n) y devuelve el valor de la integral, calcula
+       @m(a), @m(b), y @m(n) y devuelve el valor de la integral, calcula
        utilizando la regla de Simpson. Utilice su procedimiento para integrar
        @c(cube) entre 0 y 1 (con @m(n = 100) y @m(n = 1000), y compare los
        resultados con los del procedimiento @c(integral) mostrado arriba.
@@ -6272,7 +6264,7 @@ Company.
 #      auxiliary procedure to bind the local variables:
      Al escribir un procedimiento para calcular @m(ƒ), nos gustaría incluir como
      variables locales no solo @m(x) e @m(y), sino también los nombres de
-     cantidades intermedias como @m(una) y @m(b). Una manera de lograr esto es
+     cantidades intermedias como @m(a) y @m(b). Una manera de lograr esto es
      usar un procedimiento auxiliar para enlazar las variables locales:
 
 #      ..src > scheme
@@ -6578,7 +6570,7 @@ Company.
      una función continua. La idea es que, si se nos dan los puntos @m(a) y
      @m(b) tales que @m(f (a) <0 <f (b)), entonces @m(ƒ) debe tener al
      menos un cero entre @m(a) y @m(b). Para localizar un cero, dejar que @m(x)
-     sea el promedio de @m(un) y @m(b), y calcular @m(f (x)). Si @m(f (x)>
+     sea el promedio de @m(a) y @m(b), y calcular @m(f (x)). Si @m(f (x)>
      0), entonces @m(ƒ) debe tener un cero entre @m(a) y @m(x). Si @m(f (x)
      <0), @m(Entonces f) debe tener un cero entre @m(x) y @m(b). Continuando
      de esta manera, podemos identificar intervalos cada vez más pequeños en los
@@ -7864,7 +7856,7 @@ Company.
   El uso de datos compuestos conduce a un aumento real en el poder expresivo de
   nuestro lenguaje de programación. Considere la idea de formar una
   @"(combinación lineal ) @m(ax + by). Nos gustaría escribir un procedimiento
-  que aceptaría @m(una), @m(b), @m(x), y @m(y) como argumentos y devuelve el
+  que aceptaría @m(a), @m(b), @m(x), y @m(y) como argumentos y devuelve el
   valor de @m(ax + by). Esto no presenta ninguna dificultad si los argumentos
   son números, porque podemos definir fácilmente el procedimiento
 
@@ -9309,7 +9301,7 @@ Company.
 #        computation in center-percent form (see @l(#Exercise 2.12)).
     :: @t(Ejercicio 2.14) :: Demostrar que Lem tiene razón. Investigue el
        comportamiento del sistema en una variedad de expresiones
-       aritméticas. Hacer un poco de intervalos de @m(una) y @m(B), y
+       aritméticas. Hacer un poco de intervalos de @m(a) y @m(B), y
        utilizarlos en el cálculo de las expresiones @m(de A / A) y @m(A /
        B). Usted obtendrá la mayoría de la visión mediante el uso de intervalos
        cuya anchura es un pequeño porcentaje del valor del centro. Examinar los
@@ -12186,7 +12178,7 @@ Company.
         Explique por qué este intercambio hace que el programa funcione
         lentamente. Estimar cuánto tiempo tardará el programa de Louis para
         resolver el rompecabezas de ocho reinas, en el supuesto de que el
-        programa de @l(#Ejercicio 2,42) resuelve el rompecabezas
+        programa de @l(#Ejercicio 2.42) resuelve el rompecabezas
         en el tiempo @m(t).
 
 # *** 2.2.4 <> Example: A Picture Language
@@ -19613,7 +19605,7 @@ Company.
 #      this decision, implementing the selectors and constructors for terms and term
 #      lists is straightforward:@n(125)
      Las listas de términos de polinomios densos se representan más
-     eficientemente como listas de los coeficientes. Por ejemplo, @m(un) arriba
+     eficientemente como listas de los coeficientes. Por ejemplo, @m(a) arriba
      sería representado agradablemente como @c[(1 2 0 3 -2 -5)]. El orden de un
      término en esta representación es la longitud de la sublista que comienza
      con el coeficiente de dicho término, decrementado por 1.@n(124) Esta
@@ -26884,8 +26876,8 @@ Company.
     podemos usarla para calcular la quinta. Sin embargo, traducir la ecuación en
     un lenguaje informático tradicional nos obligaría a elegir una de las
     cantidades a calcular en términos de las otras cuatro. Por lo tanto, un
-    procedimiento para calcular el área de @m(un) no podría ser utilizado para
-    calcular la desviación @m(d), a pesar de que los cálculos de @m(una) y @m(d)
+    procedimiento para calcular el área de @m(a) no podría ser utilizado para
+    calcular la desviación @m(d), a pesar de que los cálculos de @m(a) y @m(d)
     se derivan de la misma ecuación.@n(159)
 
 #     In this section, we sketch the design of a language that enables us to work in
@@ -28054,8 +28046,8 @@ Company.
 #     sequence of balances could be modeled by successive assignments to a variable
 #     @c(balance).
     En la superficie, el tiempo parece sencillo. Es un orden impuesto a los
-    acontecimientos.@n(163) Para cualquier eventos @m(una) y @m(B), ya
-    sea @m(una) ocurre antes de @m(B), @m(un) y @m(B) son simultáneos, o @m(una)
+    acontecimientos.@n(163) Para cualquier eventos @m(a) y @m(B), ya
+    sea @m(a) ocurre antes de @m(B), @m(a) y @m(B) son simultáneos, o @m(a)
     ocurre después @m(B). Por ejemplo, al regresar al ejemplo de la cuenta
     bancaria, supongamos que Peter retira $ 10 y Paul retira $ 25 de una cuenta
     conjunta que inicialmente contiene $ 100, dejando $ 65 en la
@@ -32870,7 +32862,7 @@ Company.
        valores de @m(y) y @m(dy / dt) y ambos de estos se determinó mediante la
        integración de @m(d² y / dt²). El diagrama que queremos codificar se
        muestra en la @l(#Figura 3.35). Escribir un procedimiento
-       @c(solve-2nd) que toma como argumentos las constantes de @m(un), @m(b), y
+       @c(solve-2nd) que toma como argumentos las constantes de @m(a), @m(b), y
        @m(dt) y los valores iniciales @m(y₀) y @m(dy₀) para @m(y) y @m(dt dy /)
        y genera el flujo de valores sucesivos de @m(y).
 
@@ -45799,7 +45791,7 @@ Company.
         análoga de los procedimientos estructurados en bloques. Puede usted se
         relaciona todo esto con el problema de las retenciones en un contexto
         (por ejemplo, @"(si se supone que @m(P) fuera cierto, entonces yo sería
-        capaz de deducir @m(una) y @m(B) .) ) Como método de resolución de
+        capaz de deducir @m(a) y @m(B) .) ) Como método de resolución de
         problemas? (Este problema es de duración indefinida, una buena respuesta
         probablemente valga la pena un Ph.D.)
 
@@ -45982,7 +45974,7 @@ Company.
 #    remainder will be placed in @c(t), then the contents of @c(b) will be placed
 #    in @c(a), and finally the remainder stored in @c(t) will be placed in @c(b).)
    Una máquina para llevar a cabo este algoritmo debe realizar un seguimiento de
-   dos números, @m(un) y @m(B), así que vamos a suponer que estos números se
+   dos números, @m(a) y @m(B), así que vamos a suponer que estos números se
    almacenan en dos registros con esos nombres. Las operaciones básicas
    requeridas son probar si el contenido del registro @c(b) es cero y calcular
    el resto del contenido del registro @c(a) dividido por el contenido del
@@ -57497,7 +57489,7 @@ Company.
 #   Wisdom. 1992. The Supercomputer Toolkit: A general framework for
 #   special-purpose computing.  @q(International Journal of High-Speed
 #   Electronics) 3(3): 337-361. @l(http://www.hpl.hp.com/techreports/94/HPL-94-30.html<>–›)
-  @t(Abelson y otros. 1992) Abelson, Harold, Andrew Berlín, Jacob Katzenelson,
+  @t(Abelson et al. 1992) Abelson, Harold, Andrew Berlín, Jacob Katzenelson,
   William McAllister, Guillermo Rozas, Gerald Jay Sussman y Jack
   Wisdom. 1992. The Supercomputer Toolkit: Un marco general para la computación
   de propósito especial.  @"(Revista Internacional de Electrónica de Alta
@@ -58036,7 +58028,7 @@ Company.
 #   1965. @q(Lisp 1.5 Programmer's Manual). 2nd edition. Cambridge, @A(MA):
 #   @A(MIT) Press.
 #   @l(http://www.softwarepreservation.org/projects/LISP/book/LISP%201.5%20Programmers%20Manual.pdf/view<>–›)
-  @t(McCarthy y otros. 1965) McCarthy, John, PW Abrahams, DJ Edwards, TP Hart y MI
+  @t(McCarthy et al. 1965) McCarthy, John, PW Abrahams, DJ Edwards, TP Hart y MI
   Levin. 1965. @"(Lisp 1.5 Manual del programador). 2ª edición. Cambridge,
   @A(MA) : Prensa del
   @A(MIT). @l(http://www.softwarepreservation.org/projects/LISP/book/LISP%201.5%20Programmers%20Manual.pdf/view<>->)
@@ -58359,7 +58351,7 @@ Company.
 #      @q(Lisp 1.5 Programmer's Manual) (@l(#McCarthy et al. 1965)) was published
 #      in 1962. The early history of Lisp is described in @l(#McCarthy 1978).
   :: @N(1) :: El @q(Manual del Programador Lisp 1) apareció en 1960 y el
-     @q(Manual del Programador Lisp 1.5) (@l(#McCarthy y otros. 1965)) fue
+     @q(Manual del Programador Lisp 1.5) (@l(#McCarthy et al. 1965)) fue
      publicado en 1962. La historia temprana de Lisp se describe en
      @l(#McCarthy 1978).
 
@@ -58417,7 +58409,7 @@ Company.
      posible gracias a nuevos algoritmos de integración, un compilador de
      propósito especial, y un ordenador de propósito especial todos
      implementados con la ayuda de herramientas de software escrito en Lisp
-     (@l(#Abelson y otros. 1992); @l(#Sussman y Wisdom 1992)).
+     (@l(#Abelson et al. 1992); @l(#Sussman y Wisdom 1992)).
 
 #   :: @N(4) :: The characterization of numbers as @"(simple data) is a barefaced
 #      bluff. In fact, the treatment of numbers is one of the trickiest and most
@@ -58933,7 +58925,7 @@ Company.
 #   :: @N(41) :: This exercise was suggested to us by Joe Stoy, based on an
 #      example in @l(#Kaldewaij 1990).
   :: @N(41) :: Este ejercicio nos fue sugerido por Joe Stoy, basado en un
-     ejemplo en @l(#Kaldewaij-1990<>Kaldewaij 1990).
+     ejemplo en @l(#Kaldewaij 1990).
 
 #   :: @N(42) :: Euclid's Algorithm is so called because it appears in Euclid's
 #      @q(Elements) (Book 7, ca. 300 @A(B.C.)).  According to @l(#Knuth (1973)),
@@ -58943,13 +58935,13 @@ Company.
 #      presented as a general algorithm, rather than as a set of illustrative
 #      examples.
   :: @N(42) :: El Algoritmo de Euclides se llama así porque aparece en los
-     @"(Elementos) de Euclides (Libro 7, aproximadamente 300 @A(aC) ). De
-     acuerdo con @l(#Knuth-(1973<>Knuth (1973) ), puede ser considerado el
-     algoritmo no trivial conocido más antiguo. El antiguo método egipcio de
-     multiplicación (@l(#Ejercicio 1.18) ) es seguramente más
-     antiguo, pero, como Knuth explica, el algoritmo de Euclides es el más
-     antiguo que se sabe que se ha presentado como un algoritmo general, más que
-     como un conjunto de ejemplos ilustrativos.
+     @"(Elementos) de Euclides (Libro 7, aproximadamente 300 A.C). De acuerdo
+     con @l[#Knuth (1973)], puede ser considerado el algoritmo no trivial
+     conocido más antiguo. El antiguo método egipcio de multiplicación
+     (@l(#Ejercicio 1.18)) es seguramente más antiguo, pero, como Knuth explica,
+     el algoritmo de Euclides es el más antiguo que se sabe que se ha presentado
+     como un algoritmo general, más que como un conjunto de ejemplos
+     ilustrativos.
 
 #   :: @N(43) :: This theorem was proved in 1845 by Gabriel Lamé, a French
 #      mathematician and engineer known chiefly for his contributions to
@@ -58978,32 +58970,32 @@ Company.
      ingeniero francés conocido principalmente por sus contribuciones a la
      física matemática. Para probar el teorema, consideramos pares @m[(aₙ, bₙ)],
      donde @m(aₙ ≥ bₙ), para el cual el Algoritmo de Euclides termina en @m(k)
-     pasos. La prueba se basa en la afirmación de que, si @m[(aₖ₊₁, bₖ₊₁)]→ (aₙ,
-     bₙ) → (aₖ₋₁, bₖ₋₁)) son tres pares sucesivos en el proceso de reducción,
-     entonces debemos tener @m(bₖ₊ ₁ ≥ bₙ + bₖ₋₁). Para verificar la
+     pasos. La prueba se basa en la afirmación de que, si @m[(aₖ₊₁, bₖ₊₁) → (aₙ,
+     bₙ) → (aₖ₋₁, bₖ₋₁)] son tres pares sucesivos en el proceso de reducción,
+     entonces debemos tener @m(bₖ₊₁ ≥ bₙ + bₖ₋₁). Para verificar la
      reivindicación, considere que un paso de reducción se define aplicando la
      transformación @m(aₖ₋₁ = bₙ), @m(bₖ₋₁ =) resto de @m(aₙ) dividido por
-     @m(bₙ). @m(La segunda ecuación significa que aₙ = qbₙ + bₖ₋₁) para un
+     @m(bₙ). @m(La segunda ecuación significa que @m(aₙ = qbₙ + bₖ₋₁) para un
      cierto entero positivo @m(q). Y como @m(q) debe ser al menos 1 tenemos
      @m(aₙ = qbₙ + bₖ₋₁ ≥ bₙ + bₖ₋₁). Pero en el paso de reducción anterior
      tenemos @m(bₖ₊₁ = aₙ). Por lo tanto, @m(bₖ₊₁ = aₙ ≥ bₙ + bₖ₋₁). Esto
-     verifica la reclamación. Ahora podemos probar el teorema por inducción en
+     verifica la exposicion. Ahora podemos probar el teorema por inducción en
      @m(k), el número de pasos que el algoritmo requiere para terminar. El
      resultado es verdadero para @m(k = 1), ya que esto requiere simplemente que
-     @m(b) sea al menos tan grande como @m(Fib (1) = 1). Ahora, @m(Suponga que
-     el resultado es verdadero para todos los enteros inferiores o iguales a k)
-     y establece el resultado para @m(k + 1). Sea @m[(aₖ₊₁, bₖ₊₁)]→ (aₙ, bₙ) →
-     (aₖ₋₁, bₖ₋₁)) ser pares sucesivos en el proceso de reducción. Por nuestras
-     hipótesis de inducción, tenemos @m(bₖ₋₁ ≥ Fib (k - 1)) y @m(bₙ ≥ Fib
-     (k)). Por lo tanto, aplicando la afirmación que acabamos de demostrar junto
-     con la definición de los números de Fibonacci, se obtiene @m(bₖ₊₁ ≥ bₙ +
-     bₖ₋₁ ≥ Fib (k) + Fib (k-1) = Fib (k + 1)), que completa la prueba Del
+     @m(b) sea al menos tan grande como @m[Fib(1) = 1]. Ahora, @m(Suponga que el
+     resultado es verdadero para todos los enteros inferiores o iguales a @m(k)
+     y establece el resultado para @m(k + 1). Sea @m[(aₖ₊₁, bₖ₊₁) → (aₙ, bₙ) →
+     (aₖ₋₁, bₖ₋₁)] ser pares sucesivos en el proceso de reducción. Por nuestras
+     hipótesis de inducción, tenemos @m[bₖ₋₁ ≥ Fib (k - 1)] y @m(bₙ ≥
+     Fib(k)]. Por lo tanto, aplicando la afirmación que acabamos de demostrar
+     junto con la definición de los números de Fibonacci, se obtiene @m[bₖ₊₁ ≥
+     bₙ + bₖ₋₁ ≥ Fib(k) + Fib (k-1) = Fib(k + 1)], que completa la prueba Del
      teorema de Lamé.
 
-#   :: @N(44) :: If @m(d) is a divisor of @m(n), then so is @m(n / d). But @m(d)
-#      and @m(n / d) cannot both be greater than @m(√n).
-  :: @N(44) :: Si @m(d) es un divisor de @m(n), entonces es @m(n / d). Pero
-     @m(d) y @m(n / d) no pueden ser ambos mayores que @m(√n).
+#   :: @N(44) :: If @m(d) is a divisor of @m(n), then so is @m(n/d). But @m(d)
+#      and @m(n/d) cannot both be greater than @m(√n).
+  :: @N(44) :: Si @m(d) es un divisor de @m(n), entonces es @m(n/d). Pero
+     @m(d) y @m(n/d) no pueden ser ambos mayores que @m(√n).
 
 #   :: @N(45) :: Pierre de Fermat (1601-1665) is considered to be the founder of
 #      modern number theory. He obtained many important number-theoretic results,
@@ -59024,12 +59016,12 @@ Company.
      pequeño teorema de Fermat se expresó en una carta que escribió en 1640. La
      primera prueba publicada fue dada por Euler en 1736 (y una prueba anterior,
      idéntica se descubrió en los manuscritos inéditos de Leibniz). El más
-     famoso de los resultados de Fermat - conocido como último teorema de
-     Fermat - fue anotado en 1637 en su copia del libro @"(Aritmética) (por el
-     matemático griego Diophantus del siglo III) con la observación @"(que he
-     descubierto una prueba verdaderamente notable, pero esto Margen es
-     demasiado pequeño para contenerlo). Encontrar una prueba de Fermat ' S Last
-     Theorem se convirtió en uno de los desafíos más famosos en la teoría
+     famoso de los resultados de Fermat––conocido como último teorema de
+     Fermat––fue anotado en 1637 en su copia del libro @q(Aritmética) (por el
+     matemático griego Diophantus del siglo III) con la observación @"(he
+     descubierto una prueba verdaderamente notable, pero este margen es
+     demasiado pequeño para contenerlo). Encontrar una prueba del ultimo teorema
+     de Fermat se convirtió en uno de los desafíos más famosos en la teoría
      numérica. Una solución completa finalmente fue dada en 1995 por Andrew
      Wiles de la Universidad de Princeton.
 
@@ -59049,10 +59041,10 @@ Company.
      @m(m) calculando por separado los restos de @m(x) módulo @m(m) y @m(y)
      modulo @m(m), multiplicando estos, y luego tomando el resto del resultado
      de módulo @m(m). Por ejemplo, en el caso donde @m(e) es par, calculamos el
-     resto de \ (b ^ {e / 2} \) módulo @m(m), cuadrado esto, y tomamos el resto
-     módulo @m(m). @m(Esta técnica es útil porque significa que podemos realizar
-     nuestro cálculo sin tener que tratar nunca con números mucho más grandes
-     que m). (Compare el @l(#Ejercicio 1.25) .)
+     resto de @M(b^{e / 2}) módulo @m(m), optenemos su cuadrado, y tomamos el
+     resto módulo @m(m). Esta técnica es útil porque significa que podemos
+     realizar nuestro cálculo sin tener que tratar nunca con números mucho más
+     grandes que @m(m). (Compare el @l(#Ejercicio 1.25) .)
 
 #   :: @N(47) :: Numbers that fool the Fermat test are called @e(Carmichael
 #      numbers), and little is known about them other than that they are extremely
@@ -59069,38 +59061,37 @@ Company.
      extremadamente raros. Hay 255 números de Carmichael por debajo de
      100.000.000. Los más pequeños son 561, 1105, 1729, 2465, 2821 y 6601. Al
      probar la primalidad de números muy grandes elegidos al azar, la
-     probabilidad de tropezar con un valor que engaña la prueba de Fermat es
-     menor que la probabilidad de que la radiación cósmica cause El ordenador
-     para hacer un error en la realización de un algoritmo
-     @"(correcto). Considerar un algoritmo inadecuado para la primera razón,
-     pero no para la segunda ilustra la diferencia entre la matemática y la
-     ingeniería.
+     probabilidad de tropezar con un valor que engañe la prueba de Fermat es
+     menor que la probabilidad de que la radiación cósmica cause que el
+     cumputador comenta un error en un algoritmo @"(correcto). Considerar un
+     algoritmo inadecuado por la primera razón, pero no por la segunda, ilustra
+     la diferencia entre la matemática y la ingeniería.
 
 #   :: @N(48) :: One of the most striking applications of probabilistic prime
 #      testing has been to the field of cryptography. Although it is now
 #      computationally infeasible to factor an arbitrary 200-digit number, the
 #      primality of such a number can be checked in a few seconds with the Fermat
 #      test. This fact forms the basis of a technique for constructing
-#      @"(unbreakable codes) suggested by @l(#Rivest et al. (1977)).  The
+#      @"(unbreakable codes) suggested by @l[#Rivest et al. (1977)].  The
 #      resulting @e(RSA algorithm) has become a widely used technique for
 #      enhancing the security of electronic communications. Because of this and
 #      related developments, the study of prime numbers, once considered the
 #      epitome of a topic in @"(pure) mathematics to be studied only for its own
 #      sake, now turns out to have important practical applications to
 #      cryptography, electronic funds transfer, and information retrieval.
-  :: @N(48) :: Una de las aplicaciones más sorprendentes de la prueba
-     probabilística principal ha sido el campo de la criptografía. Aunque ahora
-     es computacionalmente imposible factorizar un número arbitrario de 200
+  :: @N(48) :: Una de las aplicaciones más sorprendentes de la prueba prima
+     probabilística ha sido el campo de la criptografía. Aunque ahora es
+     computacionalmente imposible factorizar un número arbitrario de 200
      dígitos, la primalidad de tal número puede comprobarse en pocos segundos
      con la prueba de Fermat. Este hecho constituye la base de una técnica para
-     construir @"(códigos irrompibles) sugeridos por
-     @l(#Rivest-et-al.-(1977<>Rivest et al. (1977) ). El @e(algoritmo RSA)
-     resultante se ha convertido en una técnica ampliamente utilizada para
-     mejorar la seguridad de las comunicaciones electrónicas. Debido a esto y
-     los desarrollos relacionados, el estudio de los números primos, una vez
-     considerado el epítome de un tema en matemáticas @"(puras) para ser
-     estudiado sólo por su propio bien, ahora resulta tener importantes
-     aplicaciones prácticas a la criptografía,
+     construir @"(códigos irrompibles) sugeridos por @l[#Rivest et
+     al. (1977)]. El @e(algoritmo RSA) resultante se ha convertido en una
+     técnica ampliamente utilizada para mejorar la seguridad de las
+     comunicaciones electrónicas. Debido a esto y los desarrollos relacionados,
+     el estudio de los números primos, una vez considerado el epítome de un tema
+     en matemáticas @"(puras) para ser estudiado sólo por si mismo, ahora
+     resulta tener importantes aplicaciones prácticas a la criptografía, la
+     transferencia de fondos y recuperacion de informacion.
 
 #   :: @N(49) :: This series, usually written in the equivalent form @M({π\over4}
 #      = {1 - ⅓ + ⅕} - {⅐ + …}), is due to Leibniz. We'll see how to use this as
@@ -60395,7 +60386,7 @@ Company.
 #      Kolmogorov, Solomonoff, and Chaitin have made great progress in clarifying
 #      these issues; a discussion can be found in @l(#Chaitin 1975).
   :: @N(134) :: Una forma común de implementar @c(rand-update) es el uso de la
-     regla de que @m(x) se actualiza para @m(ax + b) módulo @m(m), donde @m(un),
+     regla de que @m(x) se actualiza para @m(ax + b) módulo @m(m), donde @m(a),
      @m(b) y @m(m) son números enteros elegidos apropiadamente. El capítulo 3 de
      @l(#Knuth-1981<>Knuth 1981) incluye una extensa discusión de técnicas para
      generar secuencias de números aleatorios y establecer sus propiedades

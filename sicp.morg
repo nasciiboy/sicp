@@ -2633,7 +2633,7 @@ production-distribution arrangement with the McGraw-Hill Book Company.
 
     We can use this theorem to get an order-of-growth estimate for Euclid's
     Algorithm. Let @m(n) be the smaller of the two inputs to the procedure. If
-    the process takes @m(k) steps, then we must have @m[n ≥ Fib(k) ≈ φᵏ / √5].
+    the process takes @m(k) steps, then we must have @m[n ≥ Fib(k) ≈ φᵏ/√5].
     Therefore the number of steps @m(k) grows as the logarithm (to the base
     @m(φ) of @m(n). Hence, the order of growth is @m[Θ(log n)].
 
@@ -2820,16 +2820,12 @@ production-distribution arrangement with the McGraw-Hill Book Company.
             (newline)
             (display n)
             (start-prime-test n (runtime)))
-        < src..
 
-        ..src > scheme
           (define (start-prime-test n start-time)
             (if (prime? n)
                 (report-prime (- (runtime)
                                  start-time))))
-        < src..
 
-        ..src > scheme
           (define (report-prime elapsed-time)
             (display " *** ")
             (display elapsed-time))
@@ -2880,7 +2876,7 @@ production-distribution arrangement with the McGraw-Hill Book Company.
         < src..
 
         Is she correct?  Would this procedure serve as well for our fast prime
-        tester?  Explain.
+        tester? Explain.
 
      :: @t(Exercise 1.26) :: Louis Reasoner is having great difficulty doing
         @l(#Exercise 1.24). His @c(fast-prime?) test seems to run more slowly than
@@ -30980,8 +30976,8 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      @m[bₖ₊₁ ≥ bₙ + bₖ₋₁ ≥ Fib(k) + Fib(k-1) = Fib(k+1)], which completes the
      proof of Lamé's Theorem.
 
-  :: @N(44) :: If @m(d) is a divisor of @m(n), then so is @m(n / d). But @m(d)
-     and @m(n / d) cannot both be greater than @m(√n).
+  :: @N(44) :: If @m(d) is a divisor of @m(n), then so is @m(n/d). But @m(d)
+     and @m(n/d) cannot both be greater than @m(√n).
 
   :: @N(45) :: Pierre de Fermat (1601-1665) is considered to be the founder of
      modern number theory. He obtained many important number-theoretic results,
