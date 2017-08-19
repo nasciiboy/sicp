@@ -66,10 +66,21 @@
   - [X] - nasciiboy :: traduccion :: Searching for divisors
   - [X] - nasciiboy :: traduccion :: The Fermat test
   - [X] - nasciiboy :: traduccion :: Probabilistic methods
-  - [ ] - nasciiboy :: traduccion :: Formulating Abstractions with Higher-Order Procedures
-  - [ ] - nasciiboy :: traduccion :: Procedures as Arguments
-  - [ ] - nasciiboy :: traduccion :: Constructing Procedures Using Lambda
-  - [ ] - nasciiboy :: traduccion :: Using let to create local variables
-  - [ ] - nasciiboy :: traduccion :: Procedures as General Methods
-  - [ ] - nasciiboy :: traduccion :: Finding roots of equations by the half-interval method
-  - [ ] - nasciiboy :: traduccion :: Finding fixed points of functions
+  - [X] - nasciiboy :: traduccion :: Formulating Abstractions with Higher-Order Procedures
+  - [X] - nasciiboy :: traduccion :: Procedures as Arguments
+  - [X] - nasciiboy :: traduccion :: Constructing Procedures Using Lambda
+  - [X] - nasciiboy :: traduccion :: Using let to create local variables
+  - [X] - nasciiboy :: traduccion :: Procedures as General Methods
+  - [X] - nasciiboy :: traduccion :: Finding roots of equations by the half-interval method
+  - [X] - nasciiboy :: traduccion :: Finding fixed points of functions
+  - [ ] - nasciiboy :: traduccion :: Procedures as Returned Values
+  - [ ] - nasciiboy :: traduccion :: Newton's method
+  - [ ] - nasciiboy :: traduccion :: Abstractions and first-class procedures
+  - [ ] - nasciiboy :: traduccion :: Building Abstractions with Data
+  - [ ] - nasciiboy :: traduccion :: Introduction to Data Abstraction
+  - [ ] - nasciiboy :: traduccion :: Example: Arithmetic Operations for Rational Numbers
+  - [ ] - nasciiboy :: traduccion :: Pairs
+  - [ ] - nasciiboy :: traduccion :: Representing rational numbers
+  - [ ] - nasciiboy :: traduccion :: Abstraction Barriers
+  - [ ] - nasciiboy :: traduccion :: What Is Meant by Data?
+  - [ ] - nasciiboy :: traduccion :: Extended Exercise: Interval Arithmetic

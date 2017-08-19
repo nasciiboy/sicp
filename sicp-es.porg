@@ -555,18 +555,18 @@ Company.
 #   one-semester subject. With all the new material in the second edition, it
 #   will not be possible to cover everything in a single semester, so the
 #   instructor will have to pick and choose. In our own teaching, we sometimes
-#   skip the section on logic programming (@l(#4.4)), we have students use the
-#   register-machine simulator but we do not cover its implementation (@l(#5.2)),
-#   and we give only a cursory overview of the compiler (@l(#5.5)). Even so, this
+#   skip the section on logic programming (section @l(#4.4)), we have students use the
+#   register-machine simulator but we do not cover its implementation (section @l(#5.2)),
+#   and we give only a cursory overview of the compiler (section @l(#5.5)). Even so, this
 #   is still an intense course. Some instructors may wish to cover only the first
 #   three or four chapters, leaving the other material for subsequent courses.
   La primera edición del libro siguió de cerca el plan de estudios de nuestra
   asignatura de un semestre del @A(MIT). Con todo el material nuevo en la
   segunda edición, no será posible cubrir todo en un solo semestre, por lo que
   el instructor tendrá que elegir. En nuestra propia enseñanza, a veces saltamos
-  la sección sobre la programación lógica (@l(#4.4)), los estudiantes usan el
-  simulador registrador-máquina, pero no cubrimos su implementación (@l(#5.2)),
-  y sólo ofrecemos una descripción somera del compilador (@l(#5.5)). Aún así,
+  la sección sobre la programación lógica (seccion @l(#4.4)), los estudiantes usan el
+  simulador registrador-máquina, pero no cubrimos su implementación (seccion @l(#5.2)),
+  y sólo ofrecemos una descripción somera del compilador (seccion @l(#5.5)). Aún así,
   este sigue siendo un curso intenso. Algunos instructores tal vez deseen cubrir
   sólo los primeros tres o cuatro capítulos, dejando el otro material para
   cursos posteriores.
@@ -5535,7 +5535,7 @@ Company.
 #    example, when we
    Hemos visto que los procedimientos son, en efecto, abstracciones que
    describen operaciones compuestas sobre números independientes de los números
-   particulares. Por ejemplo, cuando
+   particulares. Por ejemplo, con
 
 #    ..src > scheme
 #      (define (cube x) (* x x x))
@@ -5547,7 +5547,7 @@ Company.
 #    we are not talking about the cube of a particular number, but rather about a
 #    method for obtaining the cube of any number. Of course we could get along
 #    without ever defining this procedure, by always writing expressions such as
-   No estamos hablando del cubo de un número particular, sino más bien de un
+   no estamos hablando del cubo de un número particular, sino más bien de un
    método para obtener el cubo de cualquier número. Por supuesto, podríamos
    seguir adelante sin definir este procedimiento, siempre escribiendo
    expresiones como
@@ -5601,7 +5601,7 @@ Company.
    patrón de programación se utilizará con una serie de procedimientos
    diferentes. Para expresar tales patrones como conceptos, necesitaremos
    construir procedimientos que puedan aceptar procedimientos como argumentos o
-   procedimientos de retorno como valores. Los procedimientos que manipulan
+   procedimientos devueltos como valores. Los procedimientos que manipulan
    procedimientos se llaman @e(procedimientos de orden superior). Esta sección
    muestra cómo los procedimientos de orden superior pueden servir como
    poderosos mecanismos de abstracción, aumentando enormemente el poder
@@ -5613,7 +5613,7 @@ Company.
 #     Consider the following three procedures. The first computes the sum of the
 #     integers from @c(a) through @c(b):
     Considere los siguientes tres procedimientos. El primero calcula la suma de
-    los enteros desde a @c(a) través de @c(b):
+    los enteros desde a @c(a) hasta @c(b):
 
 #     ..src > scheme
 #       (define (sum-integers a b)
@@ -5651,17 +5651,17 @@ Company.
 
 #     ..example >
 #         1       1       1
-#       ----- + ----- + ------ + ...
+#       ––––– + ––––– + ––––– + ...
 #       1 ⋅ 3   5 ⋅ 7   9 ⋅ 11
 #     < example..
     ..example >
         1       1       1
-      ----- + ----- + ------ + ...
+      ––––– + ––––– + ––––– + ...
       1 ⋅ 3   5 ⋅ 7   9 ⋅ 11
     < example..
 
-#     which converges to @m[π / 8] (very slowly):@n(49)
-    Que converge a @m(π / 8) (muy lentamente):@n(49)
+#     which converges to @m[π/8] (very slowly):@n(49)
+    Que converge a @m(π/8) (muy lentamente):@n(49)
 
 #     ..src > scheme
 #       (define (pi-sum a b)
@@ -5685,10 +5685,9 @@ Company.
 #     procedures by filling in slots in the same template:
     Estos tres procedimientos claramente comparten un patrón subyacente
     común. Son en su mayor parte idénticos, difiriendo sólo en el nombre del
-    procedimiento, la función de @c(a) utilizar para calcular el término a ser
-    añadido, y la función que proporciona el siguiente valor de @c(a). Podríamos
-    generar cada uno de los procedimientos rellenando espacios en la misma
-    plantilla:
+    procedimiento, la función utiliza @c(a) para calcular el término a sumar, y
+    proporciona el siguiente valor de @c(a). Podríamos generar cada uno de los
+    procedimientos rellenando espacios en la misma plantilla:
 
 #     ..src > scheme
 #       (define (⟨name⟩ a b)
@@ -5698,11 +5697,11 @@ Company.
 #                (⟨name⟩ (⟨next⟩ a) b))))
 #     < src..
     ..src > scheme
-      (define (⟨name⟩ a b)
+      (define (⟨nombre⟩ a b)
         (if (> a b)
             0
-            (+ (⟨term⟩ a)
-               (⟨name⟩ (⟨next⟩ a) b))))
+            (+ (⟨termino⟩ a)
+               (⟨nombre⟩ (⟨siguiente⟩ a) b))))
     < src..
 
 #     The presence of such a common pattern is strong evidence that there is a
@@ -5712,7 +5711,7 @@ Company.
     La presencia de un patrón tan común es una fuerte evidencia de que hay una
     abstracción útil esperando ser traída a la superficie. De hecho, los
     matemáticos hace tiempo identificaron la abstracción de la @e(suma de una
-    serie) y la @"(notación sigma) inventada @"(,) por ejemplo
+    serie) e inventaron la @"(notación sigma), por ejemplo
 
 #     ..example >
 #        b
@@ -5863,22 +5862,22 @@ Company.
 #     Once we have @c(sum), we can use it as a building block in formulating further
 #     concepts. For instance, the definite integral of a function @m(ƒ) between the
 #     limits @m(a) and @m(b) can be approximated numerically using the formula
-    Una vez que lo tengamos @c(sum), podemos usarlo como un elemento fundamental
-    en la formulación de otros conceptos. Por ejemplo, la integral definida de
-    una función @m(ƒ) entre los límites @m(a) y @m(b) puede aproximarse
+    Una vez que tenemos @c(sum), podemos usarlo como un elemento fundamental en
+    la formulación de otros conceptos. Por ejemplo, la integral definida de una
+    función @m(ƒ) entre los límites @m(a) y @m(b) puede aproximarse
     numéricamente usando la fórmula
 
 #     ..example >
 #              ┌                                                          ┐
 #       ╭ᵇ     │  ╭     dx ╮    ╭          dx ╮    ╭           dx ╮       │
-#       │  f = │ f│ a + -- │ + f│ a + dx + -- │ + f│ a + 2dx + -- │ + ... │ dx
+#       │  ƒ = │ ƒ│ a + –– │ + ƒ│ a + dx + –– │ + ƒ│ a + 2dx + –– │ + ... │ dx
 #       ╯ᵃ     │  ╰     2  ╯    ╰          2  ╯    ╰           2  ╯       │
 #              └                                                          ┘
 #     < example..
     ..example >
              ┌                                                          ┐
       ╭ᵇ     │  ╭     dx ╮    ╭          dx ╮    ╭           dx ╮       │
-      │  f = │ f│ a + -- │ + f│ a + dx + -- │ + f│ a + 2dx + -- │ + ... │ dx
+      │  ƒ = │ ƒ│ a + –– │ + ƒ│ a + dx + –– │ + ƒ│ a + 2dx + –– │ + ... │ dx
       ╯ᵃ     │  ╰     2  ╯    ╰          2  ╯    ╰           2  ╯       │
              └                                                          ┘
     < example..
@@ -5920,14 +5919,14 @@ Company.
        aproxima como
 
 #        ..example >
-#          h
-#          - (y₀ + 4y₁ + 2y₂ + 4y₃ + 2y₄ + ... + 2y₍ₙ₋₂₎ + 4y₍ₙ₋₁₎ + yₙ)
-#          3
+#          h ┌                                                     ┐
+#          – │y₀ + 4y₁ + 2y₂ + 4y₃ + 2y₄ + ... + 2yₙ₋₂ + 4yₙ₋₁ + yₙ│
+#          3 └                                                     ┘
 #        < example..
        ..example >
-         h
-         - (y₀ + 4y₁ + 2y₂ + 4y₃ + 2y₄ + ... + 2y₍ₙ₋₂₎ + 4y₍ₙ₋₁₎ + yₙ)
-         3
+         h ┌                                                     ┐
+         – │y₀ + 4y₁ + 2y₂ + 4y₃ + 2y₄ + ... + 2yₙ₋₂ + 4yₙ₋₁ + yₙ│
+         3 └                                                     ┘
        < example..
 
 #        where @m[h = (b - a)/n], for some even integer @m(n), and @m[yₙ = ƒ(a +
@@ -5937,13 +5936,13 @@ Company.
 #        your procedure to integrate @c(cube) between 0 and 1 (with @m(n = 100) and
 #        @m(n = 1000), and compare the results to those of the @c(integral)
 #        procedure shown above.
-       donde @m(h = (b - a) / n), para algunos incluso número entero @m(n), y
-       @m(yₙ = f (a + kh)). (El aumento de @m(n) aumenta la precisión de la
-       aproximación.) Definir un procedimiento que toma como argumentos @m(ƒ),
-       @m(a), @m(b), y @m(n) y devuelve el valor de la integral, calcula
-       utilizando la regla de Simpson. Utilice su procedimiento para integrar
-       @c(cube) entre 0 y 1 (con @m(n = 100) y @m(n = 1000), y compare los
-       resultados con los del procedimiento @c(integral) mostrado arriba.
+       donde @m[h = (b - a)/n], para algunos enteros par @m(n), y @m[yₙ = ƒ(a +
+       kh)]. (Incrementando @m(n) aumenta la precisión de la aproximación.)
+       Definir un procedimiento que tome como argumentos @m(ƒ), @m(a), @m(b), y
+       @m(n) y devuelve el valor de la integral, utilizando la regla de
+       Simpson. Utilice su procedimiento para integrar @c(cube) entre 0 y 1 (con
+       @m(n = 100) y @m(n = 1000), y compare los resultados con los del
+       procedimiento @c(integral) mostrado arriba.
 
 #     :: @t(Exercise 1.30) :: The @c(sum) procedure above generates a linear
 #        recursion. The procedure can be rewritten so that the sum is performed
@@ -5985,17 +5984,17 @@ Company.
          orden superior.@n(51) Escriba un procedimiento análogo llamado
          @c(product) que devuelve el producto de los valores de una función en
          puntos sobre un rango dado. Mostrar cómo definir @c(factorial) en
-         términos de @c(product). También se usa @c(product) para calcular
+         términos de @c(product). También se utiliza @c(product) para calcular
          aproximaciones a @m(π) usando la fórmula@n(52)
 
 #          ..example >
 #            π   2 ⋅ 4 ⋅ 4 ⋅ 6 ⋅ 6 ⋅ 8 ⋅ ⋯
-#            - = -------------------------
+#            – = –––––––––––––––––––––––––
 #            4   3 ⋅ 3 ⋅ 5 ⋅ 5 ⋅ 7 ⋅ 7 ⋅ ⋯
 #          < example..
          ..example >
            π   2 ⋅ 4 ⋅ 4 ⋅ 6 ⋅ 6 ⋅ 8 ⋅ ⋯
-           - = -------------------------
+           – = –––––––––––––––––––––––––
            4   3 ⋅ 3 ⋅ 5 ⋅ 5 ⋅ 7 ⋅ 7 ⋅ ⋯
          < example..
 
@@ -6012,10 +6011,10 @@ Company.
 #        - Show that @c(sum) and @c(product) (@l(#Exercise 1.31)) are both special
 #          cases of a still more general notion called @c(accumulate) that combines
 #          a collection of terms, using some general accumulation function:
-       - Demuestre que @c(sum) y @c(product)(@l(#Ejercicio 1.31)) son ambos
-         casos especiales de una noción aún más general llamada @c(accumulate)
-         que combina una colección de términos, usando alguna función de
-         acumulación general:
+       - Demuestre que @c(sum) y @c(product) (@l(#Ejercicio 1.31)) son casos
+         especiales de una noción aún más general llamada @c(accumulate) que
+         combina una colección de términos, usando alguna función de acumulación
+         general:
 
 #          ..src > scheme
 #            (accumulate
@@ -6034,10 +6033,11 @@ Company.
 #          @c(accumulate) and show how @c(sum) and @c(product) can both be defined
 #          as simple calls to @c(accumulate).
         @c(Accumulate) Toma como argumentos el mismo término y especificaciones
-        de rango como @c(sum) y @c(product), junto con un procedimiento @c(combiner) (de dos argumentos) que especifica cómo se debe combinar
-        el término actual con la acumulación de los términos anteriores y un
-        @c(null-value) que especifica qué valor base utilizar cuando los
-        términos sin. Escribir @c(accumulate) y mostrar cómo @c(sum) y
+        de rango como @c(sum) y @c(product), junto con un procedimiento
+        @c(combiner) (de dos argumentos) que especifica cómo se debe combinar el
+        término actual con la acumulación de los términos anteriores y un
+        @c(valor-null) que especifica qué valor base utilizar cuando los
+        términos se agoten. Escribir @c(accumulate) y mostrar cómo @c(sum) y
         @c(product) pueden ser definidos como simples llamadas a @c(accumulate).
 
 #        - If your @c(accumulate) procedure generates a recursive process, write one
@@ -6056,29 +6056,29 @@ Company.
 #        specifies the filter. Write @c(filtered-accumulate) as a procedure.  Show
 #        how to express the following using @c(filtered-accumulate):
     :: @t(Ejercicio 1.33) :: Puede obtener una versión aún más general de
-       @c(accumulate)(@l(#Ejercicio 1.32) ) introduciendo la
-       noción de un @e(filtro) en los términos que se van a combinar. Es decir,
-       combinar sólo aquellos términos derivados de valores en el intervalo que
-       satisfacen una condición especificada. La @c(filtered-accumulate)
-       abstracción resultante toma los mismos argumentos que se acumulan, junto
-       con un predicado adicional de un argumento que especifica el
-       filtro. Escribir @c(filtered-accumulate) como un procedimiento. Muestre
-       cómo expresar lo siguiente usando @c(filtered-accumulate):
+       @c(accumulate) (@l(#Ejercicio 1.32)) introduciendo la noción de un
+       @e(filtro) en los términos que se van a combinar. Es decir, combinar sólo
+       aquellos términos derivados de valores en el intervalo que satisfacen una
+       condición especificada. La abstraccion @c(filtered-accumulate) resultante
+       toma los mismos argumentos que se acumulan, junto con un predicado
+       adicional de un argumento que especifica el filtro. Escribir
+       @c(filtered-accumulate) como un procedimiento. Muestre cómo expresar lo
+       siguiente usando @c(filtered-accumulate):
 
 #        - the sum of the squares of the prime numbers in the interval @m(a) to
 #          @m(b) (assuming that you have a @c(prime?) predicate already written)
        - La suma de los cuadrados de los números primos en el intervalo @m(a) a
-         @m(b) (suponiendo que usted tiene un @c(prime?) predicado ya escrito)
+         @m(b) (suponiendo que usted tiene un predicado @c(prime?) ya escrito)
 
 #        - the product of all the positive integers less than @m(n) that are
 #          relatively prime to @m(n) (i.e., all positive integers @m(i < n) such
 #          that @m[GCD(i, n) = 1].
        - El producto de todos los enteros positivos inferiores a @m(n) que son
          relativamente primos a @m(n) (es decir, todos los enteros positivos
-         @m(i <n) tales que @m(GCD (i, n) = 1).
+         @m(i < n) tales que @m[GCD(i, n) = 1].
 
 # *** 1.3.2 <> Constructing Procedures Using @c(Lambda)
-*** 1.3.2 <> Procedimientos de construcción usando @c(Lambda)
+*** 1.3.2 <> Construcción de Procedimientos usando @c(Lambda)
 
 #     In using @c(sum) as in section @l(#1.3.1), it seems terribly awkward to have to define
 #     trivial procedures such as @c(pi-term) and @c(pi-next) just so we can use them
@@ -6088,16 +6088,15 @@ Company.
 #     that returns the reciprocal of its input times its input plus 2.)  We can do
 #     this by introducing the special form @c(lambda), which creates
 #     procedures. Using @c(lambda) we can describe what we want as
-    En el uso @c(sum) como en la seccion @l(#1.3.1), parece terriblemente torpe
-    tener que definir procedimientos triviales tales como @c(pi-term) y
-    @c(pi-next) apenas así que podemos utilizarlos como argumentos a nuestro
-    procedimiento del orden más alto. En lugar de definir @c(pi-next) y
-    @c(pi-term), sería más conveniente tener una manera de especificar
-    directamente @"(el procedimiento que devuelve su entrada incrementada por 4)
-    y @"(el procedimiento que devuelve el recíproco de su entrada veces su
-    entrada más 2.)  Podemos hacer esto introduciendo el especial formar
-    @c(lambda), lo que crea procedimientos. Usando @c(lambda) podemos describir
-    lo que queremos como
+    Al usar @c(sum) como en la seccion @l(#1.3.1), parece terriblemente torpe
+    tener que definir procedimientos triviales como @c(pi-term) y @c(pi-next)
+    simplemente para utilizarlos como argumentos de nuestro procedimiento de
+    orden superior. En lugar de definir @c(pi-next) y @c(pi-term), sería más
+    conveniente tener una manera de especificar directamente @"(el procedimiento
+    que devuelve su entrada incrementada por 4) y @"(el procedimiento que
+    devuelve el recíproco de su entrada, las veces su entrada más 2.)  Podemos
+    hacer esto introduciendo la forma especial @c(lambda), que crea
+    procedimientos. Usando @c(lambda) podemos describir lo que queremos como
 
 #     ..src > scheme
 #       (lambda (x) (+ x 4))
@@ -6138,7 +6137,8 @@ Company.
 
 #     Again using @c(lambda), we can write the @c(integral) procedure without having
 #     to define the auxiliary procedure @c(add-dx):
-    Nuevamente utilizando @c(lambda), podemos escribir el procedimiento @c(integral) sin tener que definir el procedimiento auxiliar @c(add-dx):
+    Nuevamente utilizando @c(lambda), podemos escribir el procedimiento
+    @c(integral) sin tener que definir el procedimiento auxiliar @c(add-dx):
 
 #     ..src > scheme
 #       (define (integral f a b dx)
@@ -6171,9 +6171,9 @@ Company.
 #     The resulting procedure is just as much a procedure as one that is created
 #     using @c(define). The only difference is that it has not been associated with
 #     any name in the environment. In fact,
-    El procedimiento resultante es tanto un procedimiento como el que se crea
+    El procedimiento resultante es justo un procedimiento como el que se crea
     utilizando @c(define). La única diferencia es que no se ha asociado con
-    ningún nombre en el medio ambiente. De hecho,
+    ningún nombre en el entorno. De hecho,
 
 #     ..src > scheme
 #       (define (plus4 x) (+ x 4))
@@ -6193,7 +6193,7 @@ Company.
     < src..
 
 #     We can read a @c(lambda) expression as follows:
-    Podemos leer una @c(lambda) expresión como sigue:
+    Podemos leer una expresión @c(lambda) como sigue:
 
 #     ..example >
 #       (lambda                     (x)     (+   x     4))
@@ -6201,15 +6201,15 @@ Company.
 #       the procedure of an argument x that adds x and 4
 #     < example..
     ..example >
-      (lambda                     (x)     (+   x     4))
-          |                        |       |   |     |
-      the procedure of an argument x that adds x and 4
+      (lambda                         (x)    (+   x   4))
+          |                            |      |   |   |
+      el precedimiento de un argumento x que suma x y 4
     < example..
 
 #     Like any expression that has a procedure as its value, a @c(lambda) expression
 #     can be used as the operator in a combination such as
     Como cualquier expresión que tiene un procedimiento como su valor, una
-    @c(lambda) expresión puede ser utilizada como el operador en una combinación
+    expresión @c(lambda) se puede utilizar como el operador en una combinación
     como
 
 #     ..srci > scheme
@@ -6227,7 +6227,7 @@ Company.
     utilizaríamos un nombre de procedimiento.@n(53)
 
 # **** Using @c(let) to create local variables
-**** Usar @c(let) para crear variables locales
+**** Utilizar @c(let) para crear variables locales
 
 #      Another use of @c(lambda) is in creating local variables. We often need
 #      local variables in our procedures other than those that have been bound as
@@ -6289,7 +6289,7 @@ Company.
 #      Of course, we could use a @c(lambda) expression to specify an anonymous
 #      procedure for binding our local variables. The body of @c(f) then becomes a
 #      single call to that procedure:
-     Por supuesto, podríamos usar una @c(lambda) expresión para especificar un
+     Por supuesto, podríamos usar una expresión @c(lambda) para especificar un
      procedimiento anónimo para enlazar nuestras variables locales. El cuerpo de
      @c(f) entonces se convierte en una sola llamada a ese procedimiento:
 
@@ -6315,7 +6315,7 @@ Company.
 #      This construct is so useful that there is a special form called @c(let) to
 #      make its use more convenient. Using @c(let), the @c(f) procedure could be
 #      written as
-     Esta construcción es tan útil que hay una forma especial llamada @c(let) a
+     Esta construcción es tan útil que hay una forma especial llamada @c(let) para
      hacer su uso más conveniente. Usando @c(let), el procedimiento @c(f) podría
      escribirse como
 
@@ -6337,7 +6337,7 @@ Company.
      < src..
 
 #      The general form of a @c(let) expression is
-     La forma general de una @c(let) expresión es
+     La forma general de una expresión @c(let) es
 
 #      ..src > scheme
 #        (let ((⟨var₁⟩ ⟨exp₁⟩)
@@ -6365,10 +6365,10 @@ Company.
 #          in ⟨body⟩
 #      < example..
      ..example >
-       let ⟨var₁⟩ have the value ⟨exp₁⟩ and
-           ⟨var₂⟩ have the value ⟨exp₂⟩ and
+       let ⟨var₁⟩ tiene el valor ⟨exp₁⟩ y
+           ⟨var₂⟩ tiene el valor ⟨exp₂⟩ y
            …
-           ⟨varₙ⟩ have the value ⟨expₙ⟩
+           ⟨varₙ⟩ tiene el valor ⟨expₙ⟩
          in ⟨body⟩
      < example..
 
@@ -6377,11 +6377,11 @@ Company.
 #      corresponding expression. The body of the @c(let) is evaluated with these
 #      names bound as local variables. The way this happens is that the @c(let)
 #      expression is interpreted as an alternate syntax for
-     La primera parte de la @c(let) expresión es una lista de pares
+     La primera parte de la expresión @c(let) es una lista de pares
      nombre-expresión. Cuando @c(let) se evalúa, cada nombre está asociado con
-     el valor de la expresión correspondiente. El cuerpo de la @c(let) se evalúa
+     el valor de la expresión correspondiente. El cuerpo de @c(let) se evalúa
      con estos nombres vinculados como variables locales. La forma en que esto
-     ocurre es que la @c(let) expresión se interpreta como una sintaxis
+     ocurre es que la expresión @c(let) se interpreta como una sintaxis
      alternativa para
 
 #      ..src > scheme
@@ -6403,13 +6403,13 @@ Company.
 #      variables. A @c(let) expression is simply syntactic sugar for the underlying
 #      @c(lambda) application.
      No se requiere un nuevo mecanismo en el intérprete para proporcionar
-     variables locales. Una @c(let) expresión es simplemente azúcar sintáctico
-     para la @c(lambda) aplicación subyacente.
+     variables locales. Una expresión @c(let) es simplemente azúcar sintáctico
+     para aplicar la @c(lambda) subyacente.
 
 #      We can see from this equivalence that the scope of a variable specified by a
 #      @c(let) expression is the body of the @c(let). This implies that:
      Podemos ver a partir de esta equivalencia que el alcance de una variable
-     especificada por una @c(let) expresión es el cuerpo de la @c(let). Esto
+     especificada por una expresión @c(let) es el cuerpo de @c(let). Esto
      implica que:
 
 #      - @c(Let) allows one to bind variables as locally as possible to where they
@@ -6433,15 +6433,15 @@ Company.
 #        is 38. Here, the @c(x) in the body of the @c(let) is 3, so the value of the
 #        @c(let) expression is 33. On the other hand, the @c(x) that is the second
 #        argument to the outermost @c(+) is still 5.
-       Es 38. Aquí, @c(x) en el cuerpo de la @c(let) es 3, por lo que el valor
-       de la @c(let) expresión es 33. Por otra parte, el @c(x) que es el segundo
-       argumento a la más externa @c(+) es todavía 5.
+       es 38. Aquí, @c(x) en el cuerpo de @c(let) es 3, por lo que el valor de
+       la expresión @c(let) es 33. Por otra parte, el segundo argumento @c(x) a
+       más externo a @c(+) es todavía 5.
 
 #      - The variables' values are computed outside the @c(let). This matters when
 #        the expressions that provide the values for the local variables depend upon
 #        variables having the same names as the local variables themselves. For
 #        example, if the value of @c(x) is 2, the expression
-     - Los valores de las variables se calculan fuera de la @c(let). Esto es
+     - Los valores de las variables se calculan fuera de @c(let). Esto es
        importante cuando las expresiones que proporcionan los valores para las
        variables locales dependen de variables que tengan los mismos nombres que
        las variables locales. Por ejemplo, si el valor de @c(x) es 2, la
@@ -6461,14 +6461,14 @@ Company.
 #        will have the value 12 because, inside the body of the @c(let), @c(x) will
 #        be 3 and @c(y) will be 4 (which is the outer @c(x) plus 2).
        Tendrá el valor 12 porque, dentro del cuerpo del @c(let), @c(x) será 3 y
-       @c(y) será 4 (que es el exterior @c(x) más 2).
+       @c(y) será 4 (que es el @c(x) exterior más 2).
 
 
 #      Sometimes we can use internal definitions to get the same effect as with
 #      @c(let). For example, we could have defined the procedure @c(f) above as
      A veces podemos usar definiciones internas para obtener el mismo efecto que
-     con @c(let). Por ejemplo, podríamos haber definido el procedimiento @c(f)
-     anterior como
+     con @c(let). Por ejemplo, podríamos haber definido el anterior
+     procedimiento @c(f) como
 
 #      ..src > scheme
 #        (define (f x y)
@@ -6491,8 +6491,8 @@ Company.
 
 #      We prefer, however, to use @c(let) in situations like this and to use internal
 #      @c(define) only for internal procedures.@n(54)
-     Preferimos, sin embargo, utilizar @c(let) en situaciones como esta y usar
-     @c(define) sólo interno para procedimientos internos.@n(54)
+     Preferimos, sin embargo, utilizar @c(let) en situaciones como esta y utilizar
+     @c(define) internos sólo para procedimientos internos.@n(54)
 
 #      :: @t(Exercise 1.34) :: Suppose we define the procedure
      :: @t(Ejercicio 1.34) :: Supongamos que definimos el procedimiento
@@ -6528,28 +6528,28 @@ Company.
 # *** 1.3.3 <> Procedures as General Methods
 *** 1.3.3 <> Procedimientos como Métodos Generales
 
-#     We introduced compound procedures in section @l(#1.1.4) as a mechanism for abstracting
-#     patterns of numerical operations so as to make them independent of the
-#     particular numbers involved. With higher-order procedures, such as the
-#     @c(integral) procedure of section @l(#1.3.1), we began to see a more powerful kind of
-#     abstraction: procedures used to express general methods of computation,
-#     independent of the particular functions involved. In this section we discuss
-#     two more elaborate examples––general methods for finding zeros and fixed
-#     points of functions––and show how these methods can be expressed directly as
-#     procedures.
+#     We introduced compound procedures in section @l(#1.1.4) as a mechanism for
+#     abstracting patterns of numerical operations so as to make them independent
+#     of the particular numbers involved. With higher-order procedures, such as
+#     the @c(integral) procedure of section @l(#1.3.1), we began to see a more
+#     powerful kind of abstraction: procedures used to express general methods of
+#     computation, independent of the particular functions involved. In this
+#     section we discuss two more elaborate examples––general methods for finding
+#     zeros and fixed points of functions––and show how these methods can be
+#     expressed directly as procedures.
     Introdujimos los procedimientos compuestos en la seccion @l(#1.1.4) como un
     mecanismo para abstraer los patrones de las operaciones numéricas para
     hacerlos independientes de los números particulares involucrados. Con
-    procedimientos de orden superior, como el procedimiento @c(integral) de
-    @l(#1.3.1), comenzamos a ver un tipo más poderoso de abstracción:
+    procedimientos de orden superior, como el procedimiento @c(integral) de la
+    seccion @l(#1.3.1), comenzamos a ver un tipo más poderoso de abstracción:
     procedimientos usados para expresar métodos generales de computación,
     independientemente de las funciones particulares involucradas. En esta
-    sección discutiremos dos ejemplos más elaborados -métodos generales para
-    encontrar ceros y puntos fijos de funciones- y mostraremos cómo estos
+    sección discutiremos dos ejemplos más elaborados––métodos generales para
+    encontrar ceros y puntos fijos de funciones––y mostraremos cómo estos
     métodos pueden expresarse directamente como procedimientos.
 
 # **** Finding roots of equations by the half-interval method
-**** Encontrar raíces de ecuaciones por el método de medio intervalo
+**** Encontrar raíces de ecuaciones por el método de intervalo medio
 
 #      The @e(half-interval method) is a simple but powerful technique for finding
 #      roots of an equation @m[ƒ(x) = 0], where @m(ƒ) is a continuous function. The
@@ -6564,40 +6564,23 @@ Company.
 #      by half at each step of the process, the number of steps required grows as
 #      @m[Θ(log(L / T))], where @m(L) is the length of the original interval and
 #      @m(T) is the error tolerance (that is, the size of the interval we will
-#      consider @"(small enough)]. Here is a procedure that implements this strategy:
-     El @e(método del medio-intervalo) es una técnica simple pero de gran
-     alcance para encontrar raíces de una ecuación @m(f (x) = 0), donde @m(ƒ) es
+#      consider @"(small enough). Here is a procedure that implements this strategy:
+     El @e(método de intervalo medio) es una técnica simple pero de gran
+     alcance para encontrar raíces de una ecuación @m[ƒ(x) = 0], donde @m(ƒ) es
      una función continua. La idea es que, si se nos dan los puntos @m(a) y
-     @m(b) tales que @m(f (a) <0 <f (b)), entonces @m(ƒ) debe tener al
+     @m(b) tales que @m[ƒ(a) < 0 < ƒ(b)], entonces @m(ƒ) debe tener al
      menos un cero entre @m(a) y @m(b). Para localizar un cero, dejar que @m(x)
-     sea el promedio de @m(a) y @m(b), y calcular @m(f (x)). Si @m(f (x)>
-     0), entonces @m(ƒ) debe tener un cero entre @m(a) y @m(x). Si @m(f (x)
-     <0), @m(Entonces f) debe tener un cero entre @m(x) y @m(b). Continuando
+     sea el promedio de @m(a) y @m(b), y calcular @m[ƒ(x)]. Si @m[ƒ(x) >
+     0], entonces @m(ƒ) debe tener un cero entre @m(a) y @m(x). Si @m[ƒ(x)
+     < 0], entonces @m(ƒ) debe tener un cero entre @m(x) y @m(b). Continuando
      de esta manera, podemos identificar intervalos cada vez más pequeños en los
      que @m(ƒ) debe tener un cero. Cuando llegamos a un punto donde el intervalo
      es lo suficientemente pequeño, el proceso se detiene. Dado que el intervalo
      de incertidumbre se reduce a la mitad en cada paso del proceso, el número
-     de pasos requeridos crece como @m(Θ (log (L / T))), donde @m(L) es la
+     de pasos requeridos crece como @m[Θ(log(L / T))], donde @m(L) es la
      longitud del intervalo original y @m(T) es la tolerancia de error Es, el
-     tamaño del intervalo que vamos a considerar lo @"(suficientemente pequeño)
-     .] Aquí está un procedimiento que implementa esta estrategia:
-     @m(Continuando de esta manera, podemos identificar intervalos cada vez más
-     pequeños en los que f) debe tener un cero. Cuando llegamos a un punto donde
-     el intervalo es lo suficientemente pequeño, el proceso se detiene. Dado que
-     el intervalo de incertidumbre se reduce a la mitad en cada paso del
-     proceso, el número de pasos requeridos crece como @m(Θ (log (L / T))),
-     donde @m(L) es la longitud del intervalo original y @m(T) es la tolerancia
-     de error Es, el tamaño del intervalo que vamos a considerar lo
-     @"(suficientemente pequeño) .] Aquí está un procedimiento que implementa
-     esta estrategia: @m(Continuando de esta manera, podemos identificar
-     intervalos cada vez más pequeños en los que f) debe tener un cero. Cuando
-     llegamos a un punto donde el intervalo es lo suficientemente pequeño, el
-     proceso se detiene. Dado que el intervalo de incertidumbre se reduce a la
-     mitad en cada paso del proceso, el número de pasos requeridos crece como
-     @m(Θ (log (L / T))), donde @m(L) es la longitud del intervalo original y
-     @m(T) es la tolerancia de error Es, el tamaño del intervalo que vamos a
-     considerar lo @"(suficientemente pequeño) .] Aquí está un procedimiento que
-     implementa esta estrategia:
+     tamaño del intervalo que vamos a considerar lo @"(suficientemente pequeño).
+     Aquí está un procedimiento que implementa esta estrategia:
 
 #      ..src > scheme
 #        (define (search f neg-point pos-point)
@@ -6666,7 +6649,7 @@ Company.
          (< (abs (- x y)) 0.001))
      < src..
 
-#      @c(Search) is awkward to use directly, because we can accidentally give it
+#      @c(search) is awkward to use directly, because we can accidentally give it
 #      points at which @m(ƒ)'s values do not have the required sign, in which case we
 #      get a wrong answer. Instead we will use @c(search) via the following
 #      procedure, which checks to see which of the endpoints has a negative function
@@ -6674,15 +6657,14 @@ Company.
 #      accordingly. If the function has the same sign on the two given points, the
 #      half-interval method cannot be used, in which case the procedure signals an
 #      error.@n(56)
-     @c(Search) Es incómodo de usar directamente, porque podemos accidentalmente
+     @c(search) Es incómodo de usar directamente, porque podemos accidentalmente
      darle puntos en los que los valores de @m(ƒ) no tienen el signo requerido,
      en cuyo caso recibimos una respuesta equivocada. En su lugar, utilizaremos
-     @c(search) el siguiente procedimiento, que verifica para ver cuál de los
-     puntos finales tiene un valor de función negativo y cuál tiene un valor
-     positivo, y llama al procedimiento @c(search) en consecuencia. Si la
-     función tiene el mismo signo en los dos puntos dados, no se puede utilizar
-     el método de medio intervalo, en cuyo caso el procedimiento indica un
-     error.@n(56)
+     @c(search) el siguiente procedimiento, que verifica cuál de los puntos
+     finales tiene un valor de función negativo y cuál tiene un valor positivo,
+     y llama al procedimiento @c(search) en consecuencia. Si la función tiene el
+     mismo signo en los dos puntos dados, no se puede utilizar el método de
+     medio intervalo, en cuyo caso el procedimiento indica un error.@n(56)
 
 #      ..src > scheme
 #        (define (half-interval-method f a b)
@@ -6728,9 +6710,9 @@ Company.
      < srci..
 
 #      Here is another example, using the half-interval method to search for a root
-#      of the equation @m(x³ - 2x - 3 = 0) between 1 and 2:
+#      of the equation @m(x³ − 2x − 3 = 0) between 1 and 2:
      Aquí hay otro ejemplo, usando el método de medio intervalo para buscar una
-     raíz de la ecuación @m(x³ - 2x - 3 = 0) entre 1 y 2:
+     raíz de la ecuación @m(x³ − 2x − 3 = 0) entre 1 y 2:
 
 #      ..srci > scheme
 #        > (half-interval-method                 \
@@ -6753,8 +6735,8 @@ Company.
 #      A number @m(x) is called a @e(fixed point) of a function @m(ƒ) if @m(x)
 #      satisfies the equation @m[ƒ(x) = x]. For some functions @m(ƒ) we can locate a
 #      fixed point by beginning with an initial guess and applying @m(ƒ) repeatedly,
-     Un número @m(x) se llama @e(punto fijo) de una función @m(ƒ) si @m(x)
-     satisface la ecuación @m(f (x) = x). Para algunas funciones @m(ƒ) podemos
+     Un número @m(x) se denomina un @e(punto fijo) de una función @m(ƒ) si @m(x)
+     satisface la ecuación @m(ƒ(x) = x). Para algunas funciones @m(ƒ) podemos
      localizar un punto fijo empezando con una conjetura inicial y aplicando
      @m(ƒ) repetidamente,
 
@@ -6839,19 +6821,18 @@ Company.
 #      a guess until the result satisfies some criterion. In fact, we can readily
 #      formulate the square-root computation as a fixed-point search.  Computing the
 #      square root of some number @m(x) requires finding a @m(y) such that @m(y² =
-#      x). Putting this equation into the equivalent form @m(y = x / y), we recognize
-#      that we are looking for a fixed point of the function@n(58) @m(y ↦ x / y), and
+#      x). Putting this equation into the equivalent form @m(y = x/y), we recognize
+#      that we are looking for a fixed point of the function@n(58) @m(y ↦ x/y), and
 #      we can therefore try to compute square roots as
      El proceso de punto fijo es una reminiscencia del proceso que usamos para
-     encontrar raíces cuadradas en la seccion @l(#1.1.7). Ambos se basan en la idea
-     de mejorar repetidamente una conjetura hasta que el resultado satisface
-     algún criterio. De hecho, podemos formular fácilmente el cálculo de raíz
-     cuadrada como una búsqueda de punto fijo. Calculando la raíz cuadrada de un
-     cierto número @m(x se) requiere encontrar a @m(y) tal que @m(y2 =
-     x). Poniendo esta ecuación en la forma equivalente @m(y = x / y),
-     reconocemos que estamos buscando un punto fijo de la función@n(58)
-     @m( y ↦ x / y), por lo que podemos tratar de calcular las raíces cuadradas
-     como
+     encontrar raíces cuadradas en la seccion @l(#1.1.7). Ambos se basan en la
+     idea de mejorar repetidamente una conjetura hasta que el resultado
+     satisface algún criterio. De hecho, podemos formular fácilmente el cálculo
+     de raíz cuadrada como una búsqueda de punto fijo. Calculando la raíz
+     cuadrada de un cierto número @m(x) se requiere encontrar a @m(y) tal que
+     @m(y² = x). Poniendo esta ecuación en la forma equivalente @m(y = x/y),
+     reconocemos que estamos buscando un punto fijo de la función@n(58) @m(y ↦
+     x/y), por lo que podemos tratar de calcular las raíces cuadradas como
 
 #      ..src > scheme
 #        (define (sqrt x)
@@ -6865,28 +6846,28 @@ Company.
      < src..
 
 #      Unfortunately, this fixed-point search does not converge. Consider an initial
-#      guess @m(y₁). The next guess is @m(y₂ = x / y₁) and the next guess is @m[y₃ =
-#      x / y₂ = x / (x / y₁) = y₁]. This results in an infinite loop in which the two
+#      guess @m(y₁). The next guess is @m(y₂ = x/y₁) and the next guess is @m[y₃ =
+#      x/y₂ = x/(x/y₁) = y₁]. This results in an infinite loop in which the two
 #      guesses @m(y₁) and @m(y₂) repeat over and over, oscillating about the answer.
      Desafortunadamente, esta búsqueda de punto fijo no converge. Considere una
      conjetura inicial @m(y₁). La siguiente suposición es @m(y₂ = x / y₁) y la
-     siguiente conjetura es @m(y₃ = x / y₂ = x / (x / y₁) = y₁). Esto da como
-     resultado un bucle infinito en el que las dos conjeturas @m(y₁) y @m(y₂ se)
+     siguiente conjetura es @m(y₃ = x/y₂ = x/(x/y₁) = y₁). Esto da como
+     resultado un bucle infinito en el que las dos conjeturas @m(y₁) y @m(y₂) se
      repiten una y otra vez, oscilando alrededor de la respuesta.
 
 #      One way to control such oscillations is to prevent the guesses from changing
-#      so much. Since the answer is always between our guess @m(y) and @m(x / y), we
-#      can make a new guess that is not as far from @m(y) as @m(x / y) by averaging
-#      @m(y) with @m(x / y), so that the next guess after @m(y) is @m[½(y + x / y)]
-#      instead of @m(x / y). The process of making such a sequence of guesses is
-#      simply the process of looking for a fixed point of @m(y ↦ ½(y + x / y)):
+#      so much. Since the answer is always between our guess @m(y) and @m(x/y), we
+#      can make a new guess that is not as far from @m(y) as @m(x/y) by averaging
+#      @m(y) with @m(x/y), so that the next guess after @m(y) is @m[(1/2)(y + x/y)]
+#      instead of @m(x/y). The process of making such a sequence of guesses is
+#      simply the process of looking for a fixed point of @m(y ↦ (1/2)(y + x/y)):
      Una forma de controlar tales oscilaciones es evitar que las suposiciones
      cambien tanto. Puesto que la respuesta está siempre entre nuestra conjetura
-     @m(y) y @m(x / y), podemos hacer una nueva conjetura que no esté tan lejos
-     de @m(y) como @m(x / y) promediando @m(y) con @m(x / y), de modo que la
-     próxima conjetura después de @m(y) sea @m(½ (y + X / y) en) lugar de @m(x /
-     y). El proceso de hacer tal secuencia de conjeturas es simplemente el
-     proceso de buscar un punto fijo de @m(y ↦ ½ (y + x / y) ):
+     @m(y) y @m(x/y), podemos hacer una nueva conjetura que no esté tan lejos de
+     @m(y) como @m(x/y) promediando @m(y) con @m(x/y), de modo que la próxima
+     conjetura después de @m(y) sea @m[(1/2)(y + X/y)] en lugar de @m(x/y). El
+     proceso de hacer tal secuencia de conjeturas es simplemente el proceso de
+     buscar un punto fijo de @m(y ↦ (1/2)(y + x/y)):
 
 #      ..src > scheme
 #        (define (sqrt x)
@@ -6901,11 +6882,11 @@ Company.
           1.0))
      < src..
 
-#      (Note that @m[y = ½(y + x / y)] is a simple transformation of the equation
-#      @m(y = x / y); to derive it, add @m(y) to both sides of the equation and
+#      (Note that @m[y = (1/2)(y + x/y)] is a simple transformation of the equation
+#      @m(y = x/y); to derive it, add @m(y) to both sides of the equation and
 #      divide by 2.)
-     (Obsérvese que @m(y = ½ (y + x / y)) es una transformación simple de la
-     ecuación @m(y = x / y), para derivarla, añada @m(y) a ambos lados de la
+     (Obsérvese que @m[y = (1/2)(y + x/y)] es una transformación simple de la
+     ecuación @m(y = x/y), para derivarla, añada @m(y) a ambos lados de la
      ecuación y divida por 2.)
 
 #      With this modification, the square-root procedure works. In fact, if we
@@ -6917,36 +6898,37 @@ Company.
      Con esta modificación, el procedimiento de raíz cuadrada funciona. De
      hecho, si desentrañamos las definiciones, podemos ver que la secuencia de
      aproximaciones a la raíz cuadrada generada aquí es precisamente la misma
-     que la generada por nuestro procedimiento de raíz cuadrada original de
-     @l(#1.1.7). Este enfoque de promediar aproximaciones sucesivas a una
-     solución, una técnica que llamamos @e(amortiguación promedio), a menudo
-     ayuda a la convergencia de búsquedas de punto fijo.
+     que la generada por nuestro procedimiento de raíz cuadrada original de la
+     seccion @l(#1.1.7). Este enfoque de promediar aproximaciones sucesivas a
+     una solución, es una técnica que llamamos @e(amortiguación promedio), a
+     menudo ayuda a la convergencia de búsquedas de punto fijo.
 
-#      :: @t(Exercise 1.35) :: Show that the golden ratio @m(φ) (@l(#1.2.2)) is a
-#         fixed point of the transformation @m(x ↦ 1 + 1 / x), and use this fact to
+#      :: @t(Exercise 1.35) :: Show that the golden ratio @m(φ) (section @l(#1.2.2)) is a
+#         fixed point of the transformation @m(x ↦ 1 + 1/x), and use this fact to
 #         compute @m(φ) by means of the @c(fixed-point) procedure.
-     :: @t(Ejercicio 1.35) :: Demuestre que la razón de oro @m(φ) (
-        @l(#1.2.2)) es un punto fijo de la transformación @m(x ↦ 1 + 1 /
-        x), y utilice este hecho para calcular @m(φ) mediante el procedimiento @c(fixed-point).
+     :: @t(Ejercicio 1.35) :: Demuestre que la proporcion aurea @m(φ) (seccion
+        @l(#1.2.2)) es un punto fijo de la transformación @m(x ↦ 1 + 1/x), y
+        utilice este hecho para calcular @m(φ) mediante el procedimiento
+        @c(fixed-point).
 
 #      :: @t(Exercise 1.36) :: Modify @c(fixed-point) so that it prints the sequence
 #         of approximations it generates, using the @c(newline) and @c(display)
 #         primitives shown in @l(#Exercise 1.22). Then find a solution to @m(xˣ
-#         = 1000) by finding a fixed point of @m[x ↦ log(1000) / log(x)]. (Use
+#         = 1000) by finding a fixed point of @m[x ↦ log(1000)/log(x)]. (Use
 #         Scheme's primitive @c(log) procedure, which computes natural logarithms.)
 #         Compare the number of steps this takes with and without average
 #         damping. (Note that you cannot start @c(fixed-point) with a guess of 1, as
 #         this would cause division by @m[log(1) = 0].)
      :: @t(Ejercicio 1.36) :: Modifique @c(fixed-point) para que imprima la
-        secuencia de aproximaciones que genera, usando las @c(newline) y
-        @c(display) primitivas mostradas en el @l(#Ejercicio
-        1.22). A continuación, encontrar una solución a @m(xˣ = 1000) mediante
-        la búsqueda de un punto fijo de @m(x ↦ log (1000) / log (x)). (Utilice
-        el procedimiento @c(log) primitivo de Scheme, que calcula los logaritmos
+        secuencia de aproximaciones que genera, usando las primitivas
+        @c(newline) y @c(display) mostradas en el @l(#Ejercicio 1.22). A
+        continuación, encontrar una solución a @m(xˣ = 1000) mediante la
+        búsqueda de un punto fijo de @m[x ↦ log(1000)/log(x)]. (Utilice el
+        procedimiento primitivo @c(log) de Scheme, que calcula los logaritmos
         naturales.) Compare el número de pasos que lleva con y sin
         amortiguamiento promedio. (Tenga en cuenta que no puede comenzar
         @c(fixed-point) con una conjetura de 1, ya que esto causaría división
-        por @m(log (1) = 0) ).
+        por @m[log(1) = 0].)
 
 #      :: @t(Exercise 1.37) ::
      :: @t(Ejercicio 1.37) ::
@@ -6956,68 +6938,69 @@ Company.
 
 #            ..example >
 #                         N₁
-#              f = ---------------------
+#              ƒ = ––––––––––––––––––––
 #                             N₂
-#                  D₁  + ---------------
+#                  D₁  + ––––––––––––––
 #                                 N₃
-#                        D₂ + ---------
-#                             D₃ + ...
+#                        D₂ + –––––––––
+#                             D₃ + ⋅⋅⋅
 #            < example..
            ..example >
                         N₁
-             f = ---------------------
+             ƒ = ––––––––––––––––––––
                             N₂
-                 D₁  + ---------------
+                 D₁  + ––––––––––––––
                                 N₃
-                       D₂ + ---------
-                            D₃ + ...
+                       D₂ + –––––––––
+                            D₃ + ⋅⋅⋅
            < example..
 
 #            As an example, one can show that the infinite continued fraction
-#            expansion with the @m(Nᵢ) and the @m(Dᵢ) all equal to 1 produces @m(1 /
-#            φ), where @m(φ) is the golden ratio (described in section @l(#1.2.2)). One way
-#            to approximate an infinite continued fraction is to truncate the
-#            expansion after a given number of terms. Such a truncation––a so-called
-#            @e(@i{k}-term finite continued fraction)––has the form
+#            expansion with the @m(Nᵢ) and the @m(Dᵢ) all equal to 1 produces
+#            @m(1/φ), where @m(φ) is the golden ratio (described in section
+#            @l(#1.2.2)). One way to approximate an infinite continued fraction
+#            is to truncate the expansion after a given number of terms. Such a
+#            truncation––a so-called @e(@i{k}-term finite continued
+#            fraction)––has the form
            A modo de ejemplo, se puede demostrar que la expansión de la fracción
-           continua infinita con el @m(Nᵢ) y el @m(Dᵢ) igual a 1 produce @m(1 /
-           φ), donde @m(φ) es la proporción de oro (descrita en
-           @l(#1.2.2)). Una forma de aproximar una fracción continua
-           infinita es truncar la expansión después de un número dado de
-           términos. Tal truncamiento -una denominada @e(fracción continua
-           finita )@e(@i(k)) -term- tiene la forma
+           continua infinita con @m(Nᵢ) y @m(Dᵢ) igual a 1 produce @m(1/φ),
+           donde @m(φ) es la proporción aurea (descrita en la seccion @l(#1.2.2)).
+           Una forma de aproximar una fracción continua infinita es truncar la
+           expansión después de un número dado de términos. Tal truncamiento––se
+           denomina como @e(termino @i(i) de una fraccion finita continua––tiene
+           la forma
 
 #            ..example >
 #                     N₁
-#              -----------------
+#              –––––––––––––––––
 #                        N₂
-#              D₁ + ------------
+#              D₁ + ––––––––––––
 #                            Nₙ
-#                    ⋱  + -----
+#                    ⋱  + –––––
 #                            Dₙ
 #            < example..
            ..example >
                     N₁
-             -----------------
+             –––––––––––––––––
                        N₂
-             D₁ + ------------
+             D₁ + ––––––––––––
                            Nₙ
-                   ⋱  + -----
+                   ⋱  + –––––
                            Dₙ
            < example..
 
 #            Suppose that @c(n) and @c(d) are procedures of one argument (the term
-#            index @m(i) that return the @m(Nᵢ) and @m(Dᵢ) of the terms of the
+#            index @m(i)) that return the @m(Nᵢ) and @m(Dᵢ) of the terms of the
 #            continued fraction. Define a procedure @c(cont-frac) such that
 #            evaluating @c[(cont-frac n d k)] computes the value of the @m(k)-term
-#            finite continued fraction. Check your procedure by approximating @m({1 /
-#            φ} using
-           Supongamos que son @c(n) y @c(d) son procedimientos de un argumento
-           (el término índice @m(i) que devuelve el @m(Nᵢ) y @m(Dᵢ) de los
-           términos de la fracción continua) Definir un procedimiento
-           @c(cont-frac) tal que la evaluación @c[(cont-frac n d k)] calcula el
-           valor de la fracción continuada finita @m(k) -term Revise su
-           procedimiento aproximando @m({1 / φ} usando)
+#            finite continued fraction. Check your procedure by approximating
+#            @m(1/φ) using
+           Supongamos que @c(n) y @c(d) son procedimientos de un argumento
+           (el término índice @m(i)) que devuelve @m(Nᵢ) y @m(Dᵢ) de los
+           términos de la fracción continua) Defina un procedimiento
+           @c(cont-frac) donde la evaluación @c[(cont-frac n d k)] calcula el
+           valor de la fracción continuada finita de termino-@m(k). Revise su
+           procedimiento por aproximacion usando @m(1/φ) usando
 
 #            ..src > scheme
 #              (cont-frac (lambda (i) 1.0)
@@ -7045,42 +7028,41 @@ Company.
 
 #      :: @t(Exercise 1.38) :: In 1737, the Swiss mathematician Leonhard Euler
 #         published a memoir @q(De Fractionibus Continuis), which included a
-#         continued fraction expansion for @m(e - 2), where @m(e) is the base of the
+#         continued fraction expansion for @m(e − 2), where @m(e) is the base of the
 #         natural logarithms. In this fraction, the @m(Nᵢ) are all 1, and the @m(Dᵢ)
 #         are successively 1, 2, 1, 1, 4, 1, 1, 6, 1, 1, 8, ….  Write a program that
 #         uses your @c(cont-frac) procedure from @l(#Exercise 1.37) to approximate
 #         @m(e), based on Euler's expansion.
-     :: @t(Ejercicio 1.38) :: En 1737, el matemático suizo Leonhard Euler
-        publicó una memoria @"(De Fractionibus Continuis), que incluía una
-        expansión de fracción continua para @m(e - 2), donde @m(e) es la base de
+     :: @t(Ejercicio 1.38) :: En 1737, el matemático Suizo Leonhard Euler
+        publicó una memoria @q(De Fractionibus Continuis), que incluía una
+        expansión de fracción continua para @m(e − 2), donde @m(e) es la base de
         los logaritmos naturales. En esta fracción, los @m(Nᵢ) son todos 1, y
-        los @m(Dᵢ) son sucesivamente 1, 2, 1, 1, 4, 1, 1, 6, 1, 1, 8,
-        .... Escriba un programa que use su procedimiento @c(cont-frac) del
-        @l(#Ejercicio 1.37) para aproximarse a @m(e), basado en
-        la expansión de Euler.
+        los @m(Dᵢ) son sucesivamente 1, 2, 1, 1, 4, 1, 1, 6, 1, 1, 8, …. Escriba
+        un programa que use su procedimiento @c(cont-frac) del @l(#Ejercicio
+        1.37) para aproximarse a @m(e), basado en la expansión de Euler.
 
 #      :: @t(Exercise 1.39) :: A continued fraction representation of the tangent
 #         function was published in 1770 by the German mathematician J.H. Lambert:
      :: @t(Ejercicio 1.39) :: Una representación fraccionada continua de la
-     función tangente fue publicada en 1770 por el matemático alemán JH Lambert:
+        función tangente fue publicada en 1770 por el matemático alemán JH Lambert:
 
 #         ..example >
 #                         x
-#           tan x = ---------------
+#           tan x = –––––––––––––––
 #                           x²
-#                   1 − -----------
+#                   1 − –––––––––––
 #                             x²
-#                       3 − -------
-#                           5 − ...
+#                       3 − –––––––
+#                           5 − ⋱
 #         < example..
         ..example >
                         x
-          tan x = ---------------
+          tan x = –––––––––––––––
                           x²
-                  1 − -----------
+                  1 − –––––––––––
                             x²
-                      3 − -------
-                          5 − ...
+                      3 − –––––––
+                          5 − ⋱
         < example..
 
 #         where @m(x) is in radians. Define a procedure @c[(tan-cf x k)] that
@@ -7089,11 +7071,11 @@ Company.
 #         @l(#Exercise 1.37).
         Donde @m(x) es en radianes. Definir un procedimiento @c[(tan-cf x k)]
         que calcula una aproximación a la función tangente basada en la fórmula
-        de Lambert.  @c(k) Especifica el número de términos a calcular, como en
+        de Lambert. @c(k) Especifica el número de términos a calcular, como en
         el @l(#Ejercicio 1.37).
 
 # *** 1.3.4 <> Procedures as Returned Values
-*** 1.3.4 <> Procedimientos como valores devueltos
+*** 1.3.4 <> Procedimientos como Valores Devueltos
 
 #     The above examples demonstrate how the ability to pass procedures as arguments
 #     significantly enhances the expressive power of our programming language. We
@@ -7119,7 +7101,7 @@ Company.
     @m(y ↦ x / y). Luego usamos el amortiguamiento promedio para hacer converger
     las aproximaciones. El amortiguamiento medio es una técnica general útil en
     sí mismo. Es decir, dada una función @m(ƒ), consideramos que la función cuyo
-    valor en @m(x) es igual a la media de @m(x) y @m(f (x)).
+    valor en @m(x) es igual a la media de @m(x) y @m(ƒ(x)).
 
 #     We can express the idea of average damping by means of the following
 #     procedure:
@@ -7601,7 +7583,7 @@ Company.
      :: @t(Ejercicio 1.43) :: Si @m(ƒ) es una función numérica y @m(n) es un
         entero positivo, entonces podemos formar la @m(nᵗʰ) aplicación de
         repetida @m(ƒ), que se define como la función cuyo valor en @m(x) es
-        @m(f (f (... (f (x)) ...))). Por ejemplo, si @m(ƒ) es la función @m(x ↦
+        @m(ƒ(f (... (ƒ(x)) ...))). Por ejemplo, si @m(ƒ) es la función @m(x ↦
         x + 1), entonces el @m(nᵗʰ) aplicación repetida de @m(ƒ) es la función
         @m(x ↦ x + n). Si @m(ƒ) es la operación de elevar al cuadrado un número,
         entonces el @m(nᵗʰ) aplicación repetida de @m(ƒ) es la función que eleva
@@ -7639,8 +7621,8 @@ Company.
      :: @t(Ejercicio 1.44) :: La idea de @e(suavizar) una función es un concepto
         importante en el procesamiento de señales. Si @m(ƒ) es una función y
         @m(dx) es un número pequeño, entonces la versión suavizada de @m(ƒ) es
-        la función cuyo valor en un punto @m(x) es la media de @m(f (x - dx)),
-        @m(f (x)), y @m(f (x + dx)). Escriba un procedimiento @c(smooth) que
+        la función cuyo valor en un punto @m(x) es la media de @m(ƒ(x - dx)),
+        @m(ƒ(x)), y @m(ƒ(x + dx)). Escriba un procedimiento @c(smooth) que
         toma como entrada un procedimiento que calcula @m(ƒ) y devuelve un
         procedimiento que calcula el @m(ƒ) alisado. A veces es valioso suavizar
         repetidamente una función (es decir, suavizar la función suavizada, y
@@ -11740,7 +11722,7 @@ Company.
 #         (@l(#Exercise 2.18)) in terms of @c(fold-right) and @c(fold-left) from
 #         @l(#Exercise 2.38):
      :: @t(Ejercicio 2.39) :: Complete las siguientes definiciones de
-     @c(reverse)(@l(#Ejercicio 2.18) ) en términos de
+     @c(reverse) (@l(#Ejercicio 2.18) ) en términos de
      @c(fold-right) y @c(fold-left) desde el @l(#Ejercicio
      2.38) :
 
@@ -15887,7 +15869,7 @@ Company.
 #         Use @c(generate-huffman-tree) (@l(#Exercise 2.69)) to generate a
 #         corresponding Huffman tree, and use @c(encode) (@l(#Exercise 2.68)) to
 #         encode the following message:
-        Utilice @c(generate-huffman-tree)(@l(#Ejercicio 2.69) )
+        Utilice @c(generate-huffman-tree) (@l(#Ejercicio 2.69) )
         para generar un árbol Huffman correspondiente, y utilice @c(encode)(
         @l(#Ejercicio 2.68) ) para codificar el siguiente
         mensaje:
@@ -17092,10 +17074,10 @@ Company.
       @c(get) devuelve false.
 
 #     For now, we can assume that @c(put) and @c(get) are included in our
-#     language. In @l(#Chapter 3) (@l(#3.3.3)) we will see how to implement these
+#     language. In @l(#Chapter 3) (section @l(#3.3.3)) we will see how to implement these
 #     and other operations for manipulating tables.
     Por ahora, podemos asumir eso @c(put) y @c(get) estamos incluidos en nuestro
-    lenguaje. En el @l(#Capitulo 3) (@l(#3.3.3)) veremos
+    lenguaje. En el @l(#Capitulo 3) (seccion @l(#3.3.3)) veremos
     cómo implementar estas y otras operaciones para manipular tablas.
 
 #     Here is how data-directed programming can be used in the complex-number
@@ -20106,7 +20088,7 @@ Company.
 #         hand.
         Ahora definir @m(Q $ ₁ $) a ser el producto de @m(P $ ₁ $) y @m(P $ ₂
         $), y @m(Q $ ₂ $) a ser el producto de @m(P $ ₁ $) y @m(P $ ₃ $), y el
-        uso @c(greatest-common-divisor)(@l(#Ejercicio 2.94) )
+        uso @c(greatest-common-divisor) (@l(#Ejercicio 2.94) )
         para calcular el @A(GCD) de @m(Q $ ₁ $) y @m(Q $ ₂ $). Observe que la
         respuesta no es la misma que @m(P₁). Este ejemplo introduce operaciones
         no integradas en el cálculo, causando dificultades con el algoritmo
@@ -20416,7 +20398,7 @@ Company.
 #   significant linguistic issues in programming. With objects, we must be
 #   concerned with how a computational object can change and yet maintain its
 #   identity. This will force us to abandon our old substitution model of
-#   computation (@l(#1.1.5)) in favor of a more mechanistic but less theoretically
+#   computation (section @l(#1.1.5)) in favor of a more mechanistic but less theoretically
 #   tractable @e(environment model) of computation. The difficulties of dealing
 #   with objects, change, and identity are a fundamental consequence of the need
 #   to grapple with time in our computational models.  These difficulties become
@@ -20429,7 +20411,7 @@ Company.
   plantean importantes problemas lingüísticos en la programación. Con los
   objetos, debemos preocuparnos de cómo un objeto computacional puede cambiar y
   mantener su identidad. Esto nos obligará a abandonar nuestro antiguo modelo de
-  sustitución de cálculo (@l(#1.1.5)) a favor de un @e(modelo) de
+  sustitución de cálculo (seccion @l(#1.1.5)) a favor de un @e(modelo) de
   cálculo más mecanicista pero menos teóricamente manejable. Las dificultades de
   lidiar con los objetos, el cambio y la identidad son una consecuencia
   fundamental de la necesidad de lidiar con el tiempo en nuestros modelos
@@ -20710,7 +20692,7 @@ Company.
     local, usamos @c(lambda) para crear un procedimiento que toma @c(amount)
     como argumento y se comporta como nuestro procedimiento @c(withdraw)
     anterior. Este procedimiento - devuelto como resultado de la evaluación de
-    la @c(let) expresión - es @c(new-withdraw), que se comporta exactamente de
+    la expresión @c(let) - es @c(new-withdraw), que se comporta exactamente de
     la misma manera que @c(withdraw) pero cuya variable @c(balance) no es
     accesible por ningún otro procedimiento.@n(132)
 
@@ -20718,7 +20700,7 @@ Company.
 #     we will use for constructing computational objects with local state.
 #     Unfortunately, using this technique raises a serious problem: When we first
 #     introduced procedures, we also introduced the substitution model of evaluation
-#     (@l(#1.1.5)) to provide an interpretation of what procedure application
+#     (section @l(#1.1.5)) to provide an interpretation of what procedure application
 #     means. We said that applying a procedure should be interpreted as evaluating
 #     the body of the procedure with the formal parameters replaced by their
 #     values. The trouble is that, as soon as we introduce assignment into our
@@ -20734,7 +20716,7 @@ Company.
     general que utilizaremos para construir objetos computacionales con estado
     local. Desafortunadamente, el uso de esta técnica plantea un serio problema:
     cuando introdujimos procedimientos, también introdujimos el modelo de
-    sustitución de evaluación (@l(#1.1.5)) para proporcionar una
+    sustitución de evaluación (seccion @l(#1.1.5)) para proporcionar una
     interpretación de lo que significa aplicación de procedimiento. Dijimos que
     la aplicación de un procedimiento debe interpretarse como una evaluación del
     cuerpo del procedimiento con los parámetros formales reemplazados por sus
@@ -21534,7 +21516,7 @@ Company.
 #     Now we apply the operator by substituting 20 for @c(amount) in the body of the
 #     @c(lambda) expression:
     Ahora aplicamos al operador sustituyendo 20 @c(amount) en el cuerpo de la
-    @c(lambda) expresión:
+    expresión @c(lambda):
 
 #     ..src > scheme
 #       (- 25 20)
@@ -21578,7 +21560,7 @@ Company.
 #     Now we apply the operator by substituting 20 for @c(amount) in the body of the
 #     @c(lambda) expression:
     Ahora aplicamos al operador sustituyendo 20 @c(amount) en el cuerpo de la
-    @c(lambda) expresión:
+    expresión @c(lambda):
 
 #     ..src > scheme
 #       (set! balance (- 25 20)) 25
@@ -22013,11 +21995,11 @@ Company.
 ** 3.2 <> El Modelo Ambiental de Evaluación
 
 #    When we introduced compound procedures in @l(#Chapter 1), we used the
-#    substitution model of evaluation (@l(#1.1.5)) to define what is meant by
+#    substitution model of evaluation (section @l(#1.1.5)) to define what is meant by
 #    applying a procedure to arguments:
    Cuando introdujimos los procedimientos compuestos en el
    @l(#Capitulo 1), utilizamos el modelo de sustitución de evaluación
-   (@l(#1.1.5)) para definir lo que se quiere decir aplicando un
+   (seccion @l(#1.1.5)) para definir lo que se quiere decir aplicando un
    procedimiento a los argumentos:
 
 #    - To apply a compound procedure to arguments, evaluate the body of the
@@ -30076,10 +30058,10 @@ Company.
 
 #      We begin by calling @c(stream-enumerate-interval) with the arguments 10,000
 #      and 1,000,000. @c(Stream-enumerate-interval) is the stream analog of
-#      @c(enumerate-interval) (@l(#2.2.3)):
+#      @c(enumerate-interval) (section @l(#2.2.3)):
      Comenzamos llamando @c(stream-enumerate-interval) con los argumentos 10.000
      y 1.000.000. @c(Stream-enumerate-interval) Es el análogo del flujo de
-     @c(enumerate-interval)(@l(#2.2.3)):
+     @c(enumerate-interval) (seccion @l(#2.2.3)):
 
 #      ..src > scheme
 #        (define (stream-enumerate-interval low high)
@@ -30123,7 +30105,7 @@ Company.
 #      That is, @c(stream-enumerate-interval) returns a stream represented as a pair
 #      whose @c(car) is 10,000 and whose @c(cdr) is a promise to enumerate more of
 #      the interval if so requested. This stream is now filtered for primes, using
-#      the stream analog of the @c(filter) procedure (@l(#2.2.3)):
+#      the stream analog of the @c(filter) procedure (section @l(#2.2.3)):
      Es decir, @c(stream-enumerate-interval) devuelve un flujo representado como
      un par cuyo @c(car)10.000 y cuya @c(cdr) es una promesa de enumerar más del
      intervalo si así se solicita. Esta corriente se filtra ahora para primos,
@@ -31761,13 +31743,13 @@ Company.
 #         less efficient because it performs redundant computation. Explain Alyssa's
 #         answer. Would the two versions still differ in efficiency if our
 #         implementation of @c(delay) used only @c[(lambda () ⟨exp⟩)] without using
-#         the optimization provided by @c(memo-proc) (@l(#3.5.1))?
+#         the optimization provided by @c(memo-proc) (section @l(#3.5.1))?
         Alyssa P. Hacker responde que esta versión del procedimiento es
         considerablemente menos eficiente porque realiza cálculos
         redundantes. Explique la respuesta de Alyssa. ¿Serían las dos versiones
         todavía diferenciadas en eficiencia si nuestra implementación se
         @c(delay) utiliza sólo @c[(lambda () ⟨exp⟩)] sin utilizar la
-        optimización proporcionada por @c(memo-proc)(@l(#3.5.1))?
+        optimización proporcionada por @c(memo-proc) (seccion @l(#3.5.1))?
 
 #      :: @t(Exercise 3.64) :: Write a procedure @c(stream-limit) that takes as
 #         arguments a stream and a number (the tolerance). It should examine the
@@ -32241,9 +32223,9 @@ Company.
 
 #      and returns the stream of values @m[S = (Sᵢ)]. The following @c(integral)
 #      procedure is reminiscent of the @"(implicit style) definition of the stream of
-#      integers (@l(#3.5.2)):
+#      integers (section @l(#3.5.2)):
      Y devuelve el flujo de valores @m(S = (Sᵢ)). El siguiente procedimiento @c(integral) es una reminiscencia de la definición de @"(estilo implícita)
-     del flujo de enteros (@l(#3.5.2)):
+     del flujo de enteros (seccion @l(#3.5.2)):
 
 #      ..src > scheme
 #        (define (integral integrand initial-value dt)
@@ -34115,9 +34097,9 @@ Company.
 #         - A @c(lambda) expression must be transformed into an applicable procedure
 #           by packaging together the parameters and body specified by the @c(lambda)
 #           expression with the environment of the evaluation.
-        - Una @c(lambda) expresión debe transformarse en un procedimiento
+        - Una expresión @c(lambda) debe transformarse en un procedimiento
           aplicable mediante el empaquetado conjunto de los parámetros y el
-          cuerpo especificado por la @c(lambda) expresión con el entorno de la
+          cuerpo especificado por la expresión @c(lambda) con el entorno de la
           evaluación.
 
 #         - A @c(begin) expression requires evaluating its sequence of expressions in
@@ -35173,13 +35155,13 @@ Company.
 #         @c[(body)] and whose parameters are the variables in the @c[(bindings)].
 #         Thus, one can repeatedly execute the @c[(body)] by invoking the procedure
 #         named @c[(var)]. For example, the iterative Fibonacci procedure
-#         (@l(#1.2.2)) can be rewritten using named @c(let) as follows:
+#         (section @l(#1.2.2)) can be rewritten using named @c(let) as follows:
         El @c[(bindings)] y @c[(body)] son como en el ordinario @c(let), excepto
         que @c[(var)] está ligado dentro @c[(body)] de un procedimiento cuyo
         cuerpo es @c[(body)] y cuyos parámetros son las variables en el
         @c[(bindings)]. Por lo tanto, se puede ejecutar repetidamente el
         @c[(body)] invocando el procedimiento denominado @c[(var)]. Por ejemplo,
-        el procedimiento iterativo de Fibonacci (@l(#1.2.2)) puede ser
+        el procedimiento iterativo de Fibonacci (seccion @l(#1.2.2)) puede ser
         reescrito usando el nombre de la @c(let) siguiente manera:
 
 #         ..src > scheme
@@ -36310,7 +36292,7 @@ Company.
     simultáneo: simplemente cree todas las variables locales que estarán en el
     entorno actual antes de evaluar cualquier expresión de valor. Una forma de
     hacerlo es mediante una transformación de sintaxis en @c(lambda)
-    expresiones. Antes de evaluar el cuerpo de una @c(lambda) expresión,
+    expresiones. Antes de evaluar el cuerpo de una expresión @c(lambda),
     @"(escanear) y eliminar todas las definiciones internas en el cuerpo. Las
     variables internamente definidas se crearán con a @c(let) y luego se fijarán
     a sus valores por asignación. Por ejemplo, el procedimiento
@@ -36373,9 +36355,9 @@ Company.
        internas. Suponemos que el evaluador apoya @c(let)(ver el
        @l(#Ejercicio 4.6) ).
 
-#        1. Change @c(lookup-variable-value) (@l(#4.1.3)) to signal an error if the
+#        1. Change @c(lookup-variable-value) (section @l(#4.1.3)) to signal an error if the
 #           value it finds is the symbol @c(*unassigned*).
-       1. Cambie @c(lookup-variable-value)(@l(#4.1.3)) para indicar un
+       1. Cambie @c(lookup-variable-value)(seccion @l(#4.1.3)) para indicar un
           error si el valor que encuentra es el símbolo @c(*unassigned*).
 
 #        2. Write a procedure @c(scan-out-defines) that takes a procedure body and
@@ -36613,7 +36595,7 @@ Company.
 #           be created with a @c(let) and then be assigned their values with
 #           @c(set!).
        1. Implementar @c(letrec) como una expresión derivada, transformando una
-          @c(letrec) expresión en una @c(let) expresión como se muestra en el
+          @c(letrec) expresión en una expresión @c(let) como se muestra en el
           texto anterior o en el @l(#Ejercicio 4.18). Es decir,
           las @c(letrec) variables deben ser creadas con un @c(let) y luego ser
           asignados sus valores con @c(set!).
@@ -37006,7 +36988,7 @@ Company.
 #     Analyzing a @c(lambda) expression also achieves a major gain in efficiency: We
 #     analyze the @c(lambda) body only once, even though procedures resulting from
 #     evaluation of the @c(lambda) may be applied many times.
-    Analizar una @c(lambda) expresión también logra una mayor ganancia de
+    Analizar una expresión @c(lambda) también logra una mayor ganancia de
     eficiencia: Analizamos el @c(lambda) cuerpo sólo una vez, aunque los
     procedimientos resultantes de la evaluación de la @c(lambda) puede ser
     aplicado muchas veces.
@@ -37035,7 +37017,7 @@ Company.
 #     environment as argument and sequentially calls each individual execution
 #     procedure with the environment as argument.
     El análisis de una secuencia de expresiones (como en a @c(begin) o el cuerpo
-    de una @c(lambda) expresión) es más complicado.@n(234) Cada expresión
+    de una expresión @c(lambda)) es más complicado.@n(234) Cada expresión
     en la secuencia se analiza, dando lugar a un procedimiento de
     ejecución. Estos procedimientos de ejecución se combinan para producir un
     procedimiento de ejecución que toma un entorno como argumento y llama
@@ -37687,7 +37669,7 @@ Company.
              (eval (if-alternative exp) env)))
      < src..
 
-#      Finally, we must change the @c(driver-loop) procedure (@l(#4.1.4)) to use
+#      Finally, we must change the @c(driver-loop) procedure (section @l(#4.1.4)) to use
 #      @c(actual-value) instead of @c(eval), so that if a delayed value is propagated
 #      back to the read-eval-print loop, it will be forced before being printed. We
 #      also change the prompts to indicate that this is the lazy evaluator:
@@ -38210,7 +38192,7 @@ Company.
 #     for special forms or for separate list and stream operations. All we need to
 #     do is to arrange matters so that @c(cons) is non-strict. One way to accomplish
 #     this is to extend the lazy evaluator to allow for non-strict primitives, and
-#     to implement @c(cons) as one of these. An easier way is to recall (@l(#2.1.3))
+#     to implement @c(cons) as one of these. An easier way is to recall (section @l(#2.1.3))
 #     that there is no fundamental need to implement @c(cons) as a primitive at
 #     all. Instead, we can represent pairs as procedures:@n(244)
     Con la evaluación perezosa, los flujos y las listas pueden ser idénticos,
@@ -43389,11 +43371,11 @@ Company.
      base de datos.@n(283)
 
 #      :: @t(Exercise 4.64) :: Louis Reasoner mistakenly deletes the @c(outranked-by)
-#         rule (@l(#4.4.1)) from the data base. When he realizes this, he quickly
+#         rule (section @l(#4.4.1)) from the data base. When he realizes this, he quickly
 #         reinstalls it. Unfortunately, he makes a slight change in the rule, and
 #         types it in as
      :: @t(Ejercicio 4.64) :: Louis Reasoner elimina por error la
-        @c(outranked-by) regla (@l(#4.4.1)) de la base de datos. Cuando
+        @c(outranked-by) regla (seccion @l(#4.4.1)) de la base de datos. Cuando
         se da cuenta de esto, rápidamente lo reinstala. Desafortunadamente, él
         hace un ligero cambio en la regla, y lo escribe como
 
@@ -43689,7 +43671,7 @@ Company.
 #      instantiated, any variables that remain unbound are transformed back to the
 #      input representation before being printed. These transformations are performed
 #      by the two procedures @c(query-syntax-process) and @c(contract-question-mark)
-#      (@l(#4.4.4.7)).
+#      (section @l(#4.4.4.7)).
      Antes de realizar cualquier procesamiento en una expresión de entrada, el
      bucle de controlador lo transforma sintácticamente en una forma que hace
      que el procesamiento sea más eficiente. Esto implica cambiar la
@@ -43697,7 +43679,7 @@ Company.
      variables que permanecen sin enlazar se transforman de nuevo en la
      representación de entrada antes de imprimirse. Estas transformaciones se
      realizan mediante los dos procedimientos @c(query-syntax-process) y
-     @c(contract-question-mark)(@l(#4.4.4.7)).
+     @c(contract-question-mark)(seccion @l(#4.4.4.7)).
 
 #      To instantiate an expression, we copy it, replacing any variables in the
 #      expression by their values in a given frame. The values are themselves
@@ -43828,20 +43810,20 @@ Company.
            frame-stream))
       < src..
 
-#       For each frame in the input stream, we use @c(find-assertions) (@l(#4.4.4.3))
+#       For each frame in the input stream, we use @c(find-assertions) (section @l(#4.4.4.3))
 #       to match the pattern against all assertions in the data base, producing a
-#       stream of extended frames, and we use @c(apply-rules) (@l(#4.4.4.4)) to apply
+#       stream of extended frames, and we use @c(apply-rules) (section @l(#4.4.4.4)) to apply
 #       all possible rules, producing another stream of extended frames. These two
 #       streams are combined (using @c(stream-append-delayed), @l(#4.4.4.6)) to make a
 #       stream of all the ways that the given pattern can be satisfied consistent with
 #       the original frame (see @l(#Exercise 4.71)). The streams for the individual
-#       input frames are combined using @c(stream-flatmap) (@l(#4.4.4.6)) to form one
+#       input frames are combined using @c(stream-flatmap) (section @l(#4.4.4.6)) to form one
 #       large stream of all the ways that any of the frames in the original input
 #       stream can be extended to produce a match with the given pattern.
       Para cada trama en el flujo de entrada, usamos @c(find-assertions)(
       @l(#4.4.4.3)) para hacer coincidir el patrón con todas las
       aserciones en la base de datos, produciendo un flujo de tramas extendidas,
-      y usamos @c(apply-rules)(@l(#4.4.4.4)) para aplicar todas las
+      y usamos @c(apply-rules)(seccion @l(#4.4.4.4)) para aplicar todas las
       reglas posibles, produciendo otro Corriente de marcos extendidos. Estas
       dos corrientes se combinan (usando @c(stream-append-delayed),
       @l(#4.4.4.6)) para hacer una corriente de todas las maneras en
@@ -44055,7 +44037,7 @@ Company.
 #       The @c(always-true) special form provides for a query that is always
 #       satisfied. It ignores its contents (normally empty) and simply passes through
 #       all the frames in the input stream. @c(Always-true) is used by the
-#       @c(rule-body) selector (@l(#4.4.4.7)) to provide bodies for rules that were
+#       @c(rule-body) selector (section @l(#4.4.4.7)) to provide bodies for rules that were
 #       defined without bodies (that is, rules whose conclusions are always
 #       satisfied).
       El @c(always-true) formulario especial proporciona una consulta que
@@ -44085,10 +44067,10 @@ Company.
 # **** 4.4.4.3 <> Finding Assertions by Pattern Matching
 **** 4.4.4.3 <> Cómo encontrar afirmaciones por coincidencia de patrones
 
-#      @c(Find-assertions), called by @c(simple-query) (@l(#4.4.4.2)), takes as input
+#      @c(Find-assertions), called by @c(simple-query) (section @l(#4.4.4.2)), takes as input
 #      a pattern and a frame. It returns a stream of frames, each extending the given
 #      one by a data-base match of the given pattern. It uses @c(fetch-assertions)
-#      (@l(#4.4.4.5)) to get a stream of all the assertions in the data base that
+#      (section @l(#4.4.4.5)) to get a stream of all the assertions in the data base that
 #      should be checked for a match against the pattern and the frame. The reason
 #      for @c(fetch-assertions) here is that we can often apply simple tests that
 #      will eliminate many of the entries in the data base from the pool of
@@ -44096,10 +44078,10 @@ Company.
 #      eliminated @c(fetch-assertions) and simply checked a stream of all assertions
 #      in the data base, but the computation would be less efficient because we would
 #      need to make many more calls to the matcher.
-     @c(Find-assertions), Llamado por @c(simple-query)(@l(#4.4.4.2)),
+     @c(Find-assertions), Llamado por @c(simple-query)(seccion @l(#4.4.4.2)),
      toma como entrada un patrón y una trama. Devuelve una secuencia de tramas,
      cada una de las cuales se extiende por una coincidencia de base de datos
-     del patrón dado. Utiliza @c(fetch-assertions)(@l(#4.4.4.5)) para
+     del patrón dado. Utiliza @c(fetch-assertions)(seccion @l(#4.4.4.5)) para
      obtener una corriente de todas las aserciones en la base de datos que se
      debe comprobar para una coincidencia con el patrón y el marco. La razón de
      @c(fetch-assertions) aquí es que a menudo podemos aplicar pruebas simples
@@ -44326,7 +44308,7 @@ Company.
 # **** 4.4.4.4 <> Rules and Unification
 **** 4.4.4.4 <> Reglas y Unificación
 
-#      @c(Apply-rules) is the rule analog of @c(find-assertions) (@l(#4.4.4.3)). It
+#      @c(Apply-rules) is the rule analog of @c(find-assertions) (section @l(#4.4.4.3)). It
 #      takes as input a pattern and a frame, and it forms a stream of extension
 #      frames by applying rules from the data base.  @c(Stream-flatmap) maps
 #      @c(apply-a-rule) down the stream of possibly applicable rules (selected by
@@ -45025,11 +45007,11 @@ Company.
      presentaron en el @l(#Capitulo 3).
 
 #      @c(Stream-append-delayed) and @c(interleave-delayed) are just like
-#      @c(stream-append) and @c(interleave) (@l(#3.5.3)), except that they take a
+#      @c(stream-append) and @c(interleave) (section @l(#3.5.3)), except that they take a
 #      delayed argument (like the @c(integral) procedure in section @l(#3.5.4)). This
 #      postpones looping in some cases (see @l(#Exercise 4.71)).
      @c(Stream-append-delayed) Y @c(interleave-delayed) son como
-     @c(stream-append) y @c(interleave)(@l(#3.5.3)), excepto que toman
+     @c(stream-append) y @c(interleave)(seccion @l(#3.5.3)), excepto que toman
      un argumento retrasado (como el procedimiento @c(integral) en
      @l(#3.5.4)). Esto pospone el bucle en algunos casos (véase el
      @l(#Ejercicio 4.71) ).
@@ -45127,11 +45109,11 @@ Company.
 # **** 4.4.4.7 <> Query Syntax Procedures
 **** 4.4.4.7 <> Procedimientos de sintaxis de consulta
 
-#      @c(Type) and @c(contents), used by @c(qeval) (@l(#4.4.4.2)), specify that a
+#      @c(Type) and @c(contents), used by @c(qeval) (section @l(#4.4.4.2)), specify that a
 #      special form is identified by the symbol in its @c(car).  They are the same as
 #      the @c(type-tag) and @c(contents) procedures in section @l(#2.4.2), except for the
 #      error message.
-     @c(Type) Y @c(contents), usado por @c(qeval)(@l(#4.4.4.2)),
+     @c(Type) Y @c(contents), usado por @c(qeval)(seccion @l(#4.4.4.2)),
      especifica que una forma especial es identificada por el símbolo en su
      @c(car). Son los mismos que los procedimientos @c(type-tag) y @c(contents)
      en la seccion @l(#2.4.2), excepto para el mensaje de error.
@@ -45187,9 +45169,9 @@ Company.
      < src..
 
 #      Here are the syntax definitions for the @c(and), @c(or), @c(not), and
-#      @c(lisp-value) special forms (@l(#4.4.4.2)):
+#      @c(lisp-value) special forms (section @l(#4.4.4.2)):
      Aquí están las definiciones de sintaxis para los @c(and), @c(or), @c(not),
-     y @c(lisp-value) formas especiales (@l(#4.4.4.2)):
+     y @c(lisp-value) formas especiales (seccion @l(#4.4.4.2)):
 
 #      ..src > scheme
 #        (define (empty-conjunction? exps) (null? exps))
@@ -45240,7 +45222,7 @@ Company.
              (caddr rule)))
      < src..
 
-#      @c(Query-driver-loop) (@l(#4.4.4.1)) calls @c(query-syntax-process) to
+#      @c(Query-driver-loop) (section @l(#4.4.4.1)) calls @c(query-syntax-process) to
 #      transform pattern variables in the expression, which have the form
 #      @c(?symbol), into the internal format @c[(? symbol)].  That is to say, a
 #      pattern such as @c[(job ?x ?y)] is actually represented internally by the
@@ -45249,7 +45231,7 @@ Company.
 #      is a pattern variable by checking whether the @c(car) of the expression is the
 #      symbol @c(?), rather than having to extract characters from the symbol. The
 #      syntax transformation is accomplished by the following procedure:@n(285)
-     @c(Query-driver-loop)(@l(#4.4.4.1)) @c(query-syntax-process)
+     @c(Query-driver-loop)(seccion @l(#4.4.4.1)) @c(query-syntax-process)
      para transformar variables de patrón en la expresión, que tienen la forma
      @c(?symbol), en el formato interno @c[(? symbol)]. Es decir, un patrón tal
      como @c[(job ?x ?y)] está realmente representado internamente por el
@@ -45428,10 +45410,10 @@ Company.
      < src..
 
 #      :: @t(Exercise 4.71) :: Louis Reasoner wonders why the @c(simple-query) and
-#         @c(disjoin) procedures (@l(#4.4.4.2)) are implemented using explicit
+#         @c(disjoin) procedures (section @l(#4.4.4.2)) are implemented using explicit
 #         @c(delay) operations, rather than being defined as follows:
      :: @t(Ejercicio 4.71) :: Louis Reasoner se pregunta por qué los
-        procedimientos @c(simple-query) y @c(disjoin)(@l(#4.4.4.2))
+        procedimientos @c(simple-query) y @c(disjoin)(seccion @l(#4.4.4.2))
         se implementan mediante @c(delay) operaciones explícitas, en lugar de
         definirse como sigue:
 
@@ -52461,7 +52443,7 @@ Company.
      < src..
 
 #      :: @t(Exercise 5.23) :: Extend the evaluator to handle derived expressions
-#         such as @c(cond), @c(let), and so on (@l(#4.1.2)). You may @"(cheat) and
+#         such as @c(cond), @c(let), and so on (section @l(#4.1.2)). You may @"(cheat) and
 #         assume that the syntax transformers such as @c(cond->if) are available as
 #         machine operations.@n(313)
      :: @t(Ejercicio 5.23) :: Extender el evaluador de manejar expresiones
@@ -52725,7 +52707,7 @@ Company.
 #      the evaluator uses the stack. We can observe the number of stack operations
 #      required to evaluate various expressions by defining the evaluator register
 #      machine with the version of the simulator that collects statistics on stack
-#      use (@l(#5.2.4)), and adding an instruction at the evaluator's
+#      use (section @l(#5.2.4)), and adding an instruction at the evaluator's
 #      @c(print-result) entry point to print the statistics:
      La simulación puede ser una herramienta poderosa para guiar la
      implementación de los evaluadores. Las simulaciones facilitan no sólo la
@@ -52735,7 +52717,7 @@ Company.
      evaluador utiliza la pila. Podemos observar el número de operaciones de la
      pila requeridas para evaluar diversas expresiones definiendo la máquina del
      registrador del evaluador con la versión del simulador que recoge las
-     estadísticas sobre el uso de la pila (@l(#5.2.4)) y agregando una
+     estadísticas sobre el uso de la pila (seccion @l(#5.2.4)) y agregando una
      instrucción en el @c(print-result) punto de entrada del evaluador para
      imprimir las estadísticas :
 
@@ -52801,10 +52783,10 @@ Company.
      expresión anterior.
 
 #      :: @t(Exercise 5.26) :: Use the monitored stack to explore the tail-recursive
-#         property of the evaluator (@l(#5.4.2)).  Start the evaluator and define the
+#         property of the evaluator (section @l(#5.4.2)).  Start the evaluator and define the
 #         iterative @c(factorial) procedure from @l(#1.2.1):
      :: @t(Ejercicio 5.26) :: Utilice la pila supervisada para explorar la
-        propiedad recursiva de cola del evaluador (@l(#5.4.2)). Iniciar
+        propiedad recursiva de cola del evaluador (seccion @l(#5.4.2)). Iniciar
         el evaluador y definir el procedimiento @c(factorial) iterativo de
         @l(#1.2.1) :
 
@@ -54239,7 +54221,7 @@ Company.
 #      @c(Lambda) expressions construct procedures. The object code for a @c(lambda)
 #      expression must have the form
      procedimiento @c(Lambda)s de construcción de expresiones. El código objeto
-     de una @c(lambda) expresión debe tener el formato
+     de una expresión @c(lambda) debe tener el formato
 
 #      ..src > scheme
 #        ⟨construct procedure object
@@ -54260,11 +54242,11 @@ Company.
 #      need to skip around the code for the procedure body by using a linkage that
 #      jumps to a label that is inserted after the body. The object code thus has the
 #      form
-     Cuando compila la @c(lambda) expresión, también generamos el código para el
+     Cuando compila la expresión @c(lambda), también generamos el código para el
      cuerpo del procedimiento. Aunque el cuerpo no se ejecutará en el momento de
      la construcción del procedimiento, es conveniente insertarlo en el código
      objeto justo después del código para el @c(lambda). Si el enlace para la
-     @c(lambda) expresión es una etiqueta o @c(return), esto está bien. Pero si
+     expresión @c(lambda) es una etiqueta o @c(return), esto está bien. Pero si
      el enlace es @c(next), tendremos que saltar alrededor del código para el
      cuerpo de procedimiento mediante un enlace que salta a una etiqueta que se
      inserta después del cuerpo. El código objeto tiene así la forma
@@ -54350,7 +54332,7 @@ Company.
      < src..
 
 #      @c(Compile-lambda) uses the special combiner @c(tack-on-instruction-sequence)
-#      rather than @c(append-instruction-sequences) (@l(#5.5.4)) to append the
+#      rather than @c(append-instruction-sequences) (section @l(#5.5.4)) to append the
 #      procedure body to the @c(lambda) expression code, because the body is not part
 #      of the sequence of instructions that will be executed when the combined
 #      sequence is entered; rather, it is in the sequence only because that was a
@@ -55619,7 +55601,7 @@ Company.
 #     procedure code at @c(entry2) isn't executed at this point, so its use of
 #     @c(env) is irrelevant.)  Therefore, the skeleton for the compiled code becomes
     La expresión que se va a compilar para producir el valor de la variable
-    @c(factorial) es una @c(lambda) expresión cuyo valor es el procedimiento que
+    @c(factorial) es una expresión @c(lambda) cuyo valor es el procedimiento que
     calcula factorials. @c(Compile) Maneja esto llamando @c(compile-lambda), que
     compila el cuerpo del procedimiento, lo etiqueta como un nuevo punto de
     entrada y genera la instrucción que combinará el cuerpo del procedimiento en
@@ -56612,7 +56594,7 @@ Company.
 
 #     Since a @c(let) expression is just syntactic sugar for a @c(lambda)
 #     combination, this expression is equivalent to
-    Dado que una @c(let) expresión es simplemente azúcar sintáctico para una
+    Dado que una expresión @c(let) es simplemente azúcar sintáctico para una
     @c(lambda) combinación, esta expresión es equivalente a
 
 #     ..src > scheme
@@ -56971,12 +56953,12 @@ Company.
 
 #     To allow the evaluator to handle compiled procedures (for example, to evaluate
 #     the call to @c(factorial) above), we need to change the code at
-#     @c(apply-dispatch) (@l(#5.4.1)) so that it recognizes compiled procedures (as
+#     @c(apply-dispatch) (section @l(#5.4.1)) so that it recognizes compiled procedures (as
 #     distinct from compound or primitive procedures) and transfers control directly
 #     to the entry point of the compiled code:@n(333)
     Para permitir que el evaluador maneje los procedimientos compilados (por
     ejemplo, para evaluar la llamada @c(factorial) anterior), necesitamos
-    cambiar el código en @c(apply-dispatch)(@l(#5.4.1)) para que
+    cambiar el código en @c(apply-dispatch)(seccion @l(#5.4.1)) para que
     reconozca procedimientos compilados (distintos de procedimientos compuestos
     o primitivos) y control de transferencias Directamente al punto de entrada
     del código compilado:@n(333)
@@ -57088,7 +57070,7 @@ Company.
 #     target of @c(val) and a linkage of @c(return). In order to transform the
 #     object code produced by the compiler into executable instructions for the
 #     evaluator register machine, we use the procedure @c(assemble) from the
-#     register-machine simulator (@l(#5.2.2)). We then initialize the @c(val)
+#     register-machine simulator (section @l(#5.2.2)). We then initialize the @c(val)
 #     register to point to the list of instructions, set the @c(flag) so that the
 #     evaluator will go to @c(external-entry), and start the evaluator.
     Ahora podemos usar el siguiente procedimiento para compilar una definición
@@ -59093,23 +59075,23 @@ Company.
      resulta tener importantes aplicaciones prácticas a la criptografía, la
      transferencia de fondos y recuperacion de informacion.
 
-#   :: @N(49) :: This series, usually written in the equivalent form @M({π\over4}
-#      = {1 - ⅓ + ⅕} - {⅐ + …}), is due to Leibniz. We'll see how to use this as
+#   :: @N(49) :: This series, usually written in the equivalent form
+#      @m(π/4 = 1 − ⅓ + ⅕ − ⅐ + …), is due to Leibniz. We'll see how to use this as
 #      the basis for some fancy numerical tricks in section @l(#3.5.3).
-  :: @N(49) :: Esta serie, usualmente escrita en la forma equivalente \ ({π \
-     over4} = {1 - ⅓ + ⅕} - {⅐ + ...} \), se debe a Leibniz. Veremos cómo
-     utilizar esto como base para algunos trucos numéricos de fantasía en
-     @l(#3.5.3).
+  :: @N(49) :: Esta serie, usualmente escrita en la forma equivalente
+     @m(π/4 = 1 − ⅓ + ⅕ − ⅐ + …), se debe a Leibniz. Veremos cómo
+     utilizar esto como base para algunos trucos numéricos fantasticos en la
+     seccion @l(#3.5.3).
 
-#   :: @N(50) :: Notice that we have used block structure (@l(#1.1.8)) to embed
+#   :: @N(50) :: Notice that we have used block structure (section @l(#1.1.8)) to embed
 #      the definitions of @c(pi-next) and @c(pi-term) within @c(pi-sum), since
 #      these procedures are unlikely to be useful for any other purpose. We will
 #      see how to get rid of them altogether in section @l(#1.3.2).
-  :: @N(50) :: Obsérvese que hemos utilizado la estructura de bloques (
+  :: @N(50) :: Obsérvese que hemos utilizado la estructura de bloques (seccion
      @l(#1.1.8)) para incorporar las definiciones de @c(pi-next) y
      @c(pi-term) dentro @c(pi-sum), ya que es poco probable que estos
      procedimientos sean útiles para cualquier otro propósito. Veremos cómo
-     deshacerse de ellos por completo en la seccion @l(#1.3.2).
+     deshacernos de ellos por completo en la seccion @l(#1.3.2).
 
 #   :: @N(51) :: The intent of @l(#Exercise 1.31) through @l(#Exercise 1.33) is to
 #      demonstrate the expressive power that is attained by using an appropriate
@@ -59121,18 +59103,18 @@ Company.
 #      as interfaces for combining filters and accumulators to build even more
 #      powerful abstractions. We will see there how these methods really come into
 #      their own as a powerful and elegant approach to designing programs.
-  :: @N(51) :: La intención del @l(#Ejercicio 1.31 a) través del
-     @l(#Ejercicio 1.33) es demostrar el poder expresivo que se
-     logra mediante el uso de una abstracción apropiada para consolidar muchas
+  :: @N(51) :: La intención del los ejercicios @l(#Ejercicio 1.31<>1.31) al
+     @l(#Ejercicio 1.33<>1.33) es demostrar el poder expresivo que se logra
+     mediante el uso de una abstracción apropiada para consolidar muchas
      operaciones aparentemente dispares. Sin embargo, aunque la acumulación y el
      filtrado son ideas elegantes, nuestras manos están un tanto atadas en su
      uso en este punto ya que todavía no tenemos estructuras de datos para
-     proporcionar medios adecuados de combinación para estas
-     abstracciones. Volveremos a estas ideas en la seccion @l(#2.2.3) cuando
-     demostraremos cómo usar las @e(secuencias) como interfaces para combinar
-     filtros y acumuladores para crear abstracciones aún más poderosas. Vamos a
-     ver allí cómo estos métodos realmente entrar en su cuenta como un enfoque
-     poderoso y elegante para el diseño de programas.
+     proporcionar medios adecuados de combinación para estas abstracciones.
+     Volveremos a estas ideas en la seccion @l(#2.2.3) cuando demostraremos cómo
+     usar las @e(secuencias) como interfaces para combinar filtros y
+     acumuladores para crear abstracciones aún más poderosas. Veremos cómo estos
+     métodos son realmente un enfoque poderoso y elegante para el diseño de
+     programas.
 
 #   :: @N(52) :: This formula was discovered by the seventeenth-century English
 #      mathematician John Wallis.
@@ -59147,15 +59129,16 @@ Company.
 #      provide a rigorous foundation for studying the notions of function and
 #      function application. The λ-calculus has become a basic tool for
 #      mathematical investigations of the semantics of programming languages.
-  :: @N(53) :: Sería más claro y menos intimidante para las personas aprendiendo
-     Lisp si un nombre más obvio que @c(lambda), por ejemplo @c(make-procedure),
-     se utilizaron. Pero la convención está firmemente arraigada. La notación se
-     adopta desde el cálculo-λ, un formalismo matemático introducido por el
-     matemático lógico Alonzo @l(#Church-(1941<>Church (1941) ). Church
-     desarrolló el cálculo-λ para proporcionar una base rigurosa para estudiar
-     las nociones de función y aplicación de la función. El cálculo-λ se ha
-     convertido en una herramienta básica para las investigaciones matemáticas
-     de la semántica de los lenguajes de programación.
+  :: @N(53) :: Sería más claro y menos intimidante para las personas que
+     aprenden Lisp con un nombre más obvio que @c(lambda), por ejemplo
+     utilizando @c(hacer-procedimiento). Pero la convención está firmemente
+     arraigada. La notación se adopta desde el cálculo-λ, un formalismo
+     matemático introducido por el matemático lógico Alonzo @l[#Church
+     (1941)]. Church desarrolló el cálculo-λ para proporcionar una base rigurosa
+     para estudiar las nociones de función y aplicación de la función. El
+     cálculo-λ se ha convertido en una herramienta básica para las
+     investigaciones matemáticas de la semántica de los lenguajes de
+     programación.
 
 #   :: @N(54) :: Understanding internal definitions well enough to be sure a
 #      program means what we intend it to mean requires a more elaborate model of
@@ -59163,12 +59146,12 @@ Company.
 #      subtleties do not arise with internal definitions of procedures,
 #      however. We will return to this issue in section @l(#4.1.6), after we learn more
 #      about evaluation.
-  :: @N(54) :: Entender las definiciones internas lo suficientemente bien como
-     para asegurarse de que un programa significa lo que pretendemos que esto
+  :: @N(54) :: La comprensión de las definiciones internas lo suficientemente
+     bien como para asegurarse que un programa significa lo que pretendemos que
      signifique requiere un modelo más elaborado del proceso de evaluación de lo
      que hemos presentado en este capítulo. Sin embargo, las sutilezas no surgen
      con definiciones internas de los procedimientos. Volveremos a este tema en
-     @l(#4.1.6), después de aprender más sobre la evaluación.
+     la seccion @l(#4.1.6), después de aprender más sobre la evaluación.
 
 #   :: @N(55) :: We have used 0.001 as a representative @"(small) number to
 #      indicate a tolerance for the acceptable error in a calculation. The
@@ -59176,7 +59159,7 @@ Company.
 #      solved and the limitations of the computer and the algorithm. This is often
 #      a very subtle consideration, requiring help from a numerical analyst or
 #      some other kind of magician.
-  :: @N(55) :: Hemos utilizado 0.001 como un @"(pequeño) número representativo
+  :: @N(55) :: Hemos utilizado 0.001 como un número @"(pequeño) representativo
      para indicar una tolerancia para el error aceptable en un cálculo. La
      tolerancia apropiada para un cálculo real depende del problema a resolver y
      de las limitaciones de la computadora y del algoritmo. Esto es a menudo una
@@ -59192,15 +59175,15 @@ Company.
 #      mode and then repeatedly press the @c(cos) button until you obtain the
 #      fixed point.
   :: @N(57) :: Intente esto durante una conferencia aburrida: Ajuste su
-     calculadora al modo de los radianes y presione repetidamente el @c(cos)
-     botón hasta que usted obtenga el punto fijo.
+     calculadora al modo de los radianes y presione repetidamente el botón
+     @c(cos) hasta que obtenga el punto fijo.
 
-#   :: @N(58) :: @m(↦) (pronounced @"(maps to) is the mathematician's way of
-#      writing @c(lambda). @m(y ↦ x / y) means @c[(lambda (y) (/ x y))], that is,
-#      the function whose value at @m(y) is @m(x / y).
-  :: @N(58) :: @m(↦) (pronuncia @"(mapas a) es la forma de escritura del
-     matemático @c(lambda). @m(Y ↦ x / y) significa @c[(lambda (y) (/ x y))], es
-     decir, la función cuyo valor en @m(y) es @m(x / y).
+#   :: @N(58) :: @m(↦) (pronounced @"(maps to)) is the mathematician's way of
+#      writing @c(lambda). @m(y ↦ x/y) means @c[(lambda (y) (/ x y))], that is,
+#      the function whose value at @m(y) is @m(x/y).
+  :: @N(58) :: @m(↦) (pronunciado @"(mapas a)) es la forma matematica de escribir
+     @c(lambda). @m(Y ↦ x/y) significa @c[(lambda (y) (/ x y))], es decir, la
+     función cuyo valor en @m(y) es @m(x/y).
 
 #   :: @N(59) :: Observe that this is a combination whose operator is itself a
 #      combination. @l(#Exercise 1.4) already demonstrated the ability to form
@@ -59926,12 +59909,12 @@ Company.
 #      of the same characters in the same order. Such a definition skirts a deep
 #      issue that we are not yet ready to address: the meaning of @"(sameness) in
 #      a programming language. We will return to this in @l(#Chapter 3)
-#      (@l(#3.1.3)).
+#      (section @l(#3.1.3)).
   :: @N(101) :: Podemos considerar que dos símbolos son @"(iguales) si consisten
      en los mismos caracteres en el mismo orden. Tal definición bordea una
      cuestión profunda que todavía no estamos listos para abordar: el
      significado de @"(igualdad) en un lenguaje de programación. Volveremos a
-     esto en el @l(#Capitulo 3) (@l(#3.1.3)).
+     esto en el @l(#Capitulo 3) (seccion @l(#3.1.3)).
 
 #   :: @N(102) :: In practice, programmers use @c(equal?) to compare lists that
 #      contain numbers as well as symbols. Numbers are not considered to be
@@ -61068,12 +61051,12 @@ Company.
 
 #   :: @N(180) :: Physicists sometimes adopt this view by introducing the @"(world
 #      lines) of particles as a device for reasoning about motion. We've also
-#      already mentioned (@l(#2.2.3)) that this is the natural way to think about
+#      already mentioned (section @l(#2.2.3)) that this is the natural way to think about
 #      signal-processing systems. We will explore applications of streams to
 #      signal processing in section @l(#3.5.3).
   :: @N(180) :: Los físicos adoptan a veces este punto de vista introduciendo
      las @"(líneas mundiales) de las partículas como un dispositivo para razonar
-     sobre el movimiento. También hemos mencionado (@l(#2.2.3)) que
+     sobre el movimiento. También hemos mencionado (seccion @l(#2.2.3)) que
      esta es la manera natural de pensar en los sistemas de procesamiento de
      señales. Exploraremos las aplicaciones de los flujos para procesar señales
      en la seccion @l(#3.5.3).
@@ -61701,7 +61684,7 @@ Company.
 
 #   :: @N(221) :: @c(Apply-in-underlying-scheme) is the @c(apply) procedure we
 #      have used in earlier chapters. The metacircular evaluator's @c(apply)
-#      procedure (@l(#4.1.1)) models the working of this primitive. Having two
+#      procedure (section @l(#4.1.1)) models the working of this primitive. Having two
 #      different things called @c(apply) leads to a technical problem in running
 #      the metacircular evaluator, because defining the metacircular evaluator's
 #      @c(apply) will mask the definition of the primitive. One way around this is
@@ -61710,7 +61693,7 @@ Company.
 #      to the underlying @c(apply) by doing
   :: @N(221) :: @c(Apply-in-underlying-scheme) Es el procedimiento @c(apply) que
      hemos utilizado en los capítulos anteriores. El procedimiento @c(apply) del
-     evaluador metacircular (@l(#4.1.1)) modela el funcionamiento de
+     evaluador metacircular (seccion @l(#4.1.1)) modela el funcionamiento de
      esta primitiva. Tener dos cosas diferentes llamadas @c(apply) conduce a un
      problema técnico al ejecutar el evaluador metacircular, porque la
      definición del evaluador metacircular @c(apply) enmascarará la definición
@@ -62346,9 +62329,9 @@ Company.
      programas no deterministas.
 
 #   :: @N(261) :: We didn't worry about undoing definitions, since we can assume
-#      that internal definitions are scanned out (@l(#4.1.6)).
+#      that internal definitions are scanned out (section @l(#4.1.6)).
   :: @N(261) :: No nos preocupamos por deshacer las definiciones, ya que podemos
-     suponer que las definiciones internas son escaneadas (@l(#4.1.6)).
+     suponer que las definiciones internas son escaneadas (seccion @l(#4.1.6)).
 
 #   :: @N(262) :: Logic programming has grown out of a long history of research in
 #      automatic theorem proving. Early theorem-proving programs could accomplish
