@@ -1,11 +1,10 @@
-@ -*- mode: org; -*-
 ..title    > Structure and Interpretation of Computer Programs
 ..subtitle > @e(Second Edition) Unofficial morg Format
-..copy     > 1996 Massachusetts Institute of Technology
+..source   > 1996 Massachusetts Institute of Technology
 ..licence  > CC BY-SA 4.0
 ..author   > Harold Abelson and Gerald Jay Sussman with Julie Sussman
 ..style    > worg-data/worg.css
-..options  > mathjax pygments toc
+..options  > mathJax fancyCode toc
 
 @ dircategory The Algorithmic Language Scheme
 @ utfversion      2.andresraba6.6
@@ -996,8 +995,8 @@ production-distribution arrangement with the McGraw-Hill Book Company.
     numbers as arguments, produces the sum of their squares:
 
     ..srci > scheme
-      > (define (sum-of-squares x y) \
-          (+ (square x) (square y)))
+      > (define (sum-of-squares x y)
+      ^   (+ (square x) (square y)))
       > (sum-of-squares 3 4)
       25
     < srci..
@@ -1006,8 +1005,8 @@ production-distribution arrangement with the McGraw-Hill Book Company.
     procedures:
 
     ..srci > scheme
-      > (define (f a) \
-          (sum-of-squares (+ a 1) (* a 2)))
+      > (define (f a)
+      ^   (sum-of-squares (+ a 1) (* a 2)))
       > (f 5)
       136
     < srci..
@@ -1137,8 +1136,8 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      followed by the reductions
 
      ..srci > scheme
-       > (+ (* 6 6) \
-            (* 10 10))
+       > (+ (* 6 6)
+       ^    (* 10 10))
        > (+ 36 100)
        136
      < srci..
@@ -3127,10 +3126,10 @@ production-distribution arrangement with the McGraw-Hill Book Company.
     for small values of @m(dx). We can express this directly as a procedure:
 
     ..srci > scheme
-      > (define (integral f a b dx)            \
-          (define (add-dx x) (+ x dx))         \
-          (* (sum f (+ a (/ dx 2.0)) add-dx b) \
-             dx))
+      > (define (integral f a b dx)
+      ^   (define (add-dx x) (+ x dx))
+      ^   (* (sum f (+ a (/ dx 2.0)) add-dx b)
+      ^      dx))
       > (integral cube 0 1 0.01)
       .24998750000000042
       > (integral cube 0 1 0.001)
@@ -3575,10 +3574,10 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      of the equation @m(x³ - 2x - 3 = 0) between 1 and 2:
 
      ..srci > scheme
-       > (half-interval-method                 \
-          (lambda (x) (- (* x x x) (* 2 x) 3)) \
-          1.0                                  \
-          2.0)
+       > (half-interval-method
+       ^  (lambda (x) (- (* x x x) (* 2 x) 3))
+       ^  1.0
+       ^  2.0)
        1.89306640625
      < srci..
 
@@ -3624,8 +3623,8 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      Similarly, we can find a solution to the equation @m(y = sin y + cos y):
 
      ..srci > scheme
-       > (fixed-point (lambda (y) (+ (sin y) (cos y))) \
-                      1.0)
+       > (fixed-point (lambda (y) (+ (sin y) (cos y)))
+       ^              1.0)
        1.2587315962971173
      < srci..
 
@@ -3722,8 +3721,8 @@ production-distribution arrangement with the McGraw-Hill Book Company.
            index @m(i) that return the @m(Nᵢ) and @m(Dᵢ) of the terms of the
            continued fraction. Define a procedure @c(cont-frac) such that
            evaluating @c[(cont-frac n d k)] computes the value of the @m(k)-term
-           finite continued fraction. Check your procedure by approximating @m({1 /
-           φ} using
+           finite continued fraction. Check your procedure by approximating @m(1 /
+           φ) using
 
            ..src > scheme
              (cont-frac (lambda (i) 1.0)
@@ -4421,14 +4420,14 @@ production-distribution arrangement with the McGraw-Hill Book Company.
        > (print-rat one-half)
        1/2
        > (define one-third (make-rat 1 3))
-       > (print-rat \
-          (add-rat one-half one-third))
+       > (print-rat
+       ^  (add-rat one-half one-third))
        5/6
-       > (print-rat \
-          (mul-rat one-half one-third))
+       > (print-rat
+       ^  (mul-rat one-half one-third))
        1/6
-       > (print-rat \
-          (add-rat one-third one-third))
+       > (print-rat
+       ^  (add-rat one-third one-third))
        6/9
      < srci..
 
@@ -4449,8 +4448,8 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      Now we have
 
      ..srci > scheme
-       > (print-rat \
-          (add-rat one-third one-third))
+       > (print-rat
+       ^  (add-rat one-third one-third))
        2/3
      < srci..
 
@@ -5124,13 +5123,13 @@ production-distribution arrangement with the McGraw-Hill Book Company.
        of the list.
 
      ..srci > scheme
-       > (define (list-ref items n)  \
-           (if (= n 0)               \
-               (car items)           \
-               (list-ref (cdr items) \
-                         (- n 1))))
-       > (define squares \
-           (list 1 4 9 16 25))
+       > (define (list-ref items n)
+       ^   (if (= n 0)
+       ^       (car items)
+       ^       (list-ref (cdr items)
+       ^                 (- n 1))))
+       > (define squares
+       ^   (list 1 4 9 16 25))
        > (list-ref squares 3)
        16
      < srci..
@@ -5141,12 +5140,12 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      illustrates this typical pattern of use:
 
      ..srci > scheme
-       > (define (length items)              \
-           (if (null? items)                 \
-               0                             \
-               (+ 1 (length (cdr items)))))
-       > (define odds \
-           (list 1 3 5 7))
+       > (define (length items)
+       ^   (if (null? items)
+       ^       0
+       ^       (+ 1 (length (cdr items)))))
+       > (define odds
+       ^   (list 1 3 5 7))
        > (length odds)
        4
      < srci..
@@ -5329,12 +5328,12 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      procedure scales each number in a list by a given factor:
 
      ..srci > scheme
-       > (define (scale-list items factor)   \
-           (if (null? items)                 \
-               nil                           \
-               (cons (* (car items) factor)  \
-                     (scale-list (cdr items) \
-                                 factor))))
+       > (define (scale-list items factor)
+       ^   (if (null? items)
+       ^       nil
+       ^       (cons (* (car items) factor)
+       ^             (scale-list (cdr items)
+       ^                         factor))))
 
        > (scale-list (list 1 2 3 4 5) 10)
        (10 20 30 40 50)}
@@ -5347,11 +5346,11 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      procedure to each element in the list:@n(78)
 
      ..srci > scheme
-       > (define (map proc items)               \
-           (if (null? items)                    \
-               nil                              \
-               (cons (proc (car items))         \
-                     (map proc (cdr items)))))
+       > (define (map proc items)
+       ^   (if (null? items)
+       ^       nil
+       ^       (cons (proc (car items))
+       ^             (map proc (cdr items)))))
 
        > (map abs (list -10 2.5 -11.6 17))
        (10 2.5 11.6 17)
@@ -5447,9 +5446,9 @@ production-distribution arrangement with the McGraw-Hill Book Company.
         used with procedures that perform an action, such as printing. For example,
 
         ..srci > scheme
-          > (for-each                           \
-             (lambda (x) (newline) (display x)) \
-             (list 57 321 88))
+          > (for-each
+          ^  (lambda (x) (newline) (display x))
+          ^  (list 57 321 88))
           57
           321
           88
@@ -5611,8 +5610,8 @@ production-distribution arrangement with the McGraw-Hill Book Company.
        sublists deep-reversed as well. For example,
 
        ..srci > scheme
-         > (define x \
-             (list (list 1 2) (list 3 4)))
+         > (define x
+         ^   (list (list 1 2) (list 3 4)))
          > x
          ((1 2) (3 4))
          > (reverse x)
@@ -5626,8 +5625,8 @@ production-distribution arrangement with the McGraw-Hill Book Company.
        leaves of the tree arranged in left-to-right order. For example,
 
        ..srci > scheme
-         > (define x  \
-             (list (list 1 2) (list 3 4)))
+         > (define x
+         ^   (list (list 1 2) (list 3 4)))
 
          > (fringe x)
          (1 2 3 4)
@@ -5694,20 +5693,20 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      @c(count-leaves):
 
      ..srci > scheme
-       > (define (scale-tree tree factor)        \
-           (cond ((null? tree) nil)              \
-                 ((not (pair? tree))             \
-                  (* tree factor))               \
-                 (else                           \
-                  (cons (scale-tree (car tree)   \
-                                    factor)      \
-                        (scale-tree (cdr tree)   \
-                                    factor)))))
+       > (define (scale-tree tree factor)
+       ^   (cond ((null? tree) nil)
+       ^         ((not (pair? tree))
+       ^          (* tree factor))
+       ^         (else
+       ^          (cons (scale-tree (car tree)
+       ^                            factor)
+       ^                (scale-tree (cdr tree)
+       ^                            factor)))))
 
-       > (scale-tree (list 1                     \
-                           (list 2 (list 3 4) 5) \
-                           (list 6 7))           \
-                     10)
+       > (scale-tree (list 1
+       ^                   (list 2 (list 3 4) 5)
+       ^                   (list 6 7))
+       ^             10)
        (10 (20 (30 40) 50) (60 70))
      < srci..
 
@@ -5733,10 +5732,10 @@ production-distribution arrangement with the McGraw-Hill Book Company.
         should behave as follows:
 
         ..srci > scheme
-          > (square-tree                 \
-             (list 1                     \
-                   (list 2 (list 3 4) 5) \
-                   (list 6 7)))
+          > (square-tree
+          ^  (list 1
+          ^        (list 2 (list 3 4) 5)
+          ^        (list 6 7)))
           (1 (4 (9 16) 25) (36 49))
         < srci..
 
@@ -5914,13 +5913,13 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      Accumulations can be implemented by
 
      ..srci > scheme
-       > (define (accumulate op initial sequence)  \
-           (if (null? sequence)                    \
-               initial                             \
-               (op (car sequence)                  \
-                   (accumulate op                  \
-                               initial             \
-                               (cdr sequence)))))
+       > (define (accumulate op initial sequence)
+       ^   (if (null? sequence)
+       ^       initial
+       ^       (op (car sequence)
+       ^           (accumulate op
+       ^                       initial
+       ^                       (cdr sequence)))))
 
        > (accumulate + 0 (list 1 2 3 4 5))
        15
@@ -5935,13 +5934,13 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      the sequence of integers in a given range, which we can do as follows:
 
      ..srci > scheme
-       > (define (enumerate-interval low high) \
-           (if (> low high)                    \
-               nil                             \
-               (cons low                       \
-                     (enumerate-interval       \
-                      (+ low 1)                \
-                      high))))
+       > (define (enumerate-interval low high)
+       ^   (if (> low high)
+       ^       nil
+       ^       (cons low
+       ^             (enumerate-interval
+       ^              (+ low 1)
+       ^              high))))
        > (enumerate-interval 2 7)
        (2 3 4 5 6 7)
      < srci..
@@ -5949,12 +5948,12 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      To enumerate the leaves of a tree, we can use@n(80)
 
      ..srci > scheme
-       > (define (enumerate-tree tree)                  \
-           (cond ((null? tree) nil)                     \
-                 ((not (pair? tree)) (list tree))       \
-                 (else (append                          \
-                        (enumerate-tree (car tree))     \
-                        (enumerate-tree (cdr tree))))))
+       > (define (enumerate-tree tree)
+       ^   (cond ((null? tree) nil)
+       ^         ((not (pair? tree)) (list tree))
+       ^         (else (append
+       ^                (enumerate-tree (car tree))
+       ^                (enumerate-tree (cdr tree))))))
        > (enumerate-tree (list 1 (list 2 (list 3 4)) 5))
        (1 2 3 4 5)
      < srci..
@@ -6004,13 +6003,13 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      the first @m(n + 1) Fibonacci numbers:
 
      ..srci > scheme
-       > (define (list-fib-squares n)              \
-           (accumulate                             \
-            cons                                   \
-            nil                                    \
-            (map square                            \
-                 (map fib                          \
-                      (enumerate-interval 0 n)))))
+       > (define (list-fib-squares n)
+       ^   (accumulate
+       ^    cons
+       ^    nil
+       ^    (map square
+       ^         (map fib
+       ^              (enumerate-interval 0 n)))))
 
        > (list-fib-squares 10)
        (0 1 1 4 9 25 64 169 441 1156 3025)
@@ -6020,16 +6019,16 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      squares of the odd integers in a sequence:
 
      ..srci > scheme
-       > (define                                  \
-           (product-of-squares-of-odd-elements    \
-            sequence)                             \
-           (accumulate                            \
-            *                                     \
-            1                                     \
-            (map square (filter odd? sequence))))
+       > (define
+       ^   (product-of-squares-of-odd-elements
+       ^    sequence)
+       ^   (accumulate
+       ^    *
+       ^    1
+       ^    (map square (filter odd? sequence))))
 
-       > (product-of-squares-of-odd-elements \
-          (list 1 2 3 4 5))
+       > (product-of-squares-of-odd-elements
+       ^  (list 1 2 3 4 5))
        225
      < srci..
 
@@ -6434,7 +6433,7 @@ production-distribution arrangement with the McGraw-Hill Book Company.
         queen is safe––the other queens are already guaranteed safe with respect to
         each other.)
 
-     :: @t(Exercise 2.43) :; Louis Reasoner is having a terrible time doing
+     :: @t(Exercise 2.43) :: Louis Reasoner is having a terrible time doing
         @l(#Exercise 2.42). His @c(queens) procedure seems to work, but it runs
         extremely slowly. (Louis never does manage to wait long enough for it to
         solve even the @m(6×6) case.)  When Louis asks Eva Lu Ator for help, she
@@ -11277,10 +11276,10 @@ production-distribution arrangement with the McGraw-Hill Book Company.
     to check for an insufficient amount:
 
     ..srci > scheme
-      > (define (make-simplified-withdraw balance) \
-          (lambda (amount)                         \
-            (set! balance (- balance amount))      \
-            balance))
+      > (define (make-simplified-withdraw balance)
+      ^   (lambda (amount)
+      ^     (set! balance (- balance amount))
+      ^     balance))
       > (define W (make-simplified-withdraw 25))
       > (W 20)
       5
@@ -16529,14 +16528,14 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      guesses, starting with an initial guess of 1:@n(193)
 
      ..srci > scheme
-       > (define (sqrt-stream x)             \
-           (define guesses                   \
-             (cons-stream                    \
-              1.0 (stream-map                \
-                   (lambda (guess)           \
-                     (sqrt-improve guess x)) \
-                   guesses)))                \
-           guesses)
+       > (define (sqrt-stream x)
+       ^   (define guesses
+       ^     (cons-stream
+       ^      1.0 (stream-map
+       ^           (lambda (guess)
+       ^             (sqrt-improve guess x))
+       ^           guesses)))
+       ^   guesses)
 
        > (display-stream (sqrt-stream 2))
        1.
@@ -16567,14 +16566,14 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      and scale the result by 4:
 
      ..srci > scheme
-       > (define (pi-summands n)                   \
-           (cons-stream                            \
-            (/ 1.0 n)                              \
-            (stream-map - (pi-summands (+ n 2)))))
+       > (define (pi-summands n)
+       ^   (cons-stream
+       ^    (/ 1.0 n)
+       ^    (stream-map - (pi-summands (+ n 2)))))
 
-       > (define pi-stream                       \
-           (scale-stream                         \
-            (partial-sums (pi-summands 1)) 4))
+       > (define pi-stream
+       ^   (scale-stream
+       ^    (partial-sums (pi-summands 1)) 4))
 
        > (display-stream pi-stream)
        4.
@@ -16628,8 +16627,8 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      @m(π):
 
      ..srci > scheme
-       > (display-stream  \
-          (euler-transform pi-stream))
+       > (display-stream
+       ^  (euler-transform pi-stream))
        3.166666666666667
        3.1333333333333337
        3.1452380952380956
@@ -16676,9 +16675,9 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      We can demonstrate this kind of @"(super-acceleration) of the @m(π) sequence:
 
      ..srci > scheme
-       > (display-stream                        \
-          (accelerated-sequence euler-transform \
-                                pi-stream))
+       > (display-stream
+       ^  (accelerated-sequence euler-transform
+       ^                        pi-stream))
        4.
        3.166666666666667
        3.142105263157895
@@ -17255,8 +17254,8 @@ production-distribution arrangement with the McGraw-Hill Book Company.
     @m[y(0) = 1]:
 
     ..srci > scheme
-      > (stream-ref \
-         (solve (lambda (y) y) 1 0.001) 1000)
+      > (stream-ref
+      ^  (solve (lambda (y) y) 1 0.001) 1000)
       2.716924
     < srci..
 
@@ -18896,14 +18895,14 @@ production-distribution arrangement with the McGraw-Hill Book Company.
     environment and start the driver loop. Here is a sample interaction:
 
     ..srci > scheme
-      > (define the-global-environment \
-          (setup-environment))
+      > (define the-global-environment
+      ^   (setup-environment))
       > (driver-loop)
       > ;;; M-Eval input:
-      > (define (append x y)                      \
-          (if (null? x)                           \
-              y                                   \
-              (cons (car x) (append (cdr x) y))))
+      > (define (append x y)
+      ^   (if (null? x)
+      ^       y
+      ^       (cons (car x) (append (cdr x) y))))
       ;;; M-Eval value:
       ok
       > ;;; M-Eval input:
@@ -19863,8 +19862,8 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      indicates that the interpreter is performing lazy evaluation:
 
      ..srci > scheme
-       > (define the-global-environment \
-           (setup-environment))
+       > (define the-global-environment
+       ^   (setup-environment))
        > (driver-loop)
        ;;; L-Eval input:
        > (define (try a b) (if (= a 0) 1 b))
@@ -20031,9 +20030,9 @@ production-distribution arrangement with the McGraw-Hill Book Company.
 
            ..srci > scheme
              ;;; L-Eval input:
-             > (for-each                           \
-                (lambda (x) (newline) (display x)) \
-                (list 57 321 88))
+             > (for-each
+             ^  (lambda (x) (newline) (display x))
+             ^  (list 57 321 88))
              57
              321
              88
@@ -20131,29 +20130,29 @@ production-distribution arrangement with the McGraw-Hill Book Company.
     examples:
 
     ..srci > scheme
-      > (define (list-ref items n)             \
-          (if (= n 0)                          \
-              (car items)                      \
-              (list-ref (cdr items) (- n 1))))
-      > (define (map proc items)               \
-          (if (null? items)                    \
-              '()                              \
-              (cons (proc (car items))         \
-                    (map proc (cdr items)))))
-      > (define (scale-list items factor)      \
-          (map (lambda (x) (* x factor))       \
-               items))
-      > (define (add-lists list1 list2)        \
-          (cond ((null? list1) list2)          \
-                ((null? list2) list1)          \
-                (else (cons (+ (car list1)     \
-                               (car list2))    \
-                            (add-lists         \
-                             (cdr list1)       \
-                             (cdr list2))))))
+      > (define (list-ref items n)
+      ^   (if (= n 0)
+      ^       (car items)
+      ^       (list-ref (cdr items) (- n 1))))
+      > (define (map proc items)
+      ^   (if (null? items)
+      ^       '()
+      ^       (cons (proc (car items))
+      ^             (map proc (cdr items)))))
+      > (define (scale-list items factor)
+      ^   (map (lambda (x) (* x factor))
+      ^        items))
+      > (define (add-lists list1 list2)
+      ^   (cond ((null? list1) list2)
+      ^         ((null? list2) list1)
+      ^         (else (cons (+ (car list1)
+      ^                        (car list2))
+      ^                     (add-lists
+      ^                      (cdr list1)
+      ^                      (cdr list2))))))
       > (define ones (cons 1 ones))
-      > (define integers                       \
-          (cons 1 (add-lists ones integers)))
+      > (define integers
+      ^   (cons 1 (add-lists ones integers)))
       ;;; L-Eval input:
       >  (list-ref integers 17)
       ;;; L-Eval value:
@@ -20176,16 +20175,16 @@ production-distribution arrangement with the McGraw-Hill Book Company.
     @l(#3.5.4):
 
     ..srci > scheme
-      > (define (integral integrand initial-value dt)  \
-          (define int                                  \
-            (cons initial-value                        \
-                  (add-lists (scale-list integrand dt) \
-                             int)))                    \
-          int)
-      > (define (solve f y0 dt)          \
-          (define y (integral dy y0 dt)) \
-          (define dy (map f y))          \
-          y)
+      > (define (integral integrand initial-value dt)
+      ^   (define int
+      ^     (cons initial-value
+      ^           (add-lists (scale-list integrand dt)
+      ^                      int)))
+      ^   int)
+      > (define (solve f y0 dt)
+      ^   (define y (integral dy y0 dt))
+      ^   (define dy (map f y))
+      ^   y)
       ;;; L-Eval input:
       > (list-ref (solve (lambda (x) x) 1 0.001) 1000)
       ;;; L-Eval value:
@@ -21383,11 +21382,11 @@ production-distribution arrangement with the McGraw-Hill Book Company.
 
         ..srci > scheme
           > (define count 0)
-          > (let ((x (an-element-of '(a b c)))   \
-                  (y (an-element-of '(a b c))))  \
-              (permanent-set! count (+ count 1)) \
-              (require (not (eq? x y)))          \
-              (list x y count))
+          > (let ((x (an-element-of '(a b c)))
+          ^       (y (an-element-of '(a b c))))
+          ^   (permanent-set! count (+ count 1))
+          ^   (require (not (eq? x y)))
+          ^   (list x y count))
 
           ;;; Starting a new problem
           ;;; Amb-Eval value:
@@ -21411,21 +21410,21 @@ production-distribution arrangement with the McGraw-Hill Book Company.
 
         ..srci > scheme
           ;;; Amb-Eval input:
-          > (if-fail                             \
-             (let ((x (an-element-of '(1 3 5)))) \
-               (require (even? x))               \
-               x)                                \
-             'all-odd)
+          > (if-fail
+          ^  (let ((x (an-element-of '(1 3 5))))
+          ^    (require (even? x))
+          ^    x)
+          ^  'all-odd)
           ;;; Starting a new problem
           ;;; Amb-Eval value:
           all-odd
 
           ;;; Amb-Eval input:
-          > (if-fail                               \
-             (let ((x (an-element-of '(1 3 5 8)))) \
-               (require (even? x))                 \
-               x)                                  \
-             'all-odd)
+          > (if-fail
+          ^  (let ((x (an-element-of '(1 3 5 8))))
+          ^    (require (even? x))
+          ^    x)
+          ^  'all-odd)
 
           ;;; Starting a new problem
           ;;; Amb-Eval value:
@@ -25172,7 +25171,7 @@ production-distribution arrangement with the McGraw-Hill Book Company.
           fib-done)
        < src..
 
-     :: @t(Exercise 5.4) :; Specify register machines that implement each of the
+     :: @t(Exercise 5.4) :: Specify register machines that implement each of the
         following procedures. For each machine, write a controller instruction
         sequence and draw a diagram showing the data paths.
 
@@ -25201,7 +25200,6 @@ production-distribution arrangement with the McGraw-Hill Book Company.
         using some nontrivial input (requiring execution of at least one recursive
         call). Show the contents of the stack at each significant point in the
         execution.
-
 
      :: @t(Exercise 5.6) :: Ben Bitdiddle observes that the Fibonacci machine's
         controller sequence has an extra @c(save) and an extra @c(restore), which
@@ -27664,15 +27662,15 @@ production-distribution arrangement with the McGraw-Hill Book Company.
     Finally, we can initialize the global environment and run the evaluator:
 
     ..srci > scheme
-      > (define the-global-environment \
-          (setup-environment))
+      > (define the-global-environment
+      ^    (setup-environment))
       > (start eceval)
 
       ;;; EC-Eval input:
-      > (define (append x y)                      \
-          (if (null? x)                           \
-              y                                   \
-              (cons (car x) (append (cdr x) y))))
+      > (define (append x y)
+      ^   (if (null? x)
+      ^       y
+      ^       (cons (car x) (append (cdr x) y))))
       ;;; EC-Eval value:
       ok
 
@@ -27713,8 +27711,8 @@ production-distribution arrangement with the McGraw-Hill Book Company.
 
      ..srci > scheme
        ;;; EC-Eval input:
-       > (define (factorial n)  \
-           (if (= n 1) 1 (* (factorial (- n 1)) n)))
+       > (define (factorial n)
+       ^   (if (= n 1) 1 (* (factorial (- n 1)) n)))
        (total-pushes = 3, maximum-depth = 3)
 
        ;;; EC-Eval value:
@@ -29808,14 +29806,14 @@ production-distribution arrangement with the McGraw-Hill Book Company.
        y))]. @c(Find-variable) should produce
 
        ..srci > scheme
-         > (find-variable \
-            'c '((y z) (a b c d e) (x y)))
+         > (find-variable
+         ^  'c '((y z) (a b c d e) (x y)))
          (1 2)
-         > (find-variable \
-            'x '((y z) (a b c d e) (x y)))
+         > (find-variable
+         ^  'x '((y z) (a b c d e) (x y)))
          (2 0)
-         > (find-variable \
-            'w '((y z) (a b c d e) (x y)))
+         > (find-variable
+         ^  'w '((y z) (a b c d e) (x y)))
          not-found
        < srci..
 
@@ -29880,11 +29878,11 @@ production-distribution arrangement with the McGraw-Hill Book Company.
     compiled procedure into the machine and use the evaluator to call it:
 
     ..srci > scheme
-      > (compile-and-go           \
-         '(define (factorial n)   \
-            (if (= n 1)           \
-                1                 \
-                (* (factorial (- n 1)) n))))
+      > (compile-and-go
+      ^  '(define (factorial n)
+      ^     (if (= n 1)
+      ^         1
+      ^         (* (factorial (- n 1)) n))))
       ;;; EC-Eval value:
       ok
       ;;; EC-Eval input:
@@ -29983,11 +29981,11 @@ production-distribution arrangement with the McGraw-Hill Book Company.
     examine the stack usage of compiled code:
 
     ..srci > scheme
-      > (compile-and-go           \
-         '(define (factorial n)   \
-            (if (= n 1)           \
-                1                 \
-                (* (factorial (- n 1)) n))))
+      > (compile-and-go
+      ^  '(define (factorial n)
+      ^     (if (= n 1)
+      ^         1
+      ^         (* (factorial (- n 1)) n))))
       (total-pushes = 0, maximum-depth = 0)
       ;;; EC-Eval value:
       ok
@@ -30116,11 +30114,11 @@ production-distribution arrangement with the McGraw-Hill Book Company.
 
         ..srci > scheme
           ;;; EC-Eval input:
-          > (compile-and-run        \
-             '(define (factorial n) \
-                (if (= n 1)         \
-                    1               \
-                    (* (factorial (- n 1)) n))))
+          > (compile-and-run
+          ^  '(define (factorial n)
+          ^     (if (= n 1)
+          ^         1
+          ^         (* (factorial (- n 1)) n))))
           ;;; EC-Eval value:
           ok
           ;;; EC-Eval input:
@@ -30369,7 +30367,7 @@ production-distribution arrangement with the McGraw-Hill Book Company.
   @t(Hodges 1983) Hodges, Andrew. 1983. @q(Alan Turing: The Enigma). New York:
   Simon and Schuster.
 
-  @t(Hofstadter 1979) Hofstadter, Douglas R. 1979. @q(G@"odel, Escher, Bach: An
+  @t(Hofstadter 1979) Hofstadter, Douglas R. 1979. @q(G@@"odel, Escher, Bach: An
   Eternal Golden Braid). New York: Basic Books.
 
   @t(Hughes 1990) Hughes, R. J. M. 1990. Why functional programming matters. In
@@ -31258,14 +31256,14 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      results. For example:
 
      ..srci > scheme
-       > (map +                   \
-              (list 1 2 3)        \
-              (list 40 50 60)     \
-              (list 700 800 900))
+       > (map +
+       ^      (list 1 2 3)
+       ^      (list 40 50 60)
+       ^      (list 700 800 900))
        (741 852 963)
-       > (map (lambda (x y) (+ x (* 2 y))) \
-              (list 1 2 3)                 \
-              (list 4 5 6))
+       > (map (lambda (x y) (+ x (* 2 y)))
+       ^      (list 1 2 3)
+       ^      (list 4 5 6))
        (9 12 15)
      < srci..
 
@@ -32062,7 +32060,7 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      @l(#1.2.6)) that tests for primality.
 
   :: @N(182) :: In the @A(MIT) implementation, @c(the-empty-stream) is the same
-     as the empty list @c['()!, and @c(stream-null?) is the same as @c(null?).
+     as the empty list @c['()!], and @c(stream-null?) is the same as @c(null?).
 
   :: @N(183) :: This should bother you. The fact that we are defining such
      similar procedures for streams and lists indicates that we are missing some
@@ -32420,7 +32418,7 @@ production-distribution arrangement with the McGraw-Hill Book Company.
      evaluator machine is a deep and wonderful property of computation.
      @e(Recursion theory), a branch of mathematical logic, is concerned with
      logical limits of computation. Douglas Hofstadter's beautiful book
-     @q(G@"odel, Escher, Bach) explores some of these ideas (@l(#Hofstadter
+     @q(G@@"odel, Escher, Bach) explores some of these ideas (@l(#Hofstadter
      1979)).
 
   :: @N(225) :: Warning: This @c(eval) primitive is not identical to the

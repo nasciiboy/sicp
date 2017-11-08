@@ -73,7 +73,7 @@
   - [X] - nasciiboy :: traduccion :: Procedures as General Methods
   - [X] - nasciiboy :: traduccion :: Finding roots of equations by the half-interval method
   - [X] - nasciiboy :: traduccion :: Finding fixed points of functions
-  - [ ] - nasciiboy :: traduccion :: Procedures as Returned Values
+  - [X] - nasciiboy :: traduccion :: Procedures as Returned Values
   - [ ] - nasciiboy :: traduccion :: Newton's method
   - [ ] - nasciiboy :: traduccion :: Abstractions and first-class procedures
   - [ ] - nasciiboy :: traduccion :: Building Abstractions with Data

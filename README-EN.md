@@ -23,7 +23,7 @@ cd sicp
 morg toHtml sicp.morg
 ```
 
-You will need `git`, [golang](https://golang.org/) and [pygmentize](http://pygments.org/) (source code higlight)
+Only need `git` and [golang](https://golang.org/)
 
 if you prefer view in terminal try:
 

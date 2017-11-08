@@ -24,8 +24,7 @@ cd sicp
 morg toHtml sicp.morg
 ```
 
-Necesita tener instalado `git`, [golang](https://golang.org/)
-y [pygmentize](http://pygments.org/) (resaltado de codigo fuente)
+Unicamente necesita tener instalado `git` y [golang](https://golang.org/)
 
 Si prefiere verlo en terminal, intente:
 

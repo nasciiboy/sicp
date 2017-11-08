@@ -5,8 +5,7 @@
 ..licence  > CC BY-SA 4.0
 ..author   > Harold Abelson and Gerald Jay Sussman with Julie Sussman
 ..style    > worg-data/worg.css
-..options  > toc
-@ ..options  > mathjax pygments toc
+..options  > mathJax fancyCode toc
 
 @ dircategory The Algorithmic Language Scheme
 @ utfversion      2.andresraba6.6
@@ -1889,14 +1888,14 @@ Company.
     números como argumentos, produce la suma de sus cuadrados:
 
 #     ..srci > scheme
-#       > (define (sum-of-squares x y) \
-#           (+ (square x) (square y)))
+#       > (define (sum-of-squares x y)
+#       ^   (+ (square x) (square y)))
 #       > (sum-of-squares 3 4)
 #       25
 #     < srci..
     ..srci > scheme
-      > (define (sum-of-squares x y) \
-          (+ (square x) (square y)))
+      > (define (sum-of-squares x y)
+      ^   (+ (square x) (square y)))
       > (sum-of-squares 3 4)
       25
     < srci..
@@ -1907,14 +1906,14 @@ Company.
     construcción de procedimientos adicionales:
 
 #     ..srci > scheme
-#       > (define (f a) \
-#           (sum-of-squares (+ a 1) (* a 2)))
+#       > (define (f a)
+#       ^   (sum-of-squares (+ a 1) (* a 2)))
 #       > (f 5)
 #       136
 #     < srci..
     ..srci > scheme
-      > (define (f a) \
-          (sum-of-squares (+ a 1) (* a 2)))
+      > (define (f a)
+      ^   (sum-of-squares (+ a 1) (* a 2)))
       > (f 5)
       136
     < srci..
@@ -2146,14 +2145,14 @@ Company.
      Seguido por las reducciones
 
 #      ..srci > scheme
-#        > (+ (* 6 6) \
-#             (* 10 10))
+#        > (+ (* 6 6)
+#        ^    (* 10 10))
 #        > (+ 36 100)
 #        136
 #      < srci..
      ..srci > scheme
-       > (+ (* 6 6) \
-            (* 10 10))
+       > (+ (* 6 6)
+       ^    (* 10 10))
        > (+ 36 100)
        136
      < srci..
@@ -5887,20 +5886,20 @@ Company.
     procedimiento:
 
 #     ..srci > scheme
-#       > (define (integral f a b dx)            \
-#           (define (add-dx x) (+ x dx))         \
-#           (* (sum f (+ a (/ dx 2.0)) add-dx b) \
-#              dx))
+#       > (define (integral f a b dx)
+#       ^   (define (add-dx x) (+ x dx))
+#       ^   (* (sum f (+ a (/ dx 2.0)) add-dx b)
+#       ^      dx))
 #       > (integral cube 0 1 0.01)
 #       .24998750000000042
 #       > (integral cube 0 1 0.001)
 #       .249999875000001
 #     < srci..
     ..srci > scheme
-      > (define (integral f a b dx)            \
-          (define (add-dx x) (+ x dx))         \
-          (* (sum f (+ a (/ dx 2.0)) add-dx b) \
-             dx))
+      > (define (integral f a b dx)
+      ^   (define (add-dx x) (+ x dx))
+      ^   (* (sum f (+ a (/ dx 2.0)) add-dx b)
+      ^      dx))
       > (integral cube 0 1 0.01)
       .24998750000000042
       > (integral cube 0 1 0.001)
@@ -6715,17 +6714,17 @@ Company.
      raíz de la ecuación @m(x³ − 2x − 3 = 0) entre 1 y 2:
 
 #      ..srci > scheme
-#        > (half-interval-method                 \
-#           (lambda (x) (- (* x x x) (* 2 x) 3)) \
-#           1.0                                  \
-#           2.0)
+#        > (half-interval-method
+#        ^  (lambda (x) (- (* x x x) (* 2 x) 3))
+#        ^  1.0
+#        ^  2.0)
 #        1.89306640625
 #      < srci..
      ..srci > scheme
-       > (half-interval-method                 \
-          (lambda (x) (- (* x x x) (* 2 x) 3)) \
-          1.0                                  \
-          2.0)
+       > (half-interval-method
+       ^  (lambda (x) (- (* x x x) (* 2 x) 3))
+       ^  1.0
+       ^  2.0)
        1.89306640625
      < srci..
 
@@ -6806,13 +6805,13 @@ Company.
      cos y) :
 
 #      ..srci > scheme
-#        > (fixed-point (lambda (y) (+ (sin y) (cos y))) \
-#                       1.0)
+#        > (fixed-point (lambda (y) (+ (sin y) (cos y)))
+#        ^              1.0)
 #        1.2587315962971173
 #      < srci..
      ..srci > scheme
-       > (fixed-point (lambda (y) (+ (sin y) (cos y))) \
-                      1.0)
+       > (fixed-point (lambda (y) (+ (sin y) (cos y)))
+       ^              1.0)
        1.2587315962971173
      < srci..
 
@@ -7089,19 +7088,19 @@ Company.
 #     We can illustrate this idea by looking again at the fixed-point example
 #     described at the end of section @l(#1.3.3). We formulated a new version of the
 #     square-root procedure as a fixed-point search, starting with the observation
-#     that @m(√x) is a fixed-point of the function @m(y ↦ x / y). Then we used
+#     that @m(√x) is a fixed-point of the function @m(y ↦ x/y). Then we used
 #     average damping to make the approximations converge.  Average damping is a
 #     useful general technique in itself. Namely, given a function @m(ƒ), we
 #     consider the function whose value at @m(x) is equal to the average of @m(x)
 #     and @m[ƒ(x)].
     Podemos ilustrar esta idea mirando de nuevo el ejemplo de punto fijo
-    descrito al final de la seccion @l(#1.3.3). Hemos formulado una nueva versión
-    del procedimiento de raíz cuadrada como una búsqueda de punto fijo,
+    descrito al final de la seccion @l(#1.3.3). Hemos formulado una nueva
+    versión del procedimiento de raíz cuadrada como una búsqueda de punto fijo,
     comenzando con la observación de que @m(√x) es un punto fijo de la función
-    @m(y ↦ x / y). Luego usamos el amortiguamiento promedio para hacer converger
-    las aproximaciones. El amortiguamiento medio es una técnica general útil en
-    sí mismo. Es decir, dada una función @m(ƒ), consideramos que la función cuyo
-    valor en @m(x) es igual a la media de @m(x) y @m(ƒ(x)).
+    @m(y ↦ x/y). Luego usamos el amortiguamiento promedio para hacer converger
+    las aproximaciones. El amortiguamiento promedio es una técnica general útil
+    en sí misma. Es decir, dada una función @m(ƒ), consideramos que la función
+    cuyo valor en @m(x) es igual a la media de @m(x) y @m(ƒ(x)).
 
 #     We can express the idea of average damping by means of the following
 #     procedure:
@@ -7119,20 +7118,20 @@ Company.
           (average x (f x))))
     < src..
 
-#     @c(Average-damp) is a procedure that takes as its argument a procedure
+#     @c(average-damp) is a procedure that takes as its argument a procedure
 #     @c(f) and returns as its value a procedure (produced by the @c(lambda))
 #     that, when applied to a number @c(x), produces the average of @c(x) and
 #     @c[(f x)]. For example, applying @c(average-damp) to the @c(square)
 #     procedure produces a procedure whose value at some number @m(x) is the average
 #     of @m(x) and @m(x²). Applying this resulting procedure to 10 returns the
 #     average of 10 and 100, or 55:@n(59)
-    @c(Average-damp) Es un procedimiento que toma como argumento un
+    @c(average-damp) Es un procedimiento que toma como argumento un
     procedimiento @c(f) y devuelve como su valor un procedimiento (producido por
     el @c(lambda)) que, cuando se aplica a un número @c(x), produce el promedio
     de @c(x) y @c[(f x)]. Por ejemplo, aplicar @c(average-damp) al procedimiento
-    @c(square) produce un procedimiento cuyo valor en cierto número @m(x) es
-    la media de @m(x) y @m(x²). La aplicación de este procedimiento resultante a
-    10 devuelve el promedio de 10 y 100, o 55:@n(59)
+    @c(square) produce un procedimiento cuyo valor en cierto número @m(x) es la
+    media de @m(x) y @m(x²). Aplicación de este procedimiento devuelto a 10
+    regresa el promedio de 10 y 100, o 55:@n(59)
 
 #     ..srci > scheme
 #       > ((average-damp square) 10)
@@ -7164,7 +7163,7 @@ Company.
     < src..
 
 #     Notice how this formulation makes explicit the three ideas in the method:
-#     fixed-point search, average damping, and the function @m(y ↦ x / y).  It is
+#     fixed-point search, average damping, and the function @m(y ↦ x/y).  It is
 #     instructive to compare this formulation of the square-root method with the
 #     original version given in section @l(#1.1.7). Bear in mind that these procedures
 #     express the same process, and notice how much clearer the idea becomes when we
@@ -7173,21 +7172,23 @@ Company.
 #     to choose procedural formulations that are particularly perspicuous, and where
 #     useful elements of the process are exposed as separate entities that can be
 #     reused in other applications. As a simple example of reuse, notice that the
-#     cube root of @m(x) is a fixed point of the function @m(y ↦ x / y²), so we can
+#     cube root of @m(x) is a fixed point of the function @m(y ↦ x/y²), so we can
 #     immediately generalize our square-root procedure to one that extracts cube
 #     roots:@n(60)
     Observe cómo esta formulación hace explícitas las tres ideas en el método:
-    búsqueda en punto fijo, amortiguación media y la función @m(y ↦ x / y). Es
-    instructivo comparar esta formulación del método de la raíz cuadrada con la
+    búsqueda en punto fijo, amortiguación promedio y la función @m(y ↦ x/y). Es
+    instructivo comparar esta formulación del método de raíz cuadrada con la
     versión original dada en la seccion @l(#1.1.7). Tenga en cuenta que estos
-    procedimientos expresan el mismo proceso y notan cuánto más clara se vuelve
-    la idea cuando expresamos el proceso en términos de estas abstracciones. En
-    general, hay muchas maneras de formular un proceso como un
+    procedimientos expresan el mismo proceso y advierta cuánto más clara se
+    vuelve la idea cuando expresamos el proceso en términos de estas
+    abstracciones. En general, hay muchas maneras de formular un proceso como un
     procedimiento. Los programadores experimentados saben elegir fórmulas de
     procedimiento que son particularmente perspicuas, y donde los elementos
     útiles del proceso están expuestos como entidades separadas que pueden ser
-    reutilizadas en otras aplicaciones. Como un simple ejemplo de
-    reutilización,@m() @m() @n(60)
+    reutilizadas en otras aplicaciones. Como un simple ejemplo de reutilización,
+    observe que la raíz cúbica de @m(x) es un punto fijo de la función @m(y ↦
+    x/y²), por lo que inmediatamente podemos generalizar nuestro procedimiento
+    de raíz cuadrada a uno que extrae raíces cúbicas:@n(60)
 
 #     ..src > scheme
 #       (define (cube-root x)
@@ -7207,72 +7208,70 @@ Company.
     < src..
 
 # **** Newton's method
-**** Método de Newton
+**** El Método Newton
 
-#      When we first introduced the square-root procedure, in section @l(#1.1.7), we
+#      When we first introduced the @c(square-root) procedure, in section @l(#1.1.7), we
 #      mentioned that this was a special case of @e(Newton's method).  If @m[x ↦
 #      g(x)] is a differentiable function, then a solution of the equation @m[g(x) =
 #      0] is a fixed point of the function @m[x ↦ ƒ(x)] where
-     Cuando introdujimos el procedimiento de raíz cuadrada, en
-     @l(#1.1.7), mencionamos que este era un caso especial @e(del método)
-     de @e(Newton). Si @m(x ↦ g (x)) es una función diferenciable, entonces una
-     solución de la ecuación @m(g (x) = 0) es un punto fijo de la función @m(x ↦
-     f (x)) donde
+     Cuando introdujimos el procedimiento @c(square-root), en la seccion
+     @l(#1.1.7), mencionamos que este era un caso especial del @e(método
+     @e(Newton). Si @m[x ↦ g(x)] es una función diferenciable, entonces una
+     solución de la ecuación @m[g(x) = 0] es un punto fijo de la función @m[x ↦
+     ƒ(x)] donde
 
 #      ..example >
-#                   g(x)
-#        ƒ(x) = x − -----
+#                    g(x)
+#        ƒ(x) = x − –––––
 #                   Dg(x)
 #      < example..
      ..example >
-                  g(x)
-       ƒ(x) = x − -----
+                   g(x)
+       ƒ(x) = x − –––––
                   Dg(x)
      < example..
 
 #      and @m[Dg(x)] is the derivative of @m(g) evaluated at @m(x). Newton's method
 #      is the use of the fixed-point method we saw above to approximate a solution of
 #      the equation by finding a fixed point of the function @m(ƒ).@n(61)
-     Y @m(Dg (x)) es la derivada de @m(g) evaluada en @m(x). El método de Newton
-     es el uso del método de punto fijo que vimos anteriormente para aproximar
-     una solución de la ecuación encontrando un punto fijo de la función
-     @m(ƒ).@n(61)
-
 #      For many functions @m(g) and for sufficiently good initial guesses for @m(x),
 #      Newton's method converges very rapidly to a solution of @m[g(x) = 0].@n(62)
+     Y @m[Dg(x)] es la derivada de @m(g) evaluada en @m(x). El método Newton es
+     el uso del método de punto fijo que vimos anteriormente para aproximar una
+     solución de la ecuación encontrando un punto fijo de la función @m(ƒ).@n(61)
      Para muchas funciones @m(g) y para las suposiciones iniciales
      suficientemente buenas para @m(x), el método de Newton converge muy
-     rápidamente a una solución de @m(g (x) = 0).@n(62)
+     rápidamente a una solución de @m[g(x) = 0].@n(62)
 
 #      In order to implement Newton's method as a procedure, we must first express
-#      the idea of derivative. Note that @"(derivative,) like average damping, is
+#      the idea of derivative. Note that @"(derivative), like average damping, is
 #      something that transforms a function into another function. For instance, the
 #      derivative of the function @m(x ↦ x³) is the function @m(x ↦ 3x²).  In
 #      general, if @m(g) is a function and @m(dx) is a small number, then the
 #      derivative @m(Dg) of @m(g) is the function whose value at any number @m(x) is
-#      given (in the limit of small @m(dx) by
-     Para implementar el método de Newton como un procedimiento, primero debemos
-     expresar la idea de derivado. Obsérvese que la @"(derivada,) como el
+#      given (in the limit of small @m(dx)) by
+     Para implementar el método Newton como un procedimiento, primero debemos
+     expresar la idea de derivada. Obsérvese que la @"(derivada), como el
      amortiguamiento promedio, es algo que transforma una función en otra
      función. Por ejemplo, la derivada de la función @m(x ↦ x³) es la función
      @m(x ↦ 3x²). En general, si @m(g) es una función y @m(dx) es un número
      pequeño, entonces la derivada @m(Dg) de @m(g) es la función cuyo valor en
-     cualquier número @m(x) es dado (en el límite de @m(dx) pequeño por
+     cualquier número @m(x) es dado (en el límite menor de @m(dx)) por
 
 #      ..example >
 #                g(x + dx) − g(x)
-#        Dg(x) = ----------------
+#        Dg(x) = ––––––––––––––––
 #                       dx
 #      < example..
      ..example >
                g(x + dx) − g(x)
-       Dg(x) = ----------------
+       Dg(x) = ––––––––––––––––
                       dx
      < example..
 
 #      Thus, we can express the idea of derivative (taking @m(dx) to be, say,
 #      0.00001) as the procedure
-     Así, podemos expresar la idea de derivado (tomando @m(dx) como, por
+     Así, podemos expresar la idea de derivada (tomando @m(dx) como, por
      ejemplo, 0.00001) como el procedimiento
 
 #      ..src > scheme
@@ -7348,17 +7347,17 @@ Company.
 #      takes as arguments a procedure that computes the function for which we want to
 #      find a zero, together with an initial guess. For instance, to find the square
 #      root of @m(x), we can use Newton's method to find a zero of the function @m(y
-#      ↦ y² - x) starting with an initial guess of 1.@n(63)
+#      ↦ y² − x) starting with an initial guess of 1.@n(63)
      El procedimiento @c(newton-transform) expresa la fórmula al principio de
      esta sección, y @c(newtons-method) se define fácilmente en términos de
-     esto. Se toma como argumentos un procedimiento que calcula la función para
+     este. Se toman como argumentos un procedimiento que calcula la función para
      la que queremos encontrar un cero, junto con una conjetura inicial. Por
      ejemplo, para encontrar la raíz cuadrada de @m(x), podemos usar el método
-     de Newton para encontrar un cero de la función @m(y ↦ y² - x) comenzando
+     Newton para encontrar un cero de la función @m(y ↦ y² − x) comenzando
      con una conjetura inicial de 1.@n(63)
 
-#      This provides yet another form of the square-root procedure:
-     Esto proporciona otra forma del procedimiento de raíz cuadrada:
+#      This provides yet another form of the @c(square-root) procedure:
+     Esto proporciona otra forma del procedimiento @c(square-root):
 
 #      ..src > scheme
 #        (define (sqrt x)
@@ -7378,19 +7377,19 @@ Company.
 # **** Abstractions and first-class procedures
 **** Abstracciones y procedimientos de primera clase
 
-#      We've seen two ways to express the square-root computation as an instance of a
+#      We've seen two ways to express the @c(square-root) computation as an instance of a
 #      more general method, once as a fixed-point search and once using Newton's
 #      method. Since Newton's method was itself expressed as a fixed-point process,
 #      we actually saw two ways to compute square roots as fixed points. Each method
 #      begins with a function and finds a fixed point of some transformation of the
 #      function. We can express this general idea itself as a procedure:
-     Hemos visto dos maneras de expresar el cálculo de raíz cuadrada como una
-     instancia de un método más general, una vez como una búsqueda de punto fijo
-     y una vez utilizando el método de Newton. Dado que el método de Newton se
-     expresaba como un proceso de punto fijo, en realidad vimos dos maneras de
-     calcular raíces cuadradas como puntos fijos. Cada método comienza con una
-     función y encuentra un punto fijo de alguna transformación de la
-     función. Podemos expresar esta idea general como un procedimiento:
+     Hemos visto dos maneras de expresar el cálculo @c(square-root) como una
+     instancia de un método más general, tambien como una búsqueda de punto fijo
+     y utilizando el método Newton. Dado que el método Newton se expresaba
+     como un proceso de punto fijo, en realidad vimos dos maneras de calcular
+     raíces cuadradas como puntos fijos. Cada método comienza con una función y
+     encuentra un punto fijo de alguna transformación de la función. Podemos
+     expresar esta idea general como un procedimiento:
 
 #      ..src > scheme
 #        (define (fixed-point-of-transform
@@ -7406,17 +7405,17 @@ Company.
 #      This very general procedure takes as its arguments a procedure @c(g) that
 #      computes some function, a procedure that transforms @c(g), and an initial
 #      guess. The returned result is a fixed point of the transformed function.
-     Este procedimiento muy general toma como argumentos un procedimiento @c(g)
-     que computa alguna función, un procedimiento que transforma @c(g) y una
-     conjetura inicial. El resultado devuelto es un punto fijo de la función
+     Este procedimiento basten general toma como argumentos un procedimiento
+     @c(g) que computa alguna función, un procedimiento que transforma @c(g) y
+     una conjetura inicial. El resultado devuelto es un punto fijo de la función
      transformada.
 
 #      Using this abstraction, we can recast the first square-root computation from
 #      this section (where we look for a fixed point of the average-damped version of
-#      @m(y ↦ x / y)) as an instance of this general method:
-     Usando esta abstracción, podemos refundir el primer cálculo raíz cuadrada
+#      @m(y ↦ x/y)) as an instance of this general method:
+     Usando esta abstracción, podemos plantear el primer cálculo de raiz cuadrada
      de esta sección (donde buscamos un punto fijo de la versión amortiguada
-     media de @m(y ↦ x / y) ) como una instancia de este método general:
+     promedio de @m(y ↦ x/y)) como una instancia de este método general:
 
 #      ..src > scheme
 #        (define (sqrt x)
@@ -7435,10 +7434,10 @@ Company.
 
 #      Similarly, we can express the second square-root computation from this section
 #      (an instance of Newton's method that finds a fixed point of the Newton
-#      transform of @m(y ↦ y² - x)) as
+#      transform of @m(y ↦ y² − x)) as
      Del mismo modo, podemos expresar el segundo cálculo de raíz cuadrada de
-     esta sección (una instancia del método de Newton que encuentra un punto
-     fijo de la transformada de Newton de @m(y ↦ y² - x) ) como
+     esta sección (una instancia del método Newton que encuentra un punto
+     fijo de la transformada de Newton de @m(y ↦ y² − x)) como
 
 #      ..src > scheme
 #        (define (sqrt x)
@@ -7460,12 +7459,12 @@ Company.
 #      methods of computing as explicit elements in our programming language. Now
 #      we've seen how higher-order procedures permit us to manipulate these general
 #      methods to create further abstractions.
-     Comenzamos la sección @l(#1.3) con la observación de que los
-     procedimientos compuestos son un mecanismo de abstracción crucial, porque
-     nos permiten expresar los métodos generales de computación como elementos
-     explícitos en nuestro lenguaje de programación. Ahora hemos visto cómo los
-     procedimientos de orden superior nos permiten manipular estos métodos
-     generales para crear más abstracciones.
+     Comenzamos la sección @l(#1.3) con la observación de que los procedimientos
+     compuestos son un mecanismo de abstracción crucial, porque nos permiten
+     expresar los métodos generales de computación como elementos explícitos en
+     nuestro lenguaje de programación. Ahora hemos visto cómo los procedimientos
+     de orden superior nos permiten manipular estos métodos generales para crear
+     más abstracciones.
 
 #      As programmers, we should be alert to opportunities to identify the underlying
 #      abstractions in our programs and to build upon them and generalize them to
@@ -7512,7 +7511,7 @@ Company.
 #      first-class status. This poses challenges for efficient implementation, but
 #      the resulting gain in expressive power is enormous.@n(66)
      Lisp, a diferencia de otros lenguajes de programación comunes, otorga
-     procedimientos de primera clase completa. Esto plantea retos para una
+     procedimientos plenos de primera clase. Esto plantea retos para una
      implementación eficiente, pero la ganancia resultante en el poder expresivo
      es enorme.@n(66)
 
@@ -7520,7 +7519,7 @@ Company.
 #         with the @c(newtons-method) procedure in expressions of the form
      :: @t(Ejercicio 1.40) :: Definir un procedimiento @c(cubic) que se puede
         utilizar junto con el procedimiento @c(newtons-method) en las
-        expresiones del formulario
+        expresiones del formato
 
 #         ..src > scheme
 #           (newtons-method (cubic a b c) 1)
@@ -7530,14 +7529,14 @@ Company.
         < src..
 
 #         to approximate zeros of the cubic @m(x³ + ax² + bx + c).
-        Para aproximar ceros de la cúbica @m(x³ + ax² + bx + c).
+        Para aproximar ceros del cubo @m(x³ + ax² + bx + c).
 
 #      :: @t(Exercise 1.41) :: Define a procedure @c(double) that takes a procedure
 #         of one argument as argument and returns a procedure that applies the
 #         original procedure twice. For example, if @c(inc) is a procedure that adds
 #         1 to its argument, then @c[(double inc)] should be a procedure that
 #         adds 2. What value is returned by
-     :: @t(Ejercicio 1.41) :: Definir un procedimiento @c(double) que toma un
+     :: @t(Ejercicio 1.41) :: Defina un procedimiento @c(double) que toma un
         procedimiento de un argumento como argumento y devuelve un procedimiento
         que aplica el procedimiento original dos veces. Por ejemplo, si @c(inc)
         es un procedimiento que añade 1 a su argumento, entonces @c[(double
@@ -7554,11 +7553,11 @@ Company.
 #         @e(composition) @m(ƒ) after @m(g) is defined to be the function @m[x ↦
 #         ƒ(g(x))]. Define a procedure @c(compose) that implements composition. For
 #         example, if @c(inc) is a procedure that adds 1 to its argument,
-     :: @t(Ejercicio 1.42) :: Deje que @m(ƒ) y @m(g) sea dos funciones de un
-     argumento. La @e(composición ) @m(ƒ) después de @m(g) se define como la
-     función @m(x ↦ f (g (x))). Definir un procedimiento @c(compose) que
-     implemente la composición. Por ejemplo, si @c(inc) es un procedimiento que
-     añade 1 a su argumento,
+     :: @t(Ejercicio 1.42) :: Siendo que @m(ƒ) y @m(g) son dos funciones de un
+     argumento. La @e(composición) @m(ƒ) después de @m(g) se define como la
+     función @m[x ↦ ƒ(g(x))]. Defina un procedimiento @c(compose) que implemente
+     la composición. Por ejemplo, si @c(inc) es un procedimiento que añade 1 a
+     su argumento,
 
 #         ..srci > scheme
 #           > ((compose square inc) 6)
@@ -7572,7 +7571,7 @@ Company.
 #      :: @t(Exercise 1.43) :: If @m(ƒ) is a numerical function and @m(n) is a
 #         positive integer, then we can form the @m(nᵗʰ) repeated application of
 #         @m(ƒ), which is defined to be the function whose value at @m(x) is @m[ƒ(ƒ(…
-#         (ƒ(x))… ))]. For example, if @m(ƒ) is the function @m(x ↦ x + 1), then the
+#         (ƒ(x))…))]. For example, if @m(ƒ) is the function @m(x ↦ x + 1), then the
 #         @m(nᵗʰ) repeated application of @m(ƒ) is the function @m(x ↦ x + n). If
 #         @m(ƒ) is the operation of squaring a number, then the @m(nᵗʰ) repeated
 #         application of @m(ƒ) is the function that raises its argument to the
@@ -7581,14 +7580,14 @@ Company.
 #         computes the @m(nᵗʰ) repeated application of @m(ƒ). Your procedure should
 #         be able to be used as follows:
      :: @t(Ejercicio 1.43) :: Si @m(ƒ) es una función numérica y @m(n) es un
-        entero positivo, entonces podemos formar la @m(nᵗʰ) aplicación de
-        repetida @m(ƒ), que se define como la función cuyo valor en @m(x) es
-        @m(ƒ(f (... (ƒ(x)) ...))). Por ejemplo, si @m(ƒ) es la función @m(x ↦
-        x + 1), entonces el @m(nᵗʰ) aplicación repetida de @m(ƒ) es la función
-        @m(x ↦ x + n). Si @m(ƒ) es la operación de elevar al cuadrado un número,
-        entonces el @m(nᵗʰ) aplicación repetida de @m(ƒ) es la función que eleva
-        su argumento a la @m(2ⁿ-ésima) potencia. @m(Escribir un procedimiento
-        que toma como entradas un procedimiento que calcula f) y un entero
+        entero positivo, entonces podemos formar la aplicación de @m(ƒ) repetida
+        @m(nᵗʰ), que se define como la función cuyo valor en @m(x) es
+        @m[ƒ(ƒ(…(ƒ(x))…))]. Por ejemplo, si @m(ƒ) es la función @m(x ↦ x + 1),
+        entonces el @m(nᵗʰ) aplicación repetida de @m(ƒ) es la función @m(x ↦
+        x + n). Si @m(ƒ) es la operación de elevar al cuadrado un número,
+        entonces la @m(nᵗʰ) aplicación repetida de @m(ƒ) es la función que eleva
+        su argumento a la @m(2ⁿ-ésima) potencia. Escribir un procedimiento que
+        toma como entradas un procedimiento que calcula @m(ƒ) y un entero
         positivo @m(n) y devuelve el procedimiento que calcula la aplicación
         repetida @m(nᵗʰ) de @m(ƒ). Su procedimiento debe ser capaz de ser
         utilizado de la siguiente manera:
@@ -7604,13 +7603,13 @@ Company.
 
 #         Hint: You may find it convenient to use @c(compose) from @l(#Exercise
 #         1.42).
-        Sugerencia: Puede resultar conveniente utilizarlo @c(compose) desde el
+        Sugerencia: Puede resultar conveniente utilizarlo @c(compose) del
         @l(#Ejercicio 1.42).
 
 #      :: @t(Exercise 1.44) :: The idea of @e(smoothing) a function is an important
 #         concept in signal processing. If @m(ƒ) is a function and @m(dx) is some
 #         small number, then the smoothed version of @m(ƒ) is the function whose
-#         value at a point @m(x) is the average of @m[ƒ(x - dx)], @m[ƒ(x)], and
+#         value at a point @m(x) is the average of @m[ƒ(x − dx)], @m[ƒ(x)], and
 #         @m[ƒ(x + dx)]. Write a procedure @c(smooth) that takes as input a procedure
 #         that computes @m(ƒ) and returns a procedure that computes the smoothed
 #         @m(ƒ). It is sometimes valuable to repeatedly smooth a function (that is,
@@ -7621,46 +7620,47 @@ Company.
      :: @t(Ejercicio 1.44) :: La idea de @e(suavizar) una función es un concepto
         importante en el procesamiento de señales. Si @m(ƒ) es una función y
         @m(dx) es un número pequeño, entonces la versión suavizada de @m(ƒ) es
-        la función cuyo valor en un punto @m(x) es la media de @m(ƒ(x - dx)),
-        @m(ƒ(x)), y @m(ƒ(x + dx)). Escriba un procedimiento @c(smooth) que
-        toma como entrada un procedimiento que calcula @m(ƒ) y devuelve un
-        procedimiento que calcula el @m(ƒ) alisado. A veces es valioso suavizar
+        la función cuyo valor en un punto @m(x) es la media de @m[ƒ(x − dx)],
+        @m[ƒ(x)], y @m[ƒ(x + dx)]. Escriba un procedimiento @c(smooth) que toma
+        como entrada un procedimiento que calcula @m(ƒ) y devuelve un
+        procedimiento que calcula @m(ƒ) suavisado. A veces es valioso suavizar
         repetidamente una función (es decir, suavizar la función suavizada, y
-        así sucesivamente) para obtener la @e(función suavizada )@e(@i(n-)
-        plegada) .@i()@c(smooth)@c(repeated)@l(#Ejercicio 1.43)
+        así sucesivamente) para obtener la @e(función suavizada @i(n)-plegada)
+        de cualquier funcion dada usando @c(smooth) del @l(#Ejercicio 1.43)
 
 #      :: @t(Exercise 1.45) :: We saw in section @l(#1.3.3) that attempting to compute square
-#         roots by naively finding a fixed point of @m(y ↦ x / y) does not converge,
+#         roots by naively finding a fixed point of @m(y ↦ x/y) does not converge,
 #         and that this can be fixed by average damping. The same method works for
 #         finding cube roots as fixed points of the average-damped @m(y ↦ x /
 #         y²). Unfortunately, the process does not work for fourth roots––a single
-#         average damp is not enough to make a fixed-point search for @m(y ↦ x / y³)
+#         average damp is not enough to make a fixed-point search for @m(y ↦ x/y³)
 #         converge. On the other hand, if we average damp twice (i.e., use the
-#         average damp of the average damp of @m(y ↦ x / y³) the fixed-point search
+#         average damp of the average damp of @m(y ↦ x/y³) the fixed-point search
 #         does converge. Do some experiments to determine how many average damps are
 #         required to compute @m(nᵗʰ) roots as a fixed-point search based upon
-#         repeated average damping of @m(y ↦ x / yⁿ⁻¹).  Use this to implement a
+#         repeated average damping of @m(y ↦ x/yⁿ⁻¹).  Use this to implement a
 #         simple procedure for computing @m(nᵗʰ) roots using @c(fixed-point),
 #         @c(average-damp), and the @c(repeated) procedure of @l(#Exercise
 #         1.43). Assume that any arithmetic operations you need are available as
 #         primitives.
      :: @t(Ejercicio 1.45) :: Vimos en la seccion @l(#1.3.3) que el intento de
         calcular las raíces cuadradas por encontrar ingenuamente un punto fijo
-        de @m(y ↦ x / y) no converge, y que esto puede ser fijado por
+        de @m(y ↦ x/y) no converge, y que esto puede ser fijado por
         amortiguamiento promedio. El mismo método funciona para encontrar raíces
-        cúbicas como puntos fijos de la media amortiguada @m(y ↦ x /
-        y²). Desafortunadamente, el proceso no funciona para las raíces cuarta -
-        una humedad media no es suficiente para hacer una búsqueda de punto fijo
-        para @m(y ↦ x / y³) convergen. Por otro lado, si @m(medimos) la humedad
-        dos veces (es decir, usamos la humedad media de la humedad media de @m(y
-        ↦ x / y³) la búsqueda de punto fijo converge. @m(Hacer algunos
-        experimentos para determinar cuántos damps promedio se requieren para
-        calcular las) raíces n as como una búsqueda de punto fijo sobre la base
-        de amortiguación media repetida de @m(y ↦ x / yⁿ⁻¹). Usar esto para
-        poner en práctica un procedimiento simple para calcular @m(nᵗʰ) raíces
-        usando @c(fixed-point), @c(average-damp) y el procedimiento @c(repeated)
-        de @l(#Ejercicio 1.43). Suponga que las operaciones
-        aritméticas que necesita están disponibles como primitivas.
+        cúbicas como puntos fijos de amortiguamiento promedio @m(y ↦ x/y²).
+        Desafortunadamente, el proceso no funciona para las raíces
+        cuadraticas––un amortiguamiento promedio no es suficiente para hacer una
+        búsqueda de punto fijo para converger @m(y ↦ x/y³). Por otro lado, si
+        @m(medimos) el amortiguamiento dos veces (es decir, usamos el
+        amortiguamiento promedio del amortiguamiento promedio de @m(y ↦ x/y³) la
+        búsqueda de punto fijo converge. Hacer algunos experimentos para
+        determinar cuántos amortiguamientos promedio se requieren para calcular
+        la enesima raiz como una búsqueda de punto fijo sobre la base de
+        amortiguamiento promedio repetida de @m(y ↦ x/yⁿ⁻¹). Usar esto para poner
+        en práctica un procedimiento simple para calcular las @m(nᵗʰ) raíces usando
+        @c(fixed-point), @c(average-damp) y el procedimiento @c(repeated) del
+        @l(#Ejercicio 1.43). Suponga que las operaciones aritméticas que
+        necesita están disponibles como primitivas.
 
 #      :: @t(Exercise 1.46) :: Several of the numerical methods
 #         described in this chapter are instances of an extremely general computational
@@ -7670,7 +7670,7 @@ Company.
 #         process using the improved guess as the new guess. Write a procedure
 #         @c(iterative-improve) that takes two procedures as arguments: a method for
 #         telling whether a guess is good enough and a method for improving a guess.
-#         @c(Iterative-improve) should return as its value a procedure that takes a
+#         @c(iterative-improve) should return as its value a procedure that takes a
 #         guess as argument and keeps improving the guess until it is good enough.
 #         Rewrite the @c(sqrt) procedure of section @l(#1.1.7) and the
 #         @c(fixed-point) procedure of section @l(#1.3.3) in terms of
@@ -7684,11 +7684,12 @@ Company.
         mejorada como nueva conjetura. Escriba un procedimiento
         @c(iterative-improve) que tome dos procedimientos como argumentos: un
         método para decir si una suposición es lo suficientemente buena y un
-        método para mejorar una conjetura. @c(Iterative-improve) Debe devolver
+        método para mejorar una conjetura. @c(iterative-improve) debe devolver
         como su valor un procedimiento que toma una suposición como argumento y
-        sigue mejorando la conjetura hasta que es lo suficientemente
-        bueno. Reescribir el procedimiento @c(sqrt) de la seccion @l(#1.1.7) y el
-        procedimiento @c(fixed-point) de la seccion @l(#1.3.3) @c(iterative-improve)
+        sigue mejorando la conjetura hasta que es lo suficientemente bueno.
+        Reescribir el procedimiento @c(sqrt) de la seccion @l(#1.1.7) y el
+        procedimiento @c(fixed-point) de la seccion @l(#1.3.3)
+        @c(iterative-improve)
 
 # * Chapter 2 <> Building Abstractions with Data
 * Capitulo 2 <> Creación de abstracciones con datos
@@ -7705,7 +7706,7 @@ Company.
     que mirar nunca las cosas que representan.
 
 #     --Hermann Weyl, @q(The Mathematical Way of Thinking)
-    --Hermann Weyl, @"(La manera matemática de pensar)
+    --Hermann Weyl, @q(The Mathematical Way of Thinking)
 #   < quote..
   < quote..
 
@@ -8315,14 +8316,14 @@ Company.
 #        > (print-rat one-half)
 #        1/2
 #        > (define one-third (make-rat 1 3))
-#        > (print-rat \
-#           (add-rat one-half one-third))
+#        > (print-rat
+#        ^  (add-rat one-half one-third))
 #        5/6
-#        > (print-rat \
-#           (mul-rat one-half one-third))
+#        > (print-rat
+#        ^  (mul-rat one-half one-third))
 #        1/6
-#        > (print-rat \
-#           (add-rat one-third one-third))
+#        > (print-rat
+#        ^  (add-rat one-third one-third))
 #        6/9
 #      < srci..
      ..srci > scheme
@@ -8330,14 +8331,14 @@ Company.
        > (print-rat one-half)
        1/2
        > (define one-third (make-rat 1 3))
-       > (print-rat \
-          (add-rat one-half one-third))
+       > (print-rat
+       ^  (add-rat one-half one-third))
        5/6
-       > (print-rat \
-          (mul-rat one-half one-third))
+       > (print-rat
+       ^  (mul-rat one-half one-third))
        1/6
-       > (print-rat \
-          (add-rat one-third one-third))
+       > (print-rat
+       ^  (add-rat one-third one-third))
        6/9
      < srci..
 
@@ -8371,13 +8372,13 @@ Company.
      Ahora tenemos
 
 #      ..srci > scheme
-#        > (print-rat \
-#           (add-rat one-third one-third))
+#        > (print-rat
+#        ^  (add-rat one-third one-third))
 #        2/3
 #      < srci..
      ..srci > scheme
-       > (print-rat \
-          (add-rat one-third one-third))
+       > (print-rat
+       ^  (add-rat one-third one-third))
        2/3
      < srci..
 
@@ -9661,24 +9662,24 @@ Company.
        @c(cdr) de la lista.
 
 #      ..srci > scheme
-#        > (define (list-ref items n)  \
-#            (if (= n 0)               \
-#                (car items)           \
-#                (list-ref (cdr items) \
-#                          (- n 1))))
-#        > (define squares \
-#            (list 1 4 9 16 25))
+#        > (define (list-ref items n)
+#        ^   (if (= n 0)
+#        ^       (car items)
+#        ^       (list-ref (cdr items)
+#        ^                 (- n 1))))
+#        > (define squares
+#        ^   (list 1 4 9 16 25))
 #        > (list-ref squares 3)
 #        16
 #      < srci..
      ..srci > scheme
-       > (define (list-ref items n)  \
-           (if (= n 0)               \
-               (car items)           \
-               (list-ref (cdr items) \
-                         (- n 1))))
-       > (define squares \
-           (list 1 4 9 16 25))
+       > (define (list-ref items n)
+       ^   (if (= n 0)
+       ^       (car items)
+       ^       (list-ref (cdr items)
+       ^                 (- n 1))))
+       > (define squares
+       ^   (list 1 4 9 16 25))
        > (list-ref squares 3)
        16
      < srci..
@@ -9693,22 +9694,22 @@ Company.
      una lista, ilustra este patrón típico de uso:
 
 #      ..srci > scheme
-#        > (define (length items)              \
-#            (if (null? items)                 \
-#                0                             \
-#                (+ 1 (length (cdr items)))))
-#        > (define odds \
-#            (list 1 3 5 7))
+#        > (define (length items)
+#        ^   (if (null? items)
+#        ^       0
+#        ^       (+ 1 (length (cdr items)))))
+#        > (define odds
+#        ^   (list 1 3 5 7))
 #        > (length odds)
 #        4
 #      < srci..
      ..srci > scheme
-       > (define (length items)              \
-           (if (null? items)                 \
-               0                             \
-               (+ 1 (length (cdr items)))))
-       > (define odds \
-           (list 1 3 5 7))
+       > (define (length items)
+       ^   (if (null? items)
+       ^       0
+       ^       (+ 1 (length (cdr items)))))
+       > (define odds
+       ^   (list 1 3 5 7))
        > (length odds)
        4
      < srci..
@@ -10039,23 +10040,23 @@ Company.
      siguiente procedimiento escala cada número en una lista por un factor dado:
 
 #      ..srci > scheme
-#        > (define (scale-list items factor)   \
-#            (if (null? items)                 \
-#                nil                           \
-#                (cons (* (car items) factor)  \
-#                      (scale-list (cdr items) \
-#                                  factor))))
+#        > (define (scale-list items factor)
+#        ^   (if (null? items)
+#        ^       nil
+#        ^       (cons (* (car items) factor)
+#        ^             (scale-list (cdr items)
+#        ^                         factor))))
 #
 #        > (scale-list (list 1 2 3 4 5) 10)
 #        (10 20 30 40 50)}
 #      < srci..
      ..srci > scheme
-       > (define (scale-list items factor)   \
-           (if (null? items)                 \
-               nil                           \
-               (cons (* (car items) factor)  \
-                     (scale-list (cdr items) \
-                                 factor))))
+       > (define (scale-list items factor)
+       ^   (if (null? items)
+       ^       nil
+       ^       (cons (* (car items) factor)
+       ^             (scale-list (cdr items)
+       ^                         factor))))
 
        > (scale-list (list 1 2 3 4 5) 10)
        (10 20 30 40 50)}
@@ -10074,11 +10075,11 @@ Company.
      procedimiento a cada elemento de la lista:@n(78)
 
 #      ..srci > scheme
-#        > (define (map proc items)               \
-#            (if (null? items)                    \
-#                nil                              \
-#                (cons (proc (car items))         \
-#                      (map proc (cdr items)))))
+#        > (define (map proc items)
+#        ^   (if (null? items)
+#        ^       nil
+#        ^       (cons (proc (car items))
+#        ^             (map proc (cdr items)))))
 #
 #        > (map abs (list -10 2.5 -11.6 17))
 #        (10 2.5 11.6 17)
@@ -10086,11 +10087,11 @@ Company.
 #        (1 4 9 16)
 #      < srci..
      ..srci > scheme
-       > (define (map proc items)               \
-           (if (null? items)                    \
-               nil                              \
-               (cons (proc (car items))         \
-                     (map proc (cdr items)))))
+       > (define (map proc items)
+       ^   (if (null? items)
+       ^       nil
+       ^       (cons (proc (car items))
+       ^             (map proc (cdr items)))))
 
        > (map abs (list -10 2.5 -11.6 17))
        (10 2.5 11.6 17)
@@ -10266,17 +10267,17 @@ Company.
         una acción, como la impresión. Por ejemplo,
 
 #         ..srci > scheme
-#           > (for-each                           \
-#              (lambda (x) (newline) (display x)) \
-#              (list 57 321 88))
+#           > (for-each
+#           ^  (lambda (x) (newline) (display x))
+#           ^  (list 57 321 88))
 #           57
 #           321
 #           88
 #         < srci..
         ..srci > scheme
-          > (for-each                           \
-             (lambda (x) (newline) (display x)) \
-             (list 57 321 88))
+          > (for-each
+          ^  (lambda (x) (newline) (display x))
+          ^  (list 57 321 88))
           57
           321
           88
@@ -10564,8 +10565,8 @@ Company.
        revertidas profundamente también. Por ejemplo,
 
 #        ..srci > scheme
-#          > (define x \
-#              (list (list 1 2) (list 3 4)))
+#          > (define x
+#          ^   (list (list 1 2) (list 3 4)))
 #          > x
 #          ((1 2) (3 4))
 #          > (reverse x)
@@ -10574,8 +10575,8 @@ Company.
 #          ((4 3) (2 1))
 #        < srci..
        ..srci > scheme
-         > (define x \
-             (list (list 1 2) (list 3 4)))
+         > (define x
+         ^   (list (list 1 2) (list 3 4)))
          > x
          ((1 2) (3 4))
          > (reverse x)
@@ -10593,8 +10594,8 @@ Company.
     derecha. Por ejemplo,
 
 #        ..srci > scheme
-#          > (define x  \
-#              (list (list 1 2) (list 3 4)))
+#          > (define x
+#          ^   (list (list 1 2) (list 3 4)))
 #
 #          > (fringe x)
 #          (1 2 3 4)
@@ -10602,8 +10603,8 @@ Company.
 #          (1 2 3 4 1 2 3 4)
 #        < srci..
        ..srci > scheme
-         > (define x  \
-             (list (list 1 2) (list 3 4)))
+         > (define x
+         ^   (list (list 1 2) (list 3 4)))
 
          > (fringe x)
          (1 2 3 4)
@@ -10718,37 +10719,37 @@ Company.
      @c(scale-tree) es similar al de @c(count-leaves):
 
 #      ..srci > scheme
-#        > (define (scale-tree tree factor)        \
-#            (cond ((null? tree) nil)              \
-#                  ((not (pair? tree))             \
-#                   (* tree factor))               \
-#                  (else                           \
-#                   (cons (scale-tree (car tree)   \
-#                                     factor)      \
-#                         (scale-tree (cdr tree)   \
-#                                     factor)))))
+#        > (define (scale-tree tree factor)
+#        ^   (cond ((null? tree) nil)
+#        ^         ((not (pair? tree))
+#        ^          (* tree factor))
+#        ^         (else
+#        ^          (cons (scale-tree (car tree)
+#        ^                            factor)
+#        ^                (scale-tree (cdr tree)
+#        ^                            factor)))))
 #
-#        > (scale-tree (list 1                     \
-#                            (list 2 (list 3 4) 5) \
-#                            (list 6 7))           \
-#                      10)
+#        > (scale-tree (list 1
+#        ^                   (list 2 (list 3 4) 5)
+#        ^                   (list 6 7))
+#        ^             10)
 #        (10 (20 (30 40) 50) (60 70))
 #      < srci..
      ..srci > scheme
-       > (define (scale-tree tree factor)        \
-           (cond ((null? tree) nil)              \
-                 ((not (pair? tree))             \
-                  (* tree factor))               \
-                 (else                           \
-                  (cons (scale-tree (car tree)   \
-                                    factor)      \
-                        (scale-tree (cdr tree)   \
-                                    factor)))))
+       > (define (scale-tree tree factor)
+       ^   (cond ((null? tree) nil)
+       ^         ((not (pair? tree))
+       ^          (* tree factor))
+       ^         (else
+       ^          (cons (scale-tree (car tree)
+       ^                            factor)
+       ^                (scale-tree (cdr tree)
+       ^                            factor)))))
 
-       > (scale-tree (list 1                     \
-                           (list 2 (list 3 4) 5) \
-                           (list 6 7))           \
-                     10)
+       > (scale-tree (list 1
+       ^                   (list 2 (list 3 4) 5)
+       ^                   (list 6 7))
+       ^             10)
        (10 (20 (30 40) 50) (60 70))
      < srci..
 
@@ -10792,17 +10793,17 @@ Company.
         manera:
 
 #         ..srci > scheme
-#           > (square-tree                 \
-#              (list 1                     \
-#                    (list 2 (list 3 4) 5) \
-#                    (list 6 7)))
+#           > (square-tree
+#           ^  (list 1
+#           ^        (list 2 (list 3 4) 5)
+#           ^        (list 6 7)))
 #           (1 (4 (9 16) 25) (36 49))
 #         < srci..
         ..srci > scheme
-          > (square-tree                 \
-             (list 1                     \
-                   (list 2 (list 3 4) 5) \
-                   (list 6 7)))
+          > (square-tree
+          ^  (list 1
+          ^        (list 2 (list 3 4) 5)
+          ^        (list 6 7)))
           (1 (4 (9 16) 25) (36 49))
         < srci..
 
@@ -11124,13 +11125,13 @@ Company.
      Las acumulaciones pueden ser implementadas por
 
 #      ..srci > scheme
-#        > (define (accumulate op initial sequence)  \
-#            (if (null? sequence)                    \
-#                initial                             \
-#                (op (car sequence)                  \
-#                    (accumulate op                  \
-#                                initial             \
-#                                (cdr sequence)))))
+#        > (define (accumulate op initial sequence)
+#        ^   (if (null? sequence)
+#        ^       initial
+#        ^       (op (car sequence)
+#        ^           (accumulate op
+#        ^                       initial
+#        ^                       (cdr sequence)))))
 #
 #        > (accumulate + 0 (list 1 2 3 4 5))
 #        15
@@ -11140,13 +11141,13 @@ Company.
 #        (1 2 3 4 5)
 #      < srci..
      ..srci > scheme
-       > (define (accumulate op initial sequence)  \
-           (if (null? sequence)                    \
-               initial                             \
-               (op (car sequence)                  \
-                   (accumulate op                  \
-                               initial             \
-                               (cdr sequence)))))
+       > (define (accumulate op initial sequence)
+       ^   (if (null? sequence)
+       ^       initial
+       ^       (op (car sequence)
+       ^           (accumulate op
+       ^                       initial
+       ^                       (cdr sequence)))))
 
        > (accumulate + 0 (list 1 2 3 4 5))
        15
@@ -11165,24 +11166,24 @@ Company.
      siguiente manera:
 
 #      ..srci > scheme
-#        > (define (enumerate-interval low high) \
-#            (if (> low high)                    \
-#                nil                             \
-#                (cons low                       \
-#                      (enumerate-interval       \
-#                       (+ low 1)                \
-#                       high))))
+#        > (define (enumerate-interval low high)
+#        ^   (if (> low high)
+#        ^       nil
+#        ^       (cons low
+#        ^             (enumerate-interval
+#        ^              (+ low 1)
+#        ^              high))))
 #        > (enumerate-interval 2 7)
 #        (2 3 4 5 6 7)
 #      < srci..
      ..srci > scheme
-       > (define (enumerate-interval low high) \
-           (if (> low high)                    \
-               nil                             \
-               (cons low                       \
-                     (enumerate-interval       \
-                      (+ low 1)                \
-                      high))))
+       > (define (enumerate-interval low high)
+       ^   (if (> low high)
+       ^       nil
+       ^       (cons low
+       ^             (enumerate-interval
+       ^              (+ low 1)
+       ^              high))))
        > (enumerate-interval 2 7)
        (2 3 4 5 6 7)
      < srci..
@@ -11191,22 +11192,22 @@ Company.
      Para enumerar las hojas de un árbol, podemos usar@n(80)
 
 #      ..srci > scheme
-#        > (define (enumerate-tree tree)                  \
-#            (cond ((null? tree) nil)                     \
-#                  ((not (pair? tree)) (list tree))       \
-#                  (else (append                          \
-#                         (enumerate-tree (car tree))     \
-#                         (enumerate-tree (cdr tree))))))
+#        > (define (enumerate-tree tree)
+#        ^   (cond ((null? tree) nil)
+#        ^         ((not (pair? tree)) (list tree))
+#        ^         (else (append
+#        ^                (enumerate-tree (car tree))
+#        ^                (enumerate-tree (cdr tree))))))
 #        > (enumerate-tree (list 1 (list 2 (list 3 4)) 5))
 #        (1 2 3 4 5)
 #      < srci..
      ..srci > scheme
-       > (define (enumerate-tree tree)                  \
-           (cond ((null? tree) nil)                     \
-                 ((not (pair? tree)) (list tree))       \
-                 (else (append                          \
-                        (enumerate-tree (car tree))     \
-                        (enumerate-tree (cdr tree))))))
+       > (define (enumerate-tree tree)
+       ^   (cond ((null? tree) nil)
+       ^         ((not (pair? tree)) (list tree))
+       ^         (else (append
+       ^                (enumerate-tree (car tree))
+       ^                (enumerate-tree (cdr tree))))))
        > (enumerate-tree (list 1 (list 2 (list 3 4)) 5))
        (1 2 3 4 5)
      < srci..
@@ -11299,25 +11300,25 @@ Company.
      @m(n + 1) números de Fibonacci:
 
 #      ..srci > scheme
-#        > (define (list-fib-squares n)              \
-#            (accumulate                             \
-#             cons                                   \
-#             nil                                    \
-#             (map square                            \
-#                  (map fib                          \
-#                       (enumerate-interval 0 n)))))
+#        > (define (list-fib-squares n)
+#        ^   (accumulate
+#        ^    cons
+#        ^    nil
+#        ^    (map square
+#        ^         (map fib
+#        ^              (enumerate-interval 0 n)))))
 #
 #        > (list-fib-squares 10)
 #        (0 1 1 4 9 25 64 169 441 1156 3025)
 #      < srci..
      ..srci > scheme
-       > (define (list-fib-squares n)              \
-           (accumulate                             \
-            cons                                   \
-            nil                                    \
-            (map square                            \
-                 (map fib                          \
-                      (enumerate-interval 0 n)))))
+       > (define (list-fib-squares n)
+       ^   (accumulate
+       ^    cons
+       ^    nil
+       ^    (map square
+       ^         (map fib
+       ^              (enumerate-interval 0 n)))))
 
        > (list-fib-squares 10)
        (0 1 1 4 9 25 64 169 441 1156 3025)
@@ -11329,29 +11330,29 @@ Company.
      los cuadrados de los números impares en una secuencia:
 
 #      ..srci > scheme
-#        > (define                                  \
-#            (product-of-squares-of-odd-elements    \
-#             sequence)                             \
-#            (accumulate                            \
-#             *                                     \
-#             1                                     \
-#             (map square (filter odd? sequence))))
+#        > (define
+#        ^   (product-of-squares-of-odd-elements
+#        ^    sequence)
+#        ^   (accumulate
+#        ^    *
+#        ^    1
+#        ^    (map square (filter odd? sequence))))
 #
-#        > (product-of-squares-of-odd-elements \
-#           (list 1 2 3 4 5))
+#        > (product-of-squares-of-odd-elements
+#        ^  (list 1 2 3 4 5))
 #        225
 #      < srci..
      ..srci > scheme
-       > (define                                  \
-           (product-of-squares-of-odd-elements    \
-            sequence)                             \
-           (accumulate                            \
-            *                                     \
-            1                                     \
-            (map square (filter odd? sequence))))
+       > (define
+       ^   (product-of-squares-of-odd-elements
+       ^    sequence)
+       ^   (accumulate
+       ^    *
+       ^    1
+       ^    (map square (filter odd? sequence))))
 
-       > (product-of-squares-of-odd-elements \
-          (list 1 2 3 4 5))
+       > (product-of-squares-of-odd-elements
+       ^  (list 1 2 3 4 5))
        225
      < srci..
 
@@ -12120,13 +12121,13 @@ Company.
         está a salvo - las otras reinas ya están garantizadas con respecto a la
         otra.)
 
-#      :: @t(Exercise 2.43) :; Louis Reasoner is having a terrible time doing
+#      :: @t(Exercise 2.43) :: Louis Reasoner is having a terrible time doing
 #         @l(#Exercise 2.42). His @c(queens) procedure seems to work, but it runs
 #         extremely slowly. (Louis never does manage to wait long enough for it to
 #         solve even the @m(6×6) case.)  When Louis asks Eva Lu Ator for help, she
 #         points out that he has interchanged the order of the nested mappings in the
 #         @c(flatmap), writing it as
-     :: @t(Ejercicio 2.43) :; Louis Reasoner está teniendo un tiempo terrible
+     :: @t(Ejercicio 2.43) :: Louis Reasoner está teniendo un tiempo terrible
         haciendo el @l(#Ejercicio 2.42). Su procedimiento @c(queens) parece funcionar, pero funciona muy lentamente. (Louis
         nunca se las arregla para esperar el tiempo suficiente para que pueda
         resolver incluso el caso @m(6 × 6) ). Cuando Louis pide ayuda a Eva Lu
@@ -21428,10 +21429,10 @@ Company.
     se moleste en chequear una cantidad insuficiente:
 
 #     ..srci > scheme
-#       > (define (make-simplified-withdraw balance) \
-#           (lambda (amount)                         \
-#             (set! balance (- balance amount))      \
-#             balance))
+#       > (define (make-simplified-withdraw balance)
+#       ^   (lambda (amount)
+#       ^     (set! balance (- balance amount))
+#       ^     balance))
 #       > (define W (make-simplified-withdraw 25))
 #       > (W 20)
 #       5
@@ -21439,10 +21440,10 @@ Company.
 #       -5
 #     < srci..
     ..srci > scheme
-      > (define (make-simplified-withdraw balance) \
-          (lambda (amount)                         \
-            (set! balance (- balance amount))      \
-            balance))
+      > (define (make-simplified-withdraw balance)
+      ^   (lambda (amount)
+      ^     (set! balance (- balance amount))
+      ^     balance))
       > (define W (make-simplified-withdraw 25))
       > (W 20)
       5
@@ -31390,14 +31391,14 @@ Company.
      inicial de 1:@n(193)
 
 #      ..srci > scheme
-#        > (define (sqrt-stream x)             \
-#            (define guesses                   \
-#              (cons-stream                    \
-#               1.0 (stream-map                \
-#                    (lambda (guess)           \
-#                      (sqrt-improve guess x)) \
-#                    guesses)))                \
-#            guesses)
+#        > (define (sqrt-stream x)
+#        ^   (define guesses
+#        ^     (cons-stream
+#        ^      1.0 (stream-map
+#        ^           (lambda (guess)
+#        ^             (sqrt-improve guess x))
+#        ^           guesses)))
+#        ^   guesses)
 #
 #        > (display-stream (sqrt-stream 2))
 #        1.
@@ -31408,14 +31409,14 @@ Company.
 #        …
 #      < srci..
      ..srci > scheme
-       > (define (sqrt-stream x)             \
-           (define guesses                   \
-             (cons-stream                    \
-              1.0 (stream-map                \
-                   (lambda (guess)           \
-                     (sqrt-improve guess x)) \
-                   guesses)))                \
-           guesses)
+       > (define (sqrt-stream x)
+       ^   (define guesses
+       ^     (cons-stream
+       ^      1.0 (stream-map
+       ^           (lambda (guess)
+       ^             (sqrt-improve guess x))
+       ^           guesses)))
+       ^   guesses)
 
        > (display-stream (sqrt-stream 2))
        1.
@@ -31462,14 +31463,14 @@ Company.
      @l(#Ejercicio 3.55) ) y escalamos el resultado por 4:
 
 #      ..srci > scheme
-#        > (define (pi-summands n)                   \
-#            (cons-stream                            \
-#             (/ 1.0 n)                              \
-#             (stream-map - (pi-summands (+ n 2)))))
+#        > (define (pi-summands n)
+#        ^   (cons-stream
+#        ^    (/ 1.0 n)
+#        ^    (stream-map - (pi-summands (+ n 2)))))
 #
-#        > (define pi-stream                       \
-#            (scale-stream                         \
-#             (partial-sums (pi-summands 1)) 4))
+#        > (define pi-stream
+#        ^   (scale-stream
+#        ^    (partial-sums (pi-summands 1)) 4))
 #
 #        > (display-stream pi-stream)
 #        4.
@@ -31483,14 +31484,14 @@ Company.
 #        …
 #      < srci..
      ..srci > scheme
-       > (define (pi-summands n)                   \
-           (cons-stream                            \
-            (/ 1.0 n)                              \
-            (stream-map - (pi-summands (+ n 2)))))
+       > (define (pi-summands n)
+       ^   (cons-stream
+       ^    (/ 1.0 n)
+       ^    (stream-map - (pi-summands (+ n 2)))))
 
-       > (define pi-stream                       \
-           (scale-stream                         \
-            (partial-sums (pi-summands 1)) 4))
+       > (define pi-stream
+       ^   (scale-stream
+       ^    (partial-sums (pi-summands 1)) 4))
 
        > (display-stream pi-stream)
        4.
@@ -31577,8 +31578,8 @@ Company.
      aproximaciones a @m(π) :
 
 #      ..srci > scheme
-#        > (display-stream  \
-#           (euler-transform pi-stream))
+#        > (display-stream
+#        ^  (euler-transform pi-stream))
 #        3.166666666666667
 #        3.1333333333333337
 #        3.1452380952380956
@@ -31590,8 +31591,8 @@ Company.
 #        …
 #      < srci..
      ..srci > scheme
-       > (display-stream  \
-          (euler-transform pi-stream))
+       > (display-stream
+       ^  (euler-transform pi-stream))
        3.166666666666667
        3.1333333333333337
        3.1452380952380956
@@ -31666,9 +31667,9 @@ Company.
      @m(π) :
 
 #      ..srci > scheme
-#        > (display-stream                        \
-#           (accelerated-sequence euler-transform \
-#                                 pi-stream))
+#        > (display-stream
+#        ^  (accelerated-sequence euler-transform
+#        ^                        pi-stream))
 #        4.
 #        3.166666666666667
 #        3.142105263157895
@@ -31680,9 +31681,9 @@ Company.
 #        …
 #      < srci..
      ..srci > scheme
-       > (display-stream                        \
-          (accelerated-sequence euler-transform \
-                                pi-stream))
+       > (display-stream
+       ^   (accelerated-sequence euler-transform
+       ^                         pi-stream))
        4.
        3.166666666666667
        3.142105263157895
@@ -32757,13 +32758,13 @@ Company.
     = 1) :
 
 #     ..srci > scheme
-#       > (stream-ref \
-#          (solve (lambda (y) y) 1 0.001) 1000)
+#       > (stream-ref
+#       ^  (solve (lambda (y) y) 1 0.001) 1000)
 #       2.716924
 #     < srci..
     ..srci > scheme
-      > (stream-ref \
-         (solve (lambda (y) y) 1 0.001) 1000)
+      > (stream-ref
+      ^  (solve (lambda (y) y) 1 0.001) 1000)
       2.716924
     < srci..
 
@@ -35869,14 +35870,14 @@ Company.
     una muestra de interacción:
 
 #     ..srci > scheme
-#       > (define the-global-environment \
-#           (setup-environment))
+#       > (define the-global-environment
+#       ^   (setup-environment))
 #       > (driver-loop)
 #       > ;;; M-Eval input:
-#       > (define (append x y)                      \
-#           (if (null? x)                           \
-#               y                                   \
-#               (cons (car x) (append (cdr x) y))))
+#       > (define (append x y)
+#       ^   (if (null? x)
+#       ^       y
+#       ^       (cons (car x) (append (cdr x) y))))
 #       ;;; M-Eval value:
 #       ok
 #       > ;;; M-Eval input:
@@ -35885,14 +35886,14 @@ Company.
 #       (a b c d e f)
 #     < srci..
     ..srci > scheme
-      > (define the-global-environment \
-          (setup-environment))
+      > (define the-global-environment
+      ^   (setup-environment))
       > (driver-loop)
       > ;;; M-Eval input:
-      > (define (append x y)                      \
-          (if (null? x)                           \
-              y                                   \
-              (cons (car x) (append (cdr x) y))))
+      > (define (append x y)
+      ^   (if (null? x)
+      ^       y
+      ^       (cons (car x) (append (cdr x) y))))
       ;;; M-Eval value:
       ok
       > ;;; M-Eval input:
@@ -37716,8 +37717,8 @@ Company.
      el intérprete está realizando una evaluación perezosa:
 
 #      ..srci > scheme
-#        > (define the-global-environment \
-#            (setup-environment))
+#        > (define the-global-environment
+#        ^   (setup-environment))
 #        > (driver-loop)
 #        ;;; L-Eval input:
 #        > (define (try a b) (if (= a 0) 1 b))
@@ -37729,8 +37730,8 @@ Company.
 #        1
 #      < srci..
      ..srci > scheme
-       > (define the-global-environment \
-           (setup-environment))
+       > (define the-global-environment
+       ^   (setup-environment))
        > (driver-loop)
        ;;; L-Eval input:
        > (define (try a b) (if (= a 0) 1 b))
@@ -38033,9 +38034,9 @@ Company.
 
 #            ..srci > scheme
 #              ;;; L-Eval input:
-#              > (for-each                           \
-#                 (lambda (x) (newline) (display x)) \
-#                 (list 57 321 88))
+#              > (for-each
+#              ^  (lambda (x) (newline) (display x))
+#              ^  (list 57 321 88))
 #              57
 #              321
 #              88
@@ -38045,9 +38046,9 @@ Company.
 #            < srci..
            ..srci > scheme
              ;;; L-Eval input:
-             > (for-each                           \
-                (lambda (x) (newline) (display x)) \
-                (list 57 321 88))
+             > (for-each
+             ^  (lambda (x) (newline) (display x))
+             ^  (list 57 321 88))
              57
              321
              88
@@ -38226,58 +38227,58 @@ Company.
     de lista. Aquí hay unos ejemplos:
 
 #     ..srci > scheme
-#       > (define (list-ref items n)             \
-#           (if (= n 0)                          \
-#               (car items)                      \
-#               (list-ref (cdr items) (- n 1))))
-#       > (define (map proc items)               \
-#           (if (null? items)                    \
-#               '()                              \
-#               (cons (proc (car items))         \
-#                     (map proc (cdr items)))))
-#       > (define (scale-list items factor)      \
-#           (map (lambda (x) (* x factor))       \
-#                items))
-#       > (define (add-lists list1 list2)        \
-#           (cond ((null? list1) list2)          \
-#                 ((null? list2) list1)          \
-#                 (else (cons (+ (car list1)     \
-#                                (car list2))    \
-#                             (add-lists         \
-#                              (cdr list1)       \
-#                              (cdr list2))))))
+#       > (define (list-ref items n)
+#       ^   (if (= n 0)
+#       ^       (car items)
+#       ^       (list-ref (cdr items) (- n 1))))
+#       > (define (map proc items)
+#       ^   (if (null? items)
+#       ^       '()
+#       ^       (cons (proc (car items))
+#       ^             (map proc (cdr items)))))
+#       > (define (scale-list items factor)
+#       ^   (map (lambda (x) (* x factor))
+#       ^        items))
+#       > (define (add-lists list1 list2)
+#       ^   (cond ((null? list1) list2)
+#       ^         ((null? list2) list1)
+#       ^         (else (cons (+ (car list1)
+#       ^                        (car list2))
+#       ^                     (add-lists
+#       ^                      (cdr list1)
+#       ^                      (cdr list2))))))
 #       > (define ones (cons 1 ones))
-#       > (define integers                       \
-#           (cons 1 (add-lists ones integers)))
+#       > (define integers
+#       ^   (cons 1 (add-lists ones integers)))
 #       ;;; L-Eval input:
 #       >  (list-ref integers 17)
 #       ;;; L-Eval value:
 #       18
 #     < srci..
     ..srci > scheme
-      > (define (list-ref items n)             \
-          (if (= n 0)                          \
-              (car items)                      \
-              (list-ref (cdr items) (- n 1))))
-      > (define (map proc items)               \
-          (if (null? items)                    \
-              '()                              \
-              (cons (proc (car items))         \
-                    (map proc (cdr items)))))
-      > (define (scale-list items factor)      \
-          (map (lambda (x) (* x factor))       \
-               items))
-      > (define (add-lists list1 list2)        \
-          (cond ((null? list1) list2)          \
-                ((null? list2) list1)          \
-                (else (cons (+ (car list1)     \
-                               (car list2))    \
-                            (add-lists         \
-                             (cdr list1)       \
-                             (cdr list2))))))
+      > (define (list-ref items n)
+      ^   (if (= n 0)
+      ^       (car items)
+      ^       (list-ref (cdr items) (- n 1))))
+      > (define (map proc items)
+      ^   (if (null? items)
+      ^       '()
+      ^       (cons (proc (car items))
+      ^             (map proc (cdr items)))))
+      > (define (scale-list items factor)
+      ^   (map (lambda (x) (* x factor))
+      ^        items))
+      > (define (add-lists list1 list2)
+      ^   (cond ((null? list1) list2)
+      ^         ((null? list2) list1)
+      ^         (else (cons (+ (car list1)
+      ^                        (car list2))
+      ^                     (add-lists
+      ^                      (cdr list1)
+      ^                      (cdr list2))))))
       > (define ones (cons 1 ones))
-      > (define integers                       \
-          (cons 1 (add-lists ones integers)))
+      > (define integers
+      ^   (cons 1 (add-lists ones integers)))
       ;;; L-Eval input:
       >  (list-ref integers 17)
       ;;; L-Eval value:
@@ -38316,32 +38317,32 @@ Company.
     @l(#3.5.4) :
 
 #     ..srci > scheme
-#       > (define (integral integrand initial-value dt)  \
-#           (define int                                  \
-#             (cons initial-value                        \
-#                   (add-lists (scale-list integrand dt) \
-#                              int)))                    \
-#           int)
-#       > (define (solve f y0 dt)          \
-#           (define y (integral dy y0 dt)) \
-#           (define dy (map f y))          \
-#           y)
+#       > (define (integral integrand initial-value dt)
+#       ^   (define int
+#       ^     (cons initial-value
+#       ^           (add-lists (scale-list integrand dt)
+#       ^                      int)))
+#       ^   int)
+#       > (define (solve f y0 dt)
+#       ^   (define y (integral dy y0 dt))
+#       ^   (define dy (map f y))
+#       ^   y)
 #       ;;; L-Eval input:
 #       > (list-ref (solve (lambda (x) x) 1 0.001) 1000)
 #       ;;; L-Eval value:
 #       2.716924
 #     < srci..
     ..srci > scheme
-      > (define (integral integrand initial-value dt)  \
-          (define int                                  \
-            (cons initial-value                        \
-                  (add-lists (scale-list integrand dt) \
-                             int)))                    \
-          int)
-      > (define (solve f y0 dt)          \
-          (define y (integral dy y0 dt)) \
-          (define dy (map f y))          \
-          y)
+      > (define (integral integrand initial-value dt)
+      ^   (define int
+      ^     (cons initial-value
+      ^           (add-lists (scale-list integrand dt)
+      ^                      int)))
+      ^   int)
+      > (define (solve f y0 dt)
+      ^   (define y (integral dy y0 dt))
+      ^   (define dy (map f y))
+      ^   y)
       ;;; L-Eval input:
       > (list-ref (solve (lambda (x) x) 1 0.001) 1000)
       ;;; L-Eval value:
@@ -40613,11 +40614,11 @@ Company.
 
 #         ..srci > scheme
 #           > (define count 0)
-#           > (let ((x (an-element-of '(a b c)))   \
-#                   (y (an-element-of '(a b c))))  \
-#               (permanent-set! count (+ count 1)) \
-#               (require (not (eq? x y)))          \
-#               (list x y count))
+#           > (let ((x (an-element-of '(a b c)))
+#           ^       (y (an-element-of '(a b c))))
+#           ^   (permanent-set! count (+ count 1))
+#           ^   (require (not (eq? x y)))
+#           ^   (list x y count))
 #
 #           ;;; Starting a new problem
 #           ;;; Amb-Eval value:
@@ -40631,11 +40632,11 @@ Company.
 #         < srci..
         ..srci > scheme
           > (define count 0)
-          > (let ((x (an-element-of '(a b c)))   \
-                  (y (an-element-of '(a b c))))  \
-              (permanent-set! count (+ count 1)) \
-              (require (not (eq? x y)))          \
-              (list x y count))
+          > (let ((x (an-element-of '(a b c)))
+          ^       (y (an-element-of '(a b c))))
+          ^   (permanent-set! count (+ count 1))
+          ^   (require (not (eq? x y)))
+          ^   (list x y count))
 
           ;;; Starting a new problem
           ;;; Amb-Eval value:
@@ -40667,21 +40668,21 @@ Company.
 
 #         ..srci > scheme
 #           ;;; Amb-Eval input:
-#           > (if-fail                             \
-#              (let ((x (an-element-of '(1 3 5)))) \
-#                (require (even? x))               \
-#                x)                                \
-#              'all-odd)
+#           > (if-fail
+#           ^  (let ((x (an-element-of '(1 3 5))))
+#           ^    (require (even? x))
+#           ^    x)
+#           ^  'all-odd)
 #           ;;; Starting a new problem
 #           ;;; Amb-Eval value:
 #           all-odd
 #
 #           ;;; Amb-Eval input:
-#           > (if-fail                               \
-#              (let ((x (an-element-of '(1 3 5 8)))) \
-#                (require (even? x))                 \
-#                x)                                  \
-#              'all-odd)
+#           > (if-fail
+#           ^  (let ((x (an-element-of '(1 3 5 8))))
+#           ^    (require (even? x))
+#           ^    x)
+#           ^  'all-odd)
 #
 #           ;;; Starting a new problem
 #           ;;; Amb-Eval value:
@@ -40689,21 +40690,21 @@ Company.
 #         < srci..
         ..srci > scheme
           ;;; Amb-Eval input:
-          > (if-fail                             \
-             (let ((x (an-element-of '(1 3 5)))) \
-               (require (even? x))               \
-               x)                                \
-             'all-odd)
+          > (if-fail
+          ^  (let ((x (an-element-of '(1 3 5))))
+          ^    (require (even? x))
+          ^    x)
+          ^  'all-odd)
           ;;; Starting a new problem
           ;;; Amb-Eval value:
           all-odd
 
           ;;; Amb-Eval input:
-          > (if-fail                               \
-             (let ((x (an-element-of '(1 3 5 8)))) \
-               (require (even? x))                 \
-               x)                                  \
-             'all-odd)
+          > (if-fail
+          ^  (let ((x (an-element-of '(1 3 5 8))))
+          ^    (require (even? x))
+          ^    x)
+          ^  'all-odd)
 
           ;;; Starting a new problem
           ;;; Amb-Eval value:
@@ -46832,7 +46833,7 @@ Company.
 #     :: @t(Exercise 5.3) :: Design a machine to compute square roots using Newton's
 #        method, as described in @l(#Sec.1.1.7,,1.1.7):
     :: @t(Ejercicio 5.3) :: Diseñar una máquina para calcular raíces cuadradas
-       usando el método de Newton, como se describe en
+       usando el método Newton, como se describe en
        @l(#Sec.1.1.7,,1.1.7<>Sec.1.1.7,, 1.1.7) :
 
 #        ..src > scheme
@@ -47847,10 +47848,10 @@ Company.
           fib-done)
        < src..
 
-#      :: @t(Exercise 5.4) :; Specify register machines that implement each of the
+#      :: @t(Exercise 5.4) :: Specify register machines that implement each of the
 #         following procedures. For each machine, write a controller instruction
 #         sequence and draw a diagram showing the data paths.
-     :: @t(Ejercicio 5.4) :; Especifique las máquinas de registro que
+     :: @t(Ejercicio 5.4) :: Especifique las máquinas de registro que
         implementan cada uno de los procedimientos siguientes. Para cada
         máquina, escriba una secuencia de instrucciones del controlador y dibuje
         un diagrama que muestre las rutas de datos.
@@ -52650,15 +52651,15 @@ Company.
     Finalmente, podemos inicializar el entorno global y ejecutar el evaluador:
 
 #     ..srci > scheme
-#       > (define the-global-environment \
-#           (setup-environment))
+#       > (define the-global-environment
+#       ^   (setup-environment))
 #       > (start eceval)
 #
 #       ;;; EC-Eval input:
-#       > (define (append x y)                      \
-#           (if (null? x)                           \
-#               y                                   \
-#               (cons (car x) (append (cdr x) y))))
+#       > (define (append x y)
+#       ^   (if (null? x)
+#       ^       y
+#       ^       (cons (car x) (append (cdr x) y))))
 #       ;;; EC-Eval value:
 #       ok
 #
@@ -52668,15 +52669,15 @@ Company.
 #       (a b c d e f)
 #     < srci..
     ..srci > scheme
-      > (define the-global-environment \
-          (setup-environment))
+      > (define the-global-environment
+      ^   (setup-environment))
       > (start eceval)
 
       ;;; EC-Eval input:
-      > (define (append x y)                      \
-          (if (null? x)                           \
-              y                                   \
-              (cons (car x) (append (cdr x) y))))
+      > (define (append x y)
+      ^   (if (null? x)
+      ^       y
+      ^       (cons (car x) (append (cdr x) y))))
       ;;; EC-Eval value:
       ok
 
@@ -52743,8 +52744,8 @@ Company.
 
 #      ..srci > scheme
 #        ;;; EC-Eval input:
-#        > (define (factorial n)  \
-#            (if (= n 1) 1 (* (factorial (- n 1)) n)))
+#        > (define (factorial n)
+#        ^   (if (= n 1) 1 (* (factorial (- n 1)) n)))
 #        (total-pushes = 3, maximum-depth = 3)
 #
 #        ;;; EC-Eval value:
@@ -52759,8 +52760,8 @@ Company.
 #      < srci..
      ..srci > scheme
        ;;; EC-Eval input:
-       > (define (factorial n)  \
-           (if (= n 1) 1 (* (factorial (- n 1)) n)))
+       > (define (factorial n)
+       ^   (if (= n 1) 1 (* (factorial (- n 1)) n)))
        (total-pushes = 3, maximum-depth = 3)
 
        ;;; EC-Eval value:
@@ -56782,25 +56783,25 @@ Company.
        (a b c d e) (x y))]. @c(Find-variable) Debería producir
 
 #        ..srci > scheme
-#          > (find-variable \
-#             'c '((y z) (a b c d e) (x y)))
+#          > (find-variable
+#          ^  'c '((y z) (a b c d e) (x y)))
 #          (1 2)
-#          > (find-variable \
-#             'x '((y z) (a b c d e) (x y)))
+#          > (find-variable
+#          ^  'x '((y z) (a b c d e) (x y)))
 #          (2 0)
-#          > (find-variable \
-#             'w '((y z) (a b c d e) (x y)))
+#          > (find-variable
+#          ^  'w '((y z) (a b c d e) (x y)))
 #          not-found
 #        < srci..
        ..srci > scheme
-         > (find-variable \
-            'c '((y z) (a b c d e) (x y)))
+         > (find-variable
+         ^  'c '((y z) (a b c d e) (x y)))
          (1 2)
-         > (find-variable \
-            'x '((y z) (a b c d e) (x y)))
+         > (find-variable
+         ^  'x '((y z) (a b c d e) (x y)))
          (2 0)
-         > (find-variable \
-            'w '((y z) (a b c d e) (x y)))
+         > (find-variable
+         ^  'w '((y z) (a b c d e) (x y)))
          not-found
        < srci..
 
@@ -56925,11 +56926,11 @@ Company.
     máquina y utilizar el evaluador para llamarla:
 
 #     ..srci > scheme
-#       > (compile-and-go           \
-#          '(define (factorial n)   \
-#             (if (= n 1)           \
-#                 1                 \
-#                 (* (factorial (- n 1)) n))))
+#       > (compile-and-go
+#       ^  '(define (factorial n)
+#       ^     (if (= n 1)
+#       ^         1
+#       ^         (* (factorial (- n 1)) n))))
 #       ;;; EC-Eval value:
 #       ok
 #       ;;; EC-Eval input:
@@ -56938,11 +56939,11 @@ Company.
 #       120
 #     < srci..
     ..srci > scheme
-      > (compile-and-go           \
-         '(define (factorial n)   \
-            (if (= n 1)           \
-                1                 \
-                (* (factorial (- n 1)) n))))
+      > (compile-and-go
+      ^  '(define (factorial n)
+      ^     (if (= n 1)
+      ^         1
+      ^         (* (factorial (- n 1)) n))))
       ;;; EC-Eval value:
       ok
       ;;; EC-Eval input:
@@ -57124,11 +57125,11 @@ Company.
     @l(#5.4.4), podemos examinar el uso de la pila de código compilado:
 
 #     ..srci > scheme
-#       > (compile-and-go           \
-#          '(define (factorial n)   \
-#             (if (= n 1)           \
-#                 1                 \
-#                 (* (factorial (- n 1)) n))))
+#       > (compile-and-go
+#       ^  '(define (factorial n)
+#       ^     (if (= n 1)
+#       ^         1
+#       ^         (* (factorial (- n 1)) n))))
 #       (total-pushes = 0, maximum-depth = 0)
 #       ;;; EC-Eval value:
 #       ok
@@ -57139,11 +57140,11 @@ Company.
 #       120
 #     < srci..
     ..srci > scheme
-      > (compile-and-go           \
-         '(define (factorial n)   \
-            (if (= n 1)           \
-                1                 \
-                (* (factorial (- n 1)) n))))
+      > (compile-and-go
+      ^  '(define (factorial n)
+      ^     (if (= n 1)
+      ^         1
+      ^         (* (factorial (- n 1)) n))))
       (total-pushes = 0, maximum-depth = 0)
       ;;; EC-Eval value:
       ok
@@ -57385,11 +57386,11 @@ Company.
 
 #         ..srci > scheme
 #           ;;; EC-Eval input:
-#           > (compile-and-run        \
-#              '(define (factorial n) \
-#                 (if (= n 1)         \
-#                     1               \
-#                     (* (factorial (- n 1)) n))))
+#           > (compile-and-run
+#           ^  '(define (factorial n)
+#           ^     (if (= n 1)
+#           ^         1
+#           ^         (* (factorial (- n 1)) n))))
 #           ;;; EC-Eval value:
 #           ok
 #           ;;; EC-Eval input:
@@ -57399,11 +57400,11 @@ Company.
 #         < srci..
         ..srci > scheme
           ;;; EC-Eval input:
-          > (compile-and-run        \
-             '(define (factorial n) \
-                (if (= n 1)         \
-                    1               \
-                    (* (factorial (- n 1)) n))))
+          > (compile-and-run
+          ^  '(define (factorial n)
+          ^     (if (= n 1)
+          ^         1
+          ^         (* (factorial (- n 1)) n))))
           ;;; EC-Eval value:
           ok
           ;;; EC-Eval input:
@@ -57839,7 +57840,7 @@ Company.
   @t(Hodges 1983) Hodges, Andrew. 1983. @"(Alan Turing: El Enigma). Nueva York:
   Simon y Schuster.
 
-#   @t(Hofstadter 1979) Hofstadter, Douglas R. 1979. @q(G@"odel, Escher, Bach: An
+#   @t(Hofstadter 1979) Hofstadter, Douglas R. 1979. @q(G@@"odel, Escher, Bach: An
 #   Eternal Golden Braid). New York: Basic Books.
   @t(Hofstadter 1979) Hofstadter, Douglas R. 1979.
 
@@ -59191,39 +59192,38 @@ Company.
 #      the real need for such combinations––when applying a procedure that is
 #      obtained as the value returned by a higher-order procedure.
   :: @N(59) :: Observe que se trata de una combinación cuyo operador es en sí
-     mismo una combinación. @l(#Ejercicio 1.4) ya demostró la
-     capacidad de formar tales combinaciones, pero eso era sólo un ejemplo de
-     juguete. Aquí comenzamos a ver la necesidad real de tales combinaciones -
-     al aplicar un procedimiento que se obtiene como el valor devuelto por un
-     procedimiento de orden superior.
+     mismo una combinación. El @l(#Ejercicio 1.4) ya demostró la capacidad de
+     formar tales combinaciones, pero eso era sólo un ejemplo de juguete. Aquí
+     comenzamos a ver la necesidad real de tales combinaciones––al aplicar un
+     procedimiento que se obtiene como el valor devuelto por un procedimiento de
+     orden superior.
 
 #   :: @N(60) :: See @l(#Exercise 1.45) for a further generalization.
-  :: @N(60) :: Véase el @l(#Ejercicio 1.45) para una
-     generalización adicional.
+  :: @N(60) :: Véa el @l(#Ejercicio 1.45) para una generalización adicional.
 
 #   :: @N(61) :: Elementary calculus books usually describe Newton's method in
-#      terms of the sequence of approximations @m[xₙ₊₁ = xₙ - g(xₙ) / Dg(xₙ)].
+#      terms of the sequence of approximations @m[xₙ₊₁ = xₙ − g(xₙ)/Dg(xₙ)].
 #      Having language for talking about processes and using the idea of fixed
 #      points simplifies the description of the method.
   :: @N(61) :: Los libros de cálculo elementales usualmente describen el método
-     de Newton en términos de la secuencia de aproximaciones @m(xₙ₊₁ = xₙ - g
-     (xₙ) / Dg (xₙ)). Tener un lenguaje para hablar de procesos y usar la idea
-     de puntos fijos simplifica la descripción del método.
+     de Newton en términos de la secuencia de aproximaciones @m[xₙ₊₁ = xₙ −
+     g(xₙ)/Dg(xₙ)]. Tener un lenguaje para hablar de procesos y usar la idea de
+     puntos fijos simplifica la descripción del método.
 
 #   :: @N(62) :: Newton's method does not always converge to an answer, but it can
 #      be shown that in favorable cases each iteration doubles the
 #      number-of-digits accuracy of the approximation to the solution. In such
 #      cases, Newton's method will converge much more rapidly than the
 #      half-interval method.
-  :: @N(62) :: El método de Newton no siempre converge en una respuesta, pero se
+  :: @N(62) :: El método Newton no siempre converge en una respuesta, pero se
      puede demostrar que en casos favorables cada repetición duplica la
-     precisión de número de dígitos de la aproximación a la solución. En tales
-     casos, el método de Newton convergerá mucho más rápidamente que el método
+     precisión del número de dígitos de la aproximación a la solución. En tales
+     casos, el método Newton convergerá mucho más rápidamente que el método
      de medio intervalo.
 
 #   :: @N(63) :: For finding square roots, Newton's method converges rapidly to
 #      the correct solution from any starting point.
-  :: @N(63) :: Para encontrar raíces cuadradas, el método de Newton converge
+  :: @N(63) :: Para encontrar raíces cuadradas, el método Newton converge
      rápidamente a la solución correcta desde cualquier punto de partida.
 
 #   :: @N(64) :: The notion of first-class status of programming-language elements
@@ -59233,9 +59233,9 @@ Company.
      Strachey (1916-1975).
 
 #   :: @N(65) :: We'll see examples of this after we introduce data structures in
-#      @l(#Chapter 2.)
+#      @l(#Chapter 2).
   :: @N(65) :: Veremos ejemplos de esto después de introducir estructuras de
-     datos en el @l(#Chapter-2.<>Capitulo 2.)
+     datos en el @l(#Capitulo 2).
 
 #   :: @N(66) :: The major implementation cost of first-class procedures is that
 #      allowing procedures to be returned as values requires reserving storage for
@@ -59246,8 +59246,8 @@ Company.
      primera clase es que permitir que los procedimientos sean devueltos como
      valores requiere reservar el almacenamiento para las variables libres de un
      procedimiento incluso cuando el procedimiento no se está ejecutando. En la
-     implementación del esquema estudiaremos en la seccion @l(#4.1), estas variables
-     se almacenan en el entorno del procedimiento.
+     implementación de Scheme que estudiaremos en la seccion @l(#4.1), estas
+     variables se almacenan en el entorno del procedimiento.
 
 #   :: @N(67) :: The ability to directly manipulate procedures provides an
 #      analogous increase in the expressive power of a programming language. For
@@ -59524,25 +59524,25 @@ Company.
      ejemplo:
 
 #      ..srci > scheme
-#        > (map +                   \
-#               (list 1 2 3)        \
-#               (list 40 50 60)     \
-#               (list 700 800 900))
+#        > (map +
+#        ^      (list 1 2 3)
+#        ^      (list 40 50 60)
+#        ^      (list 700 800 900))
 #        (741 852 963)
-#        > (map (lambda (x y) (+ x (* 2 y))) \
-#               (list 1 2 3)                 \
-#               (list 4 5 6))
+#        > (map (lambda (x y) (+ x (* 2 y)))
+#        ^      (list 1 2 3)
+#        ^      (list 4 5 6))
 #        (9 12 15)
 #      < srci..
      ..srci > scheme
-       > (map +                   \
-              (list 1 2 3)        \
-              (list 40 50 60)     \
-              (list 700 800 900))
+       > (map +
+       ^      (list 1 2 3)
+       ^      (list 40 50 60)
+       ^      (list 700 800 900))
        (741 852 963)
-       > (map (lambda (x y) (+ x (* 2 y))) \
-              (list 1 2 3)                 \
-              (list 4 5 6))
+       > (map (lambda (x y) (+ x (* 2 y)))
+       ^      (list 1 2 3)
+       ^      (list 4 5 6))
        (9 12 15)
      < srci..
 
@@ -61067,9 +61067,9 @@ Company.
      en la seccion @l(#1.2.6)) que las pruebas de primalidad.
 
 #   :: @N(182) :: In the @A(MIT) implementation, @c(the-empty-stream) is the same
-#      as the empty list @c['()!, and @c(stream-null?) is the same as @c(null?).
+#      as the empty list @c['()!], and @c(stream-null?) is the same as @c(null?).
   :: @N(182) :: En la implementación @A(MIT), @c(the-empty-stream) es la misma
-     que la lista vacía@c('()!, and @c(stream-null?) is the same as @c(null?).)
+     que la lista vacía@c['()!], and @c(stream-null?) is the same as @c(null?).)
 
 #   :: @N(183) :: This should bother you. The fact that we are defining such
 #      similar procedures for streams and lists indicates that we are missing some
