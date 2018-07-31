@@ -1,14 +1,14 @@
 :root {
                            /* COLOR VARS    */
-    --FGCtitle  : #ff4500;  /* #+TITLE:      */
-    --FGCstart1 : #ffffff;  /* *             */    --FGCmenu1 : #8EF4CD;
-    --FGCstart2 : #ffffff;  /* **            */    --FGCmenu2 : #94EDCB;
-    --FGCstart3 : #ffffff;  /* ***           */    --FGCmenu3 : #CAE79B;
-    --FGCstart4 : #ffffff;  /* ****          */    --FGCmenu4 : #A1E1C8;
-    --FGCstart5 : #ffffff;  /* *****         */    --FGCmenu5 : #C7DAA8;
-    --FGCstart6 : #ffffff;  /* ******        */    --FGCmenu6 : #D4AEC6;
-    --FGCstart7 : #ffffff;  /* *******       */    --FGCmenu7 : #C4B5CE;
-    --FGCstart8 : #ffffff;  /* ********      */    --FGCmenu8 : #C3C8BB;
+    --FGCtitle  : #ffffff;  /* #+TITLE:      */
+    --FGCstart1 : #ffffff;  /* *             */
+    --FGCstart2 : #ffffff;  /* **            */
+    --FGCstart3 : #ffffff;  /* ***           */
+    --FGCstart4 : #ffffff;  /* ****          */
+    --FGCstart5 : #ffffff;  /* *****         */
+    --FGCstart6 : #ffffff;  /* ******        */
+    --FGCstart7 : #ffffff;  /* *******       */
+    --FGCstart8 : #ffffff;  /* ********      */
     --FGCtext   : #ffffff;
     --FGCabbr   : #ffffff;
     --FGCacro   : #ffffff;
@@ -16,6 +16,8 @@
     --FGCtcode  : #6ab825;  /* code          */
     --FGCbcode  : #b3b3b3;  /* block code    */
     --FGCtcomm  : #ff4500;  /* command       */
+    --FGCtkbd   : #000000;  /* kbd           */
+    --FGCtbkbd  : #ffffff;  /* kbd           */
     --FGCfile   : #eedd82;  /* file          */
     --FGCmath   : #88ffff;  /* math          */
     --FGClink   : #00ffff;  /* link          */
@@ -77,6 +79,16 @@ h7 {                                              } /* ******   */
 h8 {                                              } /* *******  */
 h9 {                                              } /* ******** */
 
+h1 { line-height: 1.5em; text-align: center;      }
+h2::before { content: "• ";                       }
+h3::before { content: "•• ";                      }
+h4::before { content: "••• ";                     }
+h5::before { content: "•••• ";                    }
+h6::before { content: "••••• ";                   }
+h7::before { content: "•••••• ";                  }
+h8::before { content: "••••••• ";                 }
+h9::before { content: "•••••••• "                 }
+
 h1.subtitle { color: var( --FGCstart1 ); font-size:   2em; font-family: title;    }
 h2.subtitle { color: var( --FGCstart2 ); font-size: 1.5em; font-family: heatline; }
 h3.subtitle { color: var( --FGCstart3 ); font-size: 1.4em; font-family: heatline; }
@@ -103,14 +115,14 @@ h9.subtitle { color: var( --FGCtitle  ); font-size: 1.0em; font-family: heatline
                      max-height: 90%; max-width: 30%;
                      z-index: 1; overflow: auto;
                      box-shadow: 0 0 1em #777777; border-bottom-left-radius: 5px; }
-#toc p { color: #eedd82; background-color: #000;
-         font-size: .8em; text-align: center;
-         border: 0; padding: 0em 0.5em 0em 0.5em; }
+#toc p { color: #98fb98; background-color: #000;
+         font-size: 1em; text-align: center; font-weight: 900;
+         border: 0; padding: 0em 0.2em; }
 #toc #toc-contents { display: none; text-align: left; }
-#toc:hover #toc-contents { display: block; font-size: .9em; line-height: 1.1em; }
+#toc:hover #toc-contents { display: block; font-size: .9em; line-height: 1.1em; padding-left: 1em; }
 #toc:hover #toc-contents { display: block }
 #toc:hover #toc-contents ul { padding-left: 0.7em; }
-#toc:hover #toc-contents ul li { list-style: none; padding-left: 0em; }
+#toc:hover #toc-contents ul li { /* list-style: none; padding-left: 0em; */ }
 #toc:hover #toc-contents a { text-decoration: none; }
 #toc:hover #toc-contents a:hover { color: #ffffff; }
 #toc:hover #toc-contents a.h1 { color: white             ; } /* *        */
@@ -132,6 +144,7 @@ em      { color: var( --FGCemph ); font-weight: 600; }
 cite    { font-family: text_verse; color: #a5b1fe; }
 code    { color: var( --FGCtcode ); font-family: codetext; font-weight: 600; padding: 0px 0.2em; }
 code.command { color: var( --FGCtcomm ); font-family: codetext; padding: 0px 0.2em; }
+kbd     {      color: var( --FGCtkbd  ); background-color: var( --FGCtbkbd  ); font-family: codetext; padding: 0.3em 0.2em 0.2em 0.2em; }
 .file    { color: var( --FGCfile ); font-family: codetext; }
 .math    { color: var( --FGCmath ); font-family: codetext; }
 .acronym { color: var( --FGCacro ); font-weight: 600; }
@@ -191,10 +204,16 @@ div.figure h1.figure { color: var( --FGCfigure );
 div.figure h1.figure a { color: #777; }
 /* div.figure code { font-size: .9em; } */
 
-.pret { padding-left: 1em; text-align: left; }
+.pret {
+    display: block;
+    font-family: codetext;
+    white-space: pre;
+    font-size: 1.1em;
+    padding-left: 1em; text-align: left;
+}
 
 .tab { padding-left: 3em; text-align: left; }
-
+.right { padding-right: 1em; text-align: right; }
 
 /* ABOUT */
 .about { width: 100%; display: inline-flex; flex-flow: row nowrap; flex-direction: row;  }
@@ -244,14 +263,26 @@ pre.art { font-size: 1em; line-height: 1.1em;
 
 /* CODE */
 pre.code { font-size: 1em; line-height: 1.2em; }
+pre.code code { padding: 0em; }
 
 /* CODE */
 pre.srci { font-size: 1em; line-height: 1.1em; }
+pre.srci code { padding: 0em; }
 
-.prompt { color: green; font-weight: 900; }
+.prompt { color: white; font-weight: 900; }
 .index { user-select: none; }
 .in  { color: #0ff; }
 .out { color: #aff; }
+
+.prompt, .out {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera  */
+}
 
 /* ==fanciCode== pygments compatible */
 .hll { background-color: #ffffcc }
